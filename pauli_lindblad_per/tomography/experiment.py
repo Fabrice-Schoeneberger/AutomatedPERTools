@@ -26,7 +26,7 @@ class SparsePauliTomographyExperiment:
     def __init__(self, circuits, inst_map, backend):
 
         circuit_interface = None
-
+        #Make sure it's a quantumcircuit as others don't work
         if circuits[0].__class__.__name__ == "QuantumCircuit":
             circuit_interface = QiskitCircuit
             processor = QiskitProcessor(backend)
