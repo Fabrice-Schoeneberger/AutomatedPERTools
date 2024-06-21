@@ -74,12 +74,15 @@ class ProcessorSpec:
         identity = ["I"]*n 
 
         #get all weight-two Paulis on with support on neighboring qubits
+        logger.info("Testing here")
+        logger.info(self._connectivity.edge_list())
+        logger.info(self._connectivity.node_indices())
         for q1,q2 in self._connectivity.edge_list():
-                for p1, p2 in product("IXYZ", repeat=2):
-                    pauli = identity.copy()
-                    pauli[q1] = p1
-                    pauli[q2] = p2
-                    model_terms.add("".join(reversed(pauli)))
+            for p1, p2 in product("IXYZ", repeat=2):
+                pauli = identity.copy()
+                pauli[q1] = p1
+                pauli[q2] = p2
+                model_terms.add("".join(reversed(pauli)))
 
         #get all weight-one Paulis
         for q in self._connectivity.node_indices():

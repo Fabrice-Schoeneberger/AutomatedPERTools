@@ -18,6 +18,7 @@ class LayerLearning:
 
         for pauli in self._procspec.model_terms:
             self.pairs[pauli] = cliff_layer.conjugate(pauli)
+        logger.info(self.pairs)
 
     #checks if a pauli term is conjugate to a different term also included in the model
     def _issingle(self, term): 
@@ -29,10 +30,7 @@ class LayerLearning:
         #have disjoint supports and the results of conjugating both by the Clifford layer
         #are also disjoint
 
-        pairs = [
-            (p,self.pairs[p]) for p in self._procspec.model_terms 
-            if self._issingle(p)
-            ]
+        pairs = [(p,self.pairs[p]) for p in self._procspec.model_terms if self._issingle(p)]
         pairs_set = set([frozenset(tup) for tup in pairs])
         self.single_pairs = [tuple(pair) for pair in pairs_set]
 
@@ -40,7 +38,7 @@ class LayerLearning:
         for p1,p2 in self.single_pairs:
             for i,pauli in enumerate(single_bases):
                 pair = self._cliff_layer.conjugate(pauli)
-                if pauli.separate(p1) and pair.separate(p2):
+                if pauli.separate(p1) and pair.separate(p2): #what is this for?
                     single_bases[i] = pauli * p2
                     break
             else:
