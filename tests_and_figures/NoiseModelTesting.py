@@ -6,6 +6,7 @@ from random import random, choices
 from matplotlib import pyplot as plt
 import numpy as np
 from scipy.optimize import nnls
+import logging
 
 import os
 import sys
@@ -66,10 +67,24 @@ qc.cx(0,1)
 #qc.draw()
 
 experiment = tomography(circuits = [qc], inst_map = [0,1], backend = FakeVigoV2())
+logger = logging.getLogger("experiment")
 
-empty_log()
+logger.info("\n")
 
 experiment.generate(samples = 32, single_samples = 250, depths = [2,4,8,16])
+
+logger.info("\n")
+
+#run circiuts
+experiment.run(executor)
+
+logger.info("\n")
+
+#return noise model
+noisedataframe = experiment.analyze()
+
+#get single circuit layer in noise model
+layer = experiment.analysis.get_layer_data(0)
 
 def print_log_file(file_path):
     try:

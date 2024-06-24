@@ -44,7 +44,7 @@ class LayerNoiseData:
         pair_sim_meas = {}
         single_sim_meas = {}
 
-        if inst.type == SINGLE: 
+        if inst.type == SINGLE:
 
             if not basis in single_sim_meas:
                 single_sim_meas[basis] = self.single_sim_meas(basis, prep)

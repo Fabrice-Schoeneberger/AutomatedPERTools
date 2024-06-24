@@ -30,7 +30,7 @@ class Analysis:
         """Sorts the data into different layers represented by LayerNoiseData objects,
         runs the analysis on each once data is collected"""
 
-        logging.info("Running analysis...")
+        logger.info("Running analysis...")
         #sort instance data into layers
         for layer in self._layers:
             self._data[layer].add_expectations()
