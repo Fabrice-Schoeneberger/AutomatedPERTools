@@ -2,6 +2,9 @@ from primitives.circuit import QiskitCircuit
 from framework.percircuit import PERCircuit
 from per.perrun import PERRun
 from primitives.processor import QiskitProcessor
+import logging
+
+logger = logging.getLogger("experiment")
 
 class PERExperiment:
     """This class plays the role of the SparsePauliTomographyExperiment class but for the
@@ -65,10 +68,11 @@ class PERExperiment:
             for i,base in enumerate(meas_bases): #iterate through bases
                 if base.nonoverlapping(pauli): #if nonoverlapping, compose into last basis
                     meas_bases[i] = base.get_composite(pauli)
+                    logger.info("compile " +str(base) + " and " + str(pauli) + " to "+ str(meas_bases[i]))
                     break
             else:
                 meas_bases.append(pauli) #if no break is reached, append to end
-
+        logger.info(meas_bases)
         self.meas_bases = meas_bases
         
     def generate(

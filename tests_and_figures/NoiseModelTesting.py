@@ -56,36 +56,9 @@ def executor(circuits): #define noisy executor
     return Aer.get_backend("qasm_simulator").run(circuits, noise_model = noise_model, shots = 500).result().get_counts()
 
 #Define circuit
-qc = QuantumCircuit(2)
-qc.x(0)
-qc.y(1)
-qc.cx(0,1)
-
-qc.x(1)
-qc.y(0)
+qc = QuantumCircuit(3)
 qc.cx(0,1)
 #qc.draw()
-
-experiment = tomography(circuits = [qc], inst_map = [0,1], backend = FakeVigoV2())
-logger = logging.getLogger("experiment")
-
-logger.info("\n")
-
-experiment.generate(samples = 32, single_samples = 250, depths = [2,4,8,16])
-
-logger.info("\n")
-
-#run circiuts
-experiment.run(executor)
-
-logger.info("\n")
-
-#return noise model
-noisedataframe = experiment.analyze()
-
-#get single circuit layer in noise model
-layer = experiment.analysis.get_layer_data(0)
-
 def print_log_file(file_path):
     try:
         with open(file_path, 'r') as file:
@@ -95,5 +68,29 @@ def print_log_file(file_path):
         print(f"Error: The file '{file_path}' was not found.")
     except Exception as e:
         print(f"An error occurred: {e}")
+    empty_log()
+
+def main():
+    experiment = tomography(circuits = [qc], inst_map = [0,1,2], backend = FakeVigoV2())
+    logger = logging.getLogger("experiment")
+    print("\n")
+    print_log_file("experiment.log")
+    
+    experiment.generate(samples = 32, single_samples = 250, depths = [2,4,8,16])
+
+    print("\n")
+    print_log_file("experiment.log")
+    #run circiuts
+    experiment.run(executor)
+
+    print("\n")
+    print_log_file("experiment.log")
+    #return noise model
+    noisedataframe = experiment.analyze()
+
+    #get single circuit layer in noise model
+    layer = experiment.analysis.get_layer_data(0)
+
 print("\n")
+main()
 print_log_file("experiment.log")
