@@ -68,7 +68,6 @@ class PERExperiment:
             for i,base in enumerate(meas_bases): #iterate through bases
                 if base.nonoverlapping(pauli): #if nonoverlapping, compose into last basis
                     meas_bases[i] = base.get_composite(pauli)
-                    logger.info("compile " +str(base) + " and " + str(pauli) + " to "+ str(meas_bases[i]))
                     break
             else:
                 meas_bases.append(pauli) #if no break is reached, append to end
