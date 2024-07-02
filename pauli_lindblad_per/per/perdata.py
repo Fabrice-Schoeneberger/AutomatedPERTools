@@ -17,6 +17,7 @@ class PERData:
         self.pauli = pauli
         self.spam = spam
         self._data = {}
+        self._dataStatistic = {}
         self._counts = {} #keep track of the number of data points for each depth
 
     def add_data(self, inst):
@@ -34,8 +35,20 @@ class PERData:
         expectation /= self.spam 
 
         #update estimator of expectation value
+
         self._data[strength] = self._data.get(strength, 0) + expectation
+
+        #Gather all entries for futher analysis like error
+        if self._dataStatistic.get(strength, []) == []:
+            self._dataStatistic[strength] = [expectation]
+        else:
+            self._dataStatistic[strength] += [expectation]
+        
         self._counts[strength] = self._counts.get(strength, 0)+1
+
+    def get_std_of_strengths(self, strength):
+        """return the standard deviation of the data of a specific noise strength"""
+        return np.std(self._dataStatistic[strength])
 
     def get_expectations(self):
         """returns a list of expectation values in order of increasing noise
@@ -63,11 +76,14 @@ class PERData:
         popt, pcov = curve_fit(
             expfit, self.get_strengths(), 
             self.get_expectations(), 
-            bounds = [(-1.5, -1),(1.5,0)] #b > 0 is enforced. Technically |a| <= 1 could also be enforced
+            bounds = [(-1.5, -1),(1.5,0)], #b > 0 is enforced. Technically |a| <= 1 could also be enforced
             #to improve the accuracy, but this feels a bit like cheating 
+            sigma=[self.get_std_of_strengths(strength) for strength in self.get_strengths()], #Factor in the error of the data for the error of the fit
+            absolute_sigma=True
             )
         a,b = popt
         self.expectation = a
+        self.expectation_error = pcov[0]
         return a,b
 
     def plot(self):
@@ -75,8 +91,9 @@ class PERData:
         """
 
         fig, ax = plt.subplots()
-        ax.plot(self.get_strengths(), self.get_expectations(), linestyle = "None", marker = "x", color = "tab:blue")
+        ax.errorbar(self.get_strengths(), self.get_expectations(), yerr=[self.get_std_of_strengths(strength) for strength in self.get_strengths()],  linestyle = "None", marker = "x", color = "tab:blue")
         a,b = self.fit()
+        #pcov = self.expectation_error
         xlin = np.linspace(0, max(self.get_strengths()), 100)
         ax.plot(xlin, [a*np.exp(b*x) for x in xlin], color = "tab:blue", linestyle="--")
 

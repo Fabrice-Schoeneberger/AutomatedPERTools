@@ -1,3 +1,7 @@
+import logging
+
+logger = logging.getLogger("experiment")
+
 class Instance:
     """This class implements the framework that both the benchmark instances and per instances
     extend. This involves storing a circuit, changing to a pauli basis, measuring, twirling the readout,
@@ -77,10 +81,14 @@ class Instance:
         #compute locations of non-idetity terms (reversed indexing)
         pz = list(reversed([{pauli_type("I"):'0'}.get(p,'1') for p in pauli]))
         #compute estimator
+        logger.info("%s"%len(result.keys()))
+        logger.info("Here come the keys:")
         for key in result.keys():
+            logger.info(key)
             #compute the overlap in the computational basis
             sgn = sum([{('1','1'):1}.get((pauli_bit, key_bit), 0) for pauli_bit, key_bit in zip(pz, key)])
             #update estimator
             estimator += (-1)**sgn*result[key]
+            logger.info((-1)**sgn*result[key])
 
         return estimator/sum(result.values())
