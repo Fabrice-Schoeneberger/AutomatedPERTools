@@ -91,7 +91,7 @@ class PERData:
         """
 
         fig, ax = plt.subplots()
-        ax.errorbar(self.get_strengths(), self.get_expectations(), yerr=[self.get_std_of_strengths(strength) for strength in self.get_strengths()],  linestyle = "None", marker = "x", color = "tab:blue")
+        ax.errorbar(self.get_strengths(), self.get_expectations(), yerr=[self.get_std_of_strengths(strength) for strength in self.get_strengths()],  linestyle = "None", marker = "x", color = "tab:blue", capsize=5)
         a,b = self.fit()
         #pcov = self.expectation_error
         xlin = np.linspace(0, max(self.get_strengths()), 100)
