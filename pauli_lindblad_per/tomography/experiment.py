@@ -45,7 +45,7 @@ class SparsePauliTomographyExperiment:
                 if layer.cliff_layer:
                     self._profiles.add(layer.cliff_layer)
         #Now see which qubits are unused by all circuits
-        unused_qubits = [a.index for a in circuits[0].qubits if a.index not in used_qubits]
+        unused_qubits = [bit for bit in inst_map if bit not in used_qubits]
 
         logger.info("Generated layer profile with %s layers:"%len(self._profiles))
         for layer in self._profiles:

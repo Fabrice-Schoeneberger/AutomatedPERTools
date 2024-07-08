@@ -77,24 +77,24 @@ class ProcessorSpec:
         return [self._processor.pauli_type(string) for string in bases]
 
     def _model_terms(self):
-        need to change things here
         n = self._n
         model_terms = set()
         identity = ["I"]*n 
 
+        #remove all unused qubits from edge_list
+        trimmed_edge_list = [connection for connection in self._connectivity.edge_list() if any(num not in connection for num in self.unused_qubits)]
         #get all weight-two Paulis on with support on neighboring qubits
-        logger.info("Testing here")
-        logger.info(self._connectivity.edge_list())
-        logger.info(self._connectivity.node_indices())
-        for q1,q2 in self._connectivity.edge_list():
+        for q1,q2 in trimmed_edge_list:
             for p1, p2 in product("IXYZ", repeat=2):
                 pauli = identity.copy()
                 pauli[q1] = p1
                 pauli[q2] = p2
                 model_terms.add("".join(reversed(pauli)))
 
+        #remove all unused qubits from indice list
+        node_indices = [indice for indice in self._connectivity.node_indices() if indice not in self.unused_qubits]
         #get all weight-one Paulis
-        for q in self._connectivity.node_indices():
+        for q in node_indices:
             for p in "IXYZ":
                 pauli = identity.copy()
                 pauli[q] = p
@@ -104,6 +104,7 @@ class ProcessorSpec:
 
         logger.info("Created model with the following terms:")
         logger.info(model_terms)
+        logger.info(len(model_terms))
 
         return [self._processor.pauli_type(p) for p in model_terms]
 
