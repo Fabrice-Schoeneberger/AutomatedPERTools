@@ -1,6 +1,9 @@
 from abc import ABC, abstractmethod
 from primitives.circuit import Circuit, QiskitCircuit
 from primitives.pauli import QiskitPauli
+import logging
+
+logger = logging.getLogger("experiment")
 
 class Processor(ABC):
     """A wrapper for interacting with a qpu backend. This object is responsible for
@@ -30,6 +33,8 @@ class QiskitProcessor(Processor):
         self._qpu = backend
 
     def sub_map(self, inst_map):
+        logger.info(self._qpu.coupling_map)
+        logger.info(self._qpu.coupling_map.graph)
         return self._qpu.coupling_map.graph.subgraph(inst_map)
 
     def transpile(self, circuit : QiskitCircuit, inst_map, **kwargs):

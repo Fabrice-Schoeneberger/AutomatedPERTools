@@ -8,31 +8,39 @@ class ProcessorSpec:
     """Responsible for interacting with the processor interface to generate the Pauli bases
     and the model terms. Also stores the mapping of virtual to physical qubits for transpilation"""
 
-    def __init__(self, inst_map, processor):
+    def __init__(self, inst_map, processor, unused_qubits):
         self._n = len(inst_map)
         self._processor = processor
         self.inst_map = inst_map
+        self.unused_qubits = unused_qubits
         self._connectivity = processor.sub_map(inst_map)
+        #logger.info(self._connectivity)
         self.meas_bases = self._meas_bases()
         self.model_terms = self._model_terms()
 
     def _meas_bases(self):
-
         n = self._n
         NUM_BASES = 9
 
         bases = [['I']*n for i in range(NUM_BASES)]
 
+        orderings = {"XXXYYYZZZ":"XYZXYZXYZ",
+                            "XXXYYZZZY":"XYZXYZXYZ",
+                            "XXYYYZZZX":"XYZXYZXYZ",
+                            "XXZYYZXYZ":"XYZXZYZYX",
+                            "XYZXYZXYZ":"XYZZXYYZX"}
+        
         for vertex in range(n):
+            #if the qubit is unused, it does not need to be tomogrophied
+            if vertex in self.unused_qubits:
+                for i,_ in enumerate(bases):
+                    bases[i][vertex] = "I"
+                continue
             #copied from Fig. S3 in van den Berg
-            orderings = {"XXXYYYZZZ":"XYZXYZXYZ",
-                                "XXXYYZZZY":"XYZXYZXYZ",
-                                "XXYYYZZZX":"XYZXYZXYZ",
-                                "XXZYYZXYZ":"XYZXZYZYX",
-                                "XYZXYZXYZ":"XYZZXYYZX"}
             
             children = self._connectivity.neighbors(vertex)
-            predecessors = [c for c in children if c < vertex]
+            #if a qubits is unused, it also doesn't need to be taken into account by other qubits
+            predecessors = [c for c in children if c < vertex and c not in self.unused_qubits] 
 
             if not predecessors:
                 cycp = cycle("XYZ")
@@ -69,6 +77,7 @@ class ProcessorSpec:
         return [self._processor.pauli_type(string) for string in bases]
 
     def _model_terms(self):
+        need to change things here
         n = self._n
         model_terms = set()
         identity = ["I"]*n 
