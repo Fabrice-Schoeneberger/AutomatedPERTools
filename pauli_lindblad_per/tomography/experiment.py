@@ -46,12 +46,14 @@ class SparsePauliTomographyExperiment:
                     self._profiles.add(layer.cliff_layer)
         #Now see which qubits are unused by all circuits
         unused_qubits = [bit for bit in inst_map if bit not in used_qubits]
+        logger.info("The following Qubits were determinded unused")
+        logger.info(unused_qubits)
 
         logger.info("Generated layer profile with %s layers:"%len(self._profiles))
         for layer in self._profiles:
             logger.info(layer)
 
-        self._procspec = ProcessorSpec(inst_map, processor, unused_qubits=unused_qubits)
+        self._procspec = ProcessorSpec(inst_map, processor, unused_qubits)
         self.instances = []
         self._inst_map = inst_map
         self.unused_qubits = unused_qubits

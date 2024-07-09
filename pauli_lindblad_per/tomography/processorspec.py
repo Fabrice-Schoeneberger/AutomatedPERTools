@@ -14,7 +14,6 @@ class ProcessorSpec:
         self.inst_map = inst_map
         self.unused_qubits = unused_qubits
         self._connectivity = processor.sub_map(inst_map)
-        #logger.info(self._connectivity)
         self.meas_bases = self._meas_bases()
         self.model_terms = self._model_terms()
 
@@ -104,7 +103,6 @@ class ProcessorSpec:
 
         logger.info("Created model with the following terms:")
         logger.info(model_terms)
-        logger.info(len(model_terms))
 
         return [self._processor.pauli_type(p) for p in model_terms]
 

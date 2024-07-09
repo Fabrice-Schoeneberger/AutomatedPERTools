@@ -33,8 +33,6 @@ class QiskitProcessor(Processor):
         self._qpu = backend
 
     def sub_map(self, inst_map):
-        logger.info(self._qpu.coupling_map)
-        logger.info(self._qpu.coupling_map.graph)
         return self._qpu.coupling_map.graph.subgraph(inst_map)
 
     def transpile(self, circuit : QiskitCircuit, inst_map, **kwargs):
