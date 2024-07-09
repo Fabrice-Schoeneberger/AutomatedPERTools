@@ -26,7 +26,7 @@ class SparsePauliTomographyExperiment:
     def __init__(self, circuits, inst_map, backend):
 
         circuit_interface = None
-
+        #Make sure it's a quantumcircuit as others don't work
         if circuits[0].__class__.__name__ == "QuantumCircuit":
             circuit_interface = QiskitCircuit
             processor = QiskitProcessor(backend)
@@ -34,20 +34,29 @@ class SparsePauliTomographyExperiment:
             raise Exception("Unsupported circuit type")
     
         self._profiles = set()
+        used_qubits = set()
         for circuit in circuits: 
+            for c in circuit: #look at the commands
+                for bit in c.qubits: #record which qubits they use
+                    used_qubits.add(bit.index) #and save those
             circ_wrap = circuit_interface(circuit)
             parsed_circ = PERCircuit(circ_wrap)
             for layer in parsed_circ._layers:
                 if layer.cliff_layer:
                     self._profiles.add(layer.cliff_layer)
+        #Now see which qubits are unused by all circuits
+        unused_qubits = [bit for bit in inst_map if bit not in used_qubits]
+        logger.info("The following Qubits were determinded unused")
+        logger.info(unused_qubits)
 
         logger.info("Generated layer profile with %s layers:"%len(self._profiles))
         for layer in self._profiles:
             logger.info(layer)
 
-        self._procspec = ProcessorSpec(inst_map, processor)
+        self._procspec = ProcessorSpec(inst_map, processor, unused_qubits)
         self.instances = []
         self._inst_map = inst_map
+        self.unused_qubits = unused_qubits
         self._layers = None
 
         self._layers = []

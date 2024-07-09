@@ -8,31 +8,38 @@ class ProcessorSpec:
     """Responsible for interacting with the processor interface to generate the Pauli bases
     and the model terms. Also stores the mapping of virtual to physical qubits for transpilation"""
 
-    def __init__(self, inst_map, processor):
+    def __init__(self, inst_map, processor, unused_qubits):
         self._n = len(inst_map)
         self._processor = processor
         self.inst_map = inst_map
+        self.unused_qubits = unused_qubits
         self._connectivity = processor.sub_map(inst_map)
         self.meas_bases = self._meas_bases()
         self.model_terms = self._model_terms()
 
     def _meas_bases(self):
-
         n = self._n
         NUM_BASES = 9
 
         bases = [['I']*n for i in range(NUM_BASES)]
 
+        #copied from Fig. S3 in van den Berg
+        orderings = {"XXXYYYZZZ":"XYZXYZXYZ",
+                    "XXXYYZZZY":"XYZXYZXYZ",
+                    "XXYYYZZZX":"XYZXYZXYZ",
+                    "XXZYYZXYZ":"XYZXZYZYX",
+                    "XYZXYZXYZ":"XYZZXYYZX"}
+        
         for vertex in range(n):
-            #copied from Fig. S3 in van den Berg
-            orderings = {"XXXYYYZZZ":"XYZXYZXYZ",
-                                "XXXYYZZZY":"XYZXYZXYZ",
-                                "XXYYYZZZX":"XYZXYZXYZ",
-                                "XXZYYZXYZ":"XYZXZYZYX",
-                                "XYZXYZXYZ":"XYZZXYYZX"}
+            #if the qubit is unused, it does not need to be tomogrophied
+            if vertex in self.unused_qubits:
+                for i,_ in enumerate(bases):
+                    bases[i][vertex] = "I"
+                continue
             
             children = self._connectivity.neighbors(vertex)
-            predecessors = [c for c in children if c < vertex]
+            #if a qubits is unused, it also doesn't need to be taken into account by other qubits
+            predecessors = [c for c in children if c < vertex and c not in self.unused_qubits] 
 
             if not predecessors:
                 cycp = cycle("XYZ")
@@ -73,16 +80,20 @@ class ProcessorSpec:
         model_terms = set()
         identity = ["I"]*n 
 
+        #remove all unused qubits from edge_list
+        trimmed_edge_list = [connection for connection in self._connectivity.edge_list() if any(num not in connection for num in self.unused_qubits)]
         #get all weight-two Paulis on with support on neighboring qubits
-        for q1,q2 in self._connectivity.edge_list():
-                for p1, p2 in product("IXYZ", repeat=2):
-                    pauli = identity.copy()
-                    pauli[q1] = p1
-                    pauli[q2] = p2
-                    model_terms.add("".join(reversed(pauli)))
+        for q1,q2 in trimmed_edge_list:
+            for p1, p2 in product("IXYZ", repeat=2):
+                pauli = identity.copy()
+                pauli[q1] = p1
+                pauli[q2] = p2
+                model_terms.add("".join(reversed(pauli)))
 
+        #remove all unused qubits from indice list
+        node_indices = [indice for indice in self._connectivity.node_indices() if indice not in self.unused_qubits]
         #get all weight-one Paulis
-        for q in self._connectivity.node_indices():
+        for q in node_indices:
             for p in "IXYZ":
                 pauli = identity.copy()
                 pauli[q] = p
