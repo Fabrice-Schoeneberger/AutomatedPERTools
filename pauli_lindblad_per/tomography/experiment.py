@@ -44,6 +44,7 @@ class SparsePauliTomographyExperiment:
             for layer in parsed_circ._layers:
                 if layer.cliff_layer:
                     self._profiles.add(layer.cliff_layer)
+                    
         #tomography used qubits + all connected qubits
         if tomography_connections:
             submap = processor.sub_map(list(used_qubits))
