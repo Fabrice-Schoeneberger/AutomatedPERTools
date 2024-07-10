@@ -23,7 +23,7 @@ class SparsePauliTomographyExperiment:
     instance for each distinct layer, running the analysis, and then returning a PERCircuit
     with NoiseModels attached to each distinct layer"""
 
-    def __init__(self, circuits, inst_map, backend):
+    def __init__(self, circuits, inst_map, backend, tomography_connections=False):
 
         circuit_interface = None
         #Make sure it's a quantumcircuit as others don't work
@@ -44,6 +44,20 @@ class SparsePauliTomographyExperiment:
             for layer in parsed_circ._layers:
                 if layer.cliff_layer:
                     self._profiles.add(layer.cliff_layer)
+                    
+        #tomography used qubits + all connected qubits
+        if tomography_connections:
+            submap = processor.sub_map(list(used_qubits))
+            plusone = set() #Here come the extra
+            for i in used_qubits: #For every accually used qubit
+                for connection in submap.neighbors(i): #Add all qubit with direct connections to the list
+                    plusone.add(connection)
+
+            logger.info("Added the following extra qubits")
+            logger.info(plusone-used_qubits)
+            for bit in plusone:
+                used_qubits.add(bit) #set used qubits to the expanded list
+
         #Now see which qubits are unused by all circuits
         unused_qubits = [bit for bit in inst_map if bit not in used_qubits]
         logger.info("The following Qubits were determinded unused")
