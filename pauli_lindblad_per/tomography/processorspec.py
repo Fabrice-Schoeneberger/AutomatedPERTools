@@ -93,7 +93,7 @@ class ProcessorSpec:
         #remove all unused qubits from indice list
         node_indices = [indice for indice in self._connectivity.node_indices() if indice not in self.unused_qubits]
         #get all weight-one Paulis
-        for q in node_indices:
+        for q in node_indices: #This part of the code will only ever add more model terms if there are qubits in the system that have NO edges so any other used qubits
             for p in "IXYZ":
                 pauli = identity.copy()
                 pauli[q] = p
