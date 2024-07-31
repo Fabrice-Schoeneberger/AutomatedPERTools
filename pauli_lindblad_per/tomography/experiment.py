@@ -45,16 +45,18 @@ class SparsePauliTomographyExperiment:
                 if layer.cliff_layer:
                     self._profiles.add(layer.cliff_layer)
                     
+        plusone = set() #Here come the extra
         #tomography used qubits + all connected qubits
         if tomography_connections:
-            submap = processor.sub_map(list(used_qubits))
-            plusone = set() #Here come the extra
-            for i in used_qubits: #For every accually used qubit
-                for connection in submap.neighbors(i): #Add all qubit with direct connections to the list
-                    plusone.add(connection)
+            #Get all connections with used qubits inside
+            connection_map = [connection for connection in processor._qpu.coupling_map if any([used_qubit in connection for used_qubit in used_qubits])]
+            for connection in connection_map: #Add all qubits with direct connections to the list
+                plusone.add(connection[0])
+                plusone.add(connection[1])
 
             logger.info("Added the following extra qubits")
             logger.info(plusone-used_qubits)
+            plusone = plusone-used_qubits
             for bit in plusone:
                 used_qubits.add(bit) #set used qubits to the expanded list
 
@@ -67,7 +69,7 @@ class SparsePauliTomographyExperiment:
         for layer in self._profiles:
             logger.info(layer)
 
-        self._procspec = ProcessorSpec(inst_map, processor, unused_qubits)
+        self._procspec = ProcessorSpec(inst_map, processor, unused_qubits, plusone)
         self.instances = []
         self._inst_map = inst_map
         self.unused_qubits = unused_qubits

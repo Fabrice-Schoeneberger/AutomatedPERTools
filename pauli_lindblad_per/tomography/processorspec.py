@@ -8,12 +8,13 @@ class ProcessorSpec:
     """Responsible for interacting with the processor interface to generate the Pauli bases
     and the model terms. Also stores the mapping of virtual to physical qubits for transpilation"""
 
-    def __init__(self, inst_map, processor, unused_qubits):
+    def __init__(self, inst_map, processor, unused_qubits, plusone):
         self._n = len(inst_map)
         self._processor = processor
         self.inst_map = inst_map
         self.unused_qubits = unused_qubits
         self._connectivity = processor.sub_map(inst_map)
+        self.plusone = plusone
         self.meas_bases = self._meas_bases()
         self.model_terms = self._model_terms()
 
@@ -93,11 +94,14 @@ class ProcessorSpec:
         #remove all unused qubits from indice list
         node_indices = [indice for indice in self._connectivity.node_indices() if indice not in self.unused_qubits]
         #get all weight-one Paulis
-        for q in node_indices: #This part of the code will only ever add more model terms if there are qubits in the system that have NO edges so any other used qubits
+        for q in node_indices: 
             for p in "IXYZ":
                 pauli = identity.copy()
                 pauli[q] = p
-                model_terms.add("".join(reversed(pauli)))
+                if q in self.plusone: #remove the one weight paulis from edge qubits, as they are not needed to calc the errors in the end matrix
+                    model_terms.remove("".join(reversed(pauli)))    
+                else: #This part of the code will only ever add more model terms if there are qubits in the system that have NO edges to any other used qubits
+                    model_terms.add("".join(reversed(pauli)))
 
         model_terms.remove("".join(identity))
 

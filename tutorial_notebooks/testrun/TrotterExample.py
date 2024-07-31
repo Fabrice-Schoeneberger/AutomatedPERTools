@@ -5,6 +5,8 @@ from matplotlib import pyplot as plt
 import os
 import sys
 import numpy as np
+import argparse
+import json
 
 sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.getcwd())), "pauli_lindblad_per"))
 
@@ -13,10 +15,30 @@ from primitives.pauli import QiskitPauli
 
 plt.style.use("ggplot")
 
+parser = argparse.ArgumentParser()
+    
+# Definiere ein Argument
+parser.add_argument('--variable', type=bool, help='Turn plusone on or off')
+
+# Parse die Argumente
+args = parser.parse_args()
+
+# Zugriff auf die Variable
+if str(args.variable) == "True":
+    tomography_connections = True
+elif str(args.variable) == "False":
+    tomography_connections = False
+else:
+    print(str(args.variable))
+    raise TypeError()
+
+
+namebase = str(tomography_connections)
 # %%
 backend = FakeVigoV2()
 
 # %%
+print("make trotter")
 def trotterLayer(h,J,dt,n):
     trotterLayer = QuantumCircuit(2*n)
     trotterLayer.rx(dt*4*h, range(2*n))
@@ -51,15 +73,19 @@ def executor(circuits):
     return backend.run(circuits).result().get_counts()
 
 # %%
-experiment = tomography(circuits = circuits, inst_map = [0,1,2,3,4], backend = backend, tomography_connections=True)
+print("initialize experiment")
+experiment = tomography(circuits = circuits, inst_map = [0,1,2,3,4], backend = backend, tomography_connections=tomography_connections)
 
 # %%
-experiment.generate(samples = 32, single_samples = 200, depths = [2,4,8,16])
+print("generate circuits")
+experiment.generate(samples = 64, single_samples = 1000, depths = [2,4,8,16])
 
 # %%
+print("run experiment")
 experiment.run(executor)
 
 # %%
+print("analyse experiment")
 noisedataframe = experiment.analyze()
 
 # %%
@@ -68,12 +94,14 @@ perexp = experiment.create_per_experiment(circuits)
 # %%
 noise_strengths = [0,0.5,1,2]
 expectations = ["ZIIII","IZIII","IIZII","IIIZI"]
-perexp.generate(expectations = expectations, samples = 300, noise_strengths = noise_strengths)
+print("do PER runs")
+perexp.generate(expectations = expectations, samples = 1000, noise_strengths = noise_strengths)
 
 # %% [markdown]
 # ## PER
 
 # %%
+print("Run PER")
 perexp.run(executor)
 
 # %%
@@ -115,6 +143,12 @@ for run in circuit_results:
     results_at_noise.append(tot_at_noise)
     results_at_noise_errors.append(tot_at_noise_errors)
 
+savi = {}
+savi["results"] = results
+savi["results_errors"] = results_errors
+savi["results_at_noise"] = results_at_noise
+savi["results_at_noise_errors"] = results_at_noise_errors
+
 # %%
 circuit_results[-1]._per_circ.overhead(0)
 
@@ -131,6 +165,7 @@ for circ in circuits:
         tot += num*count[key]
     noisyresult.append(tot/(1024*n*2))
 
+savi["noisyresult"] = noisyresult
 # %%
 res = []
 for circ in circuits:
@@ -143,6 +178,10 @@ for circ in circuits:
         num = sum([(-1)**bit for bit in key[:4]])
         tot += num*count[key]
     res.append(tot/(1024*n*2))
+
+savi["res"] = res
+with open(namebase + '_arrays.json', 'w') as file:
+    json.dump(savi, file)
 
 plt.figure(figsize=(10,6))
 for i, noise in enumerate(list(circuit_results)[0].get_result(expectations[0]).get_strengths()):
@@ -157,21 +196,9 @@ plt.legend()
 plt.title("Trotter Simulation with PER")
 plt.xlabel("Trotter Steps")
 plt.ylabel("Z Magnetization")
-plt.savefig("Trotter_Sim_PER.png")
+plt.savefig(namebase+"_Trotter_Sim_PER.png")
 
 # %%
-res = []
-for circ in circuits:
-    qc = circ.copy()
-    qc.measure_all()
-    count= Aer.get_backend('qasm_simulator').run(qc).result().get_counts()
-    count = {tuple(int(k) for k in key):count[key] for key in count.keys()}
-    tot = 0
-    for key in count.keys():
-        num = sum([(-1)**bit for bit in key[:4]])
-        tot += num*count[key]
-    res.append(tot/(1024*n*2))
-
 plt.figure(figsize=(10,6))
 for i, noise in enumerate(list(circuit_results)[0].get_result(expectations[0]).get_strengths()):
     if noise == 0:
@@ -189,21 +216,9 @@ plt.legend()
 plt.title("Trotter Simulation with PER")
 plt.xlabel("Trotter Steps")
 plt.ylabel("Z Magnetization")
-plt.savefig("Trotter_Sim_n_0.png")
+plt.savefig(namebase+"_Trotter_Sim_n_0.png")
 
 # %%
-res = []
-for circ in circuits:
-    qc = circ.copy()
-    qc.measure_all()
-    count= Aer.get_backend('qasm_simulator').run(qc).result().get_counts()
-    count = {tuple(int(k) for k in key):count[key] for key in count.keys()}
-    tot = 0
-    for key in count.keys():
-        num = sum([(-1)**bit for bit in key[:4]])
-        tot += num*count[key]
-    res.append(tot/(1024*n*2))
-
 plt.figure(figsize=(10,6))
 for i, noise in enumerate(list(circuit_results)[0].get_result(expectations[0]).get_strengths()):
     if noise == 0.5:
@@ -221,29 +236,29 @@ plt.legend()
 plt.title("Trotter Simulation with PER")
 plt.xlabel("Trotter Steps")
 plt.ylabel("Z Magnetization")
-plt.savefig("Trotter_Sim_n_05.png")
+plt.savefig(namebase+"_Trotter_Sim_n_05.png")
 
 # %%
 ax = circuit_results[0].get_result("ZIIII").plot()
 plt.title('Expectation vs Noise Strength ZIII')
 plt.xlabel("Noise Strength")
 plt.ylabel("Expectation")
-plt.savefig("Expectation_vs_Noise_Strength_ZIII.png")
+plt.savefig(namebase+"_Expectation_vs_Noise_Strength_ZIII.png")
 circuit_results[0].get_result("IZIII").plot()
 plt.xlabel("Noise Strength")
 plt.ylabel("Expectation")
 plt.title('Expectation vs Noise Strength IZII')
-plt.savefig("Expectation_vs_Noise_Strength_IZII.png")
+plt.savefig(namebase+"_Expectation_vs_Noise_Strength_IZII.png")
 circuit_results[0].get_result("IIZII").plot()
 plt.xlabel("Noise Strength")
 plt.ylabel("Expectation")
 plt.title('Expectation vs Noise Strength IIZI')
-plt.savefig("Expectation_vs_Noise_Strength_IIZI.png")
+plt.savefig(namebase+"_Expectation_vs_Noise_Strength_IIZI.png")
 circuit_results[0].get_result("IIIZI").plot()
 plt.xlabel("Noise Strength")
 plt.ylabel("Expectation")
 plt.title('Expectation vs Noise Strength IIIZ')
-plt.savefig("Expectation_vs_Noise_Strength_IIIZ.png")
+plt.savefig(namebase+"_Expectation_vs_Noise_Strength_IIIZ.png")
 
 # %% [markdown]
 # ## Analysis
