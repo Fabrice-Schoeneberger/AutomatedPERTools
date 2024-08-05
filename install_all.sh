@@ -3,3 +3,4 @@ pip install qiskit==0.40
 pip install matplotlib
 pip install typing_extensions
 pip install numpy==1.23.5
+pip install pyquil==4.0
