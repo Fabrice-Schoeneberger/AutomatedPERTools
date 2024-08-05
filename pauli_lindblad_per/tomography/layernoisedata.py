@@ -17,9 +17,10 @@ class LayerNoiseData:
     """This class is responsible for aggregating the data associated with a single layer,
     processing it, and converting it into a noise model to use for PER"""
 
-    def __init__(self, layer : LayerLearning):
+    def __init__(self, layer : LayerLearning, sum_over_lambda=False):
         self._term_data = {} #keys are terms and the values are TermDatas
         self.layer = layer
+        self.sum_over_lambda=sum_over_lambda
 
         for pauli in layer._procspec.model_terms:
             pair = layer.pairs[pauli]
@@ -97,8 +98,9 @@ class LayerNoiseData:
         F1 = [] #First list of terms
         F2 = [] #List of term pairs
         fidelities = [] # list of fidelities from fits
-
         for datum in self._term_data.values():
+            logger.info(datum.pauli)
+            logger.info(datum.fidelity)
             F1.append(datum.pauli)
             fidelities.append(datum.fidelity)
             #If the Pauli is conjugate to another term in the model, a degeneracy is present
@@ -118,6 +120,10 @@ class LayerNoiseData:
        
         #perform least-squares estimate of model coefficients and return as noisemodel 
         coeffs,_ = nnls(np.add(M1,M2), -np.log(fidelities)) 
+
+        if self.sum_over_lambda:
+            pass #todo: Add
+
         self.noisemodel = NoiseModel(self.layer._cliff_layer, F1, coeffs)
 
     def _model_terms(self, links): #return a list of Pauli terms with the specified support
