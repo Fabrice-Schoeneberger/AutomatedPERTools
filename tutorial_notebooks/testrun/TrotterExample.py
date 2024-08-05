@@ -8,7 +8,11 @@ import numpy as np
 import argparse
 import json
 
-sys.path.append(os.path.join(os.path.dirname(os.path.dirname(os.getcwd())), "pauli_lindblad_per"))
+
+folder = os.getcwd()
+while not folder.endswith("AutomatedPERTools"):
+    folder = os.path.dirname(folder)
+sys.path.append(os.path.join(folder, "pauli_lindblad_per"))
 
 from tomography.experiment import SparsePauliTomographyExperiment as tomography
 from primitives.pauli import QiskitPauli
@@ -18,22 +22,32 @@ plt.style.use("ggplot")
 parser = argparse.ArgumentParser()
     
 # Definiere ein Argument
-parser.add_argument('--variable', type=bool, help='Turn plusone on or off')
+parser.add_argument('--plusone', type=str, help='Turn plusone on or off')
+parser.add_argument('--sum', type=str, help='Turn plusone on or off')
 
 # Parse die Argumente
 args = parser.parse_args()
 
 # Zugriff auf die Variable
-if str(args.variable) == "True":
+if str(args.plusone) == "True":
     tomography_connections = True
-elif str(args.variable) == "False":
+elif str(args.plusone) == "False":
     tomography_connections = False
 else:
-    print(str(args.variable))
+    print(str(args.plusone))
+    raise TypeError()
+
+if str(args.sum) == "True":
+    sum_over_lambda = True
+elif str(args.sum) == "False":
+    sum_over_lambda = False
+else:
+    print(str(args.sum))
     raise TypeError()
 
 
-namebase = str(tomography_connections)
+namebase = args.plusone + args.sum
+print(namebase)
 # %%
 backend = FakeVigoV2()
 
@@ -74,11 +88,11 @@ def executor(circuits):
 
 # %%
 print("initialize experiment")
-experiment = tomography(circuits = circuits, inst_map = [0,1,2,3,4], backend = backend, tomography_connections=tomography_connections)
+experiment = tomography(circuits = circuits, inst_map = [0,1,2,3,4], backend = backend, tomography_connections=tomography_connections, sum_over_lambda=sum_over_lambda)
 
 # %%
 print("generate circuits")
-experiment.generate(samples = 64, single_samples = 1000, depths = [2,4,8,16])
+experiment.generate(samples = 1, single_samples = 1, depths = [2,4,8,16])
 
 # %%
 print("run experiment")
@@ -95,7 +109,7 @@ perexp = experiment.create_per_experiment(circuits)
 noise_strengths = [0,0.5,1,2]
 expectations = ["ZIIII","IZIII","IIZII","IIIZI"]
 print("do PER runs")
-perexp.generate(expectations = expectations, samples = 1000, noise_strengths = noise_strengths)
+perexp.generate(expectations = expectations, samples = 1, noise_strengths = noise_strengths)
 
 # %% [markdown]
 # ## PER
