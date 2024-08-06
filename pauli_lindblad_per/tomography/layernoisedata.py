@@ -100,8 +100,6 @@ class LayerNoiseData:
         F2 = [] #List of term pairs
         fidelities = [] # list of fidelities from fits
         for datum in self._term_data.values():
-            logger.info(datum.pauli)
-            logger.info(datum.fidelity)
             F1.append(datum.pauli)
             fidelities.append(datum.fidelity)
             #If the Pauli is conjugate to another term in the model, a degeneracy is present
@@ -123,18 +121,28 @@ class LayerNoiseData:
         coeffs,_ = nnls(np.add(M1,M2), -np.log(fidelities)) 
 
         if self.sum_over_lambda:
+            paulilength = len(F1[0].to_label())
             for qubit in self.plusone:
-                filtered_and_cut_list = [f[:len(F1[0])-1-qubit-1]+f[len(F1[0])-1-qubit:] for f in F1 if f[len(F1[0])-1-qubit]!='I' and (f[:len(F1[0])-1-qubit-1]+f[len(F1[0])-1-qubit:] != "IIII")]
-                sorted_list = dict()
+                logger.info([f.to_label() for f in F1])
+                #Filter out all model terms with the extra qubit active with at least one connected qubit
+                filtered_and_cut_list = [f for f in F1 if f.to_label()[paulilength-1-qubit]!='I' and (f.to_label()[:paulilength-1-qubit]+f.to_label()[paulilength-1-qubit+1:] != "I"*(paulilength-1))]
+                #In case of 2 or more connected qubits we need to seperate them
+                sorted_lists = dict()
                 for f in filtered_and_cut_list:
-                    for i, char in enumerate(f):
-                        if char != "I":
-                            if not i in sorted_list:
-                                sorted_list[i] = []
-                            sorted_list[i].add(f)
+                    for i, char in enumerate(f.to_label()):
+                        #find which *other* qubits are uses and sort them into lists
+                        if char != "I" and i != paulilength-1-qubit:
+                            if not i in sorted_lists: #make the new list if it didn't exist so far
+                                sorted_lists[i] = []
+                            sorted_lists[i].append(f)
                             break
-                for i in sorted_list:
-                    liste = sorted_list[i]
+                for index in sorted_lists:
+                    #for each connected main qubit, filter them by x,y,z and sum their coeffs up
+                    for pauli in "XYZ":
+                        x = sum([coeffs[F1.index(model_term)] for model_term in sorted_lists[index] if model_term.to_label()[index]==pauli])
+                        #add these coeffs to the single pauli coeffs of the main qubit
+                        coeffs[[F1.index(f) for f in F1 if f.to_label()[i]==pauli and f.to_label()[:i]+f.to_label()[i+1:]=="I"*(paulilength-1)][0]] += x
+            logger.info("Summed extra qubits up and added it to main")
 
 
         self.noisemodel = NoiseModel(self.layer._cliff_layer, F1, coeffs)

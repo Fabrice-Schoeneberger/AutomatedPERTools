@@ -85,6 +85,9 @@ class ProcessorSpec:
         trimmed_edge_list = [connection for connection in self._connectivity.edge_list() if not any(num in connection for num in self.unused_qubits)]
         #get all weight-two Paulis on with support on neighboring qubits
         for q1,q2 in trimmed_edge_list:
+            #do not add weight-two Paulis between plusone qubits
+            if q1 in self.plusone and q2 in self.plusone:
+                continue
             for p1, p2 in product("IXYZ", repeat=2):
                 pauli = identity.copy()
                 pauli[q1] = p1
