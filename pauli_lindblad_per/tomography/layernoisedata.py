@@ -17,10 +17,11 @@ class LayerNoiseData:
     """This class is responsible for aggregating the data associated with a single layer,
     processing it, and converting it into a noise model to use for PER"""
 
-    def __init__(self, layer : LayerLearning, sum_over_lambda=False):
+    def __init__(self, layer : LayerLearning, sum_over_lambda=False, plusone = set()):
         self._term_data = {} #keys are terms and the values are TermDatas
         self.layer = layer
         self.sum_over_lambda=sum_over_lambda
+        self.plusone = plusone
 
         for pauli in layer._procspec.model_terms:
             pair = layer.pairs[pauli]
@@ -122,7 +123,19 @@ class LayerNoiseData:
         coeffs,_ = nnls(np.add(M1,M2), -np.log(fidelities)) 
 
         if self.sum_over_lambda:
-            pass #todo: Add
+            for qubit in self.plusone:
+                filtered_and_cut_list = [f[:len(F1[0])-1-qubit-1]+f[len(F1[0])-1-qubit:] for f in F1 if f[len(F1[0])-1-qubit]!='I' and (f[:len(F1[0])-1-qubit-1]+f[len(F1[0])-1-qubit:] != "IIII")]
+                sorted_list = dict()
+                for f in filtered_and_cut_list:
+                    for i, char in enumerate(f):
+                        if char != "I":
+                            if not i in sorted_list:
+                                sorted_list[i] = []
+                            sorted_list[i].add(f)
+                            break
+                for i in sorted_list:
+                    liste = sorted_list[i]
+
 
         self.noisemodel = NoiseModel(self.layer._cliff_layer, F1, coeffs)
 

@@ -81,7 +81,7 @@ class SparsePauliTomographyExperiment:
             learning = LayerLearning(l,self._procspec)
             self._layers.append(learning)
 
-        self.analysis = Analysis(self._layers, self._procspec, sum_over_lambda=sum_over_lambda)
+        self.analysis = Analysis(self._layers, self._procspec, sum_over_lambda=sum_over_lambda, plusone=plusone)
 
     def generate(self, samples, single_samples, depths):
         """This method is used to generate the experimental benchmarking procedure. The samples
