@@ -92,7 +92,7 @@ experiment = tomography(circuits = circuits, inst_map = [0,1,2,3,4], backend = b
 
 # %%
 print("generate circuits")
-experiment.generate(samples = 1, single_samples = 1, depths = [2,4,8,16])
+experiment.generate(samples = 64, single_samples = 1000, depths = [2,4,8,16])
 
 # %%
 print("run experiment")
@@ -109,7 +109,7 @@ perexp = experiment.create_per_experiment(circuits)
 noise_strengths = [0,0.5,1,2]
 expectations = ["ZIIII","IZIII","IIZII","IIIZI"]
 print("do PER runs")
-perexp.generate(expectations = expectations, samples = 1, noise_strengths = noise_strengths)
+perexp.generate(expectations = expectations, samples = 1000, noise_strengths = noise_strengths)
 
 # %% [markdown]
 # ## PER
