@@ -1,6 +1,6 @@
 # %%
 from qiskit import QuantumCircuit, Aer, transpile
-from qiskit.providers.fake_provider import FakeMelbourneV2
+from qiskit.providers.fake_provider import FakeMelbourneV2, FakeCasablancaV2, FakeVigoV2
 from matplotlib import pyplot as plt
 import os
 import sys
@@ -25,19 +25,37 @@ plt.style.use("ggplot")
 parser = argparse.ArgumentParser()
     
 # Definiere ein Argument
-parser.add_argument('--plusone', type=str, help='Turn plusone on or off')
-parser.add_argument('--sum', type=str, help='Turn sumation on or off')
-parser.add_argument('--pntsamples', type=int, help='How many samples in PNT?')
-parser.add_argument('--pntsinglesamples', type=int, help='How many single samples in PNT?')
-parser.add_argument('--persamples', type=int, help='How many samples in PER?')
+parser.add_argument('--plusone', type=str, help='Turn plusone on or off! Default: off', default="False")
+parser.add_argument('--sum', type=str, help='Turn sumation on or off! Default: off', default="False")
+parser.add_argument('--pntsamples', type=int, help='How many samples in PNT? Default: 16', default=16)
+parser.add_argument('--pntsinglesamples', type=int, help='How many single samples in PNT? Default: 100', default=100)
+parser.add_argument('--persamples', type=int, help='How many samples in PER? Default: 100', default=100)
+parser.add_argument('--backend', type=str, help='Which backend to use? Default: FakeVigoV2', default="FakeVigoV2")
+parser.add_argument('--setqubits', type=int, nargs='+', help='Which qubits to use?: Default: 0123 and transpile')
 
 #  Parse die Argumente
 args = parser.parse_args()
 
-# Zugriff auf die Variable
+# Zugriff auf die Variablen
+backend = FakeVigoV2()
+if args.backend == "FakeCasablancaV2":
+    backend = FakeCasablancaV2()
+elif args.backend == "FakeMelbourneV2":
+    backend = FakeMelbourneV2()
+elif args.backend != "FakeVigoV2":
+    raise Exception("Only FakeMelbourneV2, FakeCasablancaV2, FakeVigoV2 implemented yet")
+
+qubits = [0,1,2,3] #[9,10,11,12] for MelbourneV2
+num_qubits = 4
+if args.setqubits != None:
+    if len(args.setqubits) != 4:
+        raise Exception("Must be 4 qubits when given")
+    qubits = args.setqubits
+    num_qubits = backend.num_qubits
+    
 if str(args.plusone) == "True":
     tomography_connections = True
-elif str(args.plusone) == "False" or args.plusone == None:
+elif str(args.plusone) == "False":
     tomography_connections = False
 else:
     print(str(args.plusone))
@@ -45,33 +63,31 @@ else:
 
 if str(args.sum) == "True":
     sum_over_lambda = True
-elif str(args.sum) == "False" or args.sum == None:
+elif str(args.sum) == "False":
     sum_over_lambda = False
 else:
     print(str(args.sum))
     raise Exception("When sum is given, it needs to be either True or False")
 
-pntsamples = 16
-if args.pntsamples != None:
-    pntsamples = args.pntsamples
-pntsinglesamples = 100
-if args.pntsinglesamples != None:
-    pntsinglesamples = args.pntsinglesamples
-persamples = 100
-if args.persamples != None:
-    persamples = args.persamples
+pntsamples = args.pntsamples
+pntsinglesamples = args.pntsinglesamples
+persamples = args.persamples
 
-namebase = "" + str(tomography_connections) + "_" + str(sum_over_lambda) + "_" + str(pntsamples) + "_" + str(pntsinglesamples) + "_" + str(persamples)
-print(namebase)
+namebase = "" 
+print("Arguments where set as:")
+for arg_name, arg_value in vars(args).items():
+    if arg_name == "setqubits" and arg_value == None:
+        arg_value = "[0,1,2,3]_and_transpile"
+    print("\t%s: %s" % (arg_name, str(arg_value)))
+    namebase += str(arg_value) + "_"
+print("Namebase will be: " + namebase)
 # %%
-backend = FakeMelbourneV2()
 
 # %%
 print("make trotter")
-qubits = [9,10,11,12]
 def trotterLayer(h,J,dt,n):
     n=2
-    trotterLayer = QuantumCircuit(14)
+    trotterLayer = QuantumCircuit(num_qubits)
     trotterLayer.rx(dt*4*h, qubits)
     trotterLayer.cx(*zip(*[(qubits[2*i], qubits[2*i+1]) for i in range(n)]))
     trotterLayer.rz(-4*J*dt, [qubits[2*i+1] for i in range(n)])
@@ -88,7 +104,7 @@ n = 2
 
 def maketrotterCircuit(s):
     tL = trotterLayer(h, J, dt, n)
-    trotterCircuit = QuantumCircuit(14)
+    trotterCircuit = QuantumCircuit(num_qubits)
     for i in range(s):
         trotterCircuit = trotterCircuit.compose(tL)
         trotterCircuit.barrier()
@@ -105,7 +121,7 @@ def executor(circuits):
 
 # %%
 print("initialize experiment")
-experiment = tomography(circuits = circuits, inst_map = range(15), backend = backend, tomography_connections=tomography_connections, sum_over_lambda=sum_over_lambda)
+experiment = tomography(circuits = circuits, inst_map = range(backend.num_qubits), backend = backend, tomography_connections=tomography_connections, sum_over_lambda=sum_over_lambda)
 
 # %%
 print("generate circuits")
@@ -127,7 +143,7 @@ perexp = experiment.create_per_experiment(circuits)
 noise_strengths = [0,0.5,1,2]
 expectations = []
 for q in qubits:
-    expect = "I"*14 #15-1
+    expect = "I"*(backend.num_qubits-1) #15-1
     expect = expect[:q] + 'Z' + expect[q+1:]
     expectations.append(expect)
 print("do PER runs")
@@ -288,16 +304,16 @@ for i in range (len(expectations)):
 # ## Analysis
 
 # %%
-layer1 = experiment.analysis.get_layer_data(0)
+#layer1 = experiment.analysis.get_layer_data(0)
 
 # %%
-layer1.graph((1,))
+#layer1.graph((1,))
 
 # %%
-layer1.plot_infidelitites((0,),(1,),(0,1))
+#layer1.plot_infidelitites((0,),(1,),(0,1))
 
 # %%
-layer1.plot_coeffs((1,),(0,),(0,1))
+#layer1.plot_coeffs((1,),(0,),(0,1))
 
 # %%
 #import pickle
