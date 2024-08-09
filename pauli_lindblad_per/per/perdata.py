@@ -73,14 +73,27 @@ class PERData:
         """ 
         
         expfit = lambda x,a,b: a*np.exp(b*x)
-        popt, pcov = curve_fit(
-            expfit, self.get_strengths(), 
-            self.get_expectations(), 
-            bounds = [(-1.5, -1),(1.5,0)], #b > 0 is enforced. Technically |a| <= 1 could also be enforced
-            #to improve the accuracy, but this feels a bit like cheating 
-            sigma=[self.get_std_of_strengths(strength) for strength in self.get_strengths()], #Factor in the error of the data for the error of the fit
-            absolute_sigma=True
-            )
+        import json
+        savi = {}
+        savi["get_expectations"] = self.get_expectations()
+        savi["get_strengths"] = self.get_strengths()
+        savi["_data"] = self._data
+        savi["_dataStatistic"] = self._dataStatistic
+        savi["_counts"] = self._counts
+        with open("data.json", 'w') as file:
+            json.dump(savi, file)
+        
+        try:
+            popt, pcov = curve_fit(
+                expfit, self.get_strengths(), 
+                self.get_expectations(), 
+                bounds = [(-1.5, -1),(1.5,0)], #b > 0 is enforced. Technically |a| <= 1 could also be enforced
+                #to improve the accuracy, but this feels a bit like cheating 
+                sigma=[self.get_std_of_strengths(strength) for strength in self.get_strengths()], #Factor in the error of the data for the error of the fit
+                absolute_sigma=True
+                )
+        except:
+            raise Exception("Fitting failed. Probably not enough data points!")
         a,b = popt
         self.expectation = a
         self.expectation_error = pcov[0]

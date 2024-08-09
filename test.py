@@ -2,22 +2,13 @@ import time
 
 import argparse
 parser = argparse.ArgumentParser()
-    
-# Definiere ein Argument
-parser.add_argument('--variable', type=bool, help='Turn plusone on or off')
+
+parser.add_argument('--pntsamples', type=int, help='How many samples in PNT?')
+parser.add_argument('--pntsinglesamples', type=int, help='How many single samples in PNT?')
+parser.add_argument('--persamples', type=int, help='How many samples in PER?')
 
 # Parse die Argumente
 args = parser.parse_args()
 
-# Zugriff auf die Variable
-if str(args.variable) == "True":
-    tomography_connections = True
-elif str(args.variable) == "False":
-    tomography_connections = False
-else:
-    print(str(args.variable))
-    raise TypeError()
-
-print(tomography_connections)
-time.sleep(5)
+print(args.test)
 print("End")

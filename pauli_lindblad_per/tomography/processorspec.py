@@ -101,7 +101,7 @@ class ProcessorSpec:
             for p in "IXYZ":
                 pauli = identity.copy()
                 pauli[q] = p
-                if q in self.plusone: #remove the one weight paulis from edge qubits, as they are not needed to calc the errors in the end matrix
+                if q in self.plusone and p != "I": #remove the one weight paulis from edge qubits, as they are not needed to calc the errors in the end matrix
                     model_terms.remove("".join(reversed(pauli)))    
                 else: #This part of the code will only ever add more model terms if there are qubits in the system that have NO edges to any other used qubits
                     model_terms.add("".join(reversed(pauli)))

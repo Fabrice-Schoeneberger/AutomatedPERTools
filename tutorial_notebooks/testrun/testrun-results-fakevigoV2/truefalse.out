@@ -1,0 +1,8 @@
+TrueFalse
+make trotter
+initialize experiment
+generate circuits
+run experiment
+analyse experiment
+do PER runs
+Run PER

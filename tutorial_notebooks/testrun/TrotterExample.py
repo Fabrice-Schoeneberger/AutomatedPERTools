@@ -1,12 +1,15 @@
 # %%
 from qiskit import QuantumCircuit, Aer, transpile
-from qiskit.providers.fake_provider import FakeVigoV2
+from qiskit.providers.fake_provider import FakeMelbourneV2
 from matplotlib import pyplot as plt
 import os
 import sys
 import numpy as np
 import argparse
 import json
+import time
+tim = time.localtime()
+print("%s.%s. %s:%s" % (tim.tm_wday, tim.tm_mon, tim.tm_hour, tim.tm_min))
 
 
 folder = os.getcwd()
@@ -18,50 +21,64 @@ from tomography.experiment import SparsePauliTomographyExperiment as tomography
 from primitives.pauli import QiskitPauli
 
 plt.style.use("ggplot")
-
+# %%
 parser = argparse.ArgumentParser()
     
 # Definiere ein Argument
 parser.add_argument('--plusone', type=str, help='Turn plusone on or off')
-parser.add_argument('--sum', type=str, help='Turn plusone on or off')
+parser.add_argument('--sum', type=str, help='Turn sumation on or off')
+parser.add_argument('--pntsamples', type=int, help='How many samples in PNT?')
+parser.add_argument('--pntsinglesamples', type=int, help='How many single samples in PNT?')
+parser.add_argument('--persamples', type=int, help='How many samples in PER?')
 
-# Parse die Argumente
+#  Parse die Argumente
 args = parser.parse_args()
 
 # Zugriff auf die Variable
 if str(args.plusone) == "True":
     tomography_connections = True
-elif str(args.plusone) == "False":
+elif str(args.plusone) == "False" or args.plusone == None:
     tomography_connections = False
 else:
     print(str(args.plusone))
-    raise TypeError()
+    raise Exception("When plusone is given, it needs to be either True or False")
 
 if str(args.sum) == "True":
     sum_over_lambda = True
-elif str(args.sum) == "False":
+elif str(args.sum) == "False" or args.sum == None:
     sum_over_lambda = False
 else:
     print(str(args.sum))
-    raise TypeError()
+    raise Exception("When sum is given, it needs to be either True or False")
 
+pntsamples = 16
+if args.pntsamples != None:
+    pntsamples = args.pntsamples
+pntsinglesamples = 100
+if args.pntsinglesamples != None:
+    pntsinglesamples = args.pntsinglesamples
+persamples = 100
+if args.persamples != None:
+    persamples = args.persamples
 
-namebase = args.plusone + args.sum
+namebase = "" + str(tomography_connections) + "_" + str(sum_over_lambda) + "_" + str(pntsamples) + "_" + str(pntsinglesamples) + "_" + str(persamples)
 print(namebase)
 # %%
-backend = FakeVigoV2()
+backend = FakeMelbourneV2()
 
 # %%
 print("make trotter")
+qubits = [9,10,11,12]
 def trotterLayer(h,J,dt,n):
-    trotterLayer = QuantumCircuit(2*n)
-    trotterLayer.rx(dt*4*h, range(2*n))
-    trotterLayer.cx(*zip(*[(2*i, 2*i+1) for i in range(n)]))
-    trotterLayer.rz(-4*J*dt, [2*i+1 for i in range(n)])
-    trotterLayer.cx(*zip(*[(2*i, 2*i+1) for i in range(n)]))
-    trotterLayer.cx(*zip(*[(2*i+1, 2*i+2) for i in range(n-1)]))
-    trotterLayer.rz(-4*J*dt, [2*i+2 for i in range(n-1)])
-    trotterLayer.cx(*zip(*[(2*i+1, 2*i+2) for i in range(n-1)]))
+    n=2
+    trotterLayer = QuantumCircuit(14)
+    trotterLayer.rx(dt*4*h, qubits)
+    trotterLayer.cx(*zip(*[(qubits[2*i], qubits[2*i+1]) for i in range(n)]))
+    trotterLayer.rz(-4*J*dt, [qubits[2*i+1] for i in range(n)])
+    trotterLayer.cx(*zip(*[(qubits[2*i], qubits[2*i+1]) for i in range(n)]))
+    trotterLayer.cx(*zip(*[(qubits[2*i+1], qubits[2*i+2]) for i in range(n-1)]))
+    trotterLayer.rz(-4*J*dt, [qubits[2*i+2] for i in range(n-1)])
+    trotterLayer.cx(*zip(*[(qubits[2*i+1], qubits[2*i+2]) for i in range(n-1)]))
     return trotterLayer
 
 h = 1
@@ -71,7 +88,7 @@ n = 2
 
 def maketrotterCircuit(s):
     tL = trotterLayer(h, J, dt, n)
-    trotterCircuit = QuantumCircuit(n*2)
+    trotterCircuit = QuantumCircuit(14)
     for i in range(s):
         trotterCircuit = trotterCircuit.compose(tL)
         trotterCircuit.barrier()
@@ -80,7 +97,7 @@ def maketrotterCircuit(s):
     return transpiled
 
 circuits = [maketrotterCircuit(i) for i in range(1,15)]
-circuits[0].draw()
+#circuits[0].draw()
 
 # %%
 def executor(circuits):
@@ -88,12 +105,13 @@ def executor(circuits):
 
 # %%
 print("initialize experiment")
-experiment = tomography(circuits = circuits, inst_map = [0,1,2,3,4], backend = backend, tomography_connections=tomography_connections, sum_over_lambda=sum_over_lambda)
+experiment = tomography(circuits = circuits, inst_map = range(15), backend = backend, tomography_connections=tomography_connections, sum_over_lambda=sum_over_lambda)
 
 # %%
 print("generate circuits")
-experiment.generate(samples = 64, single_samples = 1000, depths = [2,4,8,16])
-
+experiment.generate(samples = pntsamples, single_samples = pntsinglesamples, depths = [2,4,8,16])
+tim = time.localtime()
+print("%s.%s. %s:%s" % (tim.tm_wday, tim.tm_mon, tim.tm_hour, tim.tm_min))
 # %%
 print("run experiment")
 experiment.run(executor)
@@ -107,9 +125,15 @@ perexp = experiment.create_per_experiment(circuits)
 
 # %%
 noise_strengths = [0,0.5,1,2]
-expectations = ["ZIIII","IZIII","IIZII","IIIZI"]
+expectations = []
+for q in qubits:
+    expect = "I"*14 #15-1
+    expect = expect[:q] + 'Z' + expect[q+1:]
+    expectations.append(expect)
 print("do PER runs")
-perexp.generate(expectations = expectations, samples = 1000, noise_strengths = noise_strengths)
+tim = time.localtime()
+print("%s.%s. %s:%s" % (tim.tm_wday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+perexp.generate(expectations = expectations, samples = persamples, noise_strengths = noise_strengths)
 
 # %% [markdown]
 # ## PER
@@ -253,26 +277,12 @@ plt.ylabel("Z Magnetization")
 plt.savefig(namebase+"_Trotter_Sim_n_05.png")
 
 # %%
-ax = circuit_results[0].get_result("ZIIII").plot()
-plt.title('Expectation vs Noise Strength ZIII')
-plt.xlabel("Noise Strength")
-plt.ylabel("Expectation")
-plt.savefig(namebase+"_Expectation_vs_Noise_Strength_ZIII.png")
-circuit_results[0].get_result("IZIII").plot()
-plt.xlabel("Noise Strength")
-plt.ylabel("Expectation")
-plt.title('Expectation vs Noise Strength IZII')
-plt.savefig(namebase+"_Expectation_vs_Noise_Strength_IZII.png")
-circuit_results[0].get_result("IIZII").plot()
-plt.xlabel("Noise Strength")
-plt.ylabel("Expectation")
-plt.title('Expectation vs Noise Strength IIZI')
-plt.savefig(namebase+"_Expectation_vs_Noise_Strength_IIZI.png")
-circuit_results[0].get_result("IIIZI").plot()
-plt.xlabel("Noise Strength")
-plt.ylabel("Expectation")
-plt.title('Expectation vs Noise Strength IIIZ')
-plt.savefig(namebase+"_Expectation_vs_Noise_Strength_IIIZ.png")
+for i in range (len(expectations)):
+    ax = circuit_results[0].get_result(expectations[i]).plot()
+    plt.title("Expectation vs Noise Strength " + expectations[i])
+    plt.xlabel("Noise Strength")
+    plt.ylabel("Expectation")
+    plt.savefig(namebase+"_Expectation_vs_Noise_Strength_" + expectations[i] + ".png")
 
 # %% [markdown]
 # ## Analysis
@@ -290,8 +300,11 @@ layer1.plot_infidelitites((0,),(1,),(0,1))
 layer1.plot_coeffs((1,),(0,),(0,1))
 
 # %%
-import pickle
-with open("graph.pickle", "wb") as f:
-    pickle.dump(results, f)
+#import pickle
+#with open("graph.pickle", "wb") as f:
+#    pickle.dump(results, f)
+
+tim = time.localtime()
+print("%s.%s. %s:%s" % (tim.tm_wday, tim.tm_mon, tim.tm_hour, tim.tm_min))
 
 
