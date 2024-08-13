@@ -2,6 +2,7 @@ from pyquil import get_qc, Program
 from pyquil.gates import H, CNOT, Z, MEASURE
 from pyquil.api import local_forest_runtime
 from pyquil.quilbase import Declare
+import pyquil.paulis as Pauli
 
 with local_forest_runtime():
     n = 2
@@ -17,6 +18,20 @@ with local_forest_runtime():
     executable = qc.compile(prog)
     result = qc.run(executable)
     bitstrings = result.get_register_map()['ro']
-    print(bitstrings)
+    for p in prog.instructions:
+        if p._InstructionMeta__name == 'Declare':
+            continue
+        if hasattr(p, "qubits"):
+            print([q.index for q in p.qubits])
+        elif hasattr(p, "qubit"):
+            print(p.qubit)
+        else:
+            print(p)
+            raise Exception("No qubits")
+    #print(bitstrings)
     #bitstrings = qvm.run(qvm.compile(prog)).get_register_map()
     #print(prog)
+    pauli1 = Pauli.PauliTerm("X", index=0)
+    pauli2 = Pauli.PauliTerm("X", index=0)
+    pauli = pauli1 * pauli2
+    print(pauli.pauli_string())
