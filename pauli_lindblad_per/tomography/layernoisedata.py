@@ -140,7 +140,7 @@ class LayerNoiseData:
                     #for each connected main qubit, filter them by x,y,z and sum their coeffs up
                     for pauli in "XYZ":
                         x = sum([coeffs[F1.index(model_term)] for model_term in sorted_lists[index] if model_term.to_label()[index]==pauli])
-                        #add these coeffs to the single pauli coeffs of the main qubit
+                        #add these coeffs to the single pauli coeffs of the main qubit. The extra fluf in coeffs[...] is just to find the correct coeff
                         coeffs[[F1.index(f) for f in F1 if f.to_label()[i]==pauli and f.to_label()[:i]+f.to_label()[i+1:]=="I"*(paulilength-1)][0]] += x
             logger.info("Summed extra qubits up and added it to main")
 
