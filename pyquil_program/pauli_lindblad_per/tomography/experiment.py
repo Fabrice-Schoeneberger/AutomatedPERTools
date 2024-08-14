@@ -25,17 +25,9 @@ class SparsePauliTomographyExperiment:
         self._profiles = set()
         used_qubits = set()
         for circuit in circuits: 
-            for p in circuit.instructions: #look at the commands
-                if p._InstructionMeta__name == 'Declare':
-                    continue
-                if hasattr(p, "qubits"):
-                    qubits = [q.index for q in p.qubits]
-                elif hasattr(p, "qubit"):
-                    qubits = [p.qubit]
-                else:
-                    raise Exception("No qubits " + p)
-                for bit in qubits: #record which qubits they use
-                    used_qubits.add(bit.index) #and save those
+            for i in circuit.get_qubit_indices():
+                used_qubits.add(i)
+            
             circ_wrap = circuit_interface(circuit)
             parsed_circ = PERCircuit(circ_wrap)
             for layer in parsed_circ._layers:

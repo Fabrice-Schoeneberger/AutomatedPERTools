@@ -79,42 +79,44 @@ class Pauli(ABC):
         return self.to_label()
 
 
-class QiskitPauli(Pauli):
+class PyQuilPauli(Pauli):
     """A Qiskit implementation of the Pauli algebra wrapper"""
 
     import pyquil.paulis as Pauli
+    from pyquil.paulis import PauliTerm
+    from pyquil.gates import H, S
 
     def __init__(self, name):
-        pauli = self.Pauli.PauliTerm("I", 0)
-        for i, p in enumerate(name):
-            pauli *= self.Pauli.PauliTerm(p, i)
-        self.pauli = pauli
+        self.pauli = self.PauliTerm.from_list([(p,i) for i, p in enumerate(name)])
 
     def to_label(self):
-        pauli_nophase = self.Pauli((self.pauli.z, self.pauli.x)) ##
-        return pauli_nophase.to_label()
+        return self.pauli.pauli_string(range(1+max(self.pauli.get_qubits())))
 
-    def basis_change(self, qc):
-        circ = qc.copy_empty()
-        for p,q in zip(self,qc.qc.qubits):
-            if p == QiskitPauli("X"):
-                circ.qc.h(q)
-            elif p == QiskitPauli("Y"):
-                circ.qc.h(q)
-                circ.qc.s(q)
+    def basis_change(self, qc): #todo
+        circ = qc.copy_empty() #copy_everything_except_instructions()
+        label = self.to_label()
+        for q in qc.qc.get_qubit_indices(): #this may not work, because qc.get_qubit_indices() only returns used qubits. But then, is it important?
+            p = label[q]
+            if p == "X":
+                circ.qc += self.H(q)
+            elif p == "Y":
+                circ.qc += self.H(q)
+                circ.qc += self.S(q)
 
         return circ
     
     def commutes(self,other):
-        return self.pauli.commutes(other.pauli)
+        return self.Pauli.check_commutation(pauli_list=[self.pauli] , pauli_two=other.pauli)
 
     def __mul__(self, other):
-        result = self.pauli.compose(other.pauli)
-        nophase = self.Pauli((result.z, result.x))
-        return QiskitPauli(nophase.to_label())
+        result = self.pauli * other.pauli
+        return PyQuilPauli(result.pauli_string(range(1+max(result.get_qubits()))))
 
     def __getitem__(self, item):
-        return QiskitPauli(self.pauli.__getitem__(item))
+        return PyQuilPauli(self.pauli.__getitem__(item))
 
     def __setitem__(self, key, newvalue):
-        self.pauli.__setitem__(key, newvalue.pauli)
+        label = self.to_label()
+        label[key] = newvalue.pauli
+        self.pauli = self.PauliTerm.from_list([(p,i) for i, p in enumerate(label)])
+        #self.pauli.__setitem__(key, newvalue.pauli)
