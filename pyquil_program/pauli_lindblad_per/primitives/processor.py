@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from pyquil_program.pauli_lindblad_per.primitives.circuit import Circuit, QiskitCircuit
+from primitives.circuit import Circuit, PyquilCircuit
 from primitives.pauli import PyQuilPauli
 import logging
 
@@ -11,11 +11,11 @@ class Processor(ABC):
 
     @abstractmethod
     def sub_map(self, qubits : int):
-        """Return an undirected edge list in the form of tuples of ints representing connections
+        """Return an sub edge list in the form of tuples of ints representing connections
         between qubits at those hardware addresses"""
 
     @abstractmethod
-    def transpile(self, circuit : Circuit, inst_map, **kwargs):
+    def transpile(self, circuit : Circuit):
         """Transpile a circuit into the native gateset"""
     
     @property
@@ -24,19 +24,20 @@ class Processor(ABC):
         """Returns the native Pauli type associated"""
 
 
-from qiskit import transpile
-
-class QiskitProcessor(Processor):
-    """Implementaton of a processor wrapper for the Qiskit API"""
+class PyQuilProcessor(Processor):
+    """Implementaton of a processor wrapper for the PyQuil API"""
 
     def __init__(self, backend):
         self._qpu = backend
 
     def sub_map(self, inst_map):
-        return self._qpu.coupling_map.graph.subgraph(inst_map)
+        return [pair for pair in self._qpu.quantum_processor.qubit_topology().to_directed().edges() if any(p in inst_map for p in pair)]
 
-    def transpile(self, circuit : QiskitCircuit, inst_map, **kwargs):
-        return QiskitCircuit(transpile(circuit.qc, self._qpu, initial_layout = inst_map, **kwargs))
+    #PyQuil calls this process compile and not transpile, I keep both names for parity sake
+    def compile(self, circuit : PyquilCircuit):
+        return PyquilCircuit(self._qpu.compile(circuit.qc))
+    def transpile(self, circuit : PyquilCircuit):
+        return self.compile(circuit)
 
     @property
     def pauli_type(self):

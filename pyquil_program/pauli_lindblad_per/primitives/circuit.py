@@ -132,10 +132,10 @@ class PyquilCircuit(Circuit):
         self.qc = self.qc.compose(other.qc)
     
     def copy_empty(self):
-        return PyquilCircuit(self.qc.copy_empty_like())
+        return PyquilCircuit(self.qc.copy_everything_except_instructions())
 
     def inverse(self) -> Self:
-        return PyquilCircuit(self.qc.inverse())
+        return PyquilCircuit(self.qc.dagger())
     
     def qubits(self):
         return self.qc.get_qubit_indices()
@@ -147,7 +147,7 @@ class PyquilCircuit(Circuit):
         return self.qc
 
     def conjugate(self, pauli : PyQuilPauli):
-        def is_clifford_only(program: Program) -> bool:
+        def is_clifford_only(program: Program) -> bool: #should I enforce this, or does it not matter?
             # Set of Clifford gate names
             clifford_gates = {"X", "Y", "Z", "H", "S", "S^-1", "CNOT", "I"}
             
@@ -161,9 +161,27 @@ class PyquilCircuit(Circuit):
         if not is_clifford_only(self.qc):
             raise Exception("Program contains non Cliffford gates")
         
-        pauli_c = pauli.pauli.evolve(self.qc)
-        pauli_c_nophase = self.Pauli((pauli_c.z, pauli_c.x))
-        #return QiskitPauli(pauli_c_nophase.to_label())
+        def conjugate_pauli_with_cliffords(pauli_term: PauliTerm, program: Program) -> PauliTerm:
+            # Iterate through the program's instructions in reverse order
+            for instruction in reversed(program.instructions):
+                if instruction.name == "H":
+                    for qubit in instruction.qubits:
+                        if pauli_term[qubit.index] == "X" or pauli_term[qubit.index] == "Z":
+                            pauli_term *= PauliTerm("Y", qubit.index)
+                elif instruction.name == "S" or instruction.name == "S^-1":
+                    for qubit in instruction.qubits:
+                        if pauli_term[qubit.index] == "X" or pauli_term[qubit.index] == "Y":
+                            pauli_term *= PauliTerm("Z", qubit.index)
+                elif instruction.name == "CNOT":
+                    copy_term = pauli_term.copy()
+                    control_qubit = instruction.qubits[0].index
+                    target_qubit = instruction.qubits[1].index
+                    if copy_term[control_qubit] == "X" or copy_term[control_qubit] == "Y":
+                        pauli_term *= PauliTerm("X", target_qubit)
+                    if copy_term[target_qubit] == "Z" or copy_term[target_qubit] == "Y":
+                        pauli_term *= PauliTerm("Z", control_qubit)
+            return pauli_term
+        return PyQuilPauli(conjugate_pauli_with_cliffords(pauli.pauli, self.qc))
 
     @property
     def pauli_type(self):

@@ -93,7 +93,7 @@ class PyQuilPauli(Pauli):
         return self.pauli.pauli_string(range(1+max(self.pauli.get_qubits())))
 
     def basis_change(self, qc): #todo
-        circ = qc.copy_empty() #copy_everything_except_instructions()
+        circ = qc.copy_empty() #copy_everything_except_instructions()copy_empty
         label = self.to_label()
         for q in qc.qc.get_qubit_indices(): #this may not work, because qc.get_qubit_indices() only returns used qubits. But then, is it important?
             p = label[q]
