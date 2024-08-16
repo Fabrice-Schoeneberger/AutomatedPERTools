@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from primitives.circuit import Circuit, QiskitCircuit
+from pyquil_program.pauli_lindblad_per.primitives.circuit import Circuit, QiskitCircuit
 from primitives.pauli import PyQuilPauli
 import logging
 

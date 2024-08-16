@@ -2,6 +2,9 @@ from abc import ABC, abstractmethod
 from typing_extensions import Self
 from typing import List, Type, Any
 
+from primitives.instruction import Instruction
+from primitives.pauli import Pauli
+
 class Circuit(ABC):
     """A class to standardize interface with the native representation of a quantum circuit.
     Implement this class and all the abstact methods to be able to use circuits in any 
@@ -83,24 +86,44 @@ class Circuit(ABC):
     def __str__(self): 
         #For logging, the circuit is represented as a list of instructions
         return str([inst.__str__() for inst in self])
+    
+from pyquil import Program
+from primitives.pauli import PyQuilPauli
+from primitives.instruction import PyQuilInstruction
+from pyquil.paulis import PauliTerm
+from pyquil.gates import H, S, X, Y, Z, FENCE
 
 class PyquilCircuit(Circuit):
     """This is an implementation of the Circuit interface for the Qiskit API"""
 
-    from qiskit.quantum_info import Pauli
+    import pyquil.paulis as Pauli
     
     def __init__(self, qc):
         self.qc = qc
 
-    def add_instruction(self, inst : QiskitInstruction):
-        self.qc.append(inst.instruction)
+    def add_instruction(self, inst : PyQuilInstruction):
+        self.qc += inst.instruction
 
-    def add_pauli(self, pauli : QiskitPauli):
-        for q,p in zip(self.qubits(), pauli.pauli):
-            self.qc.append(p, [q])
+    def add_pauli(self, pauli : PyQuilPauli):
+        for q,p in enumerate(pauli.to_label()):
+            match p:
+                case "I":
+                    continue
+                case "X":
+                    self.qc += X(q)
+                    continue
+                case "Y":
+                    self.qc += Y(q)
+                    continue
+                case "Z":
+                    self.qc += Z(q)
+                    continue
 
+    # These two do the same thing. PyQuil calls this operation fence, so I added that. The barrier instruction is just there for qiskit parrity
+    def fence(self):
+        self.qc += FENCE()
     def barrier(self):
-        self.qc.barrier()
+        self.fence()
 
     def measure_all(self):
         self.qc.measure_all()
@@ -113,24 +136,38 @@ class PyquilCircuit(Circuit):
 
     def inverse(self) -> Self:
         return PyquilCircuit(self.qc.inverse())
-
-    def num_qubits(self):
-        return self.qc.num_qubits
     
     def qubits(self):
-        return self.qc.qubits
+        return self.qc.get_qubit_indices()
+
+    def num_qubits(self):
+        return len(self.qubits())
 
     def original(self):
         return self.qc
 
-    def conjugate(self, pauli : QiskitPauli):
+    def conjugate(self, pauli : PyQuilPauli):
+        def is_clifford_only(program: Program) -> bool:
+            # Set of Clifford gate names
+            clifford_gates = {"X", "Y", "Z", "H", "S", "S^-1", "CNOT", "I"}
+            
+            # Iterate through the program's instructions
+            for instruction in program.instructions:
+                # Check if the instruction is a gate and not a declaration or measurement
+                if instruction.name not in clifford_gates:
+                    return False  # Return False if a non-Clifford gate is found
+
+            return True  # All gates are Clifford gates
+        if not is_clifford_only(self.qc):
+            raise Exception("Program contains non Cliffford gates")
+        
         pauli_c = pauli.pauli.evolve(self.qc)
         pauli_c_nophase = self.Pauli((pauli_c.z, pauli_c.x))
-        return QiskitPauli(pauli_c_nophase.to_label())
+        #return QiskitPauli(pauli_c_nophase.to_label())
 
     @property
     def pauli_type(self):
-        return QiskitPauli
+        return PyQuilPauli
 
     def __getitem__(self, item : int):
-        return QiskitInstruction(self.qc.__getitem__(item))
+        return PyQuilInstruction(self.qc.__getitem__(item))

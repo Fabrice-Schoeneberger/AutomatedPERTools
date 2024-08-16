@@ -32,16 +32,26 @@ class Instruction(ABC):
         return str((self.name(), self.support()))
 
 
-class QiskitInstruction(Instruction):
+class PyQuilInstruction(Instruction):
 
     def __init__(self, instruction):
         self.instruction = instruction
     
     def support(self):
-        return self.instruction.qubits
+        if self.instruction._InstructionMeta__name == 'Declare':
+            return []
+        if hasattr(self.instruction, "qubits"):
+            return [q.index for q in self.instruction.qubits]
+        elif hasattr(self.instruction, "qubit"):
+            return [self.instruction.qubit.index]
+        else:
+            raise Exception(self.instruction + " has no qubits")
 
     def name(self):
-        return self.instruction.operation.name
+        if self.instruction._InstructionMeta__name == "Measurement":
+            return "Measurement"
+        else:
+            return self.instruction.name
 
     def ismeas(self):
-        return self.name() == "measure"
+        return self.name() == "Measurement"
