@@ -1,7 +1,11 @@
 4.8. 1:53
-True_False_64_1000_1000
+True_True_64_1000_1000
 make trotter
 initialize experiment
 generate circuits
 4.8. 2:5
 run experiment
+analyse experiment
+do PER runs
+4.8. 4:29
+Run PER

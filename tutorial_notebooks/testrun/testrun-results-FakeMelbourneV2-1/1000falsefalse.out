@@ -5,3 +5,7 @@ initialize experiment
 generate circuits
 4.8. 2:5
 run experiment
+analyse experiment
+do PER runs
+4.8. 4:30
+Run PER
