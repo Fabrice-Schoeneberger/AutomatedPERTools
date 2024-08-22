@@ -87,9 +87,4 @@ done
 #For manuell entry:
 # FakeCasablancaV2
 # python TrotterExample.py --pntsamples 1 --pntsinglesamples 1 --persamples 1 --backend FakeMelbourneV2
-nohup python TrotterExample.py -p --backend FakeCasablancaV2 > FakeCasablancaV2_0_-p.out &
-nohup python TrotterExample.py -s --backend FakeCasablancaV2 > FakeCasablancaV2_0_-s.out &
-nohup python TrotterExample.py --backend FakeCasablancaV2 > FakeCasablancaV2_0_.out &
-nohup python TrotterExample.py -p --backend FakeMelbourneV2 > FakeMelbourneV2_0_-p.out &
-nohup python TrotterExample.py -s --backend FakeMelbourneV2 > FakeMelbourneV2_0_-s.out &
-nohup python TrotterExample.py --backend FakeMelbourneV2 > FakeMelbourneV2_0_.out &
+# nohup python TrotterExample.py --backend FakeMelbourneV2 > error.out &

@@ -318,3 +318,4 @@ tim = time.localtime()
 print("%s.%s. %s:%s" % (tim.tm_wday, tim.tm_mon, tim.tm_hour, tim.tm_min))
 
 
+

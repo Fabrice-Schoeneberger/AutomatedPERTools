@@ -1,25 +1,11 @@
-import argparse
-parser = argparse.ArgumentParser()
-    
-# Definiere ein Argument
-parser.add_argument('--plusone', '-p', help='Takes Neighboring qubits into account', default=False, action='store_true')
-parser.add_argument('--sum', '-s', help='Same as -p and turns sumation on over neighboring qubits', default=False, action='store_true')
-parser.add_argument('--pntsamples', type=int, help='How many samples in PNT? Default: 16', default=16)
-parser.add_argument('--pntsinglesamples', type=int, help='How many single samples in PNT? Default: 100', default=100)
-parser.add_argument('--persamples', type=int, help='How many samples in PER? Default: 100', default=100)
-parser.add_argument('--shots', type=int, help='How many shots? Default: 1000', default=1000)
-parser.add_argument('--backend', type=str, help='Which backend to use? Default: FakeVigoV2', default="FakeVigoV2")
-parser.add_argument('--setqubits', type=int, nargs='+', help='Which qubits to use?: Default: 0123 and transpile')
-
-#  Parse die Argumente
-args = parser.parse_args()
-
 # %%
 from qiskit import QuantumCircuit, Aer, transpile
+from qiskit.providers.fake_provider import FakeMelbourneV2, FakeCasablancaV2, FakeVigoV2
 from matplotlib import pyplot as plt
 import os
 import sys
 import numpy as np
+import argparse
 import json
 import time
 tim = time.localtime()
@@ -36,13 +22,28 @@ from primitives.pauli import QiskitPauli
 
 plt.style.use("ggplot")
 # %%
+parser = argparse.ArgumentParser()
+    
+# Definiere ein Argument
+parser.add_argument('--plusone', '-p', help='Takes Neighboring qubits into account', default=False, action='store_true')
+parser.add_argument('--sum', '-s', help='Same as -p and turns sumation on over neighboring qubits', default=False, action='store_true')
+parser.add_argument('--pntsamples', type=int, help='How many samples in PNT? Default: 16', default=16)
+parser.add_argument('--pntsinglesamples', type=int, help='How many single samples in PNT? Default: 100', default=100)
+parser.add_argument('--persamples', type=int, help='How many samples in PER? Default: 100', default=100)
+parser.add_argument('--backend', type=str, help='Which backend to use? Default: FakeVigoV2', default="FakeVigoV2")
+parser.add_argument('--setqubits', type=int, nargs='+', help='Which qubits to use?: Default: 0123 and transpile')
 
-import qiskit.providers.fake_provider as fake_provider # FakeMelbourneV2, FakeCasablancaV2, FakeVigoV2, FakeLagosV2, FakeGuadalupeV2, FakeGuadalupe, FakeGeneva
+#  Parse die Argumente
+args = parser.parse_args()
+
 # Zugriff auf die Variablen
-backend = fake_provider.FakeVigoV2()
-if args.backend != "FakeVigoV2":
-    method = getattr(fake_provider, args.backend)
-    backend = method()
+backend = FakeVigoV2()
+if args.backend == "FakeCasablancaV2":
+    backend = FakeCasablancaV2()
+elif args.backend == "FakeMelbourneV2":
+    backend = FakeMelbourneV2()
+elif args.backend != "FakeVigoV2":
+    raise Exception("Only FakeMelbourneV2, FakeCasablancaV2, FakeVigoV2 implemented yet")
 
 qubits = [0,1,2,3] #[9,10,11,12] for MelbourneV2
 num_qubits = 4
@@ -60,7 +61,6 @@ if sum_over_lambda:
 pntsamples = args.pntsamples
 pntsinglesamples = args.pntsinglesamples
 persamples = args.persamples
-shots = args.shots
 
 namebase = "" 
 print("Arguments where set as:")
@@ -113,7 +113,7 @@ print("Qubits set to ", qubits)
 
 # %%
 def executor(circuits):
-    return backend.run(circuits, shots=shots).result().get_counts()
+    return backend.run(circuits).result().get_counts()
 
 # %%
 print("initialize experiment")
@@ -144,8 +144,11 @@ for q in qubits:
     expectations.append("".join(reversed(expect)))
 print("do PER runs")
 tim = time.localtime()
-print("%s.%s. %s:%s" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+print("%s.%s. %s:%s" % (tim.tm_wday, tim.tm_mon, tim.tm_hour, tim.tm_min))
 perexp.generate(expectations = expectations, samples = persamples, noise_strengths = noise_strengths)
+
+# %% [markdown]
+# ## PER
 
 # %%
 print("Run PER")
@@ -155,11 +158,10 @@ perexp.run(executor)
 circuit_results = perexp.analyze()
 
 # %%
+results = []
 results_errors = []
 results_at_noise = []
 results_at_noise_errors = []
-results = []
-
 for run in circuit_results:
     tot = 0
     tot_error = [0,0]
@@ -205,11 +207,11 @@ noisyresult = []
 for circ in circuits:
     qc = circ.copy()
     qc.measure_all()
-    count= backend.run(qc, shots=shots).result().get_counts()
-    count = {tuple(int(k) for i, k in enumerate(key) if len(key)-1-i in qubits):count[key] for key in count.keys()} #not sure yet if this works for another qubits size, but I think it does
+    count= backend.run(qc).result().get_counts()
+    count = {tuple(int(k) for k in key):count[key] for key in count.keys()}
     tot = 0
     for key in count.keys():
-        num = sum([(-1)**bit for bit in key])
+        num = sum([(-1)**bit for bit in key[:4]])
         tot += num*count[key]
     noisyresult.append(tot/(1024*n*2))
 
@@ -219,13 +221,13 @@ res = []
 for circ in circuits:
     qc = circ.copy()
     qc.measure_all()
-    count= Aer.get_backend('qasm_simulator').run(qc, shots=shots).result().get_counts()
-    count = {tuple(int(k) for i, k in enumerate(key) if len(key)-1-i in qubits):count[key] for key in count.keys()}
+    count= Aer.get_backend('qasm_simulator').run(qc).result().get_counts()
+    count = {tuple(int(k) for k in key):count[key] for key in count.keys()}
     tot = 0
-    for key in sorted(count.keys()):
-        num = sum([(-1)**bit for bit in key])
+    for key in count.keys():
+        num = sum([(-1)**bit for bit in key[:4]])
         tot += num*count[key]
-    res.append(tot/(shots*1024*n*2))
+    res.append(tot/(1024*n*2))
 
 savi["res"] = res
 with open(namebase + '_arrays.json', 'w') as file:
@@ -316,5 +318,6 @@ for i in range (len(expectations)):
 
 tim = time.localtime()
 print("%s.%s. %s:%s" % (tim.tm_wday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+
 
 
