@@ -1,5 +1,7 @@
 from per.perinstance import PERInstance
 from per.perdata import PERData
+import multiprocessing
+from multiprocessing.process import AuthenticationString
 
 
 class PERRun:
@@ -15,15 +17,6 @@ class PERRun:
 
         self._generate()
 
-    def _generate(self):
-        self.instances = []
-
-        for basis in self._meas_bases:
-            for lmbda in self._noise_strengths:
-                for sample in range(self._samples):
-                    perinst = PERInstance(self._proc, self._inst_map, self._per_circ, basis, lmbda)
-                    self.instances.append(perinst)
-    
     def _get_spam(self, pauli):
         n = len(self._inst_map)
         idn = pauli.ID(n)
@@ -61,3 +54,35 @@ class PERRun:
     def get_result(self, label):
         pauli = self._pauli_type(label)
         return self._data[pauli]
+    
+    def _generate(self):
+        #I hate that I have to do this, but you can't have class inside a multiprocess thread, that isself has processes running. 
+        #So I have to put the entire function in a defined function outside the class. I havn't found a way around this.
+        self.instances = _generate_but_outside_the_class(self._meas_bases, self._noise_strengths, self._samples, self._proc, self._inst_map, self._per_circ)
+
+def _generate_but_outside_the_class(meas_bases, noise_strengths, samples, proc, inst_map, per_circ):
+    manager = multiprocessing.Manager()  # Use a manager to handle shared data
+    instances = manager.list()
+    processes = []
+    for basis in meas_bases:
+        for lmbda in noise_strengths:
+            for sample in range(samples):
+                #cut the generation of the PER Circuit into many threads to profit from multicore CPU performance
+                process = multiprocessing.Process(target=_make_PERInstance, args=(proc, inst_map, per_circ, basis, lmbda, instances))
+                processes.append(process)
+                process.start()
+                #This is the old non multithreding way:
+                #perinst = PERInstance(proc, inst_map, per_circ, basis, lmbda)
+                #instances.append(perinst)
+
+    for process in processes:
+        process.join()
+
+    return list(instances)
+    
+    
+
+def _make_PERInstance(proc, inst_map, per_circ, basis, lmbda, instances):
+    """ This funktion is here to be called async from _generate """
+    perinst = PERInstance(proc, inst_map, per_circ, basis, lmbda)
+    instances.append(perinst)

@@ -3,6 +3,7 @@ from framework.percircuit import PERCircuit
 from per.perrun import PERRun
 from primitives.processor import QiskitProcessor
 import logging
+import multiprocessing
 
 logger = logging.getLogger("experiment")
 
@@ -73,41 +74,6 @@ class PERExperiment:
                 meas_bases.append(pauli) #if no break is reached, append to end
         logger.info(meas_bases)
         self.meas_bases = meas_bases
-        
-    def generate(
-        self, 
-        expectations, 
-        samples, 
-        noise_strengths
-        ):
-        """Initiate the generation of circuits required for PER
-
-        Args:
-            noise_strengths (list[int]): strengths of noise for PER fit
-            expectations (list[str]): expectation values to reconstruct
-            samples (int): number of samples to take from distribution
-        """
-
-        #Convert string labels to Pauli representation
-        expectations = [self.pauli_type(label) for label in expectations]
-
-        #get minimal set of measurement bases
-        self.get_meas_bases(expectations)
-        bases = self.meas_bases
-
-        self._per_runs = []
-        #initialize PERRun for each PERCircuit
-        for pcirc in self._per_circuits:
-            per_run = PERRun(
-                self._processor, 
-                self._inst_map, 
-                pcirc, 
-                samples,
-                noise_strengths,
-                bases, 
-                expectations
-                )
-            self._per_runs.append(per_run)
 
     def run(self, executor):
         """pass a list of circuit in the native language to the executor method and await results
@@ -141,3 +107,47 @@ class PERExperiment:
 
     def get_overhead(self, layer, noise_strength):
         return self._per_circuits[layer].overhead(noise_strength)
+        
+    def generate(
+        self, 
+        expectations, 
+        samples, 
+        noise_strengths
+        ):
+        """Initiate the generation of circuits required for PER
+
+        Args:
+            noise_strengths (list[int]): strengths of noise for PER fit
+            expectations (list[str]): expectation values to reconstruct
+            samples (int): number of samples to take from distribution
+        """
+
+        #Convert string labels to Pauli representation
+        expectations = [self.pauli_type(label) for label in expectations]
+
+        #get minimal set of measurement bases
+        self.get_meas_bases(expectations)
+        self.manager = multiprocessing.Manager()  # Use a manager to handle shared data
+        self._per_runs = self.manager.list() # Use a managed list for shared data between processes
+
+        processes  = []
+        self.debug = 0
+        #initialize PERRun for each PERCircuit
+        for pcirc in self._per_circuits:
+            #cut the generation of the PER Circuit into many threads to profit from multicore CPU performance
+            process = multiprocessing.Process(target=_make_PERRUN, args=(self._processor, self._inst_map, expectations, samples, noise_strengths, self.meas_bases, pcirc, self._per_runs))
+            processes.append(process)
+            process.start()
+            #This is the old non multithreding way:
+            #per_run = PERRun(self._processor, self._inst_map, pcirc, samples, noise_strengths, self.meas_bases, expectations)
+            #self._per_runs.append(per_run)
+        for process in processes:
+            process.join()
+        #changing the type from the mulitprocess list to a normal list
+        self._per_runs = list(self._per_runs)
+
+
+def _make_PERRUN(processor, inst_map, expectations, samples, noise_strengths, meas_bases, pcirc, per_runs):
+    """ This funktion is here to be called async from generate """
+    per_run = PERRun(processor, inst_map, pcirc, samples, noise_strengths, meas_bases, expectations)
+    per_runs.append(per_run)

@@ -448,3 +448,7113 @@ Tccd11:       +65.1°C
 Tccd12:       +66.0°C  
 
 
+Thu Aug 22 02:57:21 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.8°C  
+Tccd1:        +71.1°C  
+Tccd2:        +70.0°C  
+Tccd3:        +70.4°C  
+Tccd4:        +69.9°C  
+Tccd5:        +71.2°C  
+Tccd6:        +71.8°C  
+Tccd7:        +70.2°C  
+Tccd8:        +70.2°C  
+Tccd9:        +71.2°C  
+Tccd10:       +70.8°C  
+Tccd11:       +70.6°C  
+Tccd12:       +71.9°C  
+
+
+Thu Aug 22 03:02:22 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.9°C  
+Tccd1:        +70.2°C  
+Tccd2:        +90.6°C  
+Tccd3:        +67.2°C  
+Tccd4:        +81.0°C  
+Tccd5:        +67.4°C  
+Tccd6:        +67.6°C  
+Tccd7:        +67.1°C  
+Tccd8:        +65.4°C  
+Tccd9:        +67.0°C  
+Tccd10:       +67.1°C  
+Tccd11:       +67.4°C  
+Tccd12:       +67.4°C  
+
+
+Thu Aug 22 03:07:23 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.4°C  
+Tccd1:        +78.8°C  
+Tccd2:        +76.9°C  
+Tccd3:        +77.5°C  
+Tccd4:        +76.9°C  
+Tccd5:        +80.4°C  
+Tccd6:        +80.0°C  
+Tccd7:        +79.2°C  
+Tccd8:        +78.0°C  
+Tccd9:        +79.6°C  
+Tccd10:       +79.8°C  
+Tccd11:       +79.8°C  
+Tccd12:       +81.2°C  
+
+
+Thu Aug 22 03:12:23 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +90.1°C  
+Tccd1:        +82.0°C  
+Tccd2:        +76.0°C  
+Tccd3:        +76.0°C  
+Tccd4:        +79.6°C  
+Tccd5:        +82.6°C  
+Tccd6:        +76.8°C  
+Tccd7:        +78.4°C  
+Tccd8:        +82.5°C  
+Tccd9:        +82.8°C  
+Tccd10:       +79.8°C  
+Tccd11:       +78.4°C  
+Tccd12:       +81.8°C  
+
+
+Thu Aug 22 03:17:24 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +90.8°C  
+Tccd1:        +80.1°C  
+Tccd2:        +79.2°C  
+Tccd3:        +79.8°C  
+Tccd4:        +77.2°C  
+Tccd5:        +81.8°C  
+Tccd6:        +82.2°C  
+Tccd7:        +82.1°C  
+Tccd8:        +79.8°C  
+Tccd9:        +83.2°C  
+Tccd10:       +81.6°C  
+Tccd11:       +81.5°C  
+Tccd12:       +83.1°C  
+
+
+Thu Aug 22 03:22:24 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +91.1°C  
+Tccd1:        +78.5°C  
+Tccd2:        +78.8°C  
+Tccd3:        +80.8°C  
+Tccd4:        +81.8°C  
+Tccd5:        +81.8°C  
+Tccd6:        +80.9°C  
+Tccd7:        +82.6°C  
+Tccd8:        +80.5°C  
+Tccd9:        +81.0°C  
+Tccd10:       +82.1°C  
+Tccd11:       +82.0°C  
+Tccd12:       +83.1°C  
+
+
+Thu Aug 22 03:27:25 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +90.6°C  
+Tccd1:        +84.2°C  
+Tccd2:        +83.0°C  
+Tccd3:        +77.0°C  
+Tccd4:        +78.2°C  
+Tccd5:        +83.1°C  
+Tccd6:        +80.0°C  
+Tccd7:        +80.8°C  
+Tccd8:        +77.5°C  
+Tccd9:        +86.4°C  
+Tccd10:       +79.8°C  
+Tccd11:       +79.2°C  
+Tccd12:       +80.5°C  
+
+
+Thu Aug 22 03:32:26 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.2°C  
+Tccd1:        +80.6°C  
+Tccd2:        +78.8°C  
+Tccd3:        +80.1°C  
+Tccd4:        +79.0°C  
+Tccd5:        +82.6°C  
+Tccd6:        +81.4°C  
+Tccd7:        +82.5°C  
+Tccd8:        +80.2°C  
+Tccd9:        +83.1°C  
+Tccd10:       +82.1°C  
+Tccd11:       +82.9°C  
+Tccd12:       +83.1°C  
+
+
+Thu Aug 22 03:37:26 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +46.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.1°C  
+Tccd1:        +78.8°C  
+Tccd2:        +77.4°C  
+Tccd3:        +79.8°C  
+Tccd4:        +77.2°C  
+Tccd5:        +81.8°C  
+Tccd6:        +82.2°C  
+Tccd7:        +79.4°C  
+Tccd8:        +80.2°C  
+Tccd9:        +80.4°C  
+Tccd10:       +81.5°C  
+Tccd11:       +80.6°C  
+Tccd12:       +81.4°C  
+
+
+Thu Aug 22 03:42:27 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.5°C  
+Tccd1:        +80.6°C  
+Tccd2:        +80.2°C  
+Tccd3:        +80.8°C  
+Tccd4:        +78.8°C  
+Tccd5:        +81.2°C  
+Tccd6:        +82.8°C  
+Tccd7:        +80.8°C  
+Tccd8:        +78.9°C  
+Tccd9:        +82.4°C  
+Tccd10:       +81.6°C  
+Tccd11:       +82.5°C  
+Tccd12:       +82.8°C  
+
+
+Thu Aug 22 03:47:27 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +46.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.5°C  
+Tccd1:        +79.8°C  
+Tccd2:        +79.2°C  
+Tccd3:        +79.8°C  
+Tccd4:        +77.8°C  
+Tccd5:        +81.2°C  
+Tccd6:        +80.9°C  
+Tccd7:        +80.8°C  
+Tccd8:        +79.8°C  
+Tccd9:        +82.4°C  
+Tccd10:       +81.6°C  
+Tccd11:       +82.5°C  
+Tccd12:       +82.1°C  
+
+
+Thu Aug 22 03:52:28 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.9°C  
+Tccd1:        +76.5°C  
+Tccd2:        +76.9°C  
+Tccd3:        +77.0°C  
+Tccd4:        +75.0°C  
+Tccd5:        +78.5°C  
+Tccd6:        +79.5°C  
+Tccd7:        +77.1°C  
+Tccd8:        +77.0°C  
+Tccd9:        +78.8°C  
+Tccd10:       +78.8°C  
+Tccd11:       +79.2°C  
+Tccd12:       +80.5°C  
+
+
+Thu Aug 22 03:57:29 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +90.4°C  
+Tccd1:        +78.8°C  
+Tccd2:        +76.9°C  
+Tccd3:        +79.4°C  
+Tccd4:        +75.0°C  
+Tccd5:        +80.4°C  
+Tccd6:        +81.4°C  
+Tccd7:        +80.1°C  
+Tccd8:        +78.4°C  
+Tccd9:        +80.1°C  
+Tccd10:       +81.1°C  
+Tccd11:       +80.1°C  
+Tccd12:       +80.9°C  
+
+
+Thu Aug 22 04:02:29 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.0°C  
+Tccd1:        +48.0°C  
+Tccd2:        +83.0°C  
+Tccd3:        +50.1°C  
+Tccd4:        +47.6°C  
+Tccd5:        +47.9°C  
+Tccd6:        +52.1°C  
+Tccd7:        +50.0°C  
+Tccd8:        +46.0°C  
+Tccd9:        +46.5°C  
+Tccd10:       +50.4°C  
+Tccd11:       +50.5°C  
+Tccd12:       +47.5°C  
+
+
+Thu Aug 22 04:07:29 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.5°C  
+Tccd1:        +53.6°C  
+Tccd2:        +55.9°C  
+Tccd3:        +55.2°C  
+Tccd4:        +53.8°C  
+Tccd5:        +53.6°C  
+Tccd6:        +54.9°C  
+Tccd7:        +54.0°C  
+Tccd8:        +52.2°C  
+Tccd9:        +51.2°C  
+Tccd10:       +54.0°C  
+Tccd11:       +54.2°C  
+Tccd12:       +53.0°C  
+
+
+Thu Aug 22 04:12:30 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.8°C  
+Tccd1:        +54.9°C  
+Tccd2:        +88.5°C  
+Tccd3:        +56.2°C  
+Tccd4:        +55.1°C  
+Tccd5:        +54.9°C  
+Tccd6:        +57.1°C  
+Tccd7:        +56.4°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +56.4°C  
+Tccd11:       +56.5°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 04:17:30 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +73.9°C  
+Tccd1:        +54.1°C  
+Tccd2:        +56.2°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.0°C  
+Tccd6:        +64.5°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.2°C  
+Tccd9:        +52.2°C  
+Tccd10:       +55.9°C  
+Tccd11:       +55.5°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 04:22:30 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.2°C  
+Tccd1:        +54.5°C  
+Tccd2:        +56.8°C  
+Tccd3:        +56.2°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.5°C  
+Tccd6:        +86.2°C  
+Tccd7:        +55.4°C  
+Tccd8:        +52.2°C  
+Tccd9:        +52.6°C  
+Tccd10:       +57.4°C  
+Tccd11:       +56.0°C  
+Tccd12:       +53.4°C  
+
+
+Thu Aug 22 04:27:31 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +67.9°C  
+Tccd1:        +55.6°C  
+Tccd2:        +57.8°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.5°C  
+Tccd5:        +56.2°C  
+Tccd6:        +58.2°C  
+Tccd7:        +56.8°C  
+Tccd8:        +54.5°C  
+Tccd9:        +54.1°C  
+Tccd10:       +56.9°C  
+Tccd11:       +56.9°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 04:32:31 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +69.0°C  
+Tccd1:        +54.0°C  
+Tccd2:        +56.8°C  
+Tccd3:        +54.8°C  
+Tccd4:        +53.8°C  
+Tccd5:        +54.0°C  
+Tccd6:        +55.8°C  
+Tccd7:        +54.5°C  
+Tccd8:        +51.8°C  
+Tccd9:        +51.8°C  
+Tccd10:       +54.5°C  
+Tccd11:       +54.6°C  
+Tccd12:       +53.6°C  
+
+
+Thu Aug 22 04:37:32 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.6°C  
+Tccd1:        +54.9°C  
+Tccd2:        +56.8°C  
+Tccd3:        +56.2°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.5°C  
+Tccd6:        +57.6°C  
+Tccd7:        +55.9°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.2°C  
+Tccd10:       +88.9°C  
+Tccd11:       +56.0°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 04:42:32 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.4°C  
+Tccd1:        +54.1°C  
+Tccd2:        +56.2°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.0°C  
+Tccd6:        +56.6°C  
+Tccd7:        +55.4°C  
+Tccd8:        +52.2°C  
+Tccd9:        +52.2°C  
+Tccd10:       +88.5°C  
+Tccd11:       +56.0°C  
+Tccd12:       +53.4°C  
+
+
+Thu Aug 22 04:47:32 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.2°C  
+Tccd1:        +54.5°C  
+Tccd2:        +56.8°C  
+Tccd3:        +56.2°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.5°C  
+Tccd6:        +56.6°C  
+Tccd7:        +55.9°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +88.5°C  
+Tccd11:       +56.0°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 04:52:33 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.6°C  
+Tccd1:        +56.4°C  
+Tccd2:        +58.6°C  
+Tccd3:        +58.1°C  
+Tccd4:        +56.5°C  
+Tccd5:        +56.8°C  
+Tccd6:        +59.0°C  
+Tccd7:        +58.1°C  
+Tccd8:        +55.0°C  
+Tccd9:        +55.1°C  
+Tccd10:       +59.1°C  
+Tccd11:       +58.2°C  
+Tccd12:       +56.1°C  
+
+
+Thu Aug 22 04:57:33 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.2°C  
+Tccd1:        +56.9°C  
+Tccd2:        +58.6°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.5°C  
+Tccd5:        +56.2°C  
+Tccd6:        +58.5°C  
+Tccd7:        +57.2°C  
+Tccd8:        +55.0°C  
+Tccd9:        +55.1°C  
+Tccd10:       +57.8°C  
+Tccd11:       +57.4°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 05:02:33 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.0°C  
+Tccd1:        +56.9°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.9°C  
+Tccd5:        +56.8°C  
+Tccd6:        +58.5°C  
+Tccd7:        +57.6°C  
+Tccd8:        +55.0°C  
+Tccd9:        +55.1°C  
+Tccd10:       +58.2°C  
+Tccd11:       +57.9°C  
+Tccd12:       +56.1°C  
+
+
+Thu Aug 22 05:07:34 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.2°C  
+Tccd1:        +55.9°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.1°C  
+Tccd4:        +56.0°C  
+Tccd5:        +55.4°C  
+Tccd6:        +86.5°C  
+Tccd7:        +57.2°C  
+Tccd8:        +53.6°C  
+Tccd9:        +53.6°C  
+Tccd10:       +57.8°C  
+Tccd11:       +56.9°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 05:12:34 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.1°C  
+Tccd1:        +55.4°C  
+Tccd2:        +58.1°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.5°C  
+Tccd5:        +55.4°C  
+Tccd6:        +86.5°C  
+Tccd7:        +56.8°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +57.4°C  
+Tccd11:       +56.9°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 05:17:34 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.1°C  
+Tccd1:        +55.4°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.1°C  
+Tccd4:        +55.1°C  
+Tccd5:        +55.4°C  
+Tccd6:        +88.2°C  
+Tccd7:        +56.4°C  
+Tccd8:        +53.6°C  
+Tccd9:        +53.6°C  
+Tccd10:       +57.4°C  
+Tccd11:       +56.9°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 05:22:35 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.2°C  
+Tccd1:        +55.9°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.1°C  
+Tccd4:        +56.0°C  
+Tccd5:        +55.4°C  
+Tccd6:        +87.9°C  
+Tccd7:        +57.2°C  
+Tccd8:        +53.6°C  
+Tccd9:        +53.6°C  
+Tccd10:       +57.8°C  
+Tccd11:       +56.9°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 05:27:35 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.4°C  
+Tccd1:        +54.5°C  
+Tccd2:        +57.2°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.9°C  
+Tccd6:        +56.2°C  
+Tccd7:        +55.4°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.5°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 05:32:36 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.1°C  
+Tccd1:        +55.4°C  
+Tccd2:        +89.4°C  
+Tccd3:        +56.2°C  
+Tccd4:        +55.5°C  
+Tccd5:        +54.9°C  
+Tccd6:        +57.6°C  
+Tccd7:        +56.4°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +56.4°C  
+Tccd11:       +56.5°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 05:37:36 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.5°C  
+Tccd1:        +54.0°C  
+Tccd2:        +56.8°C  
+Tccd3:        +54.8°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.5°C  
+Tccd6:        +55.8°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +54.5°C  
+Tccd11:       +54.6°C  
+Tccd12:       +53.4°C  
+
+
+Thu Aug 22 05:42:36 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.9°C  
+Tccd1:        +54.9°C  
+Tccd2:        +57.8°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.1°C  
+Tccd5:        +54.9°C  
+Tccd6:        +83.2°C  
+Tccd7:        +56.8°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.6°C  
+Tccd10:       +56.9°C  
+Tccd11:       +56.9°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 05:47:37 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +68.5°C  
+Tccd1:        +54.5°C  
+Tccd2:        +56.2°C  
+Tccd3:        +55.2°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.0°C  
+Tccd6:        +62.5°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.2°C  
+Tccd9:        +52.6°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.5°C  
+Tccd12:       +53.4°C  
+
+
+Thu Aug 22 05:52:37 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +60.9°C  
+Tccd1:        +54.5°C  
+Tccd2:        +57.2°C  
+Tccd3:        +56.2°C  
+Tccd4:        +55.1°C  
+Tccd5:        +54.5°C  
+Tccd6:        +56.2°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.8°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.1°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 05:57:37 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +60.5°C  
+Tccd1:        +54.1°C  
+Tccd2:        +56.2°C  
+Tccd3:        +55.2°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.0°C  
+Tccd6:        +55.8°C  
+Tccd7:        +54.5°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +54.5°C  
+Tccd11:       +54.6°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 06:02:38 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +61.1°C  
+Tccd1:        +54.5°C  
+Tccd2:        +57.1°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.9°C  
+Tccd6:        +55.8°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +54.5°C  
+Tccd11:       +55.1°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 06:07:38 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.1°C  
+Tccd1:        +54.5°C  
+Tccd2:        +57.2°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.9°C  
+Tccd6:        +56.2°C  
+Tccd7:        +55.0°C  
+Tccd8:        +53.1°C  
+Tccd9:        +52.6°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.5°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 06:12:38 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.2°C  
+Tccd1:        +54.0°C  
+Tccd2:        +87.6°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.5°C  
+Tccd6:        +56.6°C  
+Tccd7:        +55.9°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +55.5°C  
+Tccd11:       +55.5°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 06:17:39 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.0°C  
+Tccd1:        +54.9°C  
+Tccd2:        +88.9°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.1°C  
+Tccd5:        +54.9°C  
+Tccd6:        +57.1°C  
+Tccd7:        +55.9°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.9°C  
+Tccd11:       +56.5°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 06:22:39 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.8°C  
+Tccd1:        +55.1°C  
+Tccd2:        +86.8°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.1°C  
+Tccd5:        +55.4°C  
+Tccd6:        +57.6°C  
+Tccd7:        +56.4°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.9°C  
+Tccd11:       +56.0°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 06:27:39 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +61.1°C  
+Tccd1:        +55.4°C  
+Tccd2:        +57.8°C  
+Tccd3:        +56.2°C  
+Tccd4:        +55.5°C  
+Tccd5:        +55.8°C  
+Tccd6:        +56.6°C  
+Tccd7:        +55.9°C  
+Tccd8:        +53.6°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.5°C  
+Tccd11:       +55.5°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 06:32:40 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +69.9°C  
+Tccd1:        +54.9°C  
+Tccd2:        +62.5°C  
+Tccd3:        +56.2°C  
+Tccd4:        +55.1°C  
+Tccd5:        +55.4°C  
+Tccd6:        +56.6°C  
+Tccd7:        +55.4°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.5°C  
+Tccd11:       +56.0°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 06:37:40 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.5°C  
+Tccd1:        +55.6°C  
+Tccd2:        +85.8°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.0°C  
+Tccd5:        +55.8°C  
+Tccd6:        +58.5°C  
+Tccd7:        +57.2°C  
+Tccd8:        +54.0°C  
+Tccd9:        +53.6°C  
+Tccd10:       +57.4°C  
+Tccd11:       +57.4°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 06:42:41 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +62.4°C  
+Tccd1:        +54.6°C  
+Tccd2:        +57.2°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.9°C  
+Tccd6:        +56.2°C  
+Tccd7:        +55.0°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.5°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 06:47:41 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.5°C  
+Tccd1:        +55.4°C  
+Tccd2:        +87.6°C  
+Tccd3:        +57.1°C  
+Tccd4:        +56.0°C  
+Tccd5:        +56.2°C  
+Tccd6:        +58.5°C  
+Tccd7:        +57.2°C  
+Tccd8:        +54.0°C  
+Tccd9:        +54.1°C  
+Tccd10:       +56.9°C  
+Tccd11:       +57.4°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 06:52:41 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +66.5°C  
+Tccd1:        +54.9°C  
+Tccd2:        +62.5°C  
+Tccd3:        +55.2°C  
+Tccd4:        +55.1°C  
+Tccd5:        +54.5°C  
+Tccd6:        +56.6°C  
+Tccd7:        +55.4°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.1°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 06:57:42 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +60.0°C  
+Tccd1:        +54.6°C  
+Tccd2:        +56.8°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.9°C  
+Tccd6:        +55.8°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.5°C  
+Tccd12:       +53.4°C  
+
+
+Thu Aug 22 07:02:42 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.0°C  
+Tccd1:        +54.9°C  
+Tccd2:        +87.6°C  
+Tccd3:        +56.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.9°C  
+Tccd6:        +57.1°C  
+Tccd7:        +56.4°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.9°C  
+Tccd11:       +56.0°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 07:07:42 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.1°C  
+Tccd1:        +53.5°C  
+Tccd2:        +56.2°C  
+Tccd3:        +54.8°C  
+Tccd4:        +53.8°C  
+Tccd5:        +53.6°C  
+Tccd6:        +55.2°C  
+Tccd7:        +54.5°C  
+Tccd8:        +51.8°C  
+Tccd9:        +52.2°C  
+Tccd10:       +54.0°C  
+Tccd11:       +54.6°C  
+Tccd12:       +53.0°C  
+
+
+Thu Aug 22 07:12:43 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.5°C  
+Tccd1:        +55.9°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.1°C  
+Tccd4:        +55.5°C  
+Tccd5:        +55.8°C  
+Tccd6:        +57.1°C  
+Tccd7:        +56.4°C  
+Tccd8:        +54.0°C  
+Tccd9:        +54.1°C  
+Tccd10:       +56.4°C  
+Tccd11:       +56.9°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 07:17:43 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +60.9°C  
+Tccd1:        +55.1°C  
+Tccd2:        +57.2°C  
+Tccd3:        +56.2°C  
+Tccd4:        +54.6°C  
+Tccd5:        +55.4°C  
+Tccd6:        +56.6°C  
+Tccd7:        +55.9°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.5°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 07:22:43 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.8°C  
+Tccd1:        +55.9°C  
+Tccd2:        +88.1°C  
+Tccd3:        +57.1°C  
+Tccd4:        +55.5°C  
+Tccd5:        +55.8°C  
+Tccd6:        +58.0°C  
+Tccd7:        +57.2°C  
+Tccd8:        +54.0°C  
+Tccd9:        +54.1°C  
+Tccd10:       +56.4°C  
+Tccd11:       +56.5°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 07:27:44 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.2°C  
+Tccd1:        +55.9°C  
+Tccd2:        +89.9°C  
+Tccd3:        +57.6°C  
+Tccd4:        +55.5°C  
+Tccd5:        +55.4°C  
+Tccd6:        +58.0°C  
+Tccd7:        +56.8°C  
+Tccd8:        +54.0°C  
+Tccd9:        +53.6°C  
+Tccd10:       +56.4°C  
+Tccd11:       +56.9°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 07:32:44 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.5°C  
+Tccd1:        +55.9°C  
+Tccd2:        +89.4°C  
+Tccd3:        +57.1°C  
+Tccd4:        +56.0°C  
+Tccd5:        +56.2°C  
+Tccd6:        +58.0°C  
+Tccd7:        +57.2°C  
+Tccd8:        +54.0°C  
+Tccd9:        +53.6°C  
+Tccd10:       +56.9°C  
+Tccd11:       +56.9°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 07:37:45 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.8°C  
+Tccd1:        +55.9°C  
+Tccd2:        +88.0°C  
+Tccd3:        +57.1°C  
+Tccd4:        +56.0°C  
+Tccd5:        +56.2°C  
+Tccd6:        +58.0°C  
+Tccd7:        +57.2°C  
+Tccd8:        +54.5°C  
+Tccd9:        +53.6°C  
+Tccd10:       +56.4°C  
+Tccd11:       +57.4°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 07:42:45 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +60.1°C  
+Tccd1:        +54.5°C  
+Tccd2:        +57.2°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.5°C  
+Tccd6:        +56.2°C  
+Tccd7:        +55.4°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.1°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 07:47:45 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +61.0°C  
+Tccd1:        +54.0°C  
+Tccd2:        +56.2°C  
+Tccd3:        +55.2°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.5°C  
+Tccd6:        +55.8°C  
+Tccd7:        +54.5°C  
+Tccd8:        +52.2°C  
+Tccd9:        +52.2°C  
+Tccd10:       +54.5°C  
+Tccd11:       +54.6°C  
+Tccd12:       +53.4°C  
+
+
+Thu Aug 22 07:52:46 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +68.8°C  
+Tccd1:        +54.1°C  
+Tccd2:        +58.2°C  
+Tccd3:        +54.8°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.0°C  
+Tccd6:        +55.8°C  
+Tccd7:        +54.5°C  
+Tccd8:        +52.2°C  
+Tccd9:        +52.2°C  
+Tccd10:       +54.5°C  
+Tccd11:       +54.6°C  
+Tccd12:       +53.4°C  
+
+
+Thu Aug 22 07:57:46 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.4°C  
+Tccd1:        +55.1°C  
+Tccd2:        +88.1°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.1°C  
+Tccd5:        +54.9°C  
+Tccd6:        +58.0°C  
+Tccd7:        +56.4°C  
+Tccd8:        +53.6°C  
+Tccd9:        +53.6°C  
+Tccd10:       +56.9°C  
+Tccd11:       +56.9°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 08:02:46 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +60.9°C  
+Tccd1:        +55.9°C  
+Tccd2:        +58.1°C  
+Tccd3:        +56.8°C  
+Tccd4:        +56.0°C  
+Tccd5:        +55.4°C  
+Tccd6:        +57.1°C  
+Tccd7:        +55.9°C  
+Tccd8:        +54.0°C  
+Tccd9:        +54.1°C  
+Tccd10:       +55.9°C  
+Tccd11:       +56.5°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 08:07:47 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.9°C  
+Tccd1:        +54.1°C  
+Tccd2:        +62.5°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.5°C  
+Tccd6:        +56.2°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.1°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 08:12:47 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.9°C  
+Tccd1:        +54.9°C  
+Tccd2:        +87.1°C  
+Tccd3:        +55.8°C  
+Tccd4:        +55.1°C  
+Tccd5:        +54.9°C  
+Tccd6:        +57.1°C  
+Tccd7:        +55.9°C  
+Tccd8:        +53.1°C  
+Tccd9:        +53.1°C  
+Tccd10:       +56.4°C  
+Tccd11:       +56.5°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 08:17:47 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.4°C  
+Tccd1:        +56.9°C  
+Tccd2:        +88.1°C  
+Tccd3:        +58.1°C  
+Tccd4:        +56.9°C  
+Tccd5:        +56.8°C  
+Tccd6:        +59.0°C  
+Tccd7:        +57.6°C  
+Tccd8:        +54.5°C  
+Tccd9:        +55.1°C  
+Tccd10:       +57.4°C  
+Tccd11:       +57.9°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 08:22:48 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.0°C  
+Tccd1:        +54.5°C  
+Tccd2:        +62.5°C  
+Tccd3:        +55.2°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.5°C  
+Tccd6:        +56.2°C  
+Tccd7:        +54.5°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +54.5°C  
+Tccd11:       +55.1°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 08:27:48 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.1°C  
+Tccd1:        +56.4°C  
+Tccd2:        +88.6°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.0°C  
+Tccd5:        +56.2°C  
+Tccd6:        +59.0°C  
+Tccd7:        +56.8°C  
+Tccd8:        +54.5°C  
+Tccd9:        +54.6°C  
+Tccd10:       +56.9°C  
+Tccd11:       +57.4°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 08:32:48 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +61.8°C  
+Tccd1:        +54.9°C  
+Tccd2:        +56.2°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.9°C  
+Tccd6:        +55.8°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +54.5°C  
+Tccd11:       +55.1°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 08:37:49 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.6°C  
+Tccd1:        +55.4°C  
+Tccd2:        +87.6°C  
+Tccd3:        +57.1°C  
+Tccd4:        +55.5°C  
+Tccd5:        +56.2°C  
+Tccd6:        +58.5°C  
+Tccd7:        +56.8°C  
+Tccd8:        +53.6°C  
+Tccd9:        +54.1°C  
+Tccd10:       +56.9°C  
+Tccd11:       +56.9°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 08:42:49 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +62.2°C  
+Tccd1:        +54.9°C  
+Tccd2:        +56.8°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.5°C  
+Tccd6:        +56.2°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.8°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.1°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 08:47:50 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.4°C  
+Tccd1:        +56.6°C  
+Tccd2:        +89.0°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.5°C  
+Tccd5:        +56.8°C  
+Tccd6:        +59.4°C  
+Tccd7:        +57.6°C  
+Tccd8:        +55.0°C  
+Tccd9:        +54.6°C  
+Tccd10:       +57.8°C  
+Tccd11:       +57.9°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 08:52:50 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +65.2°C  
+Tccd1:        +54.5°C  
+Tccd2:        +62.0°C  
+Tccd3:        +55.2°C  
+Tccd4:        +53.8°C  
+Tccd5:        +54.0°C  
+Tccd6:        +55.8°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.6°C  
+Tccd10:       +54.5°C  
+Tccd11:       +55.1°C  
+Tccd12:       +53.4°C  
+
+
+Thu Aug 22 08:57:50 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +61.2°C  
+Tccd1:        +55.9°C  
+Tccd2:        +58.1°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.5°C  
+Tccd5:        +55.8°C  
+Tccd6:        +57.1°C  
+Tccd7:        +56.4°C  
+Tccd8:        +54.0°C  
+Tccd9:        +54.1°C  
+Tccd10:       +55.9°C  
+Tccd11:       +56.5°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 09:02:51 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.5°C  
+Tccd1:        +55.4°C  
+Tccd2:        +88.6°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.1°C  
+Tccd5:        +55.4°C  
+Tccd6:        +58.0°C  
+Tccd7:        +56.8°C  
+Tccd8:        +53.6°C  
+Tccd9:        +54.1°C  
+Tccd10:       +56.4°C  
+Tccd11:       +56.5°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 09:07:51 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.8°C  
+Tccd1:        +54.9°C  
+Tccd2:        +62.0°C  
+Tccd3:        +55.2°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.5°C  
+Tccd6:        +56.2°C  
+Tccd7:        +55.4°C  
+Tccd8:        +52.8°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.0°C  
+Tccd11:       +55.1°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 09:12:51 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +60.8°C  
+Tccd1:        +55.4°C  
+Tccd2:        +57.8°C  
+Tccd3:        +56.2°C  
+Tccd4:        +55.5°C  
+Tccd5:        +54.9°C  
+Tccd6:        +56.6°C  
+Tccd7:        +55.9°C  
+Tccd8:        +53.6°C  
+Tccd9:        +53.1°C  
+Tccd10:       +55.5°C  
+Tccd11:       +56.0°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 09:17:52 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.8°C  
+Tccd1:        +56.9°C  
+Tccd2:        +90.0°C  
+Tccd3:        +58.6°C  
+Tccd4:        +56.9°C  
+Tccd5:        +57.1°C  
+Tccd6:        +59.9°C  
+Tccd7:        +58.6°C  
+Tccd8:        +55.0°C  
+Tccd9:        +55.5°C  
+Tccd10:       +58.2°C  
+Tccd11:       +58.2°C  
+Tccd12:       +56.1°C  
+
+
+Thu Aug 22 09:22:52 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.5°C  
+Tccd1:        +54.5°C  
+Tccd2:        +88.1°C  
+Tccd3:        +55.2°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.5°C  
+Tccd6:        +56.6°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.2°C  
+Tccd9:        +52.6°C  
+Tccd10:       +55.9°C  
+Tccd11:       +55.5°C  
+Tccd12:       +53.4°C  
+
+
+Thu Aug 22 09:27:52 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.5°C  
+Tccd1:        +56.4°C  
+Tccd2:        +63.4°C  
+Tccd3:        +57.1°C  
+Tccd4:        +56.0°C  
+Tccd5:        +56.2°C  
+Tccd6:        +57.6°C  
+Tccd7:        +56.4°C  
+Tccd8:        +54.0°C  
+Tccd9:        +54.1°C  
+Tccd10:       +56.9°C  
+Tccd11:       +56.9°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 09:32:53 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +59.6°C  
+Tccd1:        +54.5°C  
+Tccd2:        +55.9°C  
+Tccd3:        +55.2°C  
+Tccd4:        +53.8°C  
+Tccd5:        +54.5°C  
+Tccd6:        +55.2°C  
+Tccd7:        +55.0°C  
+Tccd8:        +52.8°C  
+Tccd9:        +52.2°C  
+Tccd10:       +55.5°C  
+Tccd11:       +55.1°C  
+Tccd12:       +53.0°C  
+
+
+Thu Aug 22 09:37:53 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +90.5°C  
+Tccd1:        +59.9°C  
+Tccd2:        +62.4°C  
+Tccd3:        +61.0°C  
+Tccd4:        +59.8°C  
+Tccd5:        +59.4°C  
+Tccd6:        +62.1°C  
+Tccd7:        +60.9°C  
+Tccd8:        +57.6°C  
+Tccd9:        +57.5°C  
+Tccd10:       +91.6°C  
+Tccd11:       +61.0°C  
+Tccd12:       +58.4°C  
+
+
+Thu Aug 22 09:42:53 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.0°C  
+Tccd1:        +55.4°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.6°C  
+Tccd4:        +55.5°C  
+Tccd5:        +55.8°C  
+Tccd6:        +58.5°C  
+Tccd7:        +57.6°C  
+Tccd8:        +54.0°C  
+Tccd9:        +54.1°C  
+Tccd10:       +87.0°C  
+Tccd11:       +57.9°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 09:47:54 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +41.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +41.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +82.8°C  
+Tccd1:        +54.5°C  
+Tccd2:        +56.8°C  
+Tccd3:        +56.2°C  
+Tccd4:        +54.1°C  
+Tccd5:        +54.5°C  
+Tccd6:        +57.1°C  
+Tccd7:        +55.9°C  
+Tccd8:        +52.8°C  
+Tccd9:        +53.1°C  
+Tccd10:       +56.9°C  
+Tccd11:       +56.9°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 09:52:54 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +65.5°C  
+Tccd1:        +56.4°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.5°C  
+Tccd5:        +56.2°C  
+Tccd6:        +57.6°C  
+Tccd7:        +57.2°C  
+Tccd8:        +54.5°C  
+Tccd9:        +54.6°C  
+Tccd10:       +63.0°C  
+Tccd11:       +57.4°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 09:57:55 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +62.9°C  
+Tccd1:        +54.9°C  
+Tccd2:        +56.2°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.9°C  
+Tccd6:        +56.6°C  
+Tccd7:        +55.4°C  
+Tccd8:        +52.8°C  
+Tccd9:        +53.1°C  
+Tccd10:       +61.6°C  
+Tccd11:       +56.0°C  
+Tccd12:       +53.9°C  
+
+
+Thu Aug 22 10:02:55 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.9°C  
+Tccd1:        +56.6°C  
+Tccd2:        +58.6°C  
+Tccd3:        +58.1°C  
+Tccd4:        +56.5°C  
+Tccd5:        +56.8°C  
+Tccd6:        +58.0°C  
+Tccd7:        +57.6°C  
+Tccd8:        +54.5°C  
+Tccd9:        +55.1°C  
+Tccd10:       +58.2°C  
+Tccd11:       +57.4°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 10:07:55 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +62.5°C  
+Tccd1:        +55.9°C  
+Tccd2:        +57.8°C  
+Tccd3:        +57.1°C  
+Tccd4:        +56.5°C  
+Tccd5:        +56.2°C  
+Tccd6:        +57.6°C  
+Tccd7:        +56.8°C  
+Tccd8:        +54.0°C  
+Tccd9:        +54.1°C  
+Tccd10:       +57.4°C  
+Tccd11:       +56.9°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 10:12:56 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.0°C  
+Tccd1:        +56.4°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.0°C  
+Tccd5:        +56.2°C  
+Tccd6:        +57.6°C  
+Tccd7:        +56.8°C  
+Tccd8:        +54.5°C  
+Tccd9:        +54.6°C  
+Tccd10:       +57.8°C  
+Tccd11:       +57.4°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 10:17:56 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.2°C  
+Tccd1:        +56.4°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.5°C  
+Tccd5:        +56.8°C  
+Tccd6:        +58.0°C  
+Tccd7:        +56.8°C  
+Tccd8:        +55.0°C  
+Tccd9:        +54.1°C  
+Tccd10:       +57.8°C  
+Tccd11:       +57.4°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 10:22:56 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.5°C  
+Tccd1:        +55.9°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.0°C  
+Tccd5:        +56.2°C  
+Tccd6:        +57.6°C  
+Tccd7:        +56.8°C  
+Tccd8:        +54.5°C  
+Tccd9:        +54.1°C  
+Tccd10:       +62.1°C  
+Tccd11:       +57.4°C  
+Tccd12:       +56.1°C  
+
+
+Thu Aug 22 10:27:57 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.4°C  
+Tccd1:        +56.1°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.1°C  
+Tccd4:        +56.0°C  
+Tccd5:        +55.8°C  
+Tccd6:        +57.6°C  
+Tccd7:        +57.2°C  
+Tccd8:        +54.5°C  
+Tccd9:        +54.6°C  
+Tccd10:       +63.5°C  
+Tccd11:       +56.9°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 10:32:57 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +73.0°C  
+Tccd1:        +55.4°C  
+Tccd2:        +57.8°C  
+Tccd3:        +57.1°C  
+Tccd4:        +55.5°C  
+Tccd5:        +55.8°C  
+Tccd6:        +57.1°C  
+Tccd7:        +56.8°C  
+Tccd8:        +53.6°C  
+Tccd9:        +54.1°C  
+Tccd10:       +57.5°C  
+Tccd11:       +56.5°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 10:37:57 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.5°C  
+Tccd1:        +56.4°C  
+Tccd2:        +58.6°C  
+Tccd3:        +57.6°C  
+Tccd4:        +55.5°C  
+Tccd5:        +56.2°C  
+Tccd6:        +59.0°C  
+Tccd7:        +57.2°C  
+Tccd8:        +54.5°C  
+Tccd9:        +54.6°C  
+Tccd10:       +86.0°C  
+Tccd11:       +57.9°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 10:42:58 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.4°C  
+Tccd1:        +57.1°C  
+Tccd2:        +59.6°C  
+Tccd3:        +58.1°C  
+Tccd4:        +56.9°C  
+Tccd5:        +56.8°C  
+Tccd6:        +59.4°C  
+Tccd7:        +58.1°C  
+Tccd8:        +55.4°C  
+Tccd9:        +55.1°C  
+Tccd10:       +84.6°C  
+Tccd11:       +58.8°C  
+Tccd12:       +56.5°C  
+
+
+Thu Aug 22 10:47:58 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.5°C  
+Tccd1:        +58.9°C  
+Tccd2:        +61.5°C  
+Tccd3:        +60.5°C  
+Tccd4:        +58.4°C  
+Tccd5:        +58.9°C  
+Tccd6:        +61.6°C  
+Tccd7:        +59.9°C  
+Tccd8:        +56.5°C  
+Tccd9:        +57.0°C  
+Tccd10:       +88.4°C  
+Tccd11:       +60.1°C  
+Tccd12:       +57.9°C  
+
+
+Thu Aug 22 10:52:59 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.6°C  
+Tccd1:        +59.4°C  
+Tccd2:        +61.0°C  
+Tccd3:        +60.5°C  
+Tccd4:        +59.2°C  
+Tccd5:        +59.4°C  
+Tccd6:        +60.8°C  
+Tccd7:        +59.9°C  
+Tccd8:        +57.2°C  
+Tccd9:        +57.5°C  
+Tccd10:       +60.1°C  
+Tccd11:       +59.6°C  
+Tccd12:       +58.5°C  
+
+
+Thu Aug 22 10:57:59 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +62.8°C  
+Tccd1:        +57.4°C  
+Tccd2:        +59.6°C  
+Tccd3:        +58.6°C  
+Tccd4:        +56.9°C  
+Tccd5:        +57.6°C  
+Tccd6:        +59.0°C  
+Tccd7:        +58.1°C  
+Tccd8:        +55.4°C  
+Tccd9:        +55.5°C  
+Tccd10:       +58.8°C  
+Tccd11:       +58.2°C  
+Tccd12:       +56.5°C  
+
+
+Thu Aug 22 11:02:59 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.0°C  
+Tccd1:        +55.4°C  
+Tccd2:        +57.8°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.1°C  
+Tccd5:        +55.4°C  
+Tccd6:        +57.1°C  
+Tccd7:        +56.4°C  
+Tccd8:        +53.6°C  
+Tccd9:        +53.6°C  
+Tccd10:       +62.6°C  
+Tccd11:       +56.0°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 11:08:00 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +78.2°C  
+Tccd1:        +55.1°C  
+Tccd2:        +57.2°C  
+Tccd3:        +56.8°C  
+Tccd4:        +56.0°C  
+Tccd5:        +55.4°C  
+Tccd6:        +57.6°C  
+Tccd7:        +56.8°C  
+Tccd8:        +53.6°C  
+Tccd9:        +54.1°C  
+Tccd10:       +57.5°C  
+Tccd11:       +56.9°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 11:13:00 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.2°C  
+Tccd1:        +56.6°C  
+Tccd2:        +59.6°C  
+Tccd3:        +58.6°C  
+Tccd4:        +56.9°C  
+Tccd5:        +56.8°C  
+Tccd6:        +59.4°C  
+Tccd7:        +58.1°C  
+Tccd8:        +55.4°C  
+Tccd9:        +55.1°C  
+Tccd10:       +87.9°C  
+Tccd11:       +58.8°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 11:18:00 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +64.8°C  
+Tccd1:        +59.9°C  
+Tccd2:        +61.5°C  
+Tccd3:        +60.5°C  
+Tccd4:        +59.8°C  
+Tccd5:        +59.4°C  
+Tccd6:        +61.2°C  
+Tccd7:        +59.9°C  
+Tccd8:        +57.6°C  
+Tccd9:        +57.5°C  
+Tccd10:       +61.0°C  
+Tccd11:       +60.6°C  
+Tccd12:       +58.4°C  
+
+
+Thu Aug 22 11:23:01 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +62.9°C  
+Tccd1:        +56.4°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.5°C  
+Tccd5:        +56.2°C  
+Tccd6:        +57.6°C  
+Tccd7:        +57.2°C  
+Tccd8:        +55.0°C  
+Tccd9:        +54.6°C  
+Tccd10:       +58.2°C  
+Tccd11:       +57.4°C  
+Tccd12:       +55.6°C  
+
+
+Thu Aug 22 11:28:01 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +79.2°C  
+Tccd1:        +55.9°C  
+Tccd2:        +57.8°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.5°C  
+Tccd5:        +55.8°C  
+Tccd6:        +57.6°C  
+Tccd7:        +56.8°C  
+Tccd8:        +53.6°C  
+Tccd9:        +54.1°C  
+Tccd10:       +57.4°C  
+Tccd11:       +56.9°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 11:33:01 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.1°C  
+Tccd1:        +58.1°C  
+Tccd2:        +60.5°C  
+Tccd3:        +59.5°C  
+Tccd4:        +57.9°C  
+Tccd5:        +58.0°C  
+Tccd6:        +61.2°C  
+Tccd7:        +59.9°C  
+Tccd8:        +56.2°C  
+Tccd9:        +56.5°C  
+Tccd10:       +88.1°C  
+Tccd11:       +60.6°C  
+Tccd12:       +57.5°C  
+
+
+Thu Aug 22 11:38:02 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.6°C  
+Tccd1:        +58.9°C  
+Tccd2:        +60.5°C  
+Tccd3:        +60.0°C  
+Tccd4:        +58.4°C  
+Tccd5:        +58.5°C  
+Tccd6:        +60.4°C  
+Tccd7:        +59.0°C  
+Tccd8:        +57.2°C  
+Tccd9:        +56.5°C  
+Tccd10:       +60.5°C  
+Tccd11:       +59.6°C  
+Tccd12:       +57.5°C  
+
+
+Thu Aug 22 11:43:02 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +65.8°C  
+Tccd1:        +54.6°C  
+Tccd2:        +56.5°C  
+Tccd3:        +55.8°C  
+Tccd4:        +54.6°C  
+Tccd5:        +54.9°C  
+Tccd6:        +56.2°C  
+Tccd7:        +55.0°C  
+Tccd8:        +53.6°C  
+Tccd9:        +53.6°C  
+Tccd10:       +57.2°C  
+Tccd11:       +55.5°C  
+Tccd12:       +54.2°C  
+
+
+Thu Aug 22 11:48:03 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.6°C  
+Tccd1:        +57.4°C  
+Tccd2:        +60.0°C  
+Tccd3:        +59.5°C  
+Tccd4:        +57.4°C  
+Tccd5:        +58.0°C  
+Tccd6:        +60.4°C  
+Tccd7:        +58.6°C  
+Tccd8:        +55.9°C  
+Tccd9:        +55.5°C  
+Tccd10:       +86.8°C  
+Tccd11:       +59.2°C  
+Tccd12:       +57.0°C  
+
+
+Thu Aug 22 11:53:03 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.9°C  
+Tccd1:        +58.4°C  
+Tccd2:        +60.0°C  
+Tccd3:        +59.5°C  
+Tccd4:        +57.9°C  
+Tccd5:        +58.0°C  
+Tccd6:        +60.4°C  
+Tccd7:        +59.5°C  
+Tccd8:        +56.8°C  
+Tccd9:        +56.5°C  
+Tccd10:       +59.6°C  
+Tccd11:       +58.8°C  
+Tccd12:       +57.5°C  
+
+
+Thu Aug 22 11:58:03 AM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.8°C  
+Tccd1:        +55.4°C  
+Tccd2:        +57.8°C  
+Tccd3:        +56.8°C  
+Tccd4:        +55.1°C  
+Tccd5:        +55.4°C  
+Tccd6:        +57.6°C  
+Tccd7:        +56.4°C  
+Tccd8:        +53.6°C  
+Tccd9:        +53.6°C  
+Tccd10:       +57.8°C  
+Tccd11:       +56.9°C  
+Tccd12:       +54.8°C  
+
+
+Thu Aug 22 12:03:04 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.5°C  
+Tccd1:        +58.9°C  
+Tccd2:        +61.9°C  
+Tccd3:        +60.5°C  
+Tccd4:        +58.8°C  
+Tccd5:        +58.5°C  
+Tccd6:        +61.6°C  
+Tccd7:        +59.9°C  
+Tccd8:        +57.2°C  
+Tccd9:        +57.0°C  
+Tccd10:       +86.8°C  
+Tccd11:       +60.1°C  
+Tccd12:       +57.9°C  
+
+
+Thu Aug 22 12:08:04 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +63.8°C  
+Tccd1:        +56.4°C  
+Tccd2:        +58.1°C  
+Tccd3:        +57.6°C  
+Tccd4:        +56.5°C  
+Tccd5:        +56.2°C  
+Tccd6:        +58.5°C  
+Tccd7:        +57.2°C  
+Tccd8:        +54.0°C  
+Tccd9:        +54.6°C  
+Tccd10:       +61.4°C  
+Tccd11:       +56.9°C  
+Tccd12:       +55.2°C  
+
+
+Thu Aug 22 12:13:04 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +68.4°C  
+Tccd1:        +57.4°C  
+Tccd2:        +60.0°C  
+Tccd3:        +58.6°C  
+Tccd4:        +57.4°C  
+Tccd5:        +57.6°C  
+Tccd6:        +59.4°C  
+Tccd7:        +58.6°C  
+Tccd8:        +55.9°C  
+Tccd9:        +56.0°C  
+Tccd10:       +58.8°C  
+Tccd11:       +58.8°C  
+Tccd12:       +56.8°C  
+
+
+Thu Aug 22 12:18:05 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.5°C  
+Tccd1:        +63.2°C  
+Tccd2:        +83.0°C  
+Tccd3:        +65.1°C  
+Tccd4:        +63.0°C  
+Tccd5:        +62.9°C  
+Tccd6:        +72.1°C  
+Tccd7:        +64.5°C  
+Tccd8:        +61.2°C  
+Tccd9:        +61.2°C  
+Tccd10:       +65.8°C  
+Tccd11:       +64.6°C  
+Tccd12:       +62.0°C  
+
+
+Thu Aug 22 12:23:06 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.0°C  
+Tccd1:        +66.2°C  
+Tccd2:        +69.0°C  
+Tccd3:        +67.5°C  
+Tccd4:        +65.2°C  
+Tccd5:        +65.6°C  
+Tccd6:        +83.6°C  
+Tccd7:        +67.1°C  
+Tccd8:        +63.5°C  
+Tccd9:        +63.6°C  
+Tccd10:       +67.5°C  
+Tccd11:       +67.0°C  
+Tccd12:       +64.6°C  
+
+
+Thu Aug 22 12:28:06 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.4°C  
+Tccd1:        +69.6°C  
+Tccd2:        +71.8°C  
+Tccd3:        +70.9°C  
+Tccd4:        +69.9°C  
+Tccd5:        +68.8°C  
+Tccd6:        +85.4°C  
+Tccd7:        +70.8°C  
+Tccd8:        +67.1°C  
+Tccd9:        +67.5°C  
+Tccd10:       +71.2°C  
+Tccd11:       +70.6°C  
+Tccd12:       +67.8°C  
+
+
+Thu Aug 22 12:33:07 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.9°C  
+Tccd1:        +70.1°C  
+Tccd2:        +72.2°C  
+Tccd3:        +71.2°C  
+Tccd4:        +70.4°C  
+Tccd5:        +69.6°C  
+Tccd6:        +81.8°C  
+Tccd7:        +71.2°C  
+Tccd8:        +67.6°C  
+Tccd9:        +68.0°C  
+Tccd10:       +71.2°C  
+Tccd11:       +71.0°C  
+Tccd12:       +68.2°C  
+
+
+Thu Aug 22 12:38:07 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.5°C  
+Tccd1:        +70.6°C  
+Tccd2:        +72.2°C  
+Tccd3:        +71.8°C  
+Tccd4:        +71.4°C  
+Tccd5:        +70.0°C  
+Tccd6:        +79.5°C  
+Tccd7:        +71.2°C  
+Tccd8:        +68.5°C  
+Tccd9:        +68.0°C  
+Tccd10:       +71.8°C  
+Tccd11:       +71.5°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 12:43:07 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.5°C  
+Tccd1:        +71.6°C  
+Tccd2:        +74.1°C  
+Tccd3:        +72.8°C  
+Tccd4:        +71.2°C  
+Tccd5:        +70.5°C  
+Tccd6:        +81.8°C  
+Tccd7:        +72.1°C  
+Tccd8:        +68.9°C  
+Tccd9:        +68.9°C  
+Tccd10:       +72.6°C  
+Tccd11:       +72.4°C  
+Tccd12:       +70.0°C  
+
+
+Thu Aug 22 12:48:08 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.1°C  
+Tccd1:        +72.6°C  
+Tccd2:        +75.5°C  
+Tccd3:        +74.1°C  
+Tccd4:        +72.6°C  
+Tccd5:        +71.8°C  
+Tccd6:        +84.0°C  
+Tccd7:        +73.9°C  
+Tccd8:        +70.2°C  
+Tccd9:        +69.9°C  
+Tccd10:       +74.1°C  
+Tccd11:       +73.4°C  
+Tccd12:       +71.0°C  
+
+
+Thu Aug 22 12:53:08 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.2°C  
+Tccd1:        +72.6°C  
+Tccd2:        +75.0°C  
+Tccd3:        +73.6°C  
+Tccd4:        +72.6°C  
+Tccd5:        +71.8°C  
+Tccd6:        +84.5°C  
+Tccd7:        +73.0°C  
+Tccd8:        +70.2°C  
+Tccd9:        +70.4°C  
+Tccd10:       +73.6°C  
+Tccd11:       +73.4°C  
+Tccd12:       +70.5°C  
+
+
+Thu Aug 22 12:58:08 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.0°C  
+Tccd1:        +74.1°C  
+Tccd2:        +76.0°C  
+Tccd3:        +75.1°C  
+Tccd4:        +73.1°C  
+Tccd5:        +72.8°C  
+Tccd6:        +80.4°C  
+Tccd7:        +74.9°C  
+Tccd8:        +71.1°C  
+Tccd9:        +71.2°C  
+Tccd10:       +75.0°C  
+Tccd11:       +74.8°C  
+Tccd12:       +71.9°C  
+
+
+Thu Aug 22 01:03:09 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.0°C  
+Tccd1:        +74.1°C  
+Tccd2:        +76.0°C  
+Tccd3:        +75.5°C  
+Tccd4:        +73.6°C  
+Tccd5:        +72.8°C  
+Tccd6:        +80.4°C  
+Tccd7:        +75.2°C  
+Tccd8:        +71.6°C  
+Tccd9:        +71.2°C  
+Tccd10:       +75.0°C  
+Tccd11:       +75.1°C  
+Tccd12:       +72.9°C  
+
+
+Thu Aug 22 01:08:09 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.5°C  
+Tccd1:        +73.6°C  
+Tccd2:        +76.0°C  
+Tccd3:        +75.1°C  
+Tccd4:        +73.6°C  
+Tccd5:        +73.1°C  
+Tccd6:        +79.5°C  
+Tccd7:        +74.4°C  
+Tccd8:        +71.1°C  
+Tccd9:        +71.2°C  
+Tccd10:       +74.5°C  
+Tccd11:       +74.8°C  
+Tccd12:       +71.9°C  
+
+
+Thu Aug 22 01:13:09 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.0°C  
+Tccd1:        +74.6°C  
+Tccd2:        +76.5°C  
+Tccd3:        +76.0°C  
+Tccd4:        +74.0°C  
+Tccd5:        +73.6°C  
+Tccd6:        +85.4°C  
+Tccd7:        +75.2°C  
+Tccd8:        +72.1°C  
+Tccd9:        +71.8°C  
+Tccd10:       +75.5°C  
+Tccd11:       +75.1°C  
+Tccd12:       +72.2°C  
+
+
+Thu Aug 22 01:18:10 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.6°C  
+Tccd1:        +74.1°C  
+Tccd2:        +76.9°C  
+Tccd3:        +76.0°C  
+Tccd4:        +74.0°C  
+Tccd5:        +73.1°C  
+Tccd6:        +83.1°C  
+Tccd7:        +75.2°C  
+Tccd8:        +71.6°C  
+Tccd9:        +72.2°C  
+Tccd10:       +75.5°C  
+Tccd11:       +75.1°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 01:23:10 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.2°C  
+Tccd1:        +74.6°C  
+Tccd2:        +76.9°C  
+Tccd3:        +76.0°C  
+Tccd4:        +74.0°C  
+Tccd5:        +74.0°C  
+Tccd6:        +83.1°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.1°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.0°C  
+Tccd11:       +75.6°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 01:28:11 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.0°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +77.0°C  
+Tccd4:        +75.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +80.4°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.1°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.0°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 01:33:11 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.0°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.0°C  
+Tccd5:        +74.0°C  
+Tccd6:        +84.5°C  
+Tccd7:        +76.1°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.0°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.8°C  
+
+
+Thu Aug 22 01:38:11 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.9°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +77.0°C  
+Tccd4:        +75.0°C  
+Tccd5:        +73.6°C  
+Tccd6:        +85.0°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.0°C  
+Tccd11:       +75.6°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 01:43:12 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.9°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.5°C  
+Tccd5:        +73.6°C  
+Tccd6:        +83.6°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.0°C  
+Tccd11:       +75.6°C  
+Tccd12:       +73.6°C  
+
+
+Thu Aug 22 01:48:12 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.8°C  
+Tccd1:        +75.6°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.0°C  
+Tccd5:        +74.0°C  
+Tccd6:        +80.0°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.0°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.6°C  
+
+
+Thu Aug 22 01:53:12 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.9°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.0°C  
+Tccd3:        +77.0°C  
+Tccd4:        +75.0°C  
+Tccd5:        +74.0°C  
+Tccd6:        +80.9°C  
+Tccd7:        +76.1°C  
+Tccd8:        +73.0°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.4°C  
+Tccd11:       +75.6°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 01:58:13 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.9°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.9°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +85.4°C  
+Tccd7:        +76.1°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.0°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.6°C  
+
+
+Thu Aug 22 02:03:13 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.8°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +80.0°C  
+Tccd7:        +76.1°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.4°C  
+Tccd11:       +75.6°C  
+Tccd12:       +73.6°C  
+
+
+Thu Aug 22 02:08:13 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.8°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.0°C  
+Tccd4:        +75.0°C  
+Tccd5:        +74.0°C  
+Tccd6:        +85.0°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.1°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.0°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 02:13:14 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.8°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.0°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +86.4°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.0°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 02:18:14 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.0°C  
+Tccd1:        +75.6°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +75.0°C  
+Tccd5:        +74.0°C  
+Tccd6:        +83.1°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.4°C  
+Tccd11:       +75.6°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 02:23:15 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.9°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +77.0°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +85.0°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.1°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.4°C  
+Tccd11:       +75.6°C  
+Tccd12:       +73.6°C  
+
+
+Thu Aug 22 02:28:15 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.1°C  
+Tccd1:        +75.6°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +75.9°C  
+Tccd5:        +74.5°C  
+Tccd6:        +84.0°C  
+Tccd7:        +76.1°C  
+Tccd8:        +73.0°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.4°C  
+Tccd11:       +75.1°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 02:33:15 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.9°C  
+Tccd1:        +74.6°C  
+Tccd2:        +77.5°C  
+Tccd3:        +77.0°C  
+Tccd4:        +75.0°C  
+Tccd5:        +74.0°C  
+Tccd6:        +81.4°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.0°C  
+Tccd11:       +75.6°C  
+Tccd12:       +73.8°C  
+
+
+Thu Aug 22 02:38:16 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.0°C  
+Tccd1:        +75.6°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +75.0°C  
+Tccd5:        +74.0°C  
+Tccd6:        +80.9°C  
+Tccd7:        +76.1°C  
+Tccd8:        +73.0°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.0°C  
+Tccd11:       +76.1°C  
+Tccd12:       +74.1°C  
+
+
+Thu Aug 22 02:43:16 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.1°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.5°C  
+Tccd6:        +80.4°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.4°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.8°C  
+
+
+Thu Aug 22 02:48:16 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.9°C  
+Tccd1:        +75.6°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +80.4°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.4°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.6°C  
+
+
+Thu Aug 22 02:53:17 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.9°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +83.1°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.4°C  
+Tccd11:       +75.6°C  
+Tccd12:       +74.1°C  
+
+
+Thu Aug 22 02:58:17 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.8°C  
+Tccd1:        +74.6°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +83.1°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.1°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.0°C  
+Tccd11:       +76.1°C  
+Tccd12:       +74.1°C  
+
+
+Thu Aug 22 03:03:17 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +81.5°C  
+Tccd1:        +71.6°C  
+Tccd2:        +74.1°C  
+Tccd3:        +73.2°C  
+Tccd4:        +71.8°C  
+Tccd5:        +70.9°C  
+Tccd6:        +76.8°C  
+Tccd7:        +72.6°C  
+Tccd8:        +68.9°C  
+Tccd9:        +68.9°C  
+Tccd10:       +72.6°C  
+Tccd11:       +72.9°C  
+Tccd12:       +69.6°C  
+
+
+Thu Aug 22 03:08:18 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +42.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +42.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.5°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.0°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +81.8°C  
+Tccd7:        +75.2°C  
+Tccd8:        +72.1°C  
+Tccd9:        +72.2°C  
+Tccd10:       +75.5°C  
+Tccd11:       +75.1°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 03:13:18 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.6°C  
+Tccd1:        +74.6°C  
+Tccd2:        +77.4°C  
+Tccd3:        +75.5°C  
+Tccd4:        +75.0°C  
+Tccd5:        +73.6°C  
+Tccd6:        +82.2°C  
+Tccd7:        +75.2°C  
+Tccd8:        +72.1°C  
+Tccd9:        +71.8°C  
+Tccd10:       +75.5°C  
+Tccd11:       +75.1°C  
+Tccd12:       +72.8°C  
+
+
+Thu Aug 22 03:18:19 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.0°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +75.0°C  
+Tccd5:        +74.0°C  
+Tccd6:        +80.4°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.4°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.8°C  
+
+
+Thu Aug 22 03:23:19 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.1°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +83.6°C  
+Tccd7:        +76.1°C  
+Tccd8:        +72.1°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.0°C  
+Tccd11:       +75.6°C  
+Tccd12:       +74.1°C  
+
+
+Thu Aug 22 03:28:19 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.2°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +75.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +80.4°C  
+Tccd7:        +76.1°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.2°C  
+Tccd10:       +76.0°C  
+Tccd11:       +75.6°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 03:33:20 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.9°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.5°C  
+Tccd3:        +76.5°C  
+Tccd4:        +74.5°C  
+Tccd5:        +74.0°C  
+Tccd6:        +81.4°C  
+Tccd7:        +75.2°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.0°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.6°C  
+
+
+Thu Aug 22 03:38:20 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.1°C  
+Tccd1:        +75.1°C  
+Tccd2:        +77.4°C  
+Tccd3:        +76.5°C  
+Tccd4:        +75.0°C  
+Tccd5:        +74.0°C  
+Tccd6:        +80.0°C  
+Tccd7:        +75.8°C  
+Tccd8:        +72.5°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.4°C  
+Tccd11:       +76.1°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 03:43:20 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.5°C  
+Tccd1:        +74.6°C  
+Tccd2:        +76.9°C  
+Tccd3:        +75.5°C  
+Tccd4:        +74.5°C  
+Tccd5:        +73.6°C  
+Tccd6:        +79.5°C  
+Tccd7:        +75.2°C  
+Tccd8:        +72.1°C  
+Tccd9:        +71.8°C  
+Tccd10:       +75.5°C  
+Tccd11:       +75.1°C  
+Tccd12:       +72.2°C  
+
+
+Thu Aug 22 03:48:21 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.4°C  
+Tccd1:        +74.6°C  
+Tccd2:        +76.9°C  
+Tccd3:        +75.5°C  
+Tccd4:        +74.0°C  
+Tccd5:        +73.6°C  
+Tccd6:        +81.4°C  
+Tccd7:        +75.2°C  
+Tccd8:        +72.1°C  
+Tccd9:        +71.8°C  
+Tccd10:       +75.5°C  
+Tccd11:       +75.1°C  
+Tccd12:       +72.2°C  
+
+
+Thu Aug 22 03:53:21 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +84.8°C  
+Tccd1:        +73.1°C  
+Tccd2:        +74.6°C  
+Tccd3:        +74.1°C  
+Tccd4:        +72.8°C  
+Tccd5:        +73.0°C  
+Tccd6:        +75.0°C  
+Tccd7:        +74.9°C  
+Tccd8:        +71.6°C  
+Tccd9:        +72.5°C  
+Tccd10:       +76.4°C  
+Tccd11:       +74.2°C  
+Tccd12:       +73.2°C  
+
+
+Thu Aug 22 03:58:22 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.0°C  
+Tccd1:        +68.1°C  
+Tccd2:        +70.9°C  
+Tccd3:        +69.4°C  
+Tccd4:        +68.0°C  
+Tccd5:        +68.2°C  
+Tccd6:        +76.4°C  
+Tccd7:        +69.4°C  
+Tccd8:        +66.2°C  
+Tccd9:        +67.5°C  
+Tccd10:       +70.4°C  
+Tccd11:       +70.1°C  
+Tccd12:       +67.8°C  
+
+
+Thu Aug 22 04:03:22 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +43.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +43.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.6°C  
+Tccd1:        +67.2°C  
+Tccd2:        +70.0°C  
+Tccd3:        +68.0°C  
+Tccd4:        +66.6°C  
+Tccd5:        +67.4°C  
+Tccd6:        +74.5°C  
+Tccd7:        +69.0°C  
+Tccd8:        +65.4°C  
+Tccd9:        +66.5°C  
+Tccd10:       +69.4°C  
+Tccd11:       +69.2°C  
+Tccd12:       +66.9°C  
+
+
+Thu Aug 22 04:08:22 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.8°C  
+Tccd1:        +69.6°C  
+Tccd2:        +86.2°C  
+Tccd3:        +70.4°C  
+Tccd4:        +69.4°C  
+Tccd5:        +69.6°C  
+Tccd6:        +71.8°C  
+Tccd7:        +70.8°C  
+Tccd8:        +68.0°C  
+Tccd9:        +68.9°C  
+Tccd10:       +71.8°C  
+Tccd11:       +70.6°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 04:13:23 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.6°C  
+Tccd1:        +67.8°C  
+Tccd2:        +87.1°C  
+Tccd3:        +68.5°C  
+Tccd4:        +67.6°C  
+Tccd5:        +67.8°C  
+Tccd6:        +69.9°C  
+Tccd7:        +68.5°C  
+Tccd8:        +65.4°C  
+Tccd9:        +67.0°C  
+Tccd10:       +69.4°C  
+Tccd11:       +69.2°C  
+Tccd12:       +66.9°C  
+
+
+Thu Aug 22 04:18:23 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.4°C  
+Tccd1:        +67.8°C  
+Tccd2:        +92.6°C  
+Tccd3:        +69.0°C  
+Tccd4:        +67.6°C  
+Tccd5:        +67.8°C  
+Tccd6:        +70.9°C  
+Tccd7:        +69.0°C  
+Tccd8:        +65.8°C  
+Tccd9:        +66.5°C  
+Tccd10:       +69.4°C  
+Tccd11:       +69.2°C  
+Tccd12:       +66.9°C  
+
+
+Thu Aug 22 04:23:23 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.4°C  
+Tccd1:        +68.8°C  
+Tccd2:        +78.2°C  
+Tccd3:        +69.9°C  
+Tccd4:        +68.0°C  
+Tccd5:        +68.8°C  
+Tccd6:        +71.2°C  
+Tccd7:        +69.9°C  
+Tccd8:        +67.1°C  
+Tccd9:        +68.0°C  
+Tccd10:       +70.9°C  
+Tccd11:       +70.1°C  
+Tccd12:       +68.2°C  
+
+
+Thu Aug 22 04:28:24 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.1°C  
+Tccd1:        +69.6°C  
+Tccd2:        +79.2°C  
+Tccd3:        +70.4°C  
+Tccd4:        +69.0°C  
+Tccd5:        +69.6°C  
+Tccd6:        +71.8°C  
+Tccd7:        +70.8°C  
+Tccd8:        +68.5°C  
+Tccd9:        +69.4°C  
+Tccd10:       +70.9°C  
+Tccd11:       +71.0°C  
+Tccd12:       +69.6°C  
+
+
+Thu Aug 22 04:33:24 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +46.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.9°C  
+Tccd1:        +68.8°C  
+Tccd2:        +74.1°C  
+Tccd3:        +69.9°C  
+Tccd4:        +68.5°C  
+Tccd5:        +68.8°C  
+Tccd6:        +71.8°C  
+Tccd7:        +69.9°C  
+Tccd8:        +67.1°C  
+Tccd9:        +68.0°C  
+Tccd10:       +70.9°C  
+Tccd11:       +70.6°C  
+Tccd12:       +68.2°C  
+
+
+Thu Aug 22 04:38:25 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.8°C  
+Tccd1:        +68.2°C  
+Tccd2:        +69.9°C  
+Tccd3:        +69.4°C  
+Tccd4:        +68.5°C  
+Tccd5:        +69.2°C  
+Tccd6:        +70.9°C  
+Tccd7:        +69.9°C  
+Tccd8:        +67.6°C  
+Tccd9:        +68.0°C  
+Tccd10:       +76.9°C  
+Tccd11:       +70.6°C  
+Tccd12:       +68.8°C  
+
+
+Thu Aug 22 04:43:25 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +85.8°C  
+Tccd1:        +69.1°C  
+Tccd2:        +70.4°C  
+Tccd3:        +69.9°C  
+Tccd4:        +68.5°C  
+Tccd5:        +69.6°C  
+Tccd6:        +70.9°C  
+Tccd7:        +70.2°C  
+Tccd8:        +68.0°C  
+Tccd9:        +68.9°C  
+Tccd10:       +82.9°C  
+Tccd11:       +71.0°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 04:48:26 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.2°C  
+Tccd1:        +78.8°C  
+Tccd2:        +82.5°C  
+Tccd3:        +80.2°C  
+Tccd4:        +79.1°C  
+Tccd5:        +82.1°C  
+Tccd6:        +81.4°C  
+Tccd7:        +83.5°C  
+Tccd8:        +80.2°C  
+Tccd9:        +80.6°C  
+Tccd10:       +79.6°C  
+Tccd11:       +78.8°C  
+Tccd12:       +80.4°C  
+
+
+Thu Aug 22 04:53:26 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.8°C  
+Tccd1:        +69.2°C  
+Tccd2:        +70.9°C  
+Tccd3:        +69.9°C  
+Tccd4:        +68.5°C  
+Tccd5:        +69.1°C  
+Tccd6:        +81.8°C  
+Tccd7:        +70.2°C  
+Tccd8:        +67.6°C  
+Tccd9:        +68.9°C  
+Tccd10:       +71.2°C  
+Tccd11:       +70.6°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 04:58:26 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.9°C  
+Tccd1:        +72.9°C  
+Tccd2:        +74.1°C  
+Tccd3:        +73.8°C  
+Tccd4:        +71.8°C  
+Tccd5:        +73.1°C  
+Tccd6:        +75.0°C  
+Tccd7:        +73.5°C  
+Tccd8:        +72.5°C  
+Tccd9:        +73.5°C  
+Tccd10:       +73.6°C  
+Tccd11:       +73.4°C  
+Tccd12:       +73.8°C  
+
+
+Thu Aug 22 05:03:27 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.5°C  
+Tccd1:        +69.6°C  
+Tccd2:        +81.4°C  
+Tccd3:        +70.4°C  
+Tccd4:        +69.4°C  
+Tccd5:        +70.0°C  
+Tccd6:        +71.2°C  
+Tccd7:        +70.8°C  
+Tccd8:        +68.5°C  
+Tccd9:        +69.4°C  
+Tccd10:       +70.9°C  
+Tccd11:       +70.6°C  
+Tccd12:       +70.0°C  
+
+
+Thu Aug 22 05:08:27 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.6°C  
+Tccd1:        +69.2°C  
+Tccd2:        +75.1°C  
+Tccd3:        +69.4°C  
+Tccd4:        +69.9°C  
+Tccd5:        +71.8°C  
+Tccd6:        +71.2°C  
+Tccd7:        +72.6°C  
+Tccd8:        +68.9°C  
+Tccd9:        +71.2°C  
+Tccd10:       +75.5°C  
+Tccd11:       +70.6°C  
+Tccd12:       +70.5°C  
+
+
+Thu Aug 22 05:13:28 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.4°C  
+Tccd1:        +68.8°C  
+Tccd2:        +69.9°C  
+Tccd3:        +69.4°C  
+Tccd4:        +68.0°C  
+Tccd5:        +69.1°C  
+Tccd6:        +80.4°C  
+Tccd7:        +69.9°C  
+Tccd8:        +67.6°C  
+Tccd9:        +68.5°C  
+Tccd10:       +70.4°C  
+Tccd11:       +70.1°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 05:18:28 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.1°C  
+Tccd1:        +69.6°C  
+Tccd2:        +70.9°C  
+Tccd3:        +69.9°C  
+Tccd4:        +69.0°C  
+Tccd5:        +70.0°C  
+Tccd6:        +71.2°C  
+Tccd7:        +70.8°C  
+Tccd8:        +68.0°C  
+Tccd9:        +69.4°C  
+Tccd10:       +81.6°C  
+Tccd11:       +71.5°C  
+Tccd12:       +70.0°C  
+
+
+Thu Aug 22 05:23:29 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.2°C  
+Tccd1:        +68.2°C  
+Tccd2:        +69.4°C  
+Tccd3:        +69.0°C  
+Tccd4:        +68.0°C  
+Tccd5:        +68.8°C  
+Tccd6:        +70.4°C  
+Tccd7:        +69.4°C  
+Tccd8:        +67.1°C  
+Tccd9:        +68.0°C  
+Tccd10:       +85.8°C  
+Tccd11:       +70.1°C  
+Tccd12:       +68.8°C  
+
+
+Thu Aug 22 05:28:29 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.4°C  
+Tccd1:        +68.8°C  
+Tccd2:        +82.5°C  
+Tccd3:        +69.0°C  
+Tccd4:        +68.5°C  
+Tccd5:        +68.8°C  
+Tccd6:        +69.9°C  
+Tccd7:        +69.4°C  
+Tccd8:        +67.1°C  
+Tccd9:        +68.5°C  
+Tccd10:       +69.9°C  
+Tccd11:       +69.6°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 05:33:29 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.1°C  
+Tccd1:        +68.8°C  
+Tccd2:        +80.1°C  
+Tccd3:        +69.0°C  
+Tccd4:        +68.0°C  
+Tccd5:        +69.6°C  
+Tccd6:        +70.9°C  
+Tccd7:        +69.4°C  
+Tccd8:        +67.6°C  
+Tccd9:        +68.0°C  
+Tccd10:       +70.4°C  
+Tccd11:       +70.1°C  
+Tccd12:       +69.6°C  
+
+
+Thu Aug 22 05:38:30 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.1°C  
+Tccd1:        +68.9°C  
+Tccd2:        +70.4°C  
+Tccd3:        +69.4°C  
+Tccd4:        +69.0°C  
+Tccd5:        +69.6°C  
+Tccd6:        +97.5°C  
+Tccd7:        +69.9°C  
+Tccd8:        +68.0°C  
+Tccd9:        +98.9°C  
+Tccd10:       +70.4°C  
+Tccd11:       +70.6°C  
+Tccd12:       +69.8°C  
+
+
+Thu Aug 22 05:43:30 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.0°C  
+Tccd1:        +68.8°C  
+Tccd2:        +76.5°C  
+Tccd3:        +69.4°C  
+Tccd4:        +69.0°C  
+Tccd5:        +70.5°C  
+Tccd6:        +70.9°C  
+Tccd7:        +70.2°C  
+Tccd8:        +68.0°C  
+Tccd9:        +73.9°C  
+Tccd10:       +70.4°C  
+Tccd11:       +70.1°C  
+Tccd12:       +70.0°C  
+
+
+Thu Aug 22 05:48:31 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.5°C  
+Tccd1:        +67.8°C  
+Tccd2:        +69.9°C  
+Tccd3:        +68.5°C  
+Tccd4:        +67.6°C  
+Tccd5:        +68.8°C  
+Tccd6:        +69.9°C  
+Tccd7:        +69.4°C  
+Tccd8:        +67.1°C  
+Tccd9:        +68.0°C  
+Tccd10:       +88.6°C  
+Tccd11:       +70.1°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 05:53:31 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.2°C  
+Tccd1:        +68.8°C  
+Tccd2:        +69.9°C  
+Tccd3:        +69.4°C  
+Tccd4:        +68.5°C  
+Tccd5:        +69.1°C  
+Tccd6:        +89.4°C  
+Tccd7:        +69.9°C  
+Tccd8:        +67.6°C  
+Tccd9:        +68.5°C  
+Tccd10:       +70.9°C  
+Tccd11:       +70.6°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 05:58:31 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.6°C  
+Tccd1:        +68.2°C  
+Tccd2:        +70.4°C  
+Tccd3:        +69.4°C  
+Tccd4:        +68.0°C  
+Tccd5:        +69.1°C  
+Tccd6:        +85.9°C  
+Tccd7:        +69.9°C  
+Tccd8:        +67.6°C  
+Tccd9:        +68.5°C  
+Tccd10:       +70.9°C  
+Tccd11:       +70.6°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 06:03:32 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.2°C  
+Tccd1:        +67.8°C  
+Tccd2:        +76.9°C  
+Tccd3:        +68.5°C  
+Tccd4:        +67.1°C  
+Tccd5:        +68.2°C  
+Tccd6:        +69.9°C  
+Tccd7:        +69.0°C  
+Tccd8:        +66.2°C  
+Tccd9:        +67.5°C  
+Tccd10:       +69.4°C  
+Tccd11:       +69.6°C  
+Tccd12:       +68.2°C  
+
+
+Thu Aug 22 06:08:32 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.8°C  
+Tccd1:        +84.6°C  
+Tccd2:        +71.5°C  
+Tccd3:        +77.9°C  
+Tccd4:        +68.5°C  
+Tccd5:        +79.9°C  
+Tccd6:        +71.2°C  
+Tccd7:        +69.0°C  
+Tccd8:        +88.9°C  
+Tccd9:        +89.2°C  
+Tccd10:       +70.4°C  
+Tccd11:       +70.1°C  
+Tccd12:       +71.0°C  
+
+
+Thu Aug 22 06:13:33 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.9°C  
+Tccd1:        +75.6°C  
+Tccd2:        +75.1°C  
+Tccd3:        +75.5°C  
+Tccd4:        +73.6°C  
+Tccd5:        +76.2°C  
+Tccd6:        +76.8°C  
+Tccd7:        +76.6°C  
+Tccd8:        +74.8°C  
+Tccd9:        +75.2°C  
+Tccd10:       +75.5°C  
+Tccd11:       +75.6°C  
+Tccd12:       +76.9°C  
+
+
+Thu Aug 22 06:18:33 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.8°C  
+Tccd1:        +75.1°C  
+Tccd2:        +74.6°C  
+Tccd3:        +75.6°C  
+Tccd4:        +73.1°C  
+Tccd5:        +75.4°C  
+Tccd6:        +76.2°C  
+Tccd7:        +74.9°C  
+Tccd8:        +74.4°C  
+Tccd9:        +75.2°C  
+Tccd10:       +75.0°C  
+Tccd11:       +74.8°C  
+Tccd12:       +75.5°C  
+
+
+Thu Aug 22 06:23:34 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.6°C  
+Tccd1:        +74.8°C  
+Tccd2:        +74.6°C  
+Tccd3:        +74.6°C  
+Tccd4:        +73.1°C  
+Tccd5:        +75.4°C  
+Tccd6:        +75.9°C  
+Tccd7:        +75.8°C  
+Tccd8:        +73.9°C  
+Tccd9:        +74.8°C  
+Tccd10:       +74.5°C  
+Tccd11:       +75.1°C  
+Tccd12:       +75.0°C  
+
+
+Thu Aug 22 06:28:34 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.9°C  
+Tccd1:        +69.2°C  
+Tccd2:        +74.1°C  
+Tccd3:        +70.9°C  
+Tccd4:        +69.1°C  
+Tccd5:        +71.2°C  
+Tccd6:        +71.2°C  
+Tccd7:        +81.6°C  
+Tccd8:        +93.9°C  
+Tccd9:        +71.1°C  
+Tccd10:       +85.6°C  
+Tccd11:       +78.8°C  
+Tccd12:       +80.9°C  
+
+
+Thu Aug 22 06:33:35 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.8°C  
+Tccd1:        +70.1°C  
+Tccd2:        +72.8°C  
+Tccd3:        +69.0°C  
+Tccd4:        +69.4°C  
+Tccd5:        +70.4°C  
+Tccd6:        +70.4°C  
+Tccd7:        +91.9°C  
+Tccd8:        +68.0°C  
+Tccd9:        +71.1°C  
+Tccd10:       +82.0°C  
+Tccd11:       +76.5°C  
+Tccd12:       +91.5°C  
+
+
+Thu Aug 22 06:38:35 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.2°C  
+Tccd1:        +77.5°C  
+Tccd2:        +78.2°C  
+Tccd3:        +77.4°C  
+Tccd4:        +75.9°C  
+Tccd5:        +77.1°C  
+Tccd6:        +79.0°C  
+Tccd7:        +78.5°C  
+Tccd8:        +74.8°C  
+Tccd9:        +75.6°C  
+Tccd10:       +77.8°C  
+Tccd11:       +77.0°C  
+Tccd12:       +78.1°C  
+
+
+Thu Aug 22 06:43:36 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.2°C  
+Tccd1:        +86.1°C  
+Tccd2:        +82.5°C  
+Tccd3:        +81.6°C  
+Tccd4:        +71.8°C  
+Tccd5:        +77.6°C  
+Tccd6:        +91.9°C  
+Tccd7:        +90.4°C  
+Tccd8:        +88.9°C  
+Tccd9:        +72.8°C  
+Tccd10:       +76.4°C  
+Tccd11:       +87.9°C  
+Tccd12:       +77.2°C  
+
+
+Thu Aug 22 06:48:36 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.8°C  
+Tccd1:        +68.8°C  
+Tccd2:        +76.0°C  
+Tccd3:        +69.4°C  
+Tccd4:        +68.5°C  
+Tccd5:        +70.0°C  
+Tccd6:        +69.9°C  
+Tccd7:        +69.4°C  
+Tccd8:        +68.0°C  
+Tccd9:        +71.8°C  
+Tccd10:       +69.9°C  
+Tccd11:       +70.6°C  
+Tccd12:       +70.0°C  
+
+
+Thu Aug 22 06:53:37 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.1°C  
+Tccd1:        +68.2°C  
+Tccd2:        +85.2°C  
+Tccd3:        +68.5°C  
+Tccd4:        +68.0°C  
+Tccd5:        +68.8°C  
+Tccd6:        +70.4°C  
+Tccd7:        +69.0°C  
+Tccd8:        +67.1°C  
+Tccd9:        +68.0°C  
+Tccd10:       +70.4°C  
+Tccd11:       +70.1°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 06:58:37 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.4°C  
+Tccd1:        +72.5°C  
+Tccd2:        +72.8°C  
+Tccd3:        +72.2°C  
+Tccd4:        +71.4°C  
+Tccd5:        +73.0°C  
+Tccd6:        +74.0°C  
+Tccd7:        +73.5°C  
+Tccd8:        +71.1°C  
+Tccd9:        +72.6°C  
+Tccd10:       +74.6°C  
+Tccd11:       +73.4°C  
+Tccd12:       +73.6°C  
+
+
+Thu Aug 22 07:03:37 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.8°C  
+Tccd1:        +66.9°C  
+Tccd2:        +77.2°C  
+Tccd3:        +67.5°C  
+Tccd4:        +66.2°C  
+Tccd5:        +68.1°C  
+Tccd6:        +69.9°C  
+Tccd7:        +68.4°C  
+Tccd8:        +66.5°C  
+Tccd9:        +67.8°C  
+Tccd10:       +69.4°C  
+Tccd11:       +68.4°C  
+Tccd12:       +68.8°C  
+
+
+Thu Aug 22 07:08:38 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.2°C  
+Tccd1:        +71.5°C  
+Tccd2:        +74.1°C  
+Tccd3:        +69.0°C  
+Tccd4:        +70.5°C  
+Tccd5:        +69.9°C  
+Tccd6:        +78.6°C  
+Tccd7:        +73.9°C  
+Tccd8:        +68.4°C  
+Tccd9:        +70.0°C  
+Tccd10:       +73.6°C  
+Tccd11:       +70.1°C  
+Tccd12:       +72.8°C  
+
+
+Thu Aug 22 07:13:38 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.1°C  
+Tccd1:        +77.0°C  
+Tccd2:        +76.9°C  
+Tccd3:        +77.0°C  
+Tccd4:        +75.5°C  
+Tccd5:        +76.2°C  
+Tccd6:        +77.2°C  
+Tccd7:        +78.0°C  
+Tccd8:        +73.0°C  
+Tccd9:        +77.9°C  
+Tccd10:       +76.4°C  
+Tccd11:       +75.6°C  
+Tccd12:       +77.2°C  
+
+
+Thu Aug 22 07:18:39 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.6°C  
+Tccd1:        +69.6°C  
+Tccd2:        +69.0°C  
+Tccd3:        +68.0°C  
+Tccd4:        +69.0°C  
+Tccd5:        +70.0°C  
+Tccd6:        +69.0°C  
+Tccd7:        +68.5°C  
+Tccd8:        +68.0°C  
+Tccd9:        +69.9°C  
+Tccd10:       +68.5°C  
+Tccd11:       +68.8°C  
+Tccd12:       +83.1°C  
+
+
+Thu Aug 22 07:23:39 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.6°C  
+Tccd1:        +67.8°C  
+Tccd2:        +69.0°C  
+Tccd3:        +68.0°C  
+Tccd4:        +67.6°C  
+Tccd5:        +68.8°C  
+Tccd6:        +70.4°C  
+Tccd7:        +68.5°C  
+Tccd8:        +68.0°C  
+Tccd9:        +68.5°C  
+Tccd10:       +81.5°C  
+Tccd11:       +69.6°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 07:28:40 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.6°C  
+Tccd1:        +74.2°C  
+Tccd2:        +74.6°C  
+Tccd3:        +74.1°C  
+Tccd4:        +72.1°C  
+Tccd5:        +74.4°C  
+Tccd6:        +75.4°C  
+Tccd7:        +74.9°C  
+Tccd8:        +73.9°C  
+Tccd9:        +74.4°C  
+Tccd10:       +74.5°C  
+Tccd11:       +74.2°C  
+Tccd12:       +74.5°C  
+
+
+Thu Aug 22 07:33:40 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.2°C  
+Tccd1:        +69.2°C  
+Tccd2:        +70.0°C  
+Tccd3:        +69.0°C  
+Tccd4:        +67.8°C  
+Tccd5:        +69.9°C  
+Tccd6:        +71.8°C  
+Tccd7:        +70.2°C  
+Tccd8:        +68.4°C  
+Tccd9:        +69.9°C  
+Tccd10:       +74.5°C  
+Tccd11:       +70.6°C  
+Tccd12:       +70.5°C  
+
+
+Thu Aug 22 07:38:40 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.8°C  
+Tccd1:        +67.8°C  
+Tccd2:        +75.0°C  
+Tccd3:        +68.1°C  
+Tccd4:        +67.1°C  
+Tccd5:        +69.1°C  
+Tccd6:        +69.5°C  
+Tccd7:        +68.5°C  
+Tccd8:        +70.0°C  
+Tccd9:        +72.1°C  
+Tccd10:       +69.4°C  
+Tccd11:       +69.6°C  
+Tccd12:       +69.1°C  
+
+
+Thu Aug 22 07:43:41 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.0°C  
+Tccd1:        +76.5°C  
+Tccd2:        +75.0°C  
+Tccd3:        +77.0°C  
+Tccd4:        +80.9°C  
+Tccd5:        +77.1°C  
+Tccd6:        +81.4°C  
+Tccd7:        +79.9°C  
+Tccd8:        +76.6°C  
+Tccd9:        +78.4°C  
+Tccd10:       +80.1°C  
+Tccd11:       +79.2°C  
+Tccd12:       +77.8°C  
+
+
+Thu Aug 22 07:48:41 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.9°C  
+Tccd1:        +72.9°C  
+Tccd2:        +72.8°C  
+Tccd3:        +72.8°C  
+Tccd4:        +72.2°C  
+Tccd5:        +74.0°C  
+Tccd6:        +73.1°C  
+Tccd7:        +73.9°C  
+Tccd8:        +73.0°C  
+Tccd9:        +73.5°C  
+Tccd10:       +72.1°C  
+Tccd11:       +72.9°C  
+Tccd12:       +74.5°C  
+
+
+Thu Aug 22 07:53:42 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.0°C  
+Tccd1:        +82.4°C  
+Tccd2:        +68.5°C  
+Tccd3:        +68.0°C  
+Tccd4:        +68.5°C  
+Tccd5:        +70.5°C  
+Tccd6:        +68.5°C  
+Tccd7:        +68.0°C  
+Tccd8:        +68.5°C  
+Tccd9:        +69.9°C  
+Tccd10:       +68.5°C  
+Tccd11:       +68.4°C  
+Tccd12:       +70.0°C  
+
+
+Thu Aug 22 07:58:42 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.0°C  
+Tccd1:        +73.8°C  
+Tccd2:        +73.2°C  
+Tccd3:        +73.8°C  
+Tccd4:        +73.2°C  
+Tccd5:        +74.9°C  
+Tccd6:        +73.6°C  
+Tccd7:        +73.9°C  
+Tccd8:        +73.9°C  
+Tccd9:        +74.8°C  
+Tccd10:       +72.8°C  
+Tccd11:       +75.1°C  
+Tccd12:       +75.9°C  
+
+
+Thu Aug 22 08:03:43 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.8°C  
+Tccd1:        +68.4°C  
+Tccd2:        +68.0°C  
+Tccd3:        +84.5°C  
+Tccd4:        +67.1°C  
+Tccd5:        +69.9°C  
+Tccd6:        +68.1°C  
+Tccd7:        +67.6°C  
+Tccd8:        +67.6°C  
+Tccd9:        +78.9°C  
+Tccd10:       +69.5°C  
+Tccd11:       +84.2°C  
+Tccd12:       +75.0°C  
+
+
+Thu Aug 22 08:08:43 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.2°C  
+Tccd1:        +69.6°C  
+Tccd2:        +69.0°C  
+Tccd3:        +68.0°C  
+Tccd4:        +69.0°C  
+Tccd5:        +78.5°C  
+Tccd6:        +69.5°C  
+Tccd7:        +69.0°C  
+Tccd8:        +68.9°C  
+Tccd9:        +70.9°C  
+Tccd10:       +69.0°C  
+Tccd11:       +69.2°C  
+Tccd12:       +71.0°C  
+
+
+Thu Aug 22 08:13:44 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.8°C  
+Tccd1:        +69.6°C  
+Tccd2:        +69.0°C  
+Tccd3:        +68.0°C  
+Tccd4:        +68.5°C  
+Tccd5:        +70.5°C  
+Tccd6:        +69.0°C  
+Tccd7:        +68.5°C  
+Tccd8:        +68.5°C  
+Tccd9:        +86.9°C  
+Tccd10:       +69.0°C  
+Tccd11:       +68.8°C  
+Tccd12:       +70.5°C  
+
+
+Thu Aug 22 08:18:44 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.4°C  
+Tccd1:        +67.9°C  
+Tccd2:        +66.6°C  
+Tccd3:        +66.1°C  
+Tccd4:        +68.2°C  
+Tccd5:        +70.8°C  
+Tccd6:        +66.8°C  
+Tccd7:        +66.2°C  
+Tccd8:        +67.1°C  
+Tccd9:        +81.5°C  
+Tccd10:       +66.8°C  
+Tccd11:       +67.0°C  
+Tccd12:       +68.8°C  
+
+
+Thu Aug 22 08:23:45 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.5°C  
+Tccd1:        +90.1°C  
+Tccd2:        +69.0°C  
+Tccd3:        +67.5°C  
+Tccd4:        +69.4°C  
+Tccd5:        +70.5°C  
+Tccd6:        +68.5°C  
+Tccd7:        +68.0°C  
+Tccd8:        +68.5°C  
+Tccd9:        +70.4°C  
+Tccd10:       +69.0°C  
+Tccd11:       +68.4°C  
+Tccd12:       +70.0°C  
+
+
+Thu Aug 22 08:28:45 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.4°C  
+Tccd1:        +74.8°C  
+Tccd2:        +72.2°C  
+Tccd3:        +72.8°C  
+Tccd4:        +72.2°C  
+Tccd5:        +75.4°C  
+Tccd6:        +73.6°C  
+Tccd7:        +73.9°C  
+Tccd8:        +73.4°C  
+Tccd9:        +75.6°C  
+Tccd10:       +72.8°C  
+Tccd11:       +73.8°C  
+Tccd12:       +75.0°C  
+
+
+Thu Aug 22 08:33:46 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.9°C  
+Tccd1:        +73.8°C  
+Tccd2:        +73.2°C  
+Tccd3:        +73.2°C  
+Tccd4:        +72.2°C  
+Tccd5:        +75.4°C  
+Tccd6:        +75.0°C  
+Tccd7:        +74.4°C  
+Tccd8:        +73.4°C  
+Tccd9:        +74.8°C  
+Tccd10:       +72.2°C  
+Tccd11:       +74.2°C  
+Tccd12:       +75.5°C  
+
+
+Thu Aug 22 08:38:46 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.8°C  
+Tccd1:        +89.6°C  
+Tccd2:        +67.5°C  
+Tccd3:        +67.1°C  
+Tccd4:        +67.6°C  
+Tccd5:        +69.6°C  
+Tccd6:        +68.1°C  
+Tccd7:        +67.1°C  
+Tccd8:        +67.6°C  
+Tccd9:        +69.4°C  
+Tccd10:       +68.0°C  
+Tccd11:       +67.9°C  
+Tccd12:       +69.6°C  
+
+
+Thu Aug 22 08:43:47 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.6°C  
+Tccd1:        +76.1°C  
+Tccd2:        +73.6°C  
+Tccd3:        +74.1°C  
+Tccd4:        +74.5°C  
+Tccd5:        +75.8°C  
+Tccd6:        +75.0°C  
+Tccd7:        +74.0°C  
+Tccd8:        +74.8°C  
+Tccd9:        +76.1°C  
+Tccd10:       +74.1°C  
+Tccd11:       +74.2°C  
+Tccd12:       +76.9°C  
+
+
+Thu Aug 22 08:48:47 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.4°C  
+Tccd1:        +86.2°C  
+Tccd2:        +77.8°C  
+Tccd3:        +71.4°C  
+Tccd4:        +91.6°C  
+Tccd5:        +89.5°C  
+Tccd6:        +87.8°C  
+Tccd7:        +94.5°C  
+Tccd8:        +78.4°C  
+Tccd9:        +95.8°C  
+Tccd10:       +81.0°C  
+Tccd11:       +77.0°C  
+Tccd12:       +77.2°C  
+
+
+Thu Aug 22 08:53:48 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.2°C  
+Tccd1:        +74.2°C  
+Tccd2:        +72.8°C  
+Tccd3:        +75.1°C  
+Tccd4:        +73.6°C  
+Tccd5:        +75.4°C  
+Tccd6:        +75.4°C  
+Tccd7:        +73.9°C  
+Tccd8:        +74.4°C  
+Tccd9:        +76.5°C  
+Tccd10:       +73.1°C  
+Tccd11:       +72.5°C  
+Tccd12:       +75.9°C  
+
+
+Thu Aug 22 08:58:48 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.4°C  
+Tccd1:        +68.2°C  
+Tccd2:        +69.4°C  
+Tccd3:        +68.5°C  
+Tccd4:        +68.0°C  
+Tccd5:        +69.6°C  
+Tccd6:        +70.4°C  
+Tccd7:        +69.4°C  
+Tccd8:        +67.6°C  
+Tccd9:        +69.4°C  
+Tccd10:       +85.4°C  
+Tccd11:       +70.6°C  
+Tccd12:       +69.6°C  
+
+
+Thu Aug 22 09:03:49 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.0°C  
+Tccd1:        +67.8°C  
+Tccd2:        +81.5°C  
+Tccd3:        +67.5°C  
+Tccd4:        +67.1°C  
+Tccd5:        +68.8°C  
+Tccd6:        +69.5°C  
+Tccd7:        +68.5°C  
+Tccd8:        +66.6°C  
+Tccd9:        +68.5°C  
+Tccd10:       +69.4°C  
+Tccd11:       +69.2°C  
+Tccd12:       +68.8°C  
+
+
+Thu Aug 22 09:08:49 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.1°C  
+Tccd1:        +73.8°C  
+Tccd2:        +73.2°C  
+Tccd3:        +73.2°C  
+Tccd4:        +72.2°C  
+Tccd5:        +74.9°C  
+Tccd6:        +75.0°C  
+Tccd7:        +76.1°C  
+Tccd8:        +73.0°C  
+Tccd9:        +74.4°C  
+Tccd10:       +74.5°C  
+Tccd11:       +75.1°C  
+Tccd12:       +74.6°C  
+
+
+Thu Aug 22 09:13:50 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.2°C  
+Tccd1:        +69.6°C  
+Tccd2:        +69.9°C  
+Tccd3:        +69.0°C  
+Tccd4:        +69.0°C  
+Tccd5:        +70.5°C  
+Tccd6:        +70.4°C  
+Tccd7:        +69.9°C  
+Tccd8:        +69.4°C  
+Tccd9:        +70.9°C  
+Tccd10:       +87.1°C  
+Tccd11:       +70.1°C  
+Tccd12:       +71.4°C  
+
+
+Thu Aug 22 09:18:50 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.4°C  
+Tccd1:        +73.6°C  
+Tccd2:        +72.4°C  
+Tccd3:        +72.8°C  
+Tccd4:        +72.6°C  
+Tccd5:        +75.8°C  
+Tccd6:        +74.5°C  
+Tccd7:        +73.5°C  
+Tccd8:        +74.4°C  
+Tccd9:        +74.8°C  
+Tccd10:       +72.8°C  
+Tccd11:       +73.4°C  
+Tccd12:       +76.4°C  
+
+
+Thu Aug 22 09:23:51 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.6°C  
+Tccd1:        +67.8°C  
+Tccd2:        +89.2°C  
+Tccd3:        +68.0°C  
+Tccd4:        +67.1°C  
+Tccd5:        +67.8°C  
+Tccd6:        +70.4°C  
+Tccd7:        +68.5°C  
+Tccd8:        +66.6°C  
+Tccd9:        +68.0°C  
+Tccd10:       +69.4°C  
+Tccd11:       +69.6°C  
+Tccd12:       +68.8°C  
+
+
+Thu Aug 22 09:28:51 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +89.0°C  
+Tccd1:        +93.4°C  
+Tccd2:        +68.0°C  
+Tccd3:        +67.5°C  
+Tccd4:        +68.0°C  
+Tccd5:        +70.5°C  
+Tccd6:        +68.5°C  
+Tccd7:        +67.6°C  
+Tccd8:        +68.5°C  
+Tccd9:        +69.9°C  
+Tccd10:       +68.5°C  
+Tccd11:       +68.8°C  
+Tccd12:       +69.6°C  
+
+
+Thu Aug 22 09:33:52 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.9°C  
+Tccd1:        +73.8°C  
+Tccd2:        +73.2°C  
+Tccd3:        +72.8°C  
+Tccd4:        +72.8°C  
+Tccd5:        +74.9°C  
+Tccd6:        +75.0°C  
+Tccd7:        +73.9°C  
+Tccd8:        +73.5°C  
+Tccd9:        +75.6°C  
+Tccd10:       +73.6°C  
+Tccd11:       +74.2°C  
+Tccd12:       +75.0°C  
+
+
+Thu Aug 22 09:38:52 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.4°C  
+Tccd1:        +74.2°C  
+Tccd2:        +73.6°C  
+Tccd3:        +74.1°C  
+Tccd4:        +72.1°C  
+Tccd5:        +74.9°C  
+Tccd6:        +75.0°C  
+Tccd7:        +74.9°C  
+Tccd8:        +73.4°C  
+Tccd9:        +74.8°C  
+Tccd10:       +74.5°C  
+Tccd11:       +75.1°C  
+Tccd12:       +75.0°C  
+
+
+Thu Aug 22 09:43:53 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.4°C  
+Tccd1:        +69.6°C  
+Tccd2:        +69.4°C  
+Tccd3:        +68.5°C  
+Tccd4:        +84.9°C  
+Tccd5:        +70.5°C  
+Tccd6:        +69.9°C  
+Tccd7:        +69.0°C  
+Tccd8:        +69.4°C  
+Tccd9:        +70.4°C  
+Tccd10:       +69.9°C  
+Tccd11:       +70.1°C  
+Tccd12:       +71.4°C  
+
+
+Thu Aug 22 09:48:53 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.1°C  
+Tccd1:        +69.6°C  
+Tccd2:        +69.0°C  
+Tccd3:        +69.0°C  
+Tccd4:        +79.5°C  
+Tccd5:        +70.5°C  
+Tccd6:        +69.9°C  
+Tccd7:        +69.0°C  
+Tccd8:        +69.9°C  
+Tccd9:        +70.4°C  
+Tccd10:       +69.9°C  
+Tccd11:       +69.6°C  
+Tccd12:       +71.4°C  
+
+
+Thu Aug 22 09:53:53 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.9°C  
+Tccd1:        +73.8°C  
+Tccd2:        +72.4°C  
+Tccd3:        +73.2°C  
+Tccd4:        +74.1°C  
+Tccd5:        +74.9°C  
+Tccd6:        +73.1°C  
+Tccd7:        +73.5°C  
+Tccd8:        +73.4°C  
+Tccd9:        +74.8°C  
+Tccd10:       +73.1°C  
+Tccd11:       +73.8°C  
+Tccd12:       +75.0°C  
+
+
+Thu Aug 22 09:58:54 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.0°C  
+Tccd1:        +74.6°C  
+Tccd2:        +75.1°C  
+Tccd3:        +76.0°C  
+Tccd4:        +73.1°C  
+Tccd5:        +76.8°C  
+Tccd6:        +76.8°C  
+Tccd7:        +74.0°C  
+Tccd8:        +74.8°C  
+Tccd9:        +76.1°C  
+Tccd10:       +74.6°C  
+Tccd11:       +74.8°C  
+Tccd12:       +75.9°C  
+
+
+Thu Aug 22 10:03:54 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.1°C  
+Tccd1:        +68.8°C  
+Tccd2:        +69.4°C  
+Tccd3:        +68.5°C  
+Tccd4:        +67.6°C  
+Tccd5:        +69.1°C  
+Tccd6:        +77.2°C  
+Tccd7:        +69.4°C  
+Tccd8:        +67.6°C  
+Tccd9:        +69.4°C  
+Tccd10:       +70.4°C  
+Tccd11:       +70.1°C  
+Tccd12:       +70.0°C  
+
+
+Thu Aug 22 10:08:55 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +88.4°C  
+Tccd1:        +73.4°C  
+Tccd2:        +73.6°C  
+Tccd3:        +72.8°C  
+Tccd4:        +71.8°C  
+Tccd5:        +74.9°C  
+Tccd6:        +75.0°C  
+Tccd7:        +74.9°C  
+Tccd8:        +72.5°C  
+Tccd9:        +73.9°C  
+Tccd10:       +74.0°C  
+Tccd11:       +73.8°C  
+Tccd12:       +74.5°C  
+
+
+Thu Aug 22 10:13:56 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.6°C  
+Tccd1:        +71.0°C  
+Tccd2:        +71.9°C  
+Tccd3:        +71.9°C  
+Tccd4:        +69.6°C  
+Tccd5:        +72.1°C  
+Tccd6:        +73.1°C  
+Tccd7:        +72.1°C  
+Tccd8:        +70.8°C  
+Tccd9:        +72.1°C  
+Tccd10:       +72.8°C  
+Tccd11:       +72.9°C  
+Tccd12:       +71.9°C  
+
+
+Thu Aug 22 10:18:56 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.4°C  
+Tccd1:        +67.8°C  
+Tccd2:        +69.4°C  
+Tccd3:        +70.4°C  
+Tccd4:        +67.6°C  
+Tccd5:        +69.6°C  
+Tccd6:        +70.9°C  
+Tccd7:        +69.4°C  
+Tccd8:        +68.0°C  
+Tccd9:        +69.4°C  
+Tccd10:       +70.4°C  
+Tccd11:       +87.1°C  
+Tccd12:       +69.6°C  
+
+
+Thu Aug 22 10:23:57 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.9°C  
+Tccd1:        +77.5°C  
+Tccd2:        +80.6°C  
+Tccd3:        +75.6°C  
+Tccd4:        +75.9°C  
+Tccd5:        +78.0°C  
+Tccd6:        +78.6°C  
+Tccd7:        +82.4°C  
+Tccd8:        +77.0°C  
+Tccd9:        +81.2°C  
+Tccd10:       +80.1°C  
+Tccd11:       +80.6°C  
+Tccd12:       +82.1°C  
+
+
+Thu Aug 22 10:28:57 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +48.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +87.8°C  
+Tccd1:        +86.5°C  
+Tccd2:        +84.4°C  
+Tccd3:        +69.1°C  
+Tccd4:        +78.2°C  
+Tccd5:        +88.9°C  
+Tccd6:        +91.0°C  
+Tccd7:        +88.6°C  
+Tccd8:        +86.6°C  
+Tccd9:        +89.0°C  
+Tccd10:       +82.5°C  
+Tccd11:       +87.5°C  
+Tccd12:       +85.2°C  
+
+
+Thu Aug 22 10:33:57 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +45.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +45.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +86.5°C  
+Tccd1:        +52.6°C  
+Tccd2:        +54.9°C  
+Tccd3:        +53.9°C  
+Tccd4:        +51.4°C  
+Tccd5:        +51.8°C  
+Tccd6:        +55.2°C  
+Tccd7:        +53.6°C  
+Tccd8:        +50.0°C  
+Tccd9:        +50.8°C  
+Tccd10:       +84.6°C  
+Tccd11:       +54.2°C  
+Tccd12:       +51.1°C  
+
+
+Thu Aug 22 10:38:58 PM CEST 2024
+ucsi_source_psy_USBC000:001-isa-0000
+Adapter: ISA adapter
+in0:           0.00 V  (min =  +0.00 V, max =  +0.00 V)
+curr1:         0.00 A  (max =  +0.00 A)
+
+nvme-pci-8100
+Adapter: PCI adapter
+Composite:    +44.9°C  (low  = -273.1°C, high = +80.8°C)
+                       (crit = +84.8°C)
+Sensor 1:     +44.9°C  (low  = -273.1°C, high = +65261.8°C)
+Sensor 2:     +47.9°C  (low  = -273.1°C, high = +65261.8°C)
+
+k10temp-pci-00c3
+Adapter: PCI adapter
+Tctl:         +67.5°C  
+Tccd1:        +62.2°C  
+Tccd2:        +63.4°C  
+Tccd3:        +62.9°C  
+Tccd4:        +61.6°C  
+Tccd5:        +61.1°C  
+Tccd6:        +63.9°C  
+Tccd7:        +62.1°C  
+Tccd8:        +59.9°C  
+Tccd9:        +59.9°C  
+Tccd10:       +62.0°C  
+Tccd11:       +62.4°C  
+Tccd12:       +60.1°C  
+
+
