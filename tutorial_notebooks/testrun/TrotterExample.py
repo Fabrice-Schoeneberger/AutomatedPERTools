@@ -109,6 +109,22 @@ if __name__ == "__main__":
     qubits = used_qubits
     print("Qubits set to ", qubits)
     #circuits[0].draw()
+    # %%
+    if True:
+        import random
+        for i in range(backend.num_qubits):
+            if i not in used_qubits:
+                for circ in circuits:
+                    for j in range(random.randint(1,9)):
+                        random.choice([
+                            circ.h, circ.x, circ.y, circ.z, circ.s, circ.t, 
+                            lambda q: circ.rx(np.pi/2, q), 
+                            lambda q: circ.ry(np.pi/2, q), 
+                            lambda q: circ.rz(np.pi/2, q),
+                            circ.i
+                        ])(i)
+                
+
 
     # %%
     def executor(circuits):
@@ -152,7 +168,7 @@ if __name__ == "__main__":
     # %%
     circuit_results = perexp.analyze()
 
-    raise Exception("Ende")
+    #raise Exception("Ende")
     # %%
     results_errors = []
     results_at_noise = []
@@ -204,13 +220,13 @@ if __name__ == "__main__":
     for circ in circuits:
         qc = circ.copy()
         qc.measure_all()
-        count= backend.run(qc, shots=shots).result().get_counts()
+        count= backend.run(qc, shots=shots*persamples).result().get_counts()
         count = {tuple(int(k) for i, k in enumerate(key) if len(key)-1-i in qubits):count[key] for key in count.keys()} #not sure yet if this works for another qubits size, but I think it does
         tot = 0
         for key in count.keys():
             num = sum([(-1)**bit for bit in key])
             tot += num*count[key]
-        noisyresult.append(tot/(shots*1024*n*2))
+        noisyresult.append(tot/(shots*persamples*n*2))
 
     savi["noisyresult"] = noisyresult
     # %%
@@ -218,13 +234,13 @@ if __name__ == "__main__":
     for circ in circuits:
         qc = circ.copy()
         qc.measure_all()
-        count= Aer.get_backend('qasm_simulator').run(qc, shots=shots).result().get_counts()
+        count= Aer.get_backend('qasm_simulator').run(qc, shots=shots*persamples).result().get_counts()
         count = {tuple(int(k) for i, k in enumerate(key) if len(key)-1-i in qubits):count[key] for key in count.keys()}
         tot = 0
         for key in sorted(count.keys()):
             num = sum([(-1)**bit for bit in key])
             tot += num*count[key]
-        res.append(tot/(shots*1024*n*2))
+        res.append(tot/(shots*persamples*n*2))
 
     savi["res"] = res
     with open(namebase + '_arrays.json', 'w') as file:
@@ -308,10 +324,6 @@ if __name__ == "__main__":
     # %%
     #layer1.plot_coeffs((1,),(0,),(0,1))
 
-    # %%
-    #import pickle
-    #with open("graph.pickle", "wb") as f:
-    #    pickle.dump(results, f)
 
     tim = time.localtime()
     print("%s.%s. %s:%s" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
