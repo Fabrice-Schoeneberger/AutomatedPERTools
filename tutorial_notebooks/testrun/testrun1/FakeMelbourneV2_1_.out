@@ -1,22 +1,22 @@
-3.8. 22:43
+4.8. 18:45
 Arguments where set as:
 	plusone: False
-	sum: True
+	sum: False
 	pntsamples: 64
 	pntsinglesamples: 1000
 	persamples: 1000
 	shots: 1000
 	backend: FakeMelbourneV2
 	setqubits: [0,1,2,3]_and_transpile
-Namebase will be: False_True_64_1000_1000_1000_FakeMelbourneV2_[0,1,2,3]_and_transpile_
+Namebase will be: False_False_64_1000_1000_1000_FakeMelbourneV2_[0,1,2,3]_and_transpile_
 make trotter
 Qubits set to  {0, 1, 2, 3}
 initialize experiment
 generate circuits
-3.8. 22:48
+4.8. 18:50
 run experiment
 analyse experiment
 do PER runs
-22.8. 23:52
+23.8. 19:52
 Run PER
-4.8. 18:41
+5.8. 14:25

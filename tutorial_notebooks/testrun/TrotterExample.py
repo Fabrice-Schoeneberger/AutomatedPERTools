@@ -16,6 +16,7 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     # %%
+    import qiskit
     from qiskit import QuantumCircuit, Aer, transpile
     from matplotlib import pyplot as plt
     import os
@@ -72,11 +73,8 @@ if __name__ == "__main__":
         namebase += str(arg_value) + "_"
     print("Namebase will be: " + namebase)
     # %%
-
-    # %%
     print("make trotter")
     def trotterLayer(h,J,dt,n):
-        n=2
         trotterLayer = QuantumCircuit(num_qubits)
         trotterLayer.rx(dt*4*h, qubits)
         trotterLayer.cx(*zip(*[(qubits[2*i], qubits[2*i+1]) for i in range(n)]))
@@ -119,10 +117,9 @@ if __name__ == "__main__":
     # %%
     print("initialize experiment")
     experiment = tomography(circuits = circuits, inst_map = range(backend.num_qubits), backend = backend, tomography_connections=tomography_connections, sum_over_lambda=sum_over_lambda)
-
     # %%
     print("generate circuits")
-    experiment.generate(samples = pntsamples, single_samples = pntsinglesamples, depths = [2,4,8,16])
+    experiment.generate(samples = 1, single_samples = 1, depths = [2,4,8,16])
     tim = time.localtime()
     print("%s.%s. %s:%s" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
     # %%
@@ -155,6 +152,7 @@ if __name__ == "__main__":
     # %%
     circuit_results = perexp.analyze()
 
+    raise Exception("Ende")
     # %%
     results_errors = []
     results_at_noise = []

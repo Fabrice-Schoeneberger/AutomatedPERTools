@@ -6,6 +6,9 @@ from per.perexperiment import PERExperiment
 
 from typing import List, Any
 import logging
+import warnings
+warnings.filterwarnings("ignore", category=ImportWarning)
+
  
 logging.basicConfig(filename="experiment.log",
                     format='%(asctime)s %(message)s',

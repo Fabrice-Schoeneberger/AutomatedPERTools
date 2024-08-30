@@ -1,5 +1,7 @@
 from abc import ABC, abstractmethod
 from typing import List
+import logging
+logger = logging.getLogger("experiment")
 
 class Instruction(ABC):
 

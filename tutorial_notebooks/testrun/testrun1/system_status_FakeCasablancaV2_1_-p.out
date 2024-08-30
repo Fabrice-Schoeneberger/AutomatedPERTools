@@ -1,0 +1,1562 @@
+Sat Aug 24 02:33:55 PM CEST 2024
+top - 14:33:55 up 2 days, 18:49,  5 users,  load average: 0.01, 6.89, 39.90
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  1.4 us, 10.3 sy,  0.0 ni, 88.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    246.1 free,      4.5 used,      2.2 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    246.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0    2.7g   0.1g   0.0g R  2686   0.0   0:06.93 python
+  51839 fabrice+  20   0    0.0g   0.0g   0.0g R  14.3   0.0   0:00.06 top
+
+Sat Aug 24 02:38:55 PM CEST 2024
+top - 14:38:56 up 2 days, 18:54,  5 users,  load average: 1.82, 3.56, 29.30
+Tasks: 1793 total,   2 running, 1791 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.7 us,  0.1 sy,  0.0 ni, 99.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    245.3 free,      5.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    246.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   18.3g   0.8g   0.1g R 121.4   0.3   9:26.88 python
+  52224 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 02:43:56 PM CEST 2024
+top - 14:43:56 up 2 days, 18:59,  5 users,  load average: 1.53, 2.24, 21.61
+Tasks: 1786 total,   1 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    243.3 free,      7.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    244.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   19.2g   2.5g   0.1g S  92.9   1.0  18:19.37 python
+  52385 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 02:48:56 PM CEST 2024
+top - 14:48:56 up 2 days, 19:04,  5 users,  load average: 1.00, 1.44, 15.91
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    243.0 free,      7.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    243.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   19.6g   2.9g   0.1g S  92.9   1.1  23:19.39 python
+  52449 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 02:53:56 PM CEST 2024
+top - 14:53:57 up 2 days, 19:09,  5 users,  load average: 1.00, 1.15, 11.78
+Tasks: 1786 total,   1 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    242.8 free,      7.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    243.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   19.9g   3.1g   0.1g S 100.0   1.2  28:19.38 python
+  52510 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 02:58:57 PM CEST 2024
+top - 14:58:57 up 2 days, 19:14,  5 users,  load average: 1.00, 1.05, 8.79
+Tasks: 1786 total,   1 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    242.6 free,      8.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    243.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   20.1g   3.3g   0.1g S 100.0   1.3  33:19.41 python
+  52571 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 03:03:57 PM CEST 2024
+top - 15:03:57 up 2 days, 19:19,  5 users,  load average: 1.00, 1.01, 6.63
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    242.4 free,      8.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    243.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   20.2g   3.5g   0.1g S 100.0   1.4  38:19.41 python
+  52633 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 03:08:57 PM CEST 2024
+top - 15:08:58 up 2 days, 19:24,  5 users,  load average: 1.00, 1.00, 5.07
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    242.2 free,      8.3 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   20.3g   3.6g   0.1g S  92.9   1.4  43:19.44 python
+  52695 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 03:13:58 PM CEST 2024
+top - 15:13:58 up 2 days, 19:29,  5 users,  load average: 1.00, 1.00, 3.93
+Tasks: 1786 total,   1 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    242.1 free,      8.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   20.5g   3.8g   0.1g S  92.9   1.5  48:19.47 python
+  52756 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 03:18:58 PM CEST 2024
+top - 15:18:58 up 2 days, 19:34,  5 users,  load average: 1.00, 1.00, 3.11
+Tasks: 1786 total,   1 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    242.0 free,      8.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   20.6g   3.9g   0.1g S 100.0   1.5  53:19.52 python
+  52817 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 03:23:58 PM CEST 2024
+top - 15:23:59 up 2 days, 19:39,  5 users,  load average: 1.00, 1.00, 2.51
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.8 free,      8.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   24.7g   4.1g   0.1g S  92.9   1.6  58:21.94 python
+  53070 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 03:28:59 PM CEST 2024
+top - 15:28:59 up 2 days, 19:44,  5 users,  load average: 1.00, 1.00, 2.08
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.8 free,      8.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   24.7g   4.1g   0.1g S  92.9   1.6  63:22.22 python
+  53133 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 03:33:59 PM CEST 2024
+top - 15:34:00 up 2 days, 19:49,  5 users,  load average: 1.00, 1.00, 1.78
+Tasks: 1786 total,   1 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.8 free,      8.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   24.7g   4.1g   0.1g S  92.9   1.7  68:22.29 python
+  53195 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 03:39:00 PM CEST 2024
+top - 15:39:00 up 2 days, 19:54,  5 users,  load average: 1.00, 1.00, 1.55
+Tasks: 1786 total,   1 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.7 free,      8.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   24.8g   4.2g   0.1g S 100.0   1.7  73:22.34 python
+  53260 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 03:44:00 PM CEST 2024
+top - 15:44:00 up 2 days, 19:59,  5 users,  load average: 1.00, 1.00, 1.39
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.7 free,      8.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   24.8g   4.2g   0.1g S 100.0   1.7  78:22.39 python
+  53322 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 03:49:00 PM CEST 2024
+top - 15:49:01 up 2 days, 20:04,  5 users,  load average: 1.00, 1.00, 1.27
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.6 free,      8.9 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   24.9g   4.3g   0.1g S  92.9   1.7  83:22.45 python
+  53385 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 03:54:01 PM CEST 2024
+top - 15:54:01 up 2 days, 20:09,  5 users,  load average: 1.00, 1.00, 1.18
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.6 free,      8.9 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   24.9g   4.3g   0.1g S  92.9   1.7  88:22.51 python
+  53447 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 03:59:01 PM CEST 2024
+top - 15:59:01 up 2 days, 20:14,  5 users,  load average: 1.00, 1.00, 1.12
+Tasks: 1786 total,   1 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.6 free,      9.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   24.9g   4.3g   0.1g S  92.9   1.7  93:22.57 python
+  53508 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.06 top
+
+Sat Aug 24 04:04:01 PM CEST 2024
+top - 16:04:02 up 2 days, 20:19,  5 users,  load average: 1.00, 1.00, 1.08
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.5 free,      9.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   25.0g   4.4g   0.1g S 100.0   1.7  98:22.63 python
+  53570 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 04:09:02 PM CEST 2024
+top - 16:09:02 up 2 days, 20:24,  5 users,  load average: 1.00, 1.00, 1.05
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.5 free,      9.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   25.1g   4.5g   0.1g R  92.9   1.8 103:22.71 python
+  53632 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 04:14:02 PM CEST 2024
+top - 16:14:02 up 2 days, 20:29,  5 users,  load average: 1.78, 1.57, 1.28
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.2 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.5 free,      9.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   25.1g   4.5g   0.1g R  92.9   1.8 110:18.83 python
+  53696 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 04:19:03 PM CEST 2024
+top - 16:19:03 up 2 days, 20:34,  5 users,  load average: 1.17, 1.37, 1.27
+Tasks: 1786 total,   2 running, 1784 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.8 us,  0.1 sy,  0.0 ni, 99.0 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.4 free,      9.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   25.1g   4.5g   0.1g R 114.3   1.8 116:14.89 python
+  53757 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 04:24:03 PM CEST 2024
+top - 16:24:03 up 2 days, 20:39,  5 users,  load average: 1.00, 1.13, 1.18
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.7 us,  0.1 sy,  0.0 ni, 99.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.3 free,      9.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    242.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   25.2g   4.7g   0.1g R 107.1   1.9 121:57.92 python
+  53820 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 04:29:03 PM CEST 2024
+top - 16:29:04 up 2 days, 20:44,  5 users,  load average: 1.07, 1.15, 1.17
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    241.0 free,      9.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    241.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   25.5g   4.9g   0.1g R 115.4   2.0 127:34.08 python
+  53884 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 04:34:04 PM CEST 2024
+top - 16:34:04 up 2 days, 20:49,  5 users,  load average: 1.00, 1.05, 1.12
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.2 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    240.7 free,      9.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    241.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   25.8g   5.2g   0.1g R 114.3   2.1 133:04.26 python
+  53946 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 04:39:04 PM CEST 2024
+top - 16:39:04 up 2 days, 20:54,  5 users,  load average: 1.00, 1.01, 1.07
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    240.5 free,     10.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    241.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   26.1g   5.5g   0.1g R  92.9   2.2 138:34.01 python
+  54008 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 04:44:04 PM CEST 2024
+top - 16:44:05 up 2 days, 20:59,  5 users,  load average: 1.00, 1.00, 1.04
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    240.2 free,     10.3 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    240.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   26.3g   5.7g   0.1g R  92.9   2.3 143:57.92 python
+  54071 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 04:49:05 PM CEST 2024
+top - 16:49:05 up 2 days, 21:04,  5 users,  load average: 1.00, 1.00, 1.02
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    240.0 free,     10.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    240.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   26.6g   6.0g   0.1g R 115.4   2.4 149:22.69 python
+  54134 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 04:54:05 PM CEST 2024
+top - 16:54:05 up 2 days, 21:09,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1790 total,   2 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.2 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    239.7 free,     10.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    240.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   26.8g   6.2g   0.1g R 107.7   2.5 154:43.08 python
+  54197 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 04:59:05 PM CEST 2024
+top - 16:59:06 up 2 days, 21:14,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    239.5 free,     11.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    240.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   27.0g   6.5g   0.1g R 115.4   2.6 160:02.43 python
+  54258 fabrice+  20   0    0.0g   0.0g   0.0g R  30.8   0.0   0:00.07 top
+
+Sat Aug 24 05:04:06 PM CEST 2024
+top - 17:04:06 up 2 days, 21:19,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    239.3 free,     11.3 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    240.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   27.3g   6.7g   0.1g R  92.9   2.7 165:21.61 python
+  54320 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 05:09:06 PM CEST 2024
+top - 17:09:06 up 2 days, 21:24,  5 users,  load average: 1.59, 1.33, 1.12
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    239.0 free,     11.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    239.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   27.5g   6.9g   0.1g R 100.0   2.7 170:39.61 python
+  54383 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 05:14:06 PM CEST 2024
+top - 17:14:07 up 2 days, 21:29,  5 users,  load average: 1.00, 1.12, 1.08
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    238.8 free,     11.7 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    239.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   27.7g   7.1g   0.1g R 100.0   2.8 175:55.15 python
+  54445 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 05:19:07 PM CEST 2024
+top - 17:19:07 up 2 days, 21:34,  5 users,  load average: 1.10, 1.06, 1.06
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    238.6 free,     11.9 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    239.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   27.9g   7.3g   0.1g R 115.4   2.9 181:11.19 python
+  54506 fabrice+  20   0    0.0g   0.0g   0.0g R  30.8   0.0   0:00.06 top
+
+Sat Aug 24 05:24:07 PM CEST 2024
+top - 17:24:07 up 2 days, 21:39,  5 users,  load average: 1.21, 1.14, 1.09
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    238.4 free,     12.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    239.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   28.1g   7.5g   0.1g R 100.0   3.0 186:28.24 python
+  54567 fabrice+  20   0    0.0g   0.0g   0.0g R  30.8   0.0   0:00.07 top
+
+Sat Aug 24 05:29:07 PM CEST 2024
+top - 17:29:08 up 2 days, 21:44,  5 users,  load average: 1.05, 1.06, 1.06
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    238.2 free,     12.3 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    238.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   28.3g   7.7g   0.1g R  92.9   3.1 191:42.44 python
+  54630 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 05:34:08 PM CEST 2024
+top - 17:34:08 up 2 days, 21:49,  5 users,  load average: 1.00, 1.02, 1.04
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    238.0 free,     12.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    238.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   28.5g   7.9g   0.1g R  92.9   3.2 196:55.65 python
+  54692 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 05:39:08 PM CEST 2024
+top - 17:39:08 up 2 days, 21:54,  5 users,  load average: 1.00, 1.00, 1.01
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.7 us,  0.1 sy,  0.0 ni, 99.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    237.8 free,     12.7 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    238.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   28.7g   8.1g   0.1g R 100.0   3.2 202:09.26 python
+  54755 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 05:44:08 PM CEST 2024
+top - 17:44:09 up 2 days, 21:59,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    237.7 free,     12.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    238.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   28.9g   8.3g   0.1g R  92.9   3.3 207:22.57 python
+  54817 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 05:49:09 PM CEST 2024
+top - 17:49:09 up 2 days, 22:04,  5 users,  load average: 1.05, 1.06, 1.02
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    237.5 free,     13.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    238.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   29.1g   8.5g   0.1g R 100.0   3.4 212:35.24 python
+  54881 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 05:54:09 PM CEST 2024
+top - 17:54:09 up 2 days, 22:09,  5 users,  load average: 1.00, 1.01, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    237.4 free,     13.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    238.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   29.3g   8.7g   0.1g R 107.1   3.5 217:47.47 python
+  54945 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 05:59:09 PM CEST 2024
+top - 17:59:10 up 2 days, 22:14,  5 users,  load average: 1.00, 1.04, 1.01
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    237.2 free,     13.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    237.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   29.5g   8.9g   0.1g R  92.9   3.5 222:58.30 python
+  55007 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 06:04:10 PM CEST 2024
+top - 18:04:10 up 2 days, 22:19,  5 users,  load average: 1.12, 1.13, 1.06
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    237.0 free,     13.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    237.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   29.7g   9.1g   0.1g R 100.0   3.6 228:09.41 python
+  55069 fabrice+  20   0    0.0g   0.0g   0.0g R  30.8   0.0   0:00.07 top
+
+Sat Aug 24 06:09:10 PM CEST 2024
+top - 18:09:10 up 2 days, 22:24,  5 users,  load average: 1.00, 1.04, 1.03
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    236.8 free,     13.7 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    237.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   29.8g   9.3g   0.1g R 100.0   3.7 233:20.12 python
+  55130 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.07 top
+
+Sat Aug 24 06:14:11 PM CEST 2024
+top - 18:14:11 up 2 days, 22:29,  5 users,  load average: 1.00, 1.01, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    236.6 free,     13.9 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    237.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   30.0g   9.4g   0.1g R 100.0   3.8 238:30.48 python
+  55193 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 06:19:11 PM CEST 2024
+top - 18:19:11 up 2 days, 22:34,  5 users,  load average: 1.01, 1.00, 1.00
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    236.5 free,     14.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    237.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   30.2g   9.6g   0.1g R 107.1   3.8 243:40.74 python
+  55255 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 06:24:11 PM CEST 2024
+top - 18:24:12 up 2 days, 22:39,  5 users,  load average: 1.06, 1.01, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    236.3 free,     14.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    237.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   30.4g   9.8g   0.1g R  92.9   3.9 248:49.70 python
+  55318 fabrice+  20   0    0.0g   0.0g   0.0g R  14.3   0.0   0:00.06 top
+
+Sat Aug 24 06:29:12 PM CEST 2024
+top - 18:29:12 up 2 days, 22:44,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    236.1 free,     14.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    236.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   30.5g   9.9g   0.1g R 100.0   4.0 253:58.59 python
+  55380 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 06:34:12 PM CEST 2024
+top - 18:34:12 up 2 days, 22:49,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    236.0 free,     14.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    236.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   30.7g  10.1g   0.1g R  92.9   4.0 259:07.23 python
+  55442 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 06:39:12 PM CEST 2024
+top - 18:39:13 up 2 days, 22:54,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    235.8 free,     14.7 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    236.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   30.9g  10.3g   0.1g R  92.9   4.1 264:16.30 python
+  55504 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 06:44:13 PM CEST 2024
+top - 18:44:13 up 2 days, 22:59,  5 users,  load average: 1.09, 1.04, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    235.6 free,     14.9 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    236.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   31.0g  10.4g   0.1g R  92.3   4.2 269:25.36 python
+  55565 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 06:49:13 PM CEST 2024
+top - 18:49:13 up 2 days, 23:04,  5 users,  load average: 1.00, 1.01, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    235.5 free,     15.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    236.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   31.2g  10.6g   0.1g R 100.0   4.2 274:34.59 python
+  55627 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 06:54:13 PM CEST 2024
+top - 18:54:14 up 2 days, 23:09,  5 users,  load average: 1.02, 1.05, 1.02
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    235.3 free,     15.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    236.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   31.4g  10.8g   0.1g R 100.0   4.3 279:42.92 python
+  55688 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 06:59:14 PM CEST 2024
+top - 18:59:14 up 2 days, 23:14,  5 users,  load average: 1.00, 1.01, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    235.2 free,     15.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    235.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   31.5g  10.9g   0.1g R 107.1   4.3 284:50.11 python
+  55750 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 07:04:14 PM CEST 2024
+top - 19:04:14 up 2 days, 23:19,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.7 us,  0.1 sy,  0.0 ni, 99.1 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    235.0 free,     15.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    235.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   31.7g  11.1g   0.1g R  92.9   4.4 289:57.55 python
+  55812 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 07:09:14 PM CEST 2024
+top - 19:09:15 up 2 days, 23:24,  5 users,  load average: 1.08, 1.02, 1.01
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    234.9 free,     15.7 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    235.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   31.8g  11.2g   0.1g R 100.0   4.5 295:04.70 python
+  55874 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.06 top
+
+Sat Aug 24 07:14:15 PM CEST 2024
+top - 19:14:15 up 2 days, 23:29,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    234.7 free,     15.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    235.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   32.0g  11.4g   0.1g R 100.0   4.5 300:12.44 python
+  55936 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 07:19:15 PM CEST 2024
+top - 19:19:15 up 2 days, 23:34,  5 users,  load average: 1.01, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.2 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    234.5 free,     16.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    235.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   32.1g  11.5g   0.1g R 107.7   4.6 305:20.40 python
+  55999 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 07:24:15 PM CEST 2024
+top - 19:24:16 up 2 days, 23:39,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    234.4 free,     16.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    235.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   32.3g  11.7g   0.1g R 100.0   4.6 310:27.50 python
+  56060 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 07:29:16 PM CEST 2024
+top - 19:29:16 up 2 days, 23:44,  5 users,  load average: 1.02, 1.05, 1.01
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    234.2 free,     16.3 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    234.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   32.4g  11.8g   0.1g R  92.9   4.7 315:35.59 python
+  56122 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 07:34:16 PM CEST 2024
+top - 19:34:16 up 2 days, 23:49,  5 users,  load average: 1.00, 1.01, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    234.1 free,     16.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    234.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   32.6g  12.0g   0.1g R  92.9   4.8 320:42.68 python
+  56186 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 07:39:16 PM CEST 2024
+top - 19:39:17 up 2 days, 23:54,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    234.0 free,     16.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    234.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   32.7g  12.1g   0.1g R  92.9   4.8 325:49.49 python
+  56248 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 07:44:17 PM CEST 2024
+top - 19:44:17 up 2 days, 23:59,  5 users,  load average: 1.30, 1.25, 1.10
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    233.8 free,     16.7 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    234.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   32.9g  12.3g   0.1g R 115.4   4.9 330:56.37 python
+  56311 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 07:49:17 PM CEST 2024
+top - 19:49:17 up 3 days, 4 min,  5 users,  load average: 1.00, 1.08, 1.06
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    233.7 free,     16.9 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    234.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   33.0g  12.4g   0.1g R 100.0   4.9 336:02.74 python
+  56372 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 07:54:18 PM CEST 2024
+top - 19:54:18 up 3 days, 9 min,  5 users,  load average: 1.00, 1.02, 1.04
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    233.5 free,     17.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    234.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   33.1g  12.5g   0.1g R  92.9   5.0 341:10.00 python
+  56433 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 07:59:18 PM CEST 2024
+top - 19:59:18 up 3 days, 14 min,  5 users,  load average: 1.00, 1.00, 1.01
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    233.4 free,     17.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    234.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   33.3g  12.7g   0.1g R  92.9   5.0 346:16.61 python
+  56496 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.06 top
+
+Sat Aug 24 08:04:18 PM CEST 2024
+top - 20:04:18 up 3 days, 19 min,  5 users,  load average: 1.00, 1.01, 1.00
+Tasks: 1793 total,   2 running, 1791 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    233.3 free,     17.3 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    233.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   33.4g  12.8g   0.1g R 107.1   5.1 351:23.43 python
+  56567 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 08:09:19 PM CEST 2024
+top - 20:09:19 up 3 days, 24 min,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    233.1 free,     17.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    233.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   33.6g  13.0g   0.1g R 100.0   5.2 356:30.72 python
+  56630 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 08:14:19 PM CEST 2024
+top - 20:14:19 up 3 days, 29 min,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    233.0 free,     17.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    233.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   33.7g  13.1g   0.1g R 100.0   5.2      6,01 python
+  56691 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 08:19:19 PM CEST 2024
+top - 20:19:20 up 3 days, 34 min,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    232.8 free,     17.7 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    233.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   33.8g  13.2g   0.1g R  92.9   5.3      6,06 python
+  56753 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 08:24:20 PM CEST 2024
+top - 20:24:20 up 3 days, 39 min,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1790 total,   2 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    232.7 free,     17.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    233.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   34.0g  13.4g   0.1g R 107.1   5.3      6,11 python
+  56816 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 08:29:20 PM CEST 2024
+top - 20:29:20 up 3 days, 44 min,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    232.6 free,     18.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    233.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   34.1g  13.5g   0.1g R 100.0   5.4      6,16 python
+  56877 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 08:34:20 PM CEST 2024
+top - 20:34:21 up 3 days, 49 min,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    232.4 free,     18.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    233.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   34.2g  13.6g   0.1g R 100.0   5.4      6,22 python
+  56938 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 08:39:21 PM CEST 2024
+top - 20:39:21 up 3 days, 54 min,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    232.3 free,     18.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    233.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   34.4g  13.8g   0.1g R 107.7   5.5      6,27 python
+  56999 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 08:44:21 PM CEST 2024
+top - 20:44:21 up 3 days, 59 min,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   2 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.4 us,  0.2 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    232.2 free,     18.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    232.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   34.5g  13.9g   0.1g R 100.0   5.5      6,32 python
+  57062 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 08:49:21 PM CEST 2024
+top - 20:49:22 up 3 days,  1:04,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    232.1 free,     18.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    232.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   34.6g  14.0g   0.1g R 100.0   5.6      6,37 python
+  57123 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 08:54:22 PM CEST 2024
+top - 20:54:22 up 3 days,  1:09,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    231.9 free,     18.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    232.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   34.7g  14.1g   0.1g R 100.0   5.6      6,42 python
+  57186 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 08:59:22 PM CEST 2024
+top - 20:59:22 up 3 days,  1:14,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    231.8 free,     18.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    232.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   34.9g  14.3g   0.1g R  92.9   5.7      6,47 python
+  57248 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 09:04:22 PM CEST 2024
+top - 21:04:23 up 3 days,  1:19,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    231.7 free,     18.9 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    232.3 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   35.0g  14.4g   0.1g R 100.0   5.7      6,52 python
+  57311 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 09:09:23 PM CEST 2024
+top - 21:09:23 up 3 days,  1:24,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    231.5 free,     19.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    232.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   35.1g  14.5g   0.1g R  92.9   5.8      6,57 python
+  57374 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 09:14:23 PM CEST 2024
+top - 21:14:23 up 3 days,  1:29,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   2 running, 1785 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    231.4 free,     19.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    232.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   35.2g  14.7g   0.1g R  92.9   5.8      7,02 python
+  57436 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 09:19:23 PM CEST 2024
+top - 21:19:24 up 3 days,  1:34,  5 users,  load average: 1.20, 1.11, 1.04
+Tasks: 1885 total,   1 running, 1884 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.2 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    198.9 free,     51.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    199.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   46.1g  25.4g   0.1g S  92.9  10.1      7,07 python
+  57598 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 09:24:24 PM CEST 2024
+top - 21:24:24 up 3 days,  1:39,  5 users,  load average: 1.03, 1.10, 1.05
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    210.3 free,     40.3 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    210.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   48.4g  27.6g   0.1g S 107.7  11.0      7,12 python
+  57661 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 09:29:24 PM CEST 2024
+top - 21:29:24 up 3 days,  1:44,  5 users,  load average: 1.00, 1.03, 1.03
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    210.4 free,     40.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    211.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   48.4g  27.6g   0.1g S  92.9  11.0      7,17 python
+  57722 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.06 top
+
+Sat Aug 24 09:34:25 PM CEST 2024
+top - 21:34:25 up 3 days,  1:49,  5 users,  load average: 1.06, 1.02, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    210.4 free,     40.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    211.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   48.4g  27.6g   0.1g S 100.0  11.0      7,22 python
+  57784 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 09:39:25 PM CEST 2024
+top - 21:39:25 up 3 days,  1:54,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    210.2 free,     40.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    210.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   48.6g  27.8g   0.1g S  92.9  11.1      7,27 python
+  57845 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 09:44:25 PM CEST 2024
+top - 21:44:25 up 3 days,  1:59,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    209.7 free,     40.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    210.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   49.3g  28.3g   0.1g S  92.9  11.3      7,32 python
+  57907 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 09:49:26 PM CEST 2024
+top - 21:49:26 up 3 days,  2:04,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    209.3 free,     41.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    210.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   49.9g  28.7g   0.1g S 107.7  11.4      7,37 python
+  57970 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 09:54:26 PM CEST 2024
+top - 21:54:26 up 3 days,  2:09,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    208.9 free,     41.7 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    209.5 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   50.5g  29.2g   0.1g S 100.0  11.6      7,42 python
+  58031 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 09:59:26 PM CEST 2024
+top - 21:59:27 up 3 days,  2:14,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    208.4 free,     42.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    209.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   51.0g  29.6g   0.1g S  92.9  11.8      7,47 python
+  58093 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 10:04:27 PM CEST 2024
+top - 22:04:27 up 3 days,  2:19,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    208.0 free,     42.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    208.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   51.6g  30.0g   0.1g S 107.7  12.0      7,52 python
+  58155 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 10:09:27 PM CEST 2024
+top - 22:09:27 up 3 days,  2:24,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    207.5 free,     43.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    208.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   52.0g  30.5g   0.1g S  92.9  12.1      7,57 python
+  58217 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 10:14:27 PM CEST 2024
+top - 22:14:28 up 3 days,  2:29,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    207.0 free,     43.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    207.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   52.5g  31.0g   0.1g S 100.0  12.3      8,02 python
+  58279 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 10:19:28 PM CEST 2024
+top - 22:19:28 up 3 days,  2:34,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    206.5 free,     44.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    207.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   53.1g  31.5g   0.1g S  92.9  12.5      8,07 python
+  58341 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 10:24:28 PM CEST 2024
+top - 22:24:28 up 3 days,  2:39,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    205.9 free,     44.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    206.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   53.8g  32.1g   0.1g S  92.9  12.8      8,12 python
+  58404 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 10:29:28 PM CEST 2024
+top - 22:29:29 up 3 days,  2:44,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    205.4 free,     45.2 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    206.0 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   54.5g  32.6g   0.1g S 107.7  13.0      8,17 python
+  58466 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 10:34:29 PM CEST 2024
+top - 22:34:29 up 3 days,  2:49,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    204.5 free,     46.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    205.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   55.5g  33.5g   0.1g S 107.7  13.3      8,22 python
+  58528 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 10:39:29 PM CEST 2024
+top - 22:39:29 up 3 days,  2:54,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    203.7 free,     46.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    204.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   56.4g  34.2g   0.1g S  92.9  13.6      8,27 python
+  58591 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 10:44:29 PM CEST 2024
+top - 22:44:30 up 3 days,  2:59,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    203.0 free,     47.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    203.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   57.3g  35.0g   0.1g S  92.9  13.9      8,32 python
+  58653 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 10:49:30 PM CEST 2024
+top - 22:49:30 up 3 days,  3:04,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    202.2 free,     48.3 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    202.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   58.1g  35.8g   0.1g S  92.9  14.2      8,37 python
+  58717 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 10:54:30 PM CEST 2024
+top - 22:54:31 up 3 days,  3:09,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    201.4 free,     49.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    202.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   59.0g  36.5g   0.1g S 285.7  14.5      8,42 python
+  58779 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 10:59:31 PM CEST 2024
+top - 22:59:31 up 3 days,  3:14,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    200.7 free,     49.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    201.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   59.9g  37.3g   0.1g S 107.7  14.8      8,47 python
+  58841 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 11:04:31 PM CEST 2024
+top - 23:04:32 up 3 days,  3:19,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    199.9 free,     50.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    200.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   60.8g  38.1g   0.1g S  92.9  15.1      8,52 python
+  58904 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 11:09:32 PM CEST 2024
+top - 23:09:32 up 3 days,  3:24,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    199.2 free,     51.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    199.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   61.6g  38.8g   0.1g S 100.0  15.4      8,57 python
+  58965 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 11:14:32 PM CEST 2024
+top - 23:14:32 up 3 days,  3:29,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    198.4 free,     52.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    199.1 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   62.5g  39.5g   0.1g S 100.0  15.7      9,02 python
+  59027 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 11:19:33 PM CEST 2024
+top - 23:19:33 up 3 days,  3:34,  5 users,  load average: 1.01, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    197.7 free,     52.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    198.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   63.3g  40.3g   0.1g S 100.0  16.0      9,07 python
+  59089 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 11:24:33 PM CEST 2024
+top - 23:24:33 up 3 days,  3:39,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1787 total,   1 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    196.9 free,     53.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    197.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   64.1g  41.0g   0.1g S 100.0  16.3      9,12 python
+  59150 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 11:29:33 PM CEST 2024
+top - 23:29:34 up 3 days,  3:44,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    196.2 free,     54.3 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    196.9 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   64.9g  41.7g   0.1g S  92.9  16.6      9,17 python
+  59212 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 11:34:34 PM CEST 2024
+top - 23:34:34 up 3 days,  3:49,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.5 free,     55.0 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    196.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   65.7g  42.5g   0.1g S  92.9  16.9      9,22 python
+  59274 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 11:39:34 PM CEST 2024
+top - 23:39:34 up 3 days,  3:54,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    194.8 free,     55.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   66.5g  43.2g   0.1g S 107.7  17.2      9,27 python
+  59336 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sat Aug 24 11:44:34 PM CEST 2024
+top - 23:44:35 up 3 days,  3:59,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    194.0 free,     56.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.3g  43.9g   0.1g S 100.0  17.5      9,32 python
+  59399 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 11:49:35 PM CEST 2024
+top - 23:49:35 up 3 days,  4:04,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6      9,37 python
+  59462 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sat Aug 24 11:54:35 PM CEST 2024
+top - 23:54:35 up 3 days,  4:09,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6      9,42 python
+  59523 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sat Aug 24 11:59:35 PM CEST 2024
+top - 23:59:36 up 3 days,  4:14,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1790 total,   1 running, 1789 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 100.0  17.6      9,47 python
+  59586 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 12:04:36 AM CEST 2024
+top - 00:04:36 up 3 days,  4:19,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1794 total,   1 running, 1793 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6      9,52 python
+  59664 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.07 top
+
+Sun Aug 25 12:09:36 AM CEST 2024
+top - 00:09:36 up 3 days,  4:24,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 107.7  17.6      9,57 python
+  59726 fabrice+  20   0    0.0g   0.0g   0.0g R  30.8   0.0   0:00.07 top
+
+Sun Aug 25 12:14:36 AM CEST 2024
+top - 00:14:37 up 3 days,  4:29,  5 users,  load average: 1.09, 1.02, 1.01
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     10,02 python
+  59789 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 12:19:37 AM CEST 2024
+top - 00:19:37 up 3 days,  4:34,  5 users,  load average: 1.08, 1.02, 1.01
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     10,07 python
+  59851 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.06 top
+
+Sun Aug 25 12:24:37 AM CEST 2024
+top - 00:24:37 up 3 days,  4:40,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1790 total,   1 running, 1789 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     10,12 python
+  59915 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 12:29:37 AM CEST 2024
+top - 00:29:38 up 3 days,  4:45,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 107.7  17.6     10,17 python
+  59977 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sun Aug 25 12:34:38 AM CEST 2024
+top - 00:34:38 up 3 days,  4:50,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 107.7  17.6     10,22 python
+  60041 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sun Aug 25 12:39:38 AM CEST 2024
+top - 00:39:38 up 3 days,  4:55,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1790 total,   1 running, 1789 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.7 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 146.2  17.6     10,27 python
+  60104 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sun Aug 25 12:44:39 AM CEST 2024
+top - 00:44:39 up 3 days,  5:00,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    193.8 free,     56.8 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.4 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 100.0  17.6     10,32 python
+  60166 fabrice+  20   0    0.0g   0.0g   0.0g R  30.8   0.0   0:00.07 top
+
+Sun Aug 25 12:49:39 AM CEST 2024
+top - 00:49:39 up 3 days,  5:05,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    194.1 free,     56.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    194.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 107.7  17.6     10,37 python
+  60227 fabrice+  20   0    0.0g   0.0g   0.0g R  23.1   0.0   0:00.06 top
+
+Sun Aug 25 12:54:39 AM CEST 2024
+top - 00:54:40 up 3 days,  5:10,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    194.5 free,     56.1 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.2 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 100.0  17.6     10,42 python
+  60288 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.07 top
+
+Sun Aug 25 12:59:40 AM CEST 2024
+top - 00:59:40 up 3 days,  5:15,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    194.9 free,     55.6 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.6 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 100.0  17.6     10,47 python
+  60349 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.06 top
+
+Sun Aug 25 01:04:40 AM CEST 2024
+top - 01:04:40 up 3 days,  5:20,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1790 total,   1 running, 1789 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.0 free,     55.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 100.0  17.6     10,52 python
+  60412 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 01:09:40 AM CEST 2024
+top - 01:09:41 up 3 days,  5:25,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.0 free,     55.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 100.0  17.6     10,57 python
+  60474 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 01:14:41 AM CEST 2024
+top - 01:14:41 up 3 days,  5:30,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.2 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.0 free,     55.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     11,02 python
+  60536 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 01:19:41 AM CEST 2024
+top - 01:19:41 up 3 days,  5:35,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     11,07 python
+  60598 fabrice+  20   0    0.0g   0.0g   0.0g R  28.6   0.0   0:00.06 top
+
+Sun Aug 25 01:24:41 AM CEST 2024
+top - 01:24:42 up 3 days,  5:40,  5 users,  load average: 1.00, 1.01, 1.00
+Tasks: 1798 total,   1 running, 1797 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     11,12 python
+  60674 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 01:29:42 AM CEST 2024
+top - 01:29:42 up 3 days,  5:45,  5 users,  load average: 1.05, 1.01, 1.00
+Tasks: 1790 total,   1 running, 1789 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     11,17 python
+  60735 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 01:34:42 AM CEST 2024
+top - 01:34:42 up 3 days,  5:50,  5 users,  load average: 1.00, 1.03, 1.00
+Tasks: 1790 total,   1 running, 1789 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     11,22 python
+  60798 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 01:39:42 AM CEST 2024
+top - 01:39:43 up 3 days,  5:55,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     11,27 python
+  60859 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 01:44:43 AM CEST 2024
+top - 01:44:43 up 3 days,  6:00,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 100.0  17.6     11,32 python
+  60921 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 01:49:43 AM CEST 2024
+top - 01:49:43 up 3 days,  6:05,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     11,37 python
+  60983 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 01:54:43 AM CEST 2024
+top - 01:54:44 up 3 days,  6:10,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     11,42 python
+  61045 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 01:59:44 AM CEST 2024
+top - 01:59:44 up 3 days,  6:15,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S 100.0  17.6     11,47 python
+  61107 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 02:04:44 AM CEST 2024
+top - 02:04:44 up 3 days,  6:20,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     11,52 python
+  61168 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 02:09:45 AM CEST 2024
+top - 02:09:45 up 3 days,  6:25,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   1 running, 1787 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.6 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     11,57 python
+  61229 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 02:14:45 AM CEST 2024
+top - 02:14:45 up 3 days,  6:30,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1789 total,   1 running, 1788 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.3 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    195.1 free,     55.4 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    195.8 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   67.6g  44.2g   0.1g S  92.9  17.6     12,02 python
+  61291 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+
+Sun Aug 25 02:19:45 AM CEST 2024
+top - 02:19:45 up 3 days,  6:35,  5 users,  load average: 1.00, 1.00, 1.00
+Tasks: 1788 total,   2 running, 1786 sleeping,   0 stopped,   0 zombie
+%Cpu(s):  0.5 us,  0.1 sy,  0.0 ni, 99.4 id,  0.0 wa,  0.0 hi,  0.0 si,  0.0 st 
+GiB Mem :    251.2 total,    207.1 free,     43.5 used,      2.3 buff/cache     
+GiB Swap:      0.0 total,      0.0 free,      0.0 used.    207.7 avail Mem 
+
+    PID USER      PR  NI    VIRT    RES    SHR S  %CPU  %MEM     TIME+ COMMAND
+  51837 fabrice+  20   0   52.7g  32.2g   0.1g R  92.9  12.8     12,08 python
+  61415 fabrice+  20   0    0.0g   0.0g   0.0g R  21.4   0.0   0:00.06 top
+

@@ -5,3 +5,15 @@ start FakeMelbourneV2_1_-p
 start FakeMelbourneV2_1_-s
 /localdisk/fabrice_remote_experiments/AutomatedPERTools/tutorial_notebooks/testrun1/TrotterExample.py:109: DeprecationWarning: Back-references to from Bit instances to their containing Registers have been deprecated. Instead, inspect Registers to find their contained Bits.
   used_qubits.add(bit.index) #and save those
+start FakeMelbourneV2_1_
+/localdisk/fabrice_remote_experiments/AutomatedPERTools/tutorial_notebooks/testrun1/TrotterExample.py:109: DeprecationWarning: Back-references to from Bit instances to their containing Registers have been deprecated. Instead, inspect Registers to find their contained Bits.
+  used_qubits.add(bit.index) #and save those
+start FakeCasablancaV2_1_-p
+/localdisk/fabrice_remote_experiments/AutomatedPERTools/tutorial_notebooks/testrun1/TrotterExample.py:109: DeprecationWarning: Back-references to from Bit instances to their containing Registers have been deprecated. Instead, inspect Registers to find their contained Bits.
+  used_qubits.add(bit.index) #and save those
+start FakeCasablancaV2_1_-s
+/localdisk/fabrice_remote_experiments/AutomatedPERTools/tutorial_notebooks/testrun1/TrotterExample.py:109: DeprecationWarning: Back-references to from Bit instances to their containing Registers have been deprecated. Instead, inspect Registers to find their contained Bits.
+  used_qubits.add(bit.index) #and save those
+start FakeCasablancaV2_1_
+/localdisk/fabrice_remote_experiments/AutomatedPERTools/tutorial_notebooks/testrun1/TrotterExample.py:109: DeprecationWarning: Back-references to from Bit instances to their containing Registers have been deprecated. Instead, inspect Registers to find their contained Bits.
+  used_qubits.add(bit.index) #and save those
