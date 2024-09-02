@@ -152,7 +152,7 @@ if __name__ == "__main__":
     # %%
     circuit_results = perexp.analyze()
 
-    raise Exception("Ende")
+    #raise Exception("Ende")
     # %%
     results_errors = []
     results_at_noise = []
@@ -161,18 +161,17 @@ if __name__ == "__main__":
 
     for run in circuit_results:
         tot = 0
-        tot_error = [0,0]
+        tot_error = 0
         tot_at_noise = [0 for _ in range(len(noise_strengths))]
         tot_at_noise_errors = [0 for _ in range(len(noise_strengths))]
         for op in expectations:
             #get the full per results
             expec = run.get_result(op).expectation
-            tot += expec
+            tot += expec/len(expectations)
 
             #get the corresponding fit-errors
             expec_error = run.get_result(op).expectation_error
-            for i in range(0,len(tot_error)):
-                tot_error[i] += expec_error[i]/len(expectations)
+            tot_error += expec_error/len(expectations)
 
             #get the value at the different noise levels
             expec_at_noise = run.get_result(op).get_expectations()
@@ -185,7 +184,7 @@ if __name__ == "__main__":
 
             
 
-        results.append(tot/len(expectations))
+        results.append(tot)
         results_errors.append(tot_error)
         results_at_noise.append(tot_at_noise)
         results_at_noise_errors.append(tot_at_noise_errors)
