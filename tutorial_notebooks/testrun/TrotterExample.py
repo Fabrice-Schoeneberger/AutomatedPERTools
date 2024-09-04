@@ -10,6 +10,7 @@ if __name__ == "__main__":
     parser.add_argument('--persamples', type=int, help='How many samples in PER? Default: 100', default=100)
     parser.add_argument('--shots', type=int, help='How many shots? Default: 1024', default=1024)
     parser.add_argument('--backend', type=str, help='Which backend to use? Default: FakeVigoV2', default="FakeVigoV2")
+    parser.add_argument('--cross', '-c', help='Simulates Cross Talk Noise', default=False, action='store_true')
     parser.add_argument('--setqubits', type=int, nargs='+', help='Which qubits to use?: Default: 0123 and transpile')
 
     #  Parse die Argumente
@@ -53,7 +54,8 @@ if __name__ == "__main__":
             raise Exception("Must be 4 qubits when given")
         qubits = args.setqubits
         num_qubits = backend.num_qubits
-        
+    
+    do_cross_talk_noise = args.cross
     tomography_connections = args.plusone
     sum_over_lambda = args.sum
     if sum_over_lambda:
@@ -127,8 +129,96 @@ if __name__ == "__main__":
 
 
     # %%
+    import multiprocessing
     def executor(circuits):
+        if do_cross_talk_noise:
+            manager = multiprocessing.Manager()
+            new_circuits = manager.list()
+            processes = []
+            for circ in circuits:
+                # Altering all circuits might take a while so let's to multiprcessing
+                process = multiprocessing.Process(target=apply_cross_talk, args=(circ, new_circuits))
+                processes.append(process)
+                process.start()
+
+            for process in processes:
+                process.join()
+            circuits = list(new_circuits)
+
         return backend.run(circuits, shots=shots).result().get_counts()
+
+    from primitives.circuit import QiskitCircuit
+    def circuit_to_layers(qc: QiskitCircuit):
+        layers = []
+        inst_list = [inst for inst in qc if not inst.ismeas()] 
+
+        #pop off instructions until inst_list is empty
+        while inst_list:
+
+            circ = qc.copy_empty() #blank circuit to add instructions
+            layer_qubits = set() #qubits in the support of two-qubit clifford gates
+
+            for inst in inst_list.copy(): #iterate through remaining instructions
+
+                #check if current instruction overlaps with support of two-qubit gates
+                #already on layer
+                if not layer_qubits.intersection(inst.support()):
+                    circ.add_instruction(inst) #add instruction to circuit and pop from list
+                    inst_list.remove(inst)
+
+                if inst.weight() == 2:
+                    layer_qubits = layer_qubits.union(inst.support()) #add support to layer
+
+            if circ: #append only if not empty
+                layers.append(circ)
+
+        return layers
+
+    cross_talk_chance = 0.000001
+    def apply_cross_talk(circuit, new_circuits):
+        import random
+
+        if backend.num_qubits != len(circuit.qubits):
+            circuit = transpile(circuit, backend)
+
+        #rebuild the circuit
+        circ = circuit.copy_empty_like()
+        # Cut into layer, so you know all 2 qubit gates in one layer are parallel
+        layers = circuit_to_layers(QiskitCircuit(circuit))
+        for layer in layers:
+            # Count up which qubit has the most instructions on it. Assume all instructions take the same time to resolve
+            qubits = []
+            for inst in layer:
+                if inst.weight() == 1:
+                    qubits.append(inst.instruction.qubits)
+            # Save which qubit is the most gated and also how many gates it has
+            most_gate_qubit = -1
+            most_gate_qubit_count = -1
+            for qubit in set(qubits):
+                if qubits.count(qubit) > most_gate_qubit_count:
+                    most_gate_qubit_count = qubits.count(qubit)
+                    most_gate_qubit = qubit
+            # rebuild the circuit
+            for inst in layer:
+                inst = inst.instruction
+                circ.append(inst)
+                # At every single qubit layer, determined by the most gated qubit, apply a random cnot gate, with chance=cross_talk_chance
+                if inst.qubits == most_gate_qubit:
+                    for edge in backend.coupling_map: # Every edge has a chance to send noise
+                        if random.random() < cross_talk_chance: # And every qubit does that individual from one another
+                            circ.cx(edge[0], edge[1])
+                        if random.random() < cross_talk_chance: # Order could play a role, but the chance is to low,
+                            circ.cx(edge[1], edge[0]) # that both hit at the same time, that it is ignored here
+                            # Another thing to add is: Bydefault, these cnot gates are also noisy themself
+                            # I consider this an upside, as cross talk noise is also not always the same.
+            # Multiqubit gates take a longer time to resolve, on average 3 times longer.
+            # This means, that there are 3 times more chances for a cross talk noise to occure
+            for edge in backend.coupling_map: 
+                if random.random() < 3*cross_talk_chance: 
+                    circ.cx(edge[0], edge[1])
+                if random.random() < 3*cross_talk_chance: 
+                    circ.cx(edge[1], edge[0])
+        new_circuits.append(circ)
 
     # %%
     print("initialize experiment")

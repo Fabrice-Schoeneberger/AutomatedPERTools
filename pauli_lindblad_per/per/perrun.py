@@ -1,7 +1,6 @@
 from per.perinstance import PERInstance
 from per.perdata import PERData
 import multiprocessing
-from multiprocessing.process import AuthenticationString
 
 
 class PERRun:
