@@ -1,4 +1,4 @@
-if __name__ == "__main__":
+def main():
     import argparse
     parser = argparse.ArgumentParser()
         
@@ -11,6 +11,8 @@ if __name__ == "__main__":
     parser.add_argument('--shots', type=int, help='How many shots? Default: 1024', default=1024)
     parser.add_argument('--backend', type=str, help='Which backend to use? Default: FakeVigoV2', default="FakeVigoV2")
     parser.add_argument('--cross', '-c', help='Simulates Cross Talk Noise', default=False, action='store_true')
+    parser.add_argument('--allqubits', '-a', help='runs over all qubits in the tomography', default=False, action='store_true')
+    parser.add_argument('--onlyTomography', help='Only does the tomography and then ends the program', default=False, action='store_true')
     parser.add_argument('--setqubits', type=int, nargs='+', help='Which qubits to use?: Default: 0123 and transpile')
 
     #  Parse die Argumente
@@ -26,7 +28,7 @@ if __name__ == "__main__":
     import json
     import time
     tim = time.localtime()
-    print("%s.%s. %s:%s" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+    print("%02d.%02d. %02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
 
 
     folder = os.getcwd()
@@ -60,20 +62,14 @@ if __name__ == "__main__":
     sum_over_lambda = args.sum
     if sum_over_lambda:
         tomography_connections = True
+    tomography_all_qubits = args.allqubits
+    onlyTomography = args.onlyTomography
 
     pntsamples = args.pntsamples
     pntsinglesamples = args.pntsinglesamples
     persamples = args.persamples
     shots = args.shots
 
-    namebase = "" 
-    print("Arguments where set as:")
-    for arg_name, arg_value in vars(args).items():
-        if arg_name == "setqubits" and arg_value == None:
-            arg_value = "[0,1,2,3]_and_transpile"
-        print("\t%s: %s" % (arg_name, str(arg_value)))
-        namebase += str(arg_value) + "_"
-    print("Namebase will be: " + namebase)
     # %%
     print("make trotter")
     def trotterLayer(h,J,dt,n):
@@ -110,9 +106,21 @@ if __name__ == "__main__":
                 used_qubits.add(bit.index) #and save those
     qubits = used_qubits
     print("Qubits set to ", qubits)
+
+    namebase = "" 
+    print("Arguments where set as:")
+    for arg_name, arg_value in vars(args).items():
+        if arg_name == "setqubits" and arg_value == None:
+            arg_value = str(qubits)
+        print("\t%s: %s" % (arg_name, str(arg_value)))
+        namebase += str(arg_value) + "_"
+    namebase = namebase[:-1]
+    os.makedirs(namebase, exist_ok=True)
+    print("Namebase will be: " + namebase)
+    namebase += "/"
     #circuits[0].draw()
-    # %%
-    if True:
+    # %% Put gates in empty qubits
+    """ if True:
         import random
         for i in range(backend.num_qubits):
             if i not in used_qubits:
@@ -124,11 +132,11 @@ if __name__ == "__main__":
                             lambda q: circ.ry(np.pi/2, q), 
                             lambda q: circ.rz(np.pi/2, q),
                             circ.i
-                        ])(i)
+                        ])(i) """
                 
 
 
-    # %%
+    # %% Executer and Friends
     import multiprocessing
     def executor(circuits):
         if do_cross_talk_noise:
@@ -174,7 +182,7 @@ if __name__ == "__main__":
 
         return layers
 
-    cross_talk_chance = 0.000001
+    cross_talk_chance = 0.000015 # Number by https://arxiv.org/pdf/2110.12570
     def apply_cross_talk(circuit, new_circuits):
         import random
 
@@ -220,26 +228,32 @@ if __name__ == "__main__":
                     circ.cx(edge[1], edge[0])
         new_circuits.append(circ)
 
-    # %%
+    # %% initialize experiment
     print("initialize experiment")
-    experiment = tomography(circuits = circuits, inst_map = range(backend.num_qubits), backend = backend, tomography_connections=tomography_connections, sum_over_lambda=sum_over_lambda)
-    # %%
+    experiment = tomography(circuits = circuits, inst_map = [i for i in range(backend.num_qubits)], backend = backend, tomography_connections=tomography_connections, sum_over_lambda=sum_over_lambda, tomography_all_qubits=tomography_all_qubits)
+    # %% generate circuits
     print("generate circuits")
-    experiment.generate(samples = 1, single_samples = 1, depths = [2,4,8,16])
+    experiment.generate(samples = pntsamples, single_samples = pntsinglesamples, depths = [2,4,8,16])
     tim = time.localtime()
-    print("%s.%s. %s:%s" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
-    # %%
+    print("%02d.%02d. %02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+    # %% run experiment
     print("run experiment")
     experiment.run(executor)
 
-    # %%
+    # %% analyse experiment
     print("analyse experiment")
     noisedataframe = experiment.analyze()
 
-    # %%
+    import pickle
+    with open(namebase + "noisedataframe.pickle", "wb") as f:
+        pickle.dump(noisedataframe, f)
+
+    if onlyTomography:
+        return
+    # %% create per experiment
     perexp = experiment.create_per_experiment(circuits)
 
-    # %%
+    # %% generate per experiment and noise strengths
     noise_strengths = [0,0.5,1,2]
     expectations = []
     for q in qubits:
@@ -248,17 +262,21 @@ if __name__ == "__main__":
         expectations.append("".join(reversed(expect)))
     print("do PER runs")
     tim = time.localtime()
-    print("%s.%s. %s:%s" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+    print("%02d.%02d. %02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
     perexp.generate(expectations = expectations, samples = persamples, noise_strengths = noise_strengths)
 
     # %%
     print("Run PER")
+    print("%02d.%02d. %02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
     perexp.run(executor)
 
     # %%
+    print("Analyze PER")
     circuit_results = perexp.analyze()
 
-    #raise Exception("Ende")
+    print("Delete Pickled PERrun Data")
+    perexp.delete_pickles()
+
     # %%
     results_errors = []
     results_at_noise = []
@@ -310,10 +328,10 @@ if __name__ == "__main__":
         qc = circ.copy()
         qc.measure_all()
         count= backend.run(qc, shots=shots*persamples).result().get_counts()
-        count = {tuple(int(k) for i, k in enumerate(key) if len(key)-1-i in qubits):count[key] for key in count.keys()} #not sure yet if this works for another qubits size, but I think it does
+        count = {tuple(int(k) for k in key):count[key] for key in count.keys()}
         tot = 0
         for key in count.keys():
-            num = sum([(-1)**bit for bit in key])
+            num = sum([(-1)**bit for i, bit in enumerate(key) if len(key)-1-i in qubits])
             tot += num*count[key]
         noisyresult.append(tot/(shots*persamples*n*2))
 
@@ -324,10 +342,10 @@ if __name__ == "__main__":
         qc = circ.copy()
         qc.measure_all()
         count= Aer.get_backend('qasm_simulator').run(qc, shots=shots*persamples).result().get_counts()
-        count = {tuple(int(k) for i, k in enumerate(key) if len(key)-1-i in qubits):count[key] for key in count.keys()}
+        count = {tuple(int(k) for k in key):count[key] for key in count.keys()}
         tot = 0
-        for key in sorted(count.keys()):
-            num = sum([(-1)**bit for bit in key])
+        for key in count.keys():
+            num = sum([(-1)**bit for i, bit in enumerate(key) if len(key)-1-i in qubits])
             tot += num*count[key]
         res.append(tot/(shots*persamples*n*2))
 
@@ -341,80 +359,30 @@ if __name__ == "__main__":
         
     plt.plot(range(1,15), res, 'o:', label="Trotter Simulation")
     plt.plot(range(1,15), noisyresult, 'o', label="Unmitigated")
-    plt.errorbar(range(1,15), results, yerr=[[np.abs(res[1]) for res in results_errors],[np.abs(res[0]) for res in results_errors]],fmt='x', capsize=5, label="PER")
+    plt.errorbar(range(1,15), results, yerr=results_errors, fmt='x', capsize=5, label="PER", color='#FFC0CB')
 
     plt.ylim([-1.8,1.8])
     plt.legend()
     plt.title("Trotter Simulation with PER")
     plt.xlabel("Trotter Steps")
     plt.ylabel("Z Magnetization")
-    plt.savefig(namebase+"_Trotter_Sim_PER.png")
+    plt.savefig(namebase+"Trotter_Sim_PER.png")
 
     # %%
-    plt.figure(figsize=(10,6))
-    for i, noise in enumerate(noise_strengths):
-        if noise == 0:
-            plt.errorbar(range(1,15), [res[i] for res in results_at_noise], fmt='x', yerr=[res[i] for res in results_at_noise_errors], capsize=5, label='N='+str(noise))
-        else:
-            plt.plot(range(1,15), [res[i] for res in results_at_noise], 'x', label='N='+str(noise))
-            
-        
-    plt.plot(range(1,15), res, 'o:', label="Trotter Simulation")
-    plt.plot(range(1,15), noisyresult, 'o', label="Unmitigated")
-    plt.plot(range(1,15), results, 'x', label="PER")
+    #for i in range (len(expectations)):
+    #    ax = circuit_results[0].get_result(expectations[i]).plot()
+    #    plt.title("Expectation vs Noise Strength " + expectations[i])
+    #    plt.xlabel("Noise Strength")
+    #    plt.ylabel("Expectation")
+    #    plt.savefig(namebase+"_Expectation_vs_Noise_Strength_" + expectations[i] + ".png")
 
-    plt.ylim([-1.8,1.8])
-    plt.legend()
-    plt.title("Trotter Simulation with PER")
-    plt.xlabel("Trotter Steps")
-    plt.ylabel("Z Magnetization")
-    plt.savefig(namebase+"_Trotter_Sim_n_0.png")
-
-    # %%
-    plt.figure(figsize=(10,6))
-    for i, noise in enumerate(noise_strengths):
-        if noise == 0.5:
-            plt.errorbar(range(1,15), [res[i] for res in results_at_noise], fmt='x', yerr=[res[i] for res in results_at_noise_errors], label='N='+str(noise), capsize=5)
-        else:
-            plt.plot(range(1,15), [res[i] for res in results_at_noise], 'x', label='N='+str(noise))
-            
-        
-    plt.plot(range(1,15), res, 'o:', label="Trotter Simulation")
-    plt.plot(range(1,15), noisyresult, 'o', label="Unmitigated")
-    plt.plot(range(1,15), results, 'x', label="PER")
-
-    plt.ylim([-1.8,1.8])
-    plt.legend()
-    plt.title("Trotter Simulation with PER")
-    plt.xlabel("Trotter Steps")
-    plt.ylabel("Z Magnetization")
-    plt.savefig(namebase+"_Trotter_Sim_n_05.png")
-
-    # %%
-    for i in range (len(expectations)):
-        ax = circuit_results[0].get_result(expectations[i]).plot()
-        plt.title("Expectation vs Noise Strength " + expectations[i])
-        plt.xlabel("Noise Strength")
-        plt.ylabel("Expectation")
-        plt.savefig(namebase+"_Expectation_vs_Noise_Strength_" + expectations[i] + ".png")
-
-    # %% [markdown]
-    # ## Analysis
-
-    # %%
-    #layer1 = experiment.analysis.get_layer_data(0)
-
-    # %%
-    #layer1.graph((1,))
-
-    # %%
-    #layer1.plot_infidelitites((0,),(1,),(0,1))
-
-    # %%
-    #layer1.plot_coeffs((1,),(0,),(0,1))
-
+    with open(namebase + "circuit_results.pickle", "wb") as f:
+        pickle.dump(circuit_results, f)
 
     tim = time.localtime()
-    print("%s.%s. %s:%s" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+    print("%02d.%02d. %02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
 
 
+
+if __name__ == "__main__":
+    main()

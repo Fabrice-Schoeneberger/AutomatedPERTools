@@ -62,6 +62,8 @@ class Instance:
     def _untwirl_result(self):
         """Return a dictionary of results with the effect of the readout twirling accounted for.
         """
+        if not self._result:
+            raise Exception("No results added")
 
         ro_untwirled = {}
         rostring = self._rostring

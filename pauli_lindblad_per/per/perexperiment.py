@@ -89,6 +89,7 @@ class PERExperiment:
        
         #get circuits in native representation
         circuits = [inst.get_circuit() for inst in instances] 
+        logger.info(len(circuits))
 
         #pass circuit to executor
         results = executor(circuits)
@@ -96,6 +97,17 @@ class PERExperiment:
         #add results to instances 
         for inst, res in zip(instances, results):
             inst.add_result(res)
+        
+        cycling = False
+
+        for run in self._per_runs:
+            cycling = run.cycle_data() # All runs should return the same data so this should be fine
+        
+        logger.info(cycling)
+
+        if not cycling:
+            logger.info("I did it")
+            self.run(executor) # recursivly call this function until all instances have been dealt with
 
     def analyze(self):
 
@@ -104,6 +116,10 @@ class PERExperiment:
             run.analyze()
 
         return self._per_runs
+    
+    def delete_pickles(self):
+        for run in self._per_runs:
+            run.delete_data()
 
     def get_overhead(self, layer, noise_strength):
         return self._per_circuits[layer].overhead(noise_strength)

@@ -3,9 +3,9 @@
 echo start
 source /localdisk/fabrice_remote_experiments/AutomatedPERTools/.venv/bin/activate
 
-names=("FakeMelbourneV2" "FakeCasablancaV2")
-do1000=(1)
-extras1=("-p" "-s" "")
+backends=("FakeVigoV2" "FakeMelbourneV2" "FakeCasablancaV2")
+extras=("-p" "-a" "" "-p -c" "-a -c" "-c")
+persamples=(10 100 500 1000 2000 5000 10000)
 
 #Do not touch this:
 processes=()
@@ -22,19 +22,18 @@ is_in_array() {
     return 1  # Not found
 }
 
-for value in "${do1000[@]}"; do
-    for name in "${names[@]}"; do
-        #This iterates over how many samples to use
-        if [ "$value" -eq 0 ]; then
-            extras2=""
-        else
-            extras2="--pntsamples 64 --pntsinglesamples 1000 --persamples 1000"
-        fi
-        #This checks which processes have already finished and removes them from the list
-        for extra in "${extras1[@]}"; do
+for backend in "${backends[@]}"; do
+    for persample in "${persamples[@]}"; do
+        for extra in "${extras[@]}"; do
+            if [ "$extra" != "" ]; then
+                if [ "$persample" -ne 1000 ]; then
+                    continue
+                fi
+            fi
             echo start ${name}_${value}_${extra}
             #rm ${name}_${value}_${extra}.out
-            nohup python TrotterExample.py ${extra} ${extras2} --backend ${name} > ${name}_${value}_${extra}.out &
+            extra_without_spaces=$(echo "$extra" | sed 's/ /_/g')
+            nohup python TrotterExample.py ${extra} --pntsamples 64 --pntsinglesamples 1000 --persamples ${persample} --backend ${backend} > ${backend}_${value}_${extra_without_spaces}.out &
             #sleep 2 &
             #min=7
             #max=20
@@ -87,9 +86,9 @@ done
 #For manuell entry:
 # FakeCasablancaV2
 # python TrotterExample.py --pntsamples 1 --pntsinglesamples 1 --persamples 1 --backend FakeMelbourneV2
-nohup python TrotterExample.py -p --backend FakeCasablancaV2 > FakeCasablancaV2_0_-p.out &
-nohup python TrotterExample.py -s --backend FakeCasablancaV2 > FakeCasablancaV2_0_-s.out &
-nohup python TrotterExample.py --backend FakeCasablancaV2 > FakeCasablancaV2_0_.out &
-nohup python TrotterExample.py -p --backend FakeMelbourneV2 > FakeMelbourneV2_0_-p.out &
-nohup python TrotterExample.py -s --backend FakeMelbourneV2 > FakeMelbourneV2_0_-s.out &
-nohup python TrotterExample.py --backend FakeMelbourneV2 > FakeMelbourneV2_0_.out &
+#nohup python TrotterExample.py -p --backend FakeCasablancaV2 > FakeCasablancaV2_0_-p.out &
+#nohup python TrotterExample.py -s --backend FakeCasablancaV2 > FakeCasablancaV2_0_-s.out &
+#nohup python TrotterExample.py --backend FakeCasablancaV2 > FakeCasablancaV2_0_.out &
+#nohup python TrotterExample.py -p --backend FakeMelbourneV2 > FakeMelbourneV2_0_-p.out &
+#nohup python TrotterExample.py -s --backend FakeMelbourneV2 > FakeMelbourneV2_0_-s.out &
+#nohup python TrotterExample.py --backend FakeMelbourneV2 > FakeMelbourneV2_0_.out &
