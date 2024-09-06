@@ -1,11 +1,12 @@
 #!/bin/bash
 
 echo start
-source /localdisk/fabrice_remote_experiments/AutomatedPERTools/.venv/bin/activate
+#source /localdisk/fabrice_remote_experiments/AutomatedPERTools/.venv/bin/activate
 
 backends=("FakeVigoV2" "FakeMelbourneV2" "FakeCasablancaV2")
 extras=("-p" "-a" "" "-p -c" "-a -c" "-c")
-persamples=(10 100 500 1000 2000 5000 10000)
+#persamples=(10 100 500 1000 2000 5000 10000)
+persamples=(1000)
 
 #Do not touch this:
 processes=()
@@ -33,7 +34,7 @@ for backend in "${backends[@]}"; do
             echo start ${name}_${value}_${extra}
             #rm ${name}_${value}_${extra}.out
             extra_without_spaces=$(echo "$extra" | sed 's/ /_/g')
-            nohup python TrotterExample.py ${extra} --pntsamples 64 --pntsinglesamples 1000 --persamples ${persample} --backend ${backend} > ${backend}_${value}_${extra_without_spaces}.out &
+            nohup python TrotterExample.py ${extra} --pntsamples 64 --pntsinglesamples 1000 --onlyTomography --backend ${backend} > ${backend}_${value}_${extra_without_spaces}.out &
             #sleep 2 &
             #min=7
             #max=20
@@ -42,12 +43,12 @@ for backend in "${backends[@]}"; do
             processes+=($!)
             n=${#processes[@]}
             while [ "$n" -gt 0 ]; do
-                date >> system_status_${name}_${value}_${extra}.out
-                top -u fabricesch -n 1 -b -i -e g -E g >> system_status_${name}_${value}_${extra}.out
-                echo "" >> system_status_${name}_${value}_${extra}.out
-                date >> cpu_temp_${name}_${value}_${extra}.out
-                sensors >> cpu_temp_${name}_${value}_${extra}.out
-                echo "" >> cpu_temp_${name}_${value}_${extra}.out
+                date >> system_status_${backend}_${value}_${extra_without_spaces}.out
+                top -u fabricesch -n 1 -b -i -e g -E g >> system_status_${backend}_${value}_${extra_without_spaces}.out
+                echo "" >> system_status_${backend}_${value}_${extra_without_spaces}.out
+                date >> cpu_temp_${backend}_${value}_${extra_without_spaces}.out
+                sensors >> cpu_temp_${backend}_${value}_${extra_without_spaces}.out
+                echo "" >> cpu_temp_${backend}_${value}_${extra_without_spaces}.out
                 sleep 300
                 remove_list=()
                 is_done=0

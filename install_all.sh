@@ -1,3 +1,4 @@
+python -m venv .venv
 source /localdisk/fabrice_remote_experiments/AutomatedPERTools/.venv/bin/activate
 #.\.venv\Scripts\activate on windows
 pip install qiskit==0.40
