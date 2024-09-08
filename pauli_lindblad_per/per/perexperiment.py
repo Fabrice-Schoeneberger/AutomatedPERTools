@@ -102,11 +102,8 @@ class PERExperiment:
 
         for run in self._per_runs:
             cycling = run.cycle_data() # All runs should return the same data so this should be fine
-        
-        logger.info(cycling)
 
         if not cycling:
-            logger.info("I did it")
             self.run(executor) # recursivly call this function until all instances have been dealt with
 
     def analyze(self):

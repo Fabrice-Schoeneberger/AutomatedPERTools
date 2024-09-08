@@ -149,7 +149,7 @@ def main():
             new_circuits = manager.list()
             processes = []
             for circ in circuits:
-                print("Opening process number ", circuits.index(circ))
+                print("Opening process number ", circuits.index[circ])
                 # Altering all circuits might take a while so let's to multiprcessing
                 process = multiprocessing.Process(target=apply_cross_talk, args=(circ, new_circuits))
                 processes.append(process)

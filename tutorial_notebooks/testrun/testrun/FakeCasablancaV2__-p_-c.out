@@ -1,0 +1,20 @@
+08.09. 14:29
+make trotter
+Qubits set to  {1, 3, 5, 6}
+Arguments where set as:
+	plusone: True
+	sum: False
+	pntsamples: 64
+	pntsinglesamples: 1000
+	persamples: 100
+	shots: 1024
+	backend: FakeCasablancaV2
+	cross: True
+	allqubits: False
+	onlyTomography: True
+	setqubits: {1, 3, 5, 6}
+Namebase will be: True_False_64_1000_100_1024_FakeCasablancaV2_True_False_True_{1, 3, 5, 6}
+initialize experiment
+generate circuits
+08.09. 14:38
+run experiment

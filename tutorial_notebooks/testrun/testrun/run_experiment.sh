@@ -88,8 +88,6 @@ for backend in "${backends[@]}"; do
     done
 done
 
-# sh run_experiment.sh > run_experiment.out &
-
 #For manuell entry:
 # FakeCasablancaV2
 # python TrotterExample.py --pntsamples 1 --pntsinglesamples 1 --persamples 1 --backend FakeMelbourneV2
