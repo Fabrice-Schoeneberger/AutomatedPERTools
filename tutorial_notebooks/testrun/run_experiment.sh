@@ -99,3 +99,7 @@ done
 #nohup python TrotterExample.py -p --backend FakeMelbourneV2 > FakeMelbourneV2_0_-p.out &
 #nohup python TrotterExample.py -s --backend FakeMelbourneV2 > FakeMelbourneV2_0_-s.out &
 #nohup python TrotterExample.py --backend FakeMelbourneV2 > FakeMelbourneV2_0_.out &
+
+python TrotterExample.py -c --onlyTomography --pntsamples 1 --pntsinglesamples 1
+nohup python TrotterExample.py -a --pntsamples 256 --pntsinglesamples 4000 --onlyTomography --backend FakeVigoV2 --depths 2 4 8 16 32 64 > FakeVigoV2_pnt256_-a.out &
+nohup python TrotterExample.py --pntsamples 256 --pntsinglesamples 4000 --onlyTomography --backend FakeVigoV2 --depths 2 4 8 16 32 64 > FakeVigoV2_pnt256_.out &

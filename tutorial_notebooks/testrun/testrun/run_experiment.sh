@@ -5,9 +5,10 @@ echo start
 
 ulimit -n 10000
 
-backends=("FakeVigoV2" "FakeMelbourneV2" "FakeCasablancaV2")
-#extras=("-p" "-a" "" "-p -c" "-a -c" "-c")
-extras=("-p -c" "-a -c" "-c")
+#backends=("FakeVigoV2" "FakeMelbourneV2" "FakeCasablancaV2")
+backends=("FakeMelbourneV2" "FakeCasablancaV2")
+extras=("-p" "-a" "")
+#extras=("-p -c" "-a -c" "-c")
 #persamples=(10 100 500 1000 2000 5000 10000)
 persamples=(1000)
 
@@ -87,6 +88,8 @@ for backend in "${backends[@]}"; do
         done
     done
 done
+
+# sh run_experiment.sh > run_experiment.out &
 
 #For manuell entry:
 # FakeCasablancaV2

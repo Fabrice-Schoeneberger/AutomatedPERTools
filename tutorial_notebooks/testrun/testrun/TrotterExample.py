@@ -1,3 +1,8 @@
+def print_time():
+    import time
+    tim = time.localtime()
+    print("%02d.%02d. %02d:%02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min, tim.tm_sec))
+
 def main():
     import argparse
     parser = argparse.ArgumentParser()
@@ -26,9 +31,7 @@ def main():
     import sys
     import numpy as np
     import json
-    import time
-    tim = time.localtime()
-    print("%02d.%02d. %02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+    print_time()
 
 
     folder = os.getcwd()
@@ -146,19 +149,21 @@ def main():
     def executor(circuits):
         if do_cross_talk_noise:
             manager = multiprocessing.Manager()
-            new_circuits = manager.list()
+            #new_circuits = manager.list()
+            new_circuits = []
             processes = []
             for circ in circuits:
-                print("Opening process number ", circuits.index[circ])
-                # Altering all circuits might take a while so let's to multiprcessing
-                process = multiprocessing.Process(target=apply_cross_talk, args=(circ, new_circuits))
-                processes.append(process)
-                process.start()
-                while len(multiprocessing.active_children()) > 100:
-                    time.sleep(10)
+                print("Opening process number ", circuits.index(circ))
+                # Altering all circuits might take a while so let's do multiprocessing
+                apply_cross_talk(circ, new_circuits)
+                #process = multiprocessing.Process(target=apply_cross_talk, args=(circ, new_circuits))
+                #processes.append(process)
+                #process.start()
+                #while len(multiprocessing.active_children()) > 100:
+                #    time.sleep(10)
 
-            for process in processes:
-                process.join()
+            #for process in processes:
+            #    process.join()
             new_circuits = list(new_circuits)
         else:
             new_circuits =circuits.copy()
@@ -218,12 +223,12 @@ def main():
                     most_gate_qubit_count = qubits.count(qubit)
                     most_gate_qubit = qubit
             # rebuild the circuit
-            for inst in layer:
-                inst = inst.instruction
+            for layer_inst in layer:
+                inst = layer_inst.instruction
                 circ.append(inst)
                 if random.random() < gate_triggered_cross_talk_chance:
                     # colloect neighbors
-                    if inst.weight() == 1:
+                    if layer_inst.weight() == 1:
                         neighbors = set([bit for connection in backend.coupling_map if inst.qubits[0].index in connection for bit in connection]).remove(inst.qubits[0].index)
                     else:
                         neighbors = set([bit for connection in backend.coupling_map if inst.qubits[0].index in connection or inst.qubits[1].index in connection for bit in connection])
@@ -231,7 +236,7 @@ def main():
                         neighbors.remove(inst.qubits[1].index)
                     # Pick a random neighbor to apply the cross talk to
                     chosen_neighbor = random.choice(neighbors)
-                    if inst.weight() == 1:
+                    if layer_inst.weight() == 1:
                         circ.cx(inst.qubits[0].index, chosen_neighbor)
                     else:
                         # Pick qubit to make cross talk from
@@ -257,24 +262,28 @@ def main():
 
     # %% initialize experiment
     print("initialize experiment")
+    print_time()
     experiment = tomography(circuits = circuits, inst_map = [i for i in range(backend.num_qubits)], backend = backend, tomography_connections=tomography_connections, sum_over_lambda=sum_over_lambda, tomography_all_qubits=tomography_all_qubits)
+
     # %% generate circuits
     print("generate circuits")
     experiment.generate(samples = pntsamples, single_samples = pntsinglesamples, depths = [2,4,8,16])
-    tim = time.localtime()
-    print("%02d.%02d. %02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+    print_time()
     # %% run experiment
     print("run experiment")
     experiment.run(executor)
 
     # %% analyse experiment
-    print("analyse experiment")
-    noisedataframe = experiment.analyze()
-
     import pickle
+    with open(namebase + "experiment.pickle", "wb") as f:
+        pickle.dump(experiment, f)
+    print("analyse experiment")
+    print_time()
+    noisedataframe = experiment.analyze()
+    print("Create PER Experiment")
+    print_time()
     with open(namebase + "noisedataframe.pickle", "wb") as f:
         pickle.dump(noisedataframe, f)
-
     if onlyTomography:
         return
     # %% create per experiment
@@ -288,20 +297,21 @@ def main():
         expect = expect[:q] + 'Z' + expect[q+1:]
         expectations.append("".join(reversed(expect)))
     print("do PER runs")
-    tim = time.localtime()
-    print("%02d.%02d. %02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+    print_time()
     perexp.generate(expectations = expectations, samples = persamples, noise_strengths = noise_strengths)
 
     # %%
     print("Run PER")
-    print("%02d.%02d. %02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+    print_time()
     perexp.run(executor)
 
     # %%
     print("Analyze PER")
+    print_time()
     circuit_results = perexp.analyze()
 
     print("Delete Pickled PERrun Data")
+    print_time()
     perexp.delete_pickles()
 
     # %%
@@ -406,8 +416,7 @@ def main():
     with open(namebase + "circuit_results.pickle", "wb") as f:
         pickle.dump(circuit_results, f)
 
-    tim = time.localtime()
-    print("%02d.%02d. %02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min))
+    print_time()
 
 
 

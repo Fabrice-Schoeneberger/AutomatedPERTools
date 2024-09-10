@@ -1,0 +1,27 @@
+/localdisk/fabrice_remote_experiments/AutomatedPERTools/tutorial_notebooks/testrun/TrotterExample.py:111: DeprecationWarning: Back-references to from Bit instances to their containing Registers have been deprecated. Instead, inspect Registers to find their contained Bits.
+  used_qubits.add(bit.index) #and save those
+09.09. 15:28
+make trotter
+Qubits set to  {0, 1, 2, 3}
+Arguments where set as:
+	plusone: False
+	sum: False
+	pntsamples: 64
+	pntsinglesamples: 1000
+	persamples: 100
+	shots: 1024
+	backend: FakeMelbourneV2
+	cross: False
+	allqubits: False
+	onlyTomography: True
+	setqubits: {0, 1, 2, 3}
+Namebase will be: False_False_64_1000_100_1024_FakeMelbourneV2_False_False_True_{0, 1, 2, 3}
+initialize experiment
+09.09. 15:28
+generate circuits
+09.09. 15:33
+run experiment
+09.09. 15:33
+analyse experiment
+Create PER Experiment
+09.09. 15:33

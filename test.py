@@ -1,12 +1,7 @@
-import os
-import pickle
 
-# Define the name of the directory
-directory = "new_folder"
+import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument('--depths', type=int, nargs='+', help='Decide the depths of the pnt-samples. Default: [2,4,8,16]')
+args = parser.parse_args()
 
-# Create the directory
-os.makedirs(directory, exist_ok=True)
-directory += "/"
-a = [1,2,3]
-with open(directory+"noisedataframe.pickle", "wb") as f:
-    noisedataframe = pickle.dump(a, f)
+print(args.depths)
