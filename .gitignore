@@ -5,3 +5,4 @@ __pycache__
 .venv2/
 copy_file_over.bat
 experiment.pickle
+circuit_results.pickle

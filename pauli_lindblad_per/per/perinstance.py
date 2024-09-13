@@ -1,5 +1,8 @@
 """Take in a per circuit with expectation value and return a single sampled instance"""
 from framework.instance import Instance
+import logging
+
+logger = logging.getLogger("experiment")
 
 class PERInstance(Instance):
     """Represents a single circuit to be run with PER. Stores the original circuit to sample

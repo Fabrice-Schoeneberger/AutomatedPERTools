@@ -1,7 +1,18 @@
+import multiprocessing, time
 
-import argparse
-parser = argparse.ArgumentParser()
-parser.add_argument('--depths', type=int, nargs='+', help='Decide the depths of the pnt-samples. Default: [2,4,8,16]')
-args = parser.parse_args()
+def do_something(i):
+    print(i)
+    time.sleep(i)
 
-print(args.depths)
+
+
+if __name__ == "__main__":
+    print(len(multiprocessing.active_children()))
+    manager = multiprocessing.Manager()
+    #new_circuits = manager.list()
+    #time.sleep(20)
+    lock = multiprocessing.Lock()
+    manager = None
+    # For some reason pickleing every circuit indiviually and sending it via the process is WAY slower than pickleing all at once and sending over the pickle file
+    print(len(multiprocessing.active_children()))
+    #time.sleep(20)

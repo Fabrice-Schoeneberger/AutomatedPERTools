@@ -102,17 +102,22 @@ class SparsePauliTomographyExperiment:
         for l in self._layers:
             l.procedure(samples, single_samples, depths)
 
-    def run(self, executor):
+    def run(self, executor, shots, do_cross_talk=False, apply_cross_talk=None):
         """This method produces a list of circuits in the native representation, passes them 
         as a list to the executor method, and associates the result with the benchmark instances
         that produced it"""
+
 
         instances = []
         for l in self._layers:
             instances += l.instances
 
         circuits = [inst.get_circuit() for inst in instances]
-        results = executor(circuits)
+
+        if do_cross_talk and apply_cross_talk:
+            circuits = apply_cross_talk(circuits, self._procspec._processor._qpu)
+
+        results = executor(circuits, self._procspec._processor._qpu, shots)
 
         for res,inst in zip(results, instances): #TODO: find out if order can be preserved
             inst.add_result(res)

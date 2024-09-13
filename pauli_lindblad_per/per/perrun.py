@@ -85,10 +85,8 @@ class PERRun:
        
 
     def delete_data(self):
-        logger.info("Deleting Data")
         for data in self._pickled_data:
             os.remove(data)
-            logger.info(data + " was deleted")
     
     def _generate(self):
         #I hate that I have to do this, but you can't have class inside a multiprocess thread, that isself has processes running. 
@@ -118,7 +116,7 @@ def _generate_but_outside_the_class(meas_bases, noise_strengths, samples, proc, 
                 #perinst = PERInstance(proc, inst_map, per_circ, basis, lmbda)
                 #instances.append(perinst)
     (pickled_data, counter) = wait_for_room(instances, id, pickled_data, counter, lock, 1)
-
+    manager = None
     return (list(instances), id, pickled_data)
     
 def wait_for_room(instances, id, pickled_data, counter, lock, children_count=1):
