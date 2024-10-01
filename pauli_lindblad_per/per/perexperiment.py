@@ -76,45 +76,39 @@ class PERExperiment:
         logger.info(meas_bases)
         self.meas_bases = meas_bases
 
-    def run(self, executor, shots, do_cross_talk=False, apply_cross_talk=None):
+    def run(self, executor, shots, do_cross_talk=False, apply_cross_talk=None, noise_model=None):
         """pass a list of circuit in the native language to the executor method and await results
 
         Args:
             executor (method): list of circuits -> Counter of results
         """
-        import multiprocessing
-        if len(multiprocessing.active_children()) > 1:
-            raise Exception("Too many children")
-        #aggregate all instances into a list
-        instances = []
-        for run in self._per_runs:
-            instances += run.instances
-        if len(multiprocessing.active_children()) > 1:
-            raise Exception("Too many children")
-        #get circuits in native representation
-        circuits = [inst.get_circuit() for inst in instances] 
-        if len(multiprocessing.active_children()) > 1:
-            raise Exception("Too many children")
+        while True:
+            #aggregate all instances into a list
+            instances = []
+            for run in self._per_runs:
+                instances += run.instances
+            #get circuits in native representation
+            circuits = [inst.get_circuit() for inst in instances] 
 
-        if do_cross_talk and apply_cross_talk:
-            circuits = apply_cross_talk(circuits, self._processor._qpu)
+            if do_cross_talk and apply_cross_talk:
+                circuits = apply_cross_talk(circuits, self._processor._qpu)
 
-        logger.info(len(circuits))
+            logger.info(len(circuits))
 
-        #pass circuit to executor
-        results = executor(circuits, self._processor._qpu, shots)
-       
-        #add results to instances 
-        for inst, res in zip(instances, results):
-            inst.add_result(res)
+            #pass circuit to executor
+            results = executor(circuits, self._processor._qpu, shots, noise_model=noise_model)
         
-        cycling = False
+            #add results to instances 
+            for inst, res in zip(instances, results):
+                inst.add_result(res)
+            
+            cycling = False
 
-        for run in self._per_runs:
-            cycling = run.cycle_data() # All runs should return the same data so this should be fine
+            for run in self._per_runs:
+                cycling = run.cycle_data() # All runs should return the same answer so this should be fine
 
-        if not cycling:
-            self.run(executor) # recursivly call this function until all instances have been dealt with
+            if cycling:
+                break
 
     def analyze(self):
 

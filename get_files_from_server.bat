@@ -1,0 +1,2 @@
+scp -r -J fabricesch@alpha.lusi.uni-sb.de fabricesch@godot1:/localdisk/fabrice_remote_experiments/AutomatedPERTools/tutorial_notebooks/testrun/server_run_collection tutorial_notebooks\testrun
+scp -r -J fabricesch@alpha.lusi.uni-sb.de fabricesch@godot1:/localdisk/fabrice_remote_experiments/AutomatedPERTools/tutorial_notebooks/testrun/*.out tutorial_notebooks\testrun\server_run_collection\outputs

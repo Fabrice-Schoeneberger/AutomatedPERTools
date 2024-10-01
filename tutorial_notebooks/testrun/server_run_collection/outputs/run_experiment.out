@@ -1,0 +1,4 @@
+start
+start __-p
+/localdisk/fabrice_remote_experiments/AutomatedPERTools/tutorial_notebooks/testrun/TrotterExample.py:111: DeprecationWarning: Back-references to from Bit instances to their containing Registers have been deprecated. Instead, inspect Registers to find their contained Bits.
+  used_qubits.add(bit.index) #and save those

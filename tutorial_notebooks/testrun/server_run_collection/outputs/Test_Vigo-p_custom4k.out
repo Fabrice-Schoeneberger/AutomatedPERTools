@@ -1,0 +1,27 @@
+19.09. 19:02:07
+make trotter
+Qubits set to  {1, 2, 3, 4}
+Arguments where set as:
+	plusone: True
+	sum: False
+	pntsamples: 4
+	pntsinglesamples: 16
+	persamples: 100
+	shots: 1024
+	backend: FakeVigoV2
+	cross: False
+	allqubits: False
+	onlyTomography: True
+	setqubits: {1, 2, 3, 4}
+	depths: [2, 4, 8, 16, 32, 64]
+Namebase will be: True_False_4_16_100_1024_FakeVigoV2_False_False_True_{1, 2, 3, 4}_[2, 4, 8, 16, 32, 64]
+initialize experiment
+19.09. 19:02:08
+generate circuits
+19.09. 19:02:08
+run experiment
+19.09. 19:02:24
+analyse experiment
+19.09. 19:02:27
+Tomography Ended
+19.09. 19:02:32

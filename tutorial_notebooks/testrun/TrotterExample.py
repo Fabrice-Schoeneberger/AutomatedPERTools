@@ -3,14 +3,26 @@ def print_time():
     tim = time.localtime()
     print("%02d.%02d. %02d:%02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min, tim.tm_sec))
 
-def get_index(qc, inst, i):
-    qubit = inst.qubits[i]
-    index = -1
-    for register in qc.qregs:  # Assuming you're using `QuantumCircuit`
-        if qubit in register:
-            index = register.index(qubit)
-            break
-    return index
+def get_index(qc, inst, i=None):
+    if i != None:
+        qubit = inst.qubits[i]
+        index = -1
+        for register in qc.qregs:  # Assuming you're using `QuantumCircuit`
+            if qubit in register:
+                index = register.index(qubit)
+                break
+        return index
+    else:
+        qubits = inst.qubits
+        indexes = []
+        for qubit in qubits:
+            index = -1
+            for register in qc.qregs:  # Assuming you're using `QuantumCircuit`
+                if qubit in register:
+                    index = register.index(qubit)
+                    break
+            indexes.append(index)
+        return indexes
 
 def make_initial_Circuit(qubits, num_qubits, backend, n):
     from qiskit import transpile, QuantumCircuit
@@ -54,17 +66,52 @@ def get_backend(args, return_perfect=False, return_backend_qubits=False):
         return backend.num_qubits
     return backend
 
-def executor(circuits, backend, shots):
-    return backend.run(circuits, shots=shots).result().get_counts()
+def get_noise_model():
+    from random import random, choices
+    from qiskit.providers.aer.noise import NoiseModel, pauli_error
+    from qiskit.quantum_info import Pauli, pauli_basis
 
-def calculate_with_simple_backend(circuits, shots, persamples, backend, qubits, n, apply_cross_talk=False):
+    def remove_Identity(pauli_list):
+        new_list = []
+        for i in pauli_list:
+            new_list.append(i)
+        new_list.remove(Pauli('I'*len(pauli_list[0])))
+        return new_list
+    
+    #num = 4  #number of errors
+    #singlequbit_errorops = choices(remove_Identity(pauli_basis(1)), k=num)
+    #twoqubit_errorops = choices(remove_Identity(pauli_basis(2)), k=num) #choose random pauli errors
+    #singlequbit_errorprobs = [random()*.1/(num*10) for op in singlequbit_errorops] #assign random probabilities
+    #twoqubit_errorprobs = [random()*.1/num for op in twoqubit_errorops] #assign random probabilities
+    singlequbit_errorops = [Pauli('Y'), Pauli('Z'), Pauli('X')]
+    twoqubit_errorops = [Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
+    singlequbit_errorprobs = [0.0018781587123864844, 0.00037277073796095685, 0.0015945514328675244]
+    twoqubit_errorprobs = [0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
+    #create normalized error model
+    singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]
+    singlequbit_error = pauli_error(singlequbit_error_template)
+    twoqubit_error_template = [(op, p) for op,p in zip(twoqubit_errorops, twoqubit_errorprobs)]+[(Pauli("II"), 1-sum(twoqubit_errorprobs))]
+    twoqubit_error = pauli_error(twoqubit_error_template)
+    noise_model = NoiseModel()
+    #add error model to two-qubit gates.
+    #noise_model.add_all_qubit_quantum_error(singlequbit_error, ['id','rz','sx'])
+    noise_model.add_all_qubit_quantum_error(twoqubit_error, ['cx','cz'])
+    return (noise_model, twoqubit_error_template, singlequbit_error_template)
+
+def executor(circuits, backend, shots, noise_model=None):
+    if noise_model:
+        return backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
+    else:
+        return backend.run(circuits, shots=shots).result().get_counts()
+
+def calculate_with_simple_backend(circuits, shots, persamples, backend, qubits, n, noise_model, apply_cross_talk=False):
     res = []
     if apply_cross_talk:
         circuits = apply_cross_talk_proxy(circuits, backend)
     for circ in circuits:
         qc = circ.copy()
         qc.measure_all()
-        count = executor(qc, backend, shots*persamples)
+        count = executor(qc, backend, shots*persamples, noise_model)
         count = {tuple(int(k) for k in key):count[key] for key in count.keys()}
         tot = 0
         for key in count.keys():
@@ -72,6 +119,42 @@ def calculate_with_simple_backend(circuits, shots, persamples, backend, qubits, 
             tot += num*count[key]
         res.append(tot/(shots*persamples*n*2))
     return res
+
+def get_error_for_circuit(circuit, twoqubit_error_template, singlequbit_error_template, backend):
+    from qiskit.quantum_info import Pauli
+    def mul_Pauli(pauli1, pauli2):
+        result = pauli1.compose(pauli2)
+        nophase = Pauli((result.z, result.x))
+        return nophase
+
+    num_qubits = backend.num_qubits
+    identity_string = 'I'*num_qubits
+    error_state = {Pauli(identity_string): 1}
+    for inst in circuit:
+        temp_error_state = {}
+        indexes = get_index(circuit, inst)
+        if len(indexes) == 1:
+            index = indexes[0]
+            for (op, p) in singlequbit_error_template:
+                op = Pauli("".join(reversed(identity_string[:index] + str(op)+ identity_string[index+1:])))
+                for og_op in error_state:
+                    og_p = error_state[og_op]
+                    new_op = mul_Pauli(op, og_op)
+                    temp_error_state[new_op] = temp_error_state.get(new_op, 0) + p*og_p
+        elif len(indexes) == 2:
+            for (op, p) in twoqubit_error_template:
+                temp_string = (identity_string[:indexes[0]] + "".join(reversed(str(op)))[0]+ identity_string[indexes[0]+1:])
+                op = Pauli("".join(reversed(temp_string[:indexes[1]] + "".join(reversed(str(op)))[1]+ temp_string[indexes[1]+1:])))
+                for og_op in error_state:
+                    og_p = error_state[og_op]
+                    new_op = mul_Pauli(op, og_op)
+                    temp_error_state[new_op] = temp_error_state.get(new_op, 0) + p*og_p
+        else:
+            if inst.operation.name == 'barrier':
+                continue
+            raise Exception("Too many qubits")
+        error_state = temp_error_state
+    return [(op, error_state[op]) for op in error_state]
 
 # %% Cross Talk Noise Functions
 def apply_cross_talk_proxy(circuits, backend):
@@ -177,19 +260,19 @@ def apply_cross_talk_individual(i, pickle_file_name, new_circuits, backend, lock
             if random.random() < gate_triggered_cross_talk_chance:
                 # collect neighbors
                 if layer_inst.weight() == 1:
-                    neighbors = list(set([bit for connection in backend.coupling_map if get_index(circ, inst, 0) in connection for bit in connection]))
-                    neighbors.remove(get_index(circ, inst, 0))
+                    neighbors = list(set([bit for connection in backend.coupling_map if get_index(circ, inst, i=0) in connection for bit in connection]))
+                    neighbors.remove(get_index(circ, inst, i=0))
                 else:
-                    neighbors = list(set([bit for connection in backend.coupling_map if get_index(circ, inst, 0) in connection or get_index(circ, inst, 1) in connection for bit in connection]))
-                    neighbors.remove(get_index(circ, inst, 0))
-                    neighbors.remove(get_index(circ, inst, 1))
+                    neighbors = list(set([bit for connection in backend.coupling_map if get_index(circ, inst, i=0) in connection or get_index(circ, inst, i=1) in connection for bit in connection]))
+                    neighbors.remove(get_index(circ, inst, i=0))
+                    neighbors.remove(get_index(circ, inst, i=1))
                 # Pick a random neighbor to apply the cross talk to
                 chosen_neighbor = random.choice(neighbors)
                 if layer_inst.weight() == 1:
-                    circ.cx(get_index(circ, inst, 0), chosen_neighbor)
+                    circ.cx(get_index(circ, inst, i=0), chosen_neighbor)
                 else:
                     # Pick qubit to make cross talk from
-                    circ.cx(get_index(circ, inst, random.choice([0,1])), chosen_neighbor)
+                    circ.cx(get_index(circ, inst, i=random.choice([0,1])), chosen_neighbor)
                 
             # At every single qubit layer, determined by the most gated qubit, apply a random cnot gate, with chance=cross_talk_chance
             if inst.qubits == most_gate_qubit:
@@ -244,7 +327,7 @@ def main():
     import sys
     i = 0
     parentfolder = "AutomatedPERTools"
-    folder = os.getcwd()
+    folder = os.path.dirname(os.path.abspath(__file__))
     while not folder.endswith(parentfolder):
         folder = os.path.dirname(folder)
         i+=1
@@ -283,6 +366,8 @@ def main():
     pntsinglesamples = args.pntsinglesamples
     persamples = args.persamples
     shots = args.shots
+    (noise_model, twoqubit_error_template, singlequbit_error_template) = get_noise_model()
+    #(noise_model, twoqubit_error, singlequbit_error) = (None, None, None)
 
     # %% Make the initial Circuits
     print("make trotter")
@@ -291,8 +376,8 @@ def main():
     used_qubits = set()
     for circuit in circuits: 
         for inst in circuit: #look at the commands
-            for i in range(len(inst.qubits)): #record which qubits they use
-                used_qubits.add(get_index(circuit, inst, i)) #and save those
+            for j in range(len(inst.qubits)): #record which qubits they use
+                used_qubits.add(get_index(circuit, inst, i=j)) #and save those
     qubits = used_qubits
     print("Qubits set to ", qubits)
     # %% Make namebase
@@ -325,17 +410,46 @@ def main():
     # %% run PNT experiment
     print("run experiment")
     print_time()
-    experiment.run(executor, shots, do_cross_talk=do_cross_talk_noise, apply_cross_talk=apply_cross_talk_proxy)
+    experiment.run(executor, shots, do_cross_talk=do_cross_talk_noise, apply_cross_talk=apply_cross_talk_proxy, noise_model=noise_model)
 
-    # %% analyse PNT experiment. End Tomography Only
-    with open(namebase + "experiment.pickle", "wb") as f:
-        pickle.dump(experiment, f)
+    # %% analyse PNT experiment.
     print("analyse experiment")
     print_time()
     noisedataframe = experiment.analyze()
+    # %% Save all the data. End Tomography Only
+    with open(namebase + "experiment.pickle", "wb") as f:
+        pickle.dump(experiment, f)
+    
+    coeffs_dict_list = []
+    infidelities_list = []
+    for i,_ in enumerate(circuit_to_layers(circuits[0])):
+        layer = experiment.analysis.get_layer_data(i)
+        coeffs_dict = dict(layer.noisemodel.coeffs)
+        infidelities = [{term: 1-layer._term_data[term].fidelity} for term in layer._term_data]
+        coeffs_dict_list.append(coeffs_dict)
+        infidelities_list.append(infidelities)
 
-    with open(namebase + "noisedataframe.pickle", "wb") as f:
-        pickle.dump(noisedataframe, f)
+    os.makedirs("server_run_collection/"+folder, exist_ok=True)
+    with open("server_run_collection/" + folder + "/coeffs.pickle", "wb") as f:
+        pickle.dump(coeffs_dict_list, f)
+    with open("server_run_collection/" + folder + "/infidelities.pickle", "wb") as f:
+        pickle.dump(infidelities_list, f)
+    with open("server_run_collection/" + namebase + "noise_model.pickle", "wb") as f:
+        pickle.dump((noise_model, twoqubit_error_template, singlequbit_error_template), f)
+
+    from primitives.circuit import QiskitCircuit
+    layers = circuit_to_layers(QiskitCircuit(circuits[0]))
+    from qiskit.providers.aer.noise import pauli_error
+    from qiskit.quantum_info import pauli_basis, PTM
+    transfer_matrixes = []
+    for layer in layers:
+        true_error = pauli_error(get_error_for_circuit(layer.qc, twoqubit_error_template, singlequbit_error_template, backend))
+        transfer_matrix = PTM(true_error.to_quantumchannel()).data #Find out more about this
+        transfer_matrixes.append(transfer_matrix)
+
+    with open("server_run_collection/" + namebase + "transfer_matrixes.pickle", "wb") as f:
+        pickle.dump(transfer_matrixes, f)
+
     if onlyTomography:
         print("Tomography Ended")
         print_time()
@@ -360,7 +474,7 @@ def main():
     print_time()
     if len(multiprocessing.active_children()) > 1:
         raise Exception("Too many children")
-    perexp.run(executor, shots, do_cross_talk=do_cross_talk_noise, apply_cross_talk=apply_cross_talk_proxy)
+    perexp.run(executor, shots, do_cross_talk=do_cross_talk_noise, apply_cross_talk=apply_cross_talk_proxy, noise_model=noise_model)
 
     # %% Analyze PER and Delete Pickled PERrun Data
     print("Analyze PER")
@@ -417,8 +531,8 @@ def main():
     circuit_results[-1]._per_circ.overhead(0)
 
     # %% Calculate unmitigated error and without error
-    noisyresult = calculate_with_simple_backend(circuits, shots, persamples, backend, qubits, n, apply_cross_talk=do_cross_talk_noise)
-    res = calculate_with_simple_backend(circuits, shots, persamples, get_backend(args, return_perfect=True), qubits, n)
+    noisyresult = calculate_with_simple_backend(circuits, shots, persamples, backend, qubits, n, noise_model, apply_cross_talk=do_cross_talk_noise)
+    res = calculate_with_simple_backend(circuits, shots, persamples, get_backend(args, return_perfect=True), qubits, n, noise_model)
 
     savi["noisyresult"] = noisyresult
     savi["res"] = res

@@ -100,6 +100,11 @@ done
 #nohup python TrotterExample.py -s --backend FakeMelbourneV2 > FakeMelbourneV2_0_-s.out &
 #nohup python TrotterExample.py --backend FakeMelbourneV2 > FakeMelbourneV2_0_.out &
 
+#ssh fabricesch@alpha.lusi.uni-sb.de 'ssh godot1 ls /localdisk/fabrice_remote_experiments/AutomatedPERTools/tutorial_notebooks/testrun/'
+#
+
+
 python TrotterExample.py -c --onlyTomography --pntsamples 1 --pntsinglesamples 1
-nohup python TrotterExample.py -a --pntsamples 256 --pntsinglesamples 4000 --onlyTomography --backend FakeVigoV2 --depths 2 4 8 16 32 64 > FakeVigoV2_pnt256_-a.out &
-nohup python TrotterExample.py --pntsamples 256 --pntsinglesamples 4000 --onlyTomography --backend FakeVigoV2 --depths 2 4 8 16 32 64 > FakeVigoV2_pnt256_.out &
+nohup python TrotterExample.py -a --pntsamples 256 --pntsinglesamples 4000 --onlyTomography --depths 2 4 8 16 32 64 --backend FakeVigoV2 > Vigo-a_custom4k.out &
+nohup python TrotterExample.py -p --pntsamples 256 --pntsinglesamples 4000 --onlyTomography --depths 2 4 8 16 32 64 --backend FakeVigoV2 > Vigo-p_custom4k.out &
+nohup python TrotterExample.py --pntsamples 256 --pntsinglesamples 4000 --onlyTomography --depths 2 4 8 16 32 64 --backend FakeVigoV2 > Vigo_custom4k.out &
