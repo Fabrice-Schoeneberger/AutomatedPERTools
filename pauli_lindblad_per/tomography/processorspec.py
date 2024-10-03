@@ -81,30 +81,22 @@ class ProcessorSpec:
         model_terms = set()
         identity = ["I"]*n 
 
-        #remove all unused qubits from edge_list
-        trimmed_edge_list = [connection for connection in self._connectivity.edge_list() if not any(num in connection for num in self.unused_qubits)]
+        trimmed_edge_list = [connection for connection in self._connectivity.edge_list()]
         #get all weight-two Paulis on with support on neighboring qubits
         for q1,q2 in trimmed_edge_list:
-            #do not add weight-two Paulis between plusone qubits
-            if q1 in self.plusone and q2 in self.plusone:
-                continue
             for p1, p2 in product("IXYZ", repeat=2):
                 pauli = identity.copy()
                 pauli[q1] = p1
                 pauli[q2] = p2
                 model_terms.add("".join(reversed(pauli)))
 
-        #remove all unused qubits from indice list
-        node_indices = [indice for indice in self._connectivity.node_indices() if indice not in self.unused_qubits]
+        node_indices = [indice for indice in self._connectivity.node_indices()]
         #get all weight-one Paulis
         for q in node_indices: 
             for p in "IXYZ":
                 pauli = identity.copy()
-                pauli[q] = p
-                if q in self.plusone and p != "I": #remove the one weight paulis from edge qubits, as they are not needed to calc the errors in the end matrix
-                    model_terms.remove("".join(reversed(pauli)))    
-                else: #This part of the code will only ever add more model terms if there are qubits in the system that have NO edges to any other used qubits
-                    model_terms.add("".join(reversed(pauli)))
+                pauli[q] = p 
+                model_terms.add("".join(reversed(pauli)))
 
         model_terms.remove("".join(identity))
 

@@ -22,7 +22,6 @@ class LayerNoiseData:
         self.layer = layer
         self.sum_over_lambda=sum_over_lambda
         self.plusone = plusone
-
         for pauli in layer._procspec.model_terms:
             pair = layer.pairs[pauli]
             self._term_data[pauli] = TermData(pauli, pair)

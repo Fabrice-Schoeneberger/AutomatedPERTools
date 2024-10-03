@@ -1,23 +1,23 @@
 01.10. 18:45:47
 make trotter
-Qubits set to  {1, 2, 3, 4}
+Qubits set to  {0, 1, 2, 3}
 Arguments where set as:
-	plusone: False
+	plusone: True
 	sum: False
 	pntsamples: 256
 	pntsinglesamples: 4000
 	persamples: 100
 	shots: 1024
-	backend: FakeVigoV2
+	backend: FakeMelbourneV2
 	cross: False
 	allqubits: False
 	onlyTomography: True
-	setqubits: {1, 2, 3, 4}
+	setqubits: {0, 1, 2, 3}
 	depths: [2, 4, 8, 16, 32, 64]
-Namebase will be: False_False_256_4000_100_1024_FakeVigoV2_False_False_True_{1, 2, 3, 4}_[2, 4, 8, 16, 32, 64]
+Namebase will be: True_False_256_4000_100_1024_FakeMelbourneV2_False_False_True_{0, 1, 2, 3}_[2, 4, 8, 16, 32, 64]
 initialize experiment
 01.10. 18:45:48
 generate circuits
 01.10. 18:45:48
 run experiment
-01.10. 19:08:46
+01.10. 19:43:09

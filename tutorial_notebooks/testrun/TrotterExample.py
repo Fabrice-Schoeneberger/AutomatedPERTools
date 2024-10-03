@@ -1,7 +1,21 @@
+import time
+tim = time.time()
 def print_time():
+    global tim
     import time
-    tim = time.localtime()
-    print("%02d.%02d. %02d:%02d:%02d" % (tim.tm_mday, tim.tm_mon, tim.tm_hour, tim.tm_min, tim.tm_sec))
+    local_tim = time.localtime()
+    new_tim = time.time()
+    time_difference = new_tim-tim
+    tim = new_tim
+    days = int(time_difference // (24 * 3600))
+    time_difference %= (24 * 3600)
+    hours = int(time_difference // 3600)
+    time_difference %= 3600
+    minutes = int(time_difference // 60)
+    seconds = int(time_difference % 60)
+    local_time_string = "%02d.%02d. %02d:%02d:%02d" % (local_tim.tm_mday, local_tim.tm_mon, local_tim.tm_hour, local_tim.tm_min, local_tim.tm_sec)
+    st = f" Time difference: {days:02}:{hours:02}:{minutes:02}:{seconds:02}"
+    print(local_time_string+st)
 
 def get_index(qc, inst, i=None):
     if i != None:
@@ -156,6 +170,21 @@ def get_error_for_circuit(circuit, twoqubit_error_template, singlequbit_error_te
         error_state = temp_error_state
     return [(op, error_state[op]) for op in error_state]
 
+def make_transfer_matrix(circuits, twoqubit_error_template, singlequbit_error_template, backend, namebase):
+    from primitives.circuit import QiskitCircuit
+    import pickle
+    layers = circuit_to_layers(QiskitCircuit(circuits[0]))
+    from qiskit.providers.aer.noise import pauli_error
+    from qiskit.quantum_info import pauli_basis, PTM
+    transfer_matrixes = []
+    for layer in layers:
+        true_error = pauli_error(get_error_for_circuit(layer.qc, twoqubit_error_template, singlequbit_error_template, backend))
+        transfer_matrix = PTM(true_error.to_quantumchannel()).data 
+        transfer_matrixes.append(transfer_matrix)
+
+    with open("server_run_collection/" + namebase + "transfer_matrixes.pickle", "wb") as f:
+        pickle.dump(transfer_matrixes, f)
+
 # %% Cross Talk Noise Functions
 def apply_cross_talk_proxy(circuits, backend):
     import multiprocessing, os, pickle, uuid
@@ -300,7 +329,7 @@ def main():
     parser = argparse.ArgumentParser()
         
     # Define an Argument
-    parser.add_argument('--plusone', '-p', help='Takes Neighboring qubits into account', default=False, action='store_true')
+    #parser.add_argument('--plusone', '-p', help='Takes Neighboring qubits into account', default=False, action='store_true')
     parser.add_argument('--sum', '-s', help='Same as -p and turns sumation on over neighboring qubits', default=False, action='store_true')
     parser.add_argument('--pntsamples', type=int, help='How many samples in PNT? Default: 16', default=16)
     parser.add_argument('--pntsinglesamples', type=int, help='How many single samples in PNT? Default: 100', default=100)
@@ -308,7 +337,7 @@ def main():
     parser.add_argument('--shots', type=int, help='How many shots? Default: 1024', default=1024)
     parser.add_argument('--backend', type=str, help='Which backend to use? Default: FakeVigoV2', default="FakeVigoV2")
     parser.add_argument('--cross', '-c', help='Simulates Cross Talk Noise', default=False, action='store_true')
-    parser.add_argument('--allqubits', '-a', help='runs over all qubits in the tomography', default=False, action='store_true')
+    #parser.add_argument('--allqubits', '-a', help='runs over all qubits in the tomography', default=False, action='store_true')
     parser.add_argument('--onlyTomography', help='Only does the tomography and then ends the program', default=False, action='store_true')
     parser.add_argument('--setqubits', type=int, nargs='+', help='Which qubits to use?: Default: 0123 and transpile')
     parser.add_argument('--depths', type=int, nargs='+', help='Decide the depths of the pnt-samples. Default: [2,4,8,16]')
@@ -355,11 +384,7 @@ def main():
     if args.depths != None:
         depths = args.depths
     do_cross_talk_noise = args.cross
-    tomography_connections = args.plusone
     sum_over_lambda = args.sum
-    if sum_over_lambda:
-        tomography_connections = True
-    tomography_all_qubits = args.allqubits
     onlyTomography = args.onlyTomography
 
     pntsamples = args.pntsamples
@@ -395,13 +420,14 @@ def main():
     print("Namebase will be: " + namebase)
     namebase += "/"
     #circuits[0].draw()
+    import multiprocessing
+    process = multiprocessing.Process(target=make_transfer_matrix, args=(circuits, twoqubit_error_template, singlequbit_error_template, backend, namebase))
+    process.start()
 
     # %% initialize experiment
     print("initialize experiment")
     print_time()
-    experiment = tomography(circuits = circuits, inst_map = [i for i in range(get_backend(args, return_backend_qubits=True))], backend = backend, tomography_connections=tomography_connections, sum_over_lambda=sum_over_lambda, tomography_all_qubits=tomography_all_qubits)
-
-    import multiprocessing
+    experiment = tomography(circuits = circuits, inst_map = [i for i in range(get_backend(args, return_backend_qubits=True))], backend = backend, sum_over_lambda=sum_over_lambda)
     # %% generate PNT circuits
     print("generate circuits")
     print_time()
@@ -417,39 +443,27 @@ def main():
     print_time()
     noisedataframe = experiment.analyze()
     # %% Save all the data. End Tomography Only
+    print("Saving data")
+    print_time()
     with open(namebase + "experiment.pickle", "wb") as f:
         pickle.dump(experiment, f)
     
     coeffs_dict_list = []
     infidelities_list = []
-    for i,_ in enumerate(circuit_to_layers(circuits[0])):
-        layer = experiment.analysis.get_layer_data(i)
+    for layer in experiment.analysis.get_all_layer_data():
         coeffs_dict = dict(layer.noisemodel.coeffs)
-        infidelities = [{term: 1-layer._term_data[term].fidelity} for term in layer._term_data]
+        infidelities = {term: 1-layer._term_data[term].fidelity for term in layer._term_data}
         coeffs_dict_list.append(coeffs_dict)
         infidelities_list.append(infidelities)
-
-    os.makedirs("server_run_collection/"+folder, exist_ok=True)
-    with open("server_run_collection/" + folder + "/coeffs.pickle", "wb") as f:
+    os.makedirs("server_run_collection/"+namebase, exist_ok=True)
+    with open("server_run_collection/" + namebase + "coeffs.pickle", "wb") as f:
         pickle.dump(coeffs_dict_list, f)
-    with open("server_run_collection/" + folder + "/infidelities.pickle", "wb") as f:
+    with open("server_run_collection/" + namebase + "infidelities.pickle", "wb") as f:
         pickle.dump(infidelities_list, f)
     with open("server_run_collection/" + namebase + "noise_model.pickle", "wb") as f:
         pickle.dump((noise_model, twoqubit_error_template, singlequbit_error_template), f)
-
-    from primitives.circuit import QiskitCircuit
-    layers = circuit_to_layers(QiskitCircuit(circuits[0]))
-    from qiskit.providers.aer.noise import pauli_error
-    from qiskit.quantum_info import pauli_basis, PTM
-    transfer_matrixes = []
-    for layer in layers:
-        true_error = pauli_error(get_error_for_circuit(layer.qc, twoqubit_error_template, singlequbit_error_template, backend))
-        transfer_matrix = PTM(true_error.to_quantumchannel()).data #Find out more about this
-        transfer_matrixes.append(transfer_matrix)
-
-    with open("server_run_collection/" + namebase + "transfer_matrixes.pickle", "wb") as f:
-        pickle.dump(transfer_matrixes, f)
-
+        
+    process.join()
     if onlyTomography:
         print("Tomography Ended")
         print_time()

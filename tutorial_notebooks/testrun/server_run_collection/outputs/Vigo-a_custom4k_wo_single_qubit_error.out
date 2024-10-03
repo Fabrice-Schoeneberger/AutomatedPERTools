@@ -1,4 +1,5 @@
-01.10. 18:45:47
+nohup: ignoring input
+19.09. 19:15:31
 make trotter
 Qubits set to  {1, 2, 3, 4}
 Arguments where set as:
@@ -10,14 +11,18 @@ Arguments where set as:
 	shots: 1024
 	backend: FakeVigoV2
 	cross: False
-	allqubits: False
+	allqubits: True
 	onlyTomography: True
 	setqubits: {1, 2, 3, 4}
 	depths: [2, 4, 8, 16, 32, 64]
-Namebase will be: False_False_256_4000_100_1024_FakeVigoV2_False_False_True_{1, 2, 3, 4}_[2, 4, 8, 16, 32, 64]
+Namebase will be: False_False_256_4000_100_1024_FakeVigoV2_False_True_True_{1, 2, 3, 4}_[2, 4, 8, 16, 32, 64]
 initialize experiment
-01.10. 18:45:48
+19.09. 19:15:32
 generate circuits
-01.10. 18:45:48
+19.09. 19:15:32
 run experiment
-01.10. 19:08:46
+19.09. 19:37:25
+analyse experiment
+20.09. 05:01:46
+Tomography Ended
+20.09. 05:09:46
