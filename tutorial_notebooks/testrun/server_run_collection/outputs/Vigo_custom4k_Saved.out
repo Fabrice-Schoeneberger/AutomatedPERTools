@@ -1,0 +1,18 @@
+Starting                	04.10. 19:49:11 Time taken: --:--:--:--
+make trotter
+Qubits set to  {1, 2, 3, 4}
+Arguments where set as:
+	sum: False
+	pntsamples: 256
+	pntsinglesamples: 4000
+	persamples: 100
+	shots: 1024
+	backend: FakeVigoV2
+	cross: False
+	onlyTomography: True
+	setqubits: {1, 2, 3, 4}
+	depths: [2, 4, 8, 16, 32, 64]
+Namebase will be: False_256_4000_100_1024_FakeVigoV2_False_True_{1, 2, 3, 4}_[2, 4, 8, 16, 32, 64]
+Starting                	04.10. 19:49:11 Time taken: 00:00:00:01
+Saving data             	04.10. 19:49:12 Time taken: --:--:--:--Saving data             	04.10. 19:49:12 Time taken: 00:00:32:06
+Tomography Ended        	04.10. 20:21:18 Time taken: --:--:--:--

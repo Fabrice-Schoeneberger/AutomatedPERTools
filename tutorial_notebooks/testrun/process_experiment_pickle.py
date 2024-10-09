@@ -107,8 +107,8 @@ def get_noise_model():
     #singlequbit_errorprobs = [random()*.1/(num*10) for op in singlequbit_errorops] #assign random probabilities
     #twoqubit_errorprobs = [random()*.1/num for op in twoqubit_errorops] #assign random probabilities
     singlequbit_errorops = [Pauli('Y'), Pauli('Z'), Pauli('X')]
-    singlequbit_errorprobs = [0.0018781587123864844, 0.00037277073796095685, 0.0015945514328675244]
     twoqubit_errorops = [Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
+    singlequbit_errorprobs = [0.0018781587123864844, 0.00037277073796095685, 0.0015945514328675244]
     twoqubit_errorprobs = [0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
     #create normalized error model
     singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]
@@ -122,7 +122,7 @@ def get_noise_model():
     return (noise_model, twoqubit_error_template, singlequbit_error_template)
 
 def executor(circuits, backend, shots, noise_model=None):
-    if not noise_model is None:
+    if noise_model:
         return backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
     else:
         return backend.run(circuits, shots=shots).result().get_counts()
@@ -436,29 +436,15 @@ def main():
     import multiprocessing
     process = multiprocessing.Process(target=make_transfer_matrix, args=(circuits, twoqubit_error_template, singlequbit_error_template, backend, namebase))
     process.start()
-
-    # %% initialize experiment
-    print_time("initialize experiment")
-    experiment = tomography(circuits = circuits, inst_map = [i for i in range(get_backend(args, return_backend_qubits=True))], backend = backend, sum_over_lambda=sum_over_lambda)
-    # %% generate PNT circuits
-    print_time("generate circuits")
-    experiment.generate(samples = pntsamples, single_samples = pntsinglesamples, depths = depths)
-
-    # %% run PNT experiment
-    print_time("run experiment")
-    experiment.run(executor, shots, do_cross_talk=do_cross_talk_noise, apply_cross_talk=apply_cross_talk_proxy, noise_model=noise_model)
-
-    # %% analyse PNT experiment.
-    print_time("analyse experiment")
-    noisedataframe = experiment.analyze()
     # %% Save all the data. End Tomography Only
     print_time("Saving data")
-    with open(namebase + "experiment.pickle", "wb") as f:
-        pickle.dump(experiment, f)
+    with open(namebase + "experiment.pickle", "rb") as f:
+        experiment = pickle.load(f)
     
     coeffs_dict_list = []
     infidelities_list = []
-    for layer in experiment.analysis.get_all_layer_data():
+    for i in [0,1]:
+        layer = experiment.analysis.get_layer_data(i)
         coeffs_dict = dict(layer.noisemodel.coeffs)
         infidelities = {term: 1-layer._term_data[term].fidelity for term in layer._term_data}
         coeffs_dict_list.append(coeffs_dict)
@@ -476,116 +462,6 @@ def main():
         print_time("Tomography Ended")
         print("")
         return
-    # %% create per experiment
-    print_time("Create PER Experiment")
-    perexp = experiment.create_per_experiment(circuits)
-
-    # %% generate per experiment and noise strengths
-    noise_strengths = [0,0.5,1,2]
-    expectations = []
-    for q in qubits:
-        expect = "I"*(get_backend(args, return_backend_qubits=True)) #15
-        expect = expect[:q] + 'Z' + expect[q+1:]
-        expectations.append("".join(reversed(expect)))
-    print_time("do PER runs")
-    perexp.generate(expectations = expectations, samples = persamples, noise_strengths = noise_strengths)
-    # %% Run PER
-    print_time("Run PER")
-    if len(multiprocessing.active_children()) > 1:
-        raise Exception("Too many children")
-    perexp.run(executor, shots, do_cross_talk=do_cross_talk_noise, apply_cross_talk=apply_cross_talk_proxy, noise_model=noise_model)
-
-    # %% Analyze PER and Delete Pickled PERrun Data
-    print_time("Analyze PER")
-    circuit_results = perexp.analyze()
-
-    print_time("Delete Pickled PERrun Data")
-    perexp.delete_pickles()
-
-    # %% Extract data
-    results_errors = []
-    results_at_noise = []
-    results_at_noise_errors = []
-    results = []
-
-    for run in circuit_results:
-        tot = 0
-        tot_error = 0
-        tot_at_noise = [0 for _ in range(len(noise_strengths))]
-        tot_at_noise_errors = [0 for _ in range(len(noise_strengths))]
-        for op in expectations:
-            #get the full per results
-            expec = run.get_result(op).expectation
-            tot += expec/len(expectations)
-
-            #get the corresponding fit-errors
-            expec_error = run.get_result(op).expectation_error
-            tot_error += expec_error/len(expectations)
-
-            #get the value at the different noise levels
-            expec_at_noise = run.get_result(op).get_expectations()
-            for i in range(0,len(tot_at_noise)):
-                tot_at_noise[i] += expec_at_noise[i]/len(expectations)
-
-            expec_at_noise_error = [run.get_result(op).get_std_of_strengths(strength) for strength in noise_strengths]
-            for i in range(0,len(tot_at_noise)):
-                tot_at_noise_errors[i] += expec_at_noise_error[i]/len(expectations)
-
-            
-
-        results.append(tot)
-        results_errors.append(tot_error)
-        results_at_noise.append(tot_at_noise)
-        results_at_noise_errors.append(tot_at_noise_errors)
-
-    savi = {}
-    savi["results"] = results
-    savi["results_errors"] = results_errors
-    savi["results_at_noise"] = results_at_noise
-    savi["results_at_noise_errors"] = results_at_noise_errors
-
-    # %% ??
-    circuit_results[-1]._per_circ.overhead(0)
-
-    # %% Calculate unmitigated error and without error
-    noisyresult = calculate_with_simple_backend(circuits, shots, persamples, backend, qubits, n, noise_model, apply_cross_talk=do_cross_talk_noise)
-    res = calculate_with_simple_backend(circuits, shots, persamples, get_backend(args, return_perfect=True), qubits, n, noise_model)
-
-    savi["noisyresult"] = noisyresult
-    savi["res"] = res
-    with open(namebase + '_arrays.json', 'w') as file:
-        json.dump(savi, file)
-
-    # %% Plot PER
-    plt.figure(figsize=(10,6))
-    for i, noise in enumerate(noise_strengths):
-        plt.plot(range(1,15), [res[i] for res in results_at_noise], 'x', label='N='+str(noise))
-        
-    plt.plot(range(1,15), res, 'o:', label="Trotter Simulation")
-    plt.plot(range(1,15), noisyresult, 'o', label="Unmitigated")
-    plt.errorbar(range(1,15), results, yerr=results_errors, fmt='x', capsize=5, label="PER", color='#FFC0CB')
-
-    plt.ylim([-1.8,1.8])
-    plt.legend()
-    plt.title("Trotter Simulation with PER")
-    plt.xlabel("Trotter Steps")
-    plt.ylabel("Z Magnetization")
-    plt.savefig(namebase+"Trotter_Sim_PER.png")
-    # %% Plot Expectation vs Noise Strength and save results
-
-    with open(namebase + "circuit_results.pickle", "wb") as f:
-        pickle.dump(circuit_results, f)
-
-    print_time()
-    print("")
-    """ for i in range (len(expectations)):
-        ax = circuit_results[0].get_result(expectations[i]).plot()
-        plt.title("Expectation vs Noise Strength " + expectations[i])
-        plt.xlabel("Noise Strength")
-        plt.ylabel("Expectation")
-        plt.savefig(namebase+"_Expectation_vs_Noise_Strength_" + expectations[i] + ".png") """
-
-
-# %% Start Program
+    
 if __name__ == "__main__":
     main()
