@@ -45,6 +45,8 @@ class BenchmarkInstance(Instance):
             circ = self._circ
 
             n = self.cliff_layer.num_qubits()
+            #logger.info("BenchmarkInstance")
+            #logger.info(n)
             pauli_type = circ.pauli_type
             pauli_frame = pauli_type.ID(n) 
 

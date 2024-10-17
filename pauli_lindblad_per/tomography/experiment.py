@@ -46,6 +46,7 @@ class SparsePauliTomographyExperiment:
             parsed_circ = PERCircuit(circ_wrap)
             for layer in parsed_circ._layers:
                 if layer.cliff_layer:
+                    logger.info(layer.cliff_layer.num_qubits())
                     self._profiles.add(layer.cliff_layer)
                     
         plusone = set() #Here come the extra

@@ -78,22 +78,23 @@ def make_initial_Circuit(qubits, num_qubits, backend, n):
 
 def make_initial_Circuit2(backend):
     from qiskit import transpile, QuantumCircuit
-    circuit = QuantumCircuit(3)
+    circuit = QuantumCircuit(4)
     circuit.cx(0,1)
+    circuit.cx(2,3)
     #circuit.cx(4,5)
     return [transpile(circuit, backend)]
 
 def get_backend(args, return_perfect=False, return_backend_qubits=False):
     from qiskit import Aer
-    if return_perfect:
-        return Aer.get_backend('qasm_simulator')
     import qiskit.providers.fake_provider as fake_provider # FakeMelbourneV2, FakeCasablancaV2, FakeVigoV2, FakeLagosV2, FakeGuadalupeV2, FakeGuadalupe, FakeGeneva
     backend = fake_provider.FakeVigoV2()
+    if return_backend_qubits:
+        return backend.num_qubits
     if args.backend != "FakeVigoV2":
         method = getattr(fake_provider, args.backend)
         backend = method()
-    if return_backend_qubits:
-        return backend.num_qubits
+    if return_perfect:
+        return Aer.get_backend('qasm_simulator')
     return backend
 
 def get_noise_model():
@@ -118,7 +119,7 @@ def get_noise_model():
     #twoqubit_errorops = [Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
     #twoqubit_errorprobs = [0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
     twoqubit_errorops = [Pauli('IX')]
-    twoqubit_errorprobs = [0.25]
+    twoqubit_errorprobs = [0.05]
     #create normalized error model
     singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]
     singlequbit_error = pauli_error(singlequbit_error_template)
@@ -131,8 +132,17 @@ def get_noise_model():
     return (noise_model, twoqubit_error_template, singlequbit_error_template)
 
 def executor(circuits, backend, shots, noise_model=None):
+    from qiskit import Aer
+    backend = Aer.get_backend('qasm_simulator')
     if not noise_model is None:
-        return backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
+        results = backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
+        #print(circuits[0])
+        #print(results)
+        #print(circuits[1])
+        #print(results[1])
+        #print(circuits[2])
+        #print(results[2])
+        return results
     else:
         return backend.run(circuits, shots=shots).result().get_counts()
 
