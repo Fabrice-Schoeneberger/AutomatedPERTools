@@ -76,6 +76,13 @@ def make_initial_Circuit(qubits, num_qubits, backend, n):
 
     return [maketrotterCircuit(i) for i in range(1,15)]
 
+def make_initial_Circuit2(backend):
+    from qiskit import transpile, QuantumCircuit
+    circuit = QuantumCircuit(3)
+    circuit.cx(0,1)
+    #circuit.cx(4,5)
+    return [transpile(circuit, backend)]
+
 def get_backend(args, return_perfect=False, return_backend_qubits=False):
     from qiskit import Aer
     if return_perfect:
@@ -108,8 +115,10 @@ def get_noise_model():
     #twoqubit_errorprobs = [random()*.1/num for op in twoqubit_errorops] #assign random probabilities
     singlequbit_errorops = [Pauli('Y'), Pauli('Z'), Pauli('X')]
     singlequbit_errorprobs = [0.0018781587123864844, 0.00037277073796095685, 0.0015945514328675244]
-    twoqubit_errorops = [Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
-    twoqubit_errorprobs = [0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
+    #twoqubit_errorops = [Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
+    #twoqubit_errorprobs = [0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
+    twoqubit_errorops = [Pauli('IX')]
+    twoqubit_errorprobs = [0.25]
     #create normalized error model
     singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]
     singlequbit_error = pauli_error(singlequbit_error_template)
@@ -190,7 +199,12 @@ def make_transfer_matrix(circuits, twoqubit_error_template, singlequbit_error_te
     transfer_matrixes = []
     for layer in layers:
         true_error = pauli_error(get_error_for_circuit(layer.qc, twoqubit_error_template, singlequbit_error_template, backend))
-        transfer_matrix = PTM(true_error.to_quantumchannel()).data 
+        try:
+            transfer_matrix = PTM(true_error.to_quantumchannel()).data 
+        except:
+            print("")
+            print("Failed to make PTM")
+            return
         transfer_matrixes.append(transfer_matrix)
 
     with open("server_run_collection/" + namebase + "transfer_matrixes.pickle", "wb") as f:
@@ -408,9 +422,10 @@ def main():
 
     # %% Make the initial Circuits
     print("")
-    print("make trotter")
+    print("Make Circuits")
     n = 2
-    circuits = make_initial_Circuit(qubits, num_qubits, backend, n)
+    #circuits = make_initial_Circuit(qubits, num_qubits, backend, n)
+    circuits = make_initial_Circuit2(backend) #Temporary TODO
     used_qubits = set()
     for circuit in circuits: 
         for inst in circuit: #look at the commands
@@ -430,6 +445,7 @@ def main():
         namebase += str(arg_value) + "_"
     namebase = namebase[:-1]
     os.makedirs(namebase, exist_ok=True)
+    namebase += "_CNOT_LAYER1" #Temporary TODO
     print("Namebase will be: " + namebase)
     namebase += "/"
     #circuits[0].draw()
@@ -453,6 +469,7 @@ def main():
     noisedataframe = experiment.analyze()
     # %% Save all the data. End Tomography Only
     print_time("Saving data")
+    os.makedirs(namebase, exist_ok=True)
     with open(namebase + "experiment.pickle", "wb") as f:
         pickle.dump(experiment, f)
     
