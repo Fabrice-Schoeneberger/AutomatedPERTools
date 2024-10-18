@@ -46,7 +46,6 @@ class SparsePauliTomographyExperiment:
             parsed_circ = PERCircuit(circ_wrap)
             for layer in parsed_circ._layers:
                 if layer.cliff_layer:
-                    logger.info(layer.cliff_layer.num_qubits())
                     self._profiles.add(layer.cliff_layer)
                     
         plusone = set() #Here come the extra
@@ -71,7 +70,7 @@ class SparsePauliTomographyExperiment:
             learning = LayerLearning(l,self._procspec)
             self._layers.append(learning)
 
-        self.analysis = Analysis(self._layers, self._procspec, sum_over_lambda=sum_over_lambda, plusone=plusone)
+        self.analysis = Analysis(self._layers, self._procspec, sum_over_lambda=sum_over_lambda, plusone=plusone, used_qubits=used_qubits)
 
     def generate(self, samples, single_samples, depths):
         """This method is used to generate the experimental benchmarking procedure. The samples

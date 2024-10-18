@@ -79,7 +79,7 @@ def make_initial_Circuit(qubits, num_qubits, backend, n):
 def make_initial_Circuit2(backend):
     from qiskit import transpile, QuantumCircuit
     circuit = QuantumCircuit(4)
-    circuit.cx(0,1)
+    circuit.cx(1,0)
     circuit.cx(2,3)
     #circuit.cx(4,5)
     return [transpile(circuit, backend)]
@@ -121,7 +121,8 @@ def get_noise_model():
     twoqubit_errorops = [Pauli('IX')]
     twoqubit_errorprobs = [0.05]
     #create normalized error model
-    singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]
+    #singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]
+    singlequbit_error_template = [(Pauli("I"), 1)]
     singlequbit_error = pauli_error(singlequbit_error_template)
     twoqubit_error_template = [(op, p) for op,p in zip(twoqubit_errorops, twoqubit_errorprobs)]+[(Pauli("II"), 1-sum(twoqubit_errorprobs))]
     twoqubit_error = pauli_error(twoqubit_error_template)

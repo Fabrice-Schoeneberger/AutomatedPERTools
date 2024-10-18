@@ -74,6 +74,7 @@ class TermData:
         except:
             (a,b) = 1,0
             logger.warning("Fit did not converge!")
+            logger.warning(self.pauli)
         return a,b
 
     def fit_single(self):
