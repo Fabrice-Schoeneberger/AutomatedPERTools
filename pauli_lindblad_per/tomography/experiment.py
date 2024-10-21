@@ -41,7 +41,7 @@ class SparsePauliTomographyExperiment:
         for circuit in circuits: 
             for c in circuit: #look at the commands
                 for bit in c.qubits: #record which qubits they use
-                    used_qubits.add(bit.index) #and save those
+                    used_qubits.add(bit._index) #and save those
             circ_wrap = circuit_interface(circuit)
             parsed_circ = PERCircuit(circ_wrap)
             for layer in parsed_circ._layers:

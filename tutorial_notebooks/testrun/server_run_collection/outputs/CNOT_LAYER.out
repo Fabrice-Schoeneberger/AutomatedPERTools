@@ -1,25 +1,0 @@
-nohup: ignoring input
-Starting                	15.10. 23:52:29 Time taken: --:--:--:--
-Make Circuits
-Qubits set to  {1, 2}
-Arguments where set as:
-	sum: False
-	pntsamples: 256
-	pntsinglesamples: 4000
-	persamples: 100
-	shots: 1024
-	backend: FakeCasablancaV2
-	cross: False
-	onlyTomography: True
-	setqubits: {1, 2}
-	depths: [2, 4, 8, 16, 32, 64]
-Namebase will be: False_256_4000_100_1024_FakeCasablancaV2_False_True_{1, 2}_[2, 4, 8, 16, 32, 64]
-
-Failed to make PTM
-Starting                	15.10. 23:52:29 Time taken: 00:00:00:00
-initialize experiment   	15.10. 23:52:30 Time taken: --:--:--:--initialize experiment   	15.10. 23:52:30 Time taken: 00:00:00:00
-generate circuits       	15.10. 23:52:30 Time taken: --:--:--:--generate circuits       	15.10. 23:52:30 Time taken: 00:00:20:14
-run experiment          	16.10. 00:12:44 Time taken: --:--:--:--run experiment          	16.10. 00:12:44 Time taken: 00:01:47:39
-analyse experiment      	16.10. 02:00:23 Time taken: --:--:--:--analyse experiment      	16.10. 02:00:23 Time taken: 00:00:04:40
-Saving data             	16.10. 02:05:03 Time taken: --:--:--:--Saving data             	16.10. 02:05:03 Time taken: 00:00:00:34
-Tomography Ended        	16.10. 02:05:37 Time taken: --:--:--:--

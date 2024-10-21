@@ -85,21 +85,21 @@ def make_initial_Circuit2(backend):
     return [transpile(circuit, backend)]
 
 def get_backend(args, return_perfect=False, return_backend_qubits=False):
-    from qiskit import Aer
-    import qiskit.providers.fake_provider as fake_provider # FakeMelbourneV2, FakeCasablancaV2, FakeVigoV2, FakeLagosV2, FakeGuadalupeV2, FakeGuadalupe, FakeGeneva
-    backend = fake_provider.FakeVigoV2()
+    from qiskit.providers.fake_provider import GenericBackendV2
+    from qiskit_aer import AerSimulator
+    if return_perfect or args is None:
+        backend = AerSimulator()
+    else:
+        num = args.num_qubits
+        coupling_map = [[i,i+1] for i in range(num-1)]+[[i+1,i] for i in range(num-1)]
+        backend = GenericBackendV2(num_qubits=num, coupling_map=coupling_map)
     if return_backend_qubits:
         return backend.num_qubits
-    if args.backend != "FakeVigoV2":
-        method = getattr(fake_provider, args.backend)
-        backend = method()
-    if return_perfect:
-        return Aer.get_backend('qasm_simulator')
     return backend
 
 def get_noise_model():
     from random import random, choices
-    from qiskit.providers.aer.noise import NoiseModel, pauli_error
+    from qiskit_aer.noise import (NoiseModel, QuantumError, ReadoutError, pauli_error, depolarizing_error, thermal_relaxation_error)
     from qiskit.quantum_info import Pauli, pauli_basis
 
     def remove_Identity(pauli_list):
@@ -133,19 +133,12 @@ def get_noise_model():
     return (noise_model, twoqubit_error_template, singlequbit_error_template)
 
 def executor(circuits, backend, shots, noise_model=None):
-    from qiskit import Aer
-    backend = Aer.get_backend('qasm_simulator')
+    backend = get_backend(None, return_perfect=True)
     if not noise_model is None:
         results = backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
-        #print(circuits[0])
-        #print(results)
-        #print(circuits[1])
-        #print(results[1])
-        #print(circuits[2])
-        #print(results[2])
-        return results
     else:
-        return backend.run(circuits, shots=shots).result().get_counts()
+        results = backend.run(circuits, shots=shots).result().get_counts()
+    return results
 
 def calculate_with_simple_backend(circuits, shots, persamples, backend, qubits, n, noise_model, apply_cross_talk=False):
     res = []
@@ -205,7 +198,7 @@ def make_transfer_matrix(circuits, twoqubit_error_template, singlequbit_error_te
     from primitives.circuit import QiskitCircuit
     import pickle
     layers = circuit_to_layers(QiskitCircuit(circuits[0]))
-    from qiskit.providers.aer.noise import pauli_error
+    from qiskit_aer.noise import pauli_error
     from qiskit.quantum_info import pauli_basis, PTM
     transfer_matrixes = []
     for layer in layers:
@@ -372,7 +365,7 @@ def main():
     parser.add_argument('--pntsinglesamples', type=int, help='How many single samples in PNT? Default: 100', default=100)
     parser.add_argument('--persamples', type=int, help='How many samples in PER? Default: 100', default=100)
     parser.add_argument('--shots', type=int, help='How many shots? Default: 1024', default=1024)
-    parser.add_argument('--backend', type=str, help='Which backend to use? Default: FakeVigoV2', default="FakeVigoV2")
+    parser.add_argument('--num_qubits', type=int, help='Define how many qubits the backend should have. Layout: Line? Default: 5', default=5)
     parser.add_argument('--cross', '-c', help='Simulates Cross Talk Noise', default=False, action='store_true')
     #parser.add_argument('--allqubits', '-a', help='runs over all qubits in the tomography', default=False, action='store_true')
     parser.add_argument('--onlyTomography', help='Only does the tomography and then ends the program', default=False, action='store_true')
