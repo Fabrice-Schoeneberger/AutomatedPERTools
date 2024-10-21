@@ -109,14 +109,14 @@ class LayerNoiseData:
         #logger.info(self.used_qubits)
         for datum in self._term_data.values():
             pauli = datum.pauli
-            #logger.info("LayerNoiseData")
-            #logger.info(pauli)
             indexes = get_indexes(str(pauli))
             if not self.used_qubits is None:
+                skip = False
                 for index in indexes:
                     if not index in self.used_qubits:
-                        #logger.info("skip")
-                        continue
+                        skip = True
+                if skip:
+                    continue
             F1.append(datum.pauli)
             fidelities.append(datum.fidelity)
             #If the Pauli is conjugate to another term in the model, a degeneracy is present
@@ -125,7 +125,8 @@ class LayerNoiseData:
             else:
                 pair = datum.pair
                 F2.append(pair)
-
+        #logger.info("LayerNoiseData")
+        #logger.info(F1)
         #create commutativity matrices
         M1 = [[sprod(a,b) for a in F1] for b in F1]
         M2 = [[sprod(a,b) for a in F1] for b in F2]

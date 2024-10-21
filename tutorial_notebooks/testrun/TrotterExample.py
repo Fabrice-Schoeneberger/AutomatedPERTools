@@ -78,9 +78,9 @@ def make_initial_Circuit(qubits, num_qubits, backend, n):
 
 def make_initial_Circuit2(backend):
     from qiskit import transpile, QuantumCircuit
-    circuit = QuantumCircuit(4)
-    circuit.cx(1,0)
-    circuit.cx(2,3)
+    circuit = QuantumCircuit(2)
+    circuit.cx(0,1)
+    #circuit.cx(2,3)
     #circuit.cx(4,5)
     return [transpile(circuit, backend)]
 
@@ -371,6 +371,7 @@ def main():
     parser.add_argument('--onlyTomography', help='Only does the tomography and then ends the program', default=False, action='store_true')
     parser.add_argument('--setqubits', type=int, nargs='+', help='Which qubits to use?: Default: 0123 and transpile')
     parser.add_argument('--depths', type=int, nargs='+', help='Decide the depths of the pnt-samples. Default: [2,4,8,16]')
+    parser.add_argument('--foldername_extra', type=str, help='Attach something to the end of the foldernamebase', default="")
 
     #  Parse die Argumente
     args = parser.parse_args()
