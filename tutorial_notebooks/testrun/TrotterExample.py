@@ -80,7 +80,6 @@ def make_initial_Circuit2(backend):
     from qiskit import transpile, QuantumCircuit
     circuit = QuantumCircuit(2)
     circuit.cx(0,1)
-    #circuit.cx(2,3)
     #circuit.cx(4,5)
     return [transpile(circuit, backend)]
 
@@ -205,6 +204,7 @@ def make_transfer_matrix(circuits, twoqubit_error_template, singlequbit_error_te
         true_error = pauli_error(get_error_for_circuit(layer.qc, twoqubit_error_template, singlequbit_error_template, backend))
         try:
             transfer_matrix = PTM(true_error.to_quantumchannel()).data 
+            #print_time("PTX made")
         except:
             print("")
             print("Failed to make PTM")
@@ -381,7 +381,7 @@ def main():
     from matplotlib import pyplot as plt
     import os
     import json
-    print_time("Starting")
+    
 
     import os
     import sys
@@ -492,7 +492,8 @@ def main():
         pickle.dump(infidelities_list, f)
     with open("server_run_collection/" + namebase + "noise_model.pickle", "wb") as f:
         pickle.dump((noise_model, twoqubit_error_template, singlequbit_error_template), f)
-        
+    with open("server_run_collection/" + namebase + "circuits.pickle", "wb") as f:
+        pickle.dump(circuits, f)
     process.join()
     if onlyTomography:
         print_time("Tomography Ended")
@@ -610,4 +611,5 @@ def main():
 
 # %% Start Program
 if __name__ == "__main__":
+    print_time("Starting")
     main()

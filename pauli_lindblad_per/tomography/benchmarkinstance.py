@@ -74,4 +74,5 @@ class BenchmarkInstance(Instance):
 
             #add measurements to the circuit and transpile
             circ.measure_all()
+            logger.info(circ)
             self._circ = self._procspec.transpile(self._circ)
