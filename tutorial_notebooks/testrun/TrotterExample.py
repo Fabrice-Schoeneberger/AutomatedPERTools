@@ -134,6 +134,7 @@ def get_noise_model():
 def executor(circuits, backend, shots, noise_model=None):
     backend = get_backend(None, return_perfect=True)
     if not noise_model is None:
+        print(circuits[0].draw())
         results = backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
     else:
         results = backend.run(circuits, shots=shots).result().get_counts()
