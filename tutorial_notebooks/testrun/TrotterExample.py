@@ -136,6 +136,10 @@ def executor(circuits, backend, shots, noise_model=None):
     if not noise_model is None:
         print(circuits[0].draw())
         results = backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
+        for i, r in enumerate(results):
+            if not 1024 in r.values():
+                print(circuits[i])
+                print(r)
     else:
         results = backend.run(circuits, shots=shots).result().get_counts()
     return results
