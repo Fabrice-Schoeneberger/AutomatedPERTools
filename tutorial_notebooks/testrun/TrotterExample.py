@@ -117,7 +117,7 @@ def get_noise_model():
     singlequbit_errorprobs = [0.0018781587123864844, 0.00037277073796095685, 0.0015945514328675244]
     #twoqubit_errorops = [Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
     #twoqubit_errorprobs = [0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
-    twoqubit_errorops = [Pauli('IX')]
+    twoqubit_errorops = [Pauli('XI')]
     twoqubit_errorprobs = [0.05]
     #create normalized error model
     #singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]
@@ -387,13 +387,12 @@ def main():
     import os
     import sys
     i = 0
-    parentfolder = "AutomatedPERTools"
     folder = os.path.dirname(os.path.abspath(__file__))
-    while not folder.endswith(parentfolder):
+    while not "pauli_lindblad_per" in os.listdir(folder):
         folder = os.path.dirname(folder)
         i+=1
         if i == 50:
-            raise Exception("Parent Folder not found. Is "+ parentfolder + " the correct name?")
+            raise Exception("pauli_lindblad_per not found. Please make sure it is in this or a parent folder")
     sys.path.append(os.path.join(folder, "pauli_lindblad_per"))
 
 
