@@ -134,12 +134,12 @@ def get_noise_model():
 def executor(circuits, backend, shots, noise_model=None):
     backend = get_backend(None, return_perfect=True)
     if not noise_model is None:
-        print(circuits[0].draw())
         results = backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
         for i, r in enumerate(results):
             if not 1024 in r.values():
-                print(circuits[i])
-                print(r)
+                pass
+                #print(circuits[i])
+                #print(r)
     else:
         results = backend.run(circuits, shots=shots).result().get_counts()
     return results
