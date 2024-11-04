@@ -78,9 +78,16 @@ def make_initial_Circuit(qubits, num_qubits, backend, n):
 
 def make_initial_Circuit2(backend):
     from qiskit import transpile, QuantumCircuit
-    circuit = QuantumCircuit(2)
+    circuit = QuantumCircuit(8)
+    circuit.cx(1,2)
+    circuit.barrier()
+    circuit.cx(1,0)
+    circuit.cx(3,4)
+    circuit.barrier()
     circuit.cx(0,1)
-    #circuit.cx(4,5)
+    circuit.cx(2,3)
+    circuit.cx(4,5)
+    circuit.cx(7,6)
     return [transpile(circuit, backend)]
 
 def get_backend(args, return_perfect=False, return_backend_qubits=False):
@@ -115,10 +122,10 @@ def get_noise_model():
     #twoqubit_errorprobs = [random()*.1/num for op in twoqubit_errorops] #assign random probabilities
     singlequbit_errorops = [Pauli('Y'), Pauli('Z'), Pauli('X')]
     singlequbit_errorprobs = [0.0018781587123864844, 0.00037277073796095685, 0.0015945514328675244]
-    #twoqubit_errorops = [Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
-    #twoqubit_errorprobs = [0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
-    twoqubit_errorops = [Pauli('XI')]
-    twoqubit_errorprobs = [0.05]
+    twoqubit_errorops = [Pauli('ZX'), Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
+    twoqubit_errorprobs = [0.00678362584027, 0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
+    #twoqubit_errorops = [Pauli('XI')]
+    #twoqubit_errorprobs = [0.05]
     #create normalized error model
     #singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]
     singlequbit_error_template = [(Pauli("I"), 1)]
@@ -454,7 +461,6 @@ def main():
         namebase += str(arg_value) + "_"
     namebase = namebase[:-1]
     os.makedirs(namebase, exist_ok=True)
-    namebase += "_CNOT_LAYER1" #Temporary TODO
     print("Namebase will be: " + namebase)
     namebase += "/"
     #circuits[0].draw()
