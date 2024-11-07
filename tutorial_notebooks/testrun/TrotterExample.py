@@ -2,6 +2,9 @@ import time
 tim = time.time()
 laststring = ""
 last_time_string = ""
+_noise_model = None
+_twoqubit_error_template = None
+_singlequbit_error_template = None
 def print_time(printstring=""):
     global tim, laststring, last_time_string
     import time
@@ -78,16 +81,16 @@ def make_initial_Circuit(qubits, num_qubits, backend, n):
 
 def make_initial_Circuit2(backend):
     from qiskit import transpile, QuantumCircuit
-    circuit = QuantumCircuit(8)
-    circuit.cx(1,2)
-    circuit.barrier()
-    circuit.cx(1,0)
-    circuit.cx(3,4)
-    circuit.barrier()
+    circuit = QuantumCircuit(4)
     circuit.cx(0,1)
-    circuit.cx(2,3)
-    circuit.cx(4,5)
-    circuit.cx(7,6)
+    #circuit.barrier()
+    #circuit.cx(1,0)
+    #circuit.cx(3,4)
+    #circuit.barrier()
+    #circuit.cx(0,1)
+    #circuit.cx(2,3)
+    #circuit.cx(4,5)
+    #circuit.cx(7,6)
     return [transpile(circuit, backend)]
 
 def get_backend(args, return_perfect=False, return_backend_qubits=False):
@@ -104,6 +107,9 @@ def get_backend(args, return_perfect=False, return_backend_qubits=False):
     return backend
 
 def get_noise_model():
+    global _noise_model, _twoqubit_error_template, _singlequbit_error_template
+    if not _noise_model is None:
+        return (_noise_model, _twoqubit_error_template, _singlequbit_error_template)
     from random import random, choices
     from qiskit_aer.noise import (NoiseModel, QuantumError, ReadoutError, pauli_error, depolarizing_error, thermal_relaxation_error)
     from qiskit.quantum_info import Pauli, pauli_basis
@@ -115,17 +121,17 @@ def get_noise_model():
         new_list.remove(Pauli('I'*len(pauli_list[0])))
         return new_list
     
-    #num = 4  #number of errors
+    num = choices([1,2,3,4,5,6,7,8])[0]  #number of errors
     #singlequbit_errorops = choices(remove_Identity(pauli_basis(1)), k=num)
-    #twoqubit_errorops = choices(remove_Identity(pauli_basis(2)), k=num) #choose random pauli errors
     #singlequbit_errorprobs = [random()*.1/(num*10) for op in singlequbit_errorops] #assign random probabilities
+    #twoqubit_errorops = choices(remove_Identity(pauli_basis(2)), k=num) #choose random pauli errors
     #twoqubit_errorprobs = [random()*.1/num for op in twoqubit_errorops] #assign random probabilities
     singlequbit_errorops = [Pauli('Y'), Pauli('Z'), Pauli('X')]
     singlequbit_errorprobs = [0.0018781587123864844, 0.00037277073796095685, 0.0015945514328675244]
-    twoqubit_errorops = [Pauli('ZX'), Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
-    twoqubit_errorprobs = [0.00678362584027, 0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
-    #twoqubit_errorops = [Pauli('XI')]
-    #twoqubit_errorprobs = [0.05]
+    #twoqubit_errorops = [Pauli('ZX'), Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
+    #twoqubit_errorprobs = [0.00678362584027, 0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
+    twoqubit_errorops = [Pauli('IX')]
+    twoqubit_errorprobs = [0.05]
     #create normalized error model
     #singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]
     singlequbit_error_template = [(Pauli("I"), 1)]
@@ -136,7 +142,8 @@ def get_noise_model():
     #add error model to two-qubit gates.
     #noise_model.add_all_qubit_quantum_error(singlequbit_error, ['id','rz','sx'])
     noise_model.add_all_qubit_quantum_error(twoqubit_error, ['cx','cz'])
-    return (noise_model, twoqubit_error_template, singlequbit_error_template)
+    (_noise_model, _twoqubit_error_template, _singlequbit_error_template) = (noise_model, twoqubit_error_template, singlequbit_error_template)
+    return (_noise_model, _twoqubit_error_template, _singlequbit_error_template)
 
 def executor(circuits, backend, shots, noise_model=None):
     backend = get_backend(None, return_perfect=True)
@@ -204,6 +211,7 @@ def get_error_for_circuit(circuit, twoqubit_error_template, singlequbit_error_te
     return [(op, error_state[op]) for op in error_state]
 
 def make_transfer_matrix(circuits, twoqubit_error_template, singlequbit_error_template, backend, namebase):
+    return
     import os
     os.makedirs("server_run_collection/"+namebase, exist_ok=True)
     from primitives.circuit import QiskitCircuit
@@ -383,6 +391,8 @@ def main():
     parser.add_argument('--onlyTomography', help='Only does the tomography and then ends the program', default=False, action='store_true')
     parser.add_argument('--setqubits', type=int, nargs='+', help='Which qubits to use?: Default: 0123 and transpile')
     parser.add_argument('--depths', type=int, nargs='+', help='Decide the depths of the pnt-samples. Default: [2,4,8,16]')
+    parser.add_argument('--circuitfilename', type=str, help='Set the name of the file, that contains the function making you circuit', default="circuits")
+    parser.add_argument('--circuitfunction', type=str, help='Set the name of the function, that return your circuits. The function can only take a backend as input and has to return an array of circuits', default="make_initial_Circuit")
     parser.add_argument('--foldername_extra', type=str, help='Attach something to the end of the foldernamebase', default="")
 
     #  Parse die Argumente
@@ -440,8 +450,18 @@ def main():
     print("")
     print("Make Circuits")
     n = 2
-    #circuits = make_initial_Circuit(qubits, num_qubits, backend, n)
-    circuits = make_initial_Circuit2(backend) #Temporary TODO
+
+    if args.circuitfilename.endswith(".py"):
+        circuitfilename = args.circuitfilename[:-3]
+    else:
+        circuitfilename = args.circuitfilename
+    import importlib.util
+    spec = importlib.util.spec_from_file_location(circuitfilename, f"{circuitfilename}.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    get_circuit = getattr(module, args.circuitfunction)
+    circuits = get_circuit(backend)
+    
     used_qubits = set()
     for circuit in circuits: 
         for inst in circuit: #look at the commands
@@ -458,7 +478,8 @@ def main():
         if arg_name == "depths" and arg_value == None:
             arg_value = str(depths)
         print("\t%s: %s" % (arg_name, str(arg_value)))
-        namebase += str(arg_value) + "_"
+        if str(arg_value) != "":
+            namebase += str(arg_value) + "_"
     namebase = namebase[:-1]
     os.makedirs(namebase, exist_ok=True)
     print("Namebase will be: " + namebase)

@@ -105,8 +105,9 @@ class LayerNoiseData:
 
         F1 = [] #First list of terms
         F2 = [] #List of term pairs
+        F1_mini = []
         fidelities = [] # list of fidelities from fits
-        #logger.info(self.used_qubits)
+        logger.info(self.used_qubits)
         for datum in self._term_data.values():
             pauli = datum.pauli
             indexes = get_indexes(str(pauli))
@@ -115,8 +116,10 @@ class LayerNoiseData:
                 for index in indexes:
                     if not index in self.used_qubits:
                         skip = True
-                if skip:
-                    continue
+                #if skip:
+                #    continue
+            if not skip:
+                F1_mini.append(datum.pauli)
             F1.append(datum.pauli)
             fidelities.append(datum.fidelity)
             #If the Pauli is conjugate to another term in the model, a degeneracy is present
