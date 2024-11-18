@@ -23,6 +23,8 @@ class LayerNoiseData:
         self.sum_over_lambda=sum_over_lambda
         self.plusone = plusone
         self.used_qubits = used_qubits
+        self.pair_sim_meas_dic = {}
+        self.single_sim_meas_dic = {}
         for pauli in layer._procspec.model_terms:
             pair = layer.pairs[pauli]
             self._term_data[pauli] = TermData(pauli, pair)
@@ -43,24 +45,24 @@ class LayerNoiseData:
 
         basis = inst.meas_basis
         prep = inst.prep_basis
-        pair_sim_meas = {}
-        single_sim_meas = {}
+        single_sim_meas_dic = {}
 
         if inst.type == SINGLE:
 
-            if not basis in single_sim_meas:
-                single_sim_meas[basis] = self.single_sim_meas(basis, prep)
+            if not basis in single_sim_meas_dic: # This is always true
+                self.single_sim_meas_dic[basis] = self.single_sim_meas(basis, prep)
+                single_sim_meas_dic[basis] = self.single_sim_meas(basis, prep)
 
-            for pauli in single_sim_meas[basis]:
+            for pauli in single_sim_meas_dic[basis]:
                 expectation = inst.get_expectation(pauli)
                 self._term_data[pauli].add_single_expectation(expectation)
 
         elif inst.type == PAIR:
 
-            if not basis in pair_sim_meas:
-                pair_sim_meas[basis] = self.sim_meas(basis)
+            if not basis in self.pair_sim_meas_dic: # This is always true
+                self.pair_sim_meas_dic[basis] = self.sim_meas(basis)
 
-            for pauli in pair_sim_meas[basis]:
+            for pauli in self.pair_sim_meas_dic[basis]:
                 #add the expectation value to the data for this term
                 expectation = inst.get_expectation(pauli)
                 self._term_data[pauli].add_expectation(inst.depth, expectation, inst.type)
@@ -77,6 +79,23 @@ class LayerNoiseData:
             self._term_data[pauli].fit_single()
             pair_dat = self._term_data[pair]
             pair_dat.fidelity = pair_dat.fidelity**2/self._term_data[pauli].fidelity
+
+        import pickle
+        savefile = []
+        for key in self.pair_sim_meas_dic:
+            keydic = {}
+            for pauli in self.pair_sim_meas_dic[key]:
+                pair = self._term_data[pauli].pair
+                plotdata = {}
+                a,b = self._term_data[pauli]._fit()
+                plotdata["a"] = a
+                plotdata["b"] = b
+                plotdata["depth"] = self._term_data[pauli].depths()
+                plotdata["expectations"] = self._term_data[pauli].expectations()
+                keydic[(pauli,pair)] = plotdata
+            savefile.append((key, keydic))
+        with open("termplot.pickle", "wb") as f:
+            pickle.dump(savefile, f)
 
         
         logger.info("Fit noise model with following fidelities:") 
@@ -111,13 +130,12 @@ class LayerNoiseData:
         for datum in self._term_data.values():
             pauli = datum.pauli
             indexes = get_indexes(str(pauli))
-            if not self.used_qubits is None:
-                skip = False
-                for index in indexes:
-                    if not index in self.used_qubits:
-                        skip = True
-                #if skip:
-                #    continue
+            skip = False
+            for index in indexes:
+                if datum.fidelity == 1:
+                    logger.info("skip")
+                    skip = True
+                    break
             if not skip:
                 F1_mini.append(datum.pauli)
             F1.append(datum.pauli)
@@ -223,3 +241,4 @@ class LayerNoiseData:
             infidelities = [1-self._term_data[term].fidelity for term in group]
             ax.bar([term.to_label() for term in group], infidelities, color=c)
         return ax
+    

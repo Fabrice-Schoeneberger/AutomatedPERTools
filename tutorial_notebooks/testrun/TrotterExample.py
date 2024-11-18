@@ -50,53 +50,10 @@ def get_index(qc, inst, i=None):
             indexes.append(index)
         return indexes
 
-def make_initial_Circuit(qubits, num_qubits, backend, n):
-    from qiskit import transpile, QuantumCircuit
-    def trotterLayer(h,J,dt,n):
-        trotterLayer = QuantumCircuit(num_qubits)
-        trotterLayer.rx(dt*4*h, qubits)
-        trotterLayer.cx(*zip(*[(qubits[2*i], qubits[2*i+1]) for i in range(n)]))
-        trotterLayer.rz(-4*J*dt, [qubits[2*i+1] for i in range(n)])
-        trotterLayer.cx(*zip(*[(qubits[2*i], qubits[2*i+1]) for i in range(n)]))
-        trotterLayer.cx(*zip(*[(qubits[2*i+1], qubits[2*i+2]) for i in range(n-1)]))
-        trotterLayer.rz(-4*J*dt, [qubits[2*i+2] for i in range(n-1)])
-        trotterLayer.cx(*zip(*[(qubits[2*i+1], qubits[2*i+2]) for i in range(n-1)]))
-        return trotterLayer
-
-    h = 1
-    J = -.15
-    dt = .2
-
-    def maketrotterCircuit(s):
-        tL = trotterLayer(h, J, dt, n)
-        trotterCircuit = QuantumCircuit(num_qubits)
-        for i in range(s):
-            trotterCircuit = trotterCircuit.compose(tL)
-            trotterCircuit.barrier()
-
-        transpiled = transpile(trotterCircuit, backend)
-        return transpiled
-
-    return [maketrotterCircuit(i) for i in range(1,15)]
-
-def make_initial_Circuit2(backend):
-    from qiskit import transpile, QuantumCircuit
-    circuit = QuantumCircuit(4)
-    circuit.cx(0,1)
-    #circuit.barrier()
-    #circuit.cx(1,0)
-    #circuit.cx(3,4)
-    #circuit.barrier()
-    #circuit.cx(0,1)
-    #circuit.cx(2,3)
-    #circuit.cx(4,5)
-    #circuit.cx(7,6)
-    return [transpile(circuit, backend)]
-
 def get_backend(args, return_perfect=False, return_backend_qubits=False):
     from qiskit.providers.fake_provider import GenericBackendV2
     from qiskit_aer import AerSimulator
-    if return_perfect or args is None:
+    if return_perfect or args is None or args.num_qubits == 0:
         backend = AerSimulator()
     else:
         num = args.num_qubits
@@ -121,10 +78,10 @@ def get_noise_model():
         new_list.remove(Pauli('I'*len(pauli_list[0])))
         return new_list
     
-    num = choices([1,2,3,4,5,6,7,8])[0]  #number of errors
+    num = choices([3,4,5,6,7,8])[0]  #number of errors
     #singlequbit_errorops = choices(remove_Identity(pauli_basis(1)), k=num)
     #singlequbit_errorprobs = [random()*.1/(num*10) for op in singlequbit_errorops] #assign random probabilities
-    #twoqubit_errorops = choices(remove_Identity(pauli_basis(2)), k=num) #choose random pauli errors
+    #twoqubit_errorops = list(set(choices(remove_Identity(pauli_basis(2)), k=num))) #choose random pauli errors
     #twoqubit_errorprobs = [random()*.1/num for op in twoqubit_errorops] #assign random probabilities
     singlequbit_errorops = [Pauli('Y'), Pauli('Z'), Pauli('X')]
     singlequbit_errorprobs = [0.0018781587123864844, 0.00037277073796095685, 0.0015945514328675244]
@@ -385,7 +342,7 @@ def main():
     parser.add_argument('--pntsinglesamples', type=int, help='How many single samples in PNT? Default: 100', default=100)
     parser.add_argument('--persamples', type=int, help='How many samples in PER? Default: 100', default=100)
     parser.add_argument('--shots', type=int, help='How many shots? Default: 1024', default=1024)
-    parser.add_argument('--num_qubits', type=int, help='Define how many qubits the backend should have. Layout: Line? Default: 5', default=5)
+    parser.add_argument('--num_qubits', type=int, help='Define how many qubits the backend should have. Layout: Line? Default: How ever many the biggest circuit has', default=0)
     parser.add_argument('--cross', '-c', help='Simulates Cross Talk Noise', default=False, action='store_true')
     #parser.add_argument('--allqubits', '-a', help='runs over all qubits in the tomography', default=False, action='store_true')
     parser.add_argument('--onlyTomography', help='Only does the tomography and then ends the program', default=False, action='store_true')
@@ -461,7 +418,16 @@ def main():
     spec.loader.exec_module(module)
     get_circuit = getattr(module, args.circuitfunction)
     circuits = get_circuit(backend)
-    
+    max_qubits = 0
+    for circuit in circuits: 
+        max_qubits = max(max_qubits, circuit.num_qubits)
+    if args.num_qubits == 0:
+        args.num_qubits = max_qubits
+        backend = get_backend(args)
+        circuits = get_circuit(backend)
+    elif max_qubits > backend.num_qubits:
+        raise Exception("Backend has to few qubits for a circuit. " +str(backend.num_qubits)+"/"+str(max_qubits)+ " given. Give more qubits with --num_qubits x")
+    #print(circuits[0])
     used_qubits = set()
     for circuit in circuits: 
         for inst in circuit: #look at the commands

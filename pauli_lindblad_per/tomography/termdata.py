@@ -73,8 +73,7 @@ class TermData:
             (a,b),_ = curve_fit(expfit, self.depths(), self.expectations(), p0 = [.8, .01], bounds = ((0,0),(1,1)))
         except:
             (a,b) = 1,0
-            logger.warning("Fit did not converge!")
-            logger.warning(self.pauli)
+            logger.warning(("Fit did not converge!", self.pauli))
         return a,b
 
     def fit_single(self):

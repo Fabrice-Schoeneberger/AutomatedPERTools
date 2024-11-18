@@ -31,8 +31,8 @@ def make_initial_Circuit2(backend):
 
 def make_initial_Circuit(backend):
     from qiskit import transpile, QuantumCircuit
-    circuit = QuantumCircuit(4)
-    circuit.cx(0,1)
+    circuit = QuantumCircuit(5)
+    circuit.cx(1,2)
     #circuit.barrier()
     #circuit.cx(1,0)
     #circuit.cx(3,4)

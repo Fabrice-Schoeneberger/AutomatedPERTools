@@ -76,4 +76,22 @@ class BenchmarkInstance(Instance):
             circ.measure_all()
             #logger.info(circ.qc.draw())
             #print(circ.qc.draw())
-            self._circ = circ#self._procspec.transpile(self._circ)
+            self._circ = self._procspec.transpile(self._circ)
+            #return
+
+            circ = self._circ.copy_empty()
+            self._keeped_qubits = set()
+            for inst in self.cliff_layer:
+                for q in inst.support():
+                    self._keeped_qubits.add(q._index)
+                    for index in self._procspec._connectivity.neighbors(q._index):
+                        self._keeped_qubits.add(int(index))
+            for inst in self._circ:
+                qubits = []
+                for q in inst.support():
+                    qubits.append(q._index)
+                if any([qubit in self._keeped_qubits for qubit in qubits]):
+                    circ.add_instruction(inst)
+            #logger.info(circ.qc.draw())
+            self._circ = circ
+
