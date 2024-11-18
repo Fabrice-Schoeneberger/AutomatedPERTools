@@ -5,6 +5,7 @@ last_time_string = ""
 _noise_model = None
 _twoqubit_error_template = None
 _singlequbit_error_template = None
+validate = None
 def print_time(printstring=""):
     global tim, laststring, last_time_string
     import time
@@ -51,14 +52,27 @@ def get_index(qc, inst, i=None):
         return indexes
 
 def get_backend(args, return_perfect=False, return_backend_qubits=False):
-    from qiskit.providers.fake_provider import GenericBackendV2
-    from qiskit_aer import AerSimulator
-    if return_perfect or args is None or args.num_qubits == 0:
+    if return_perfect or args is None:
+        from qiskit_aer import AerSimulator
         backend = AerSimulator()
     else:
+        from qiskit.providers.fake_provider import GenericBackendV2
         num = args.num_qubits
         coupling_map = [[i,i+1] for i in range(num-1)]+[[i+1,i] for i in range(num-1)]
         backend = GenericBackendV2(num_qubits=num, coupling_map=coupling_map)
+
+    if args.real_backend and not return_perfect:
+        global validate
+        if validate in None:
+            validate = input("Are you sure you want to run on a REAL backend? Yes/no")
+        if validate != "Yes":
+            raise Exception("Program aborted. Real backend NOT used")
+        else:
+            from qiskit_ibm_runtime import QiskitRuntimeService
+            #if you have never run this on a machine you need to run this first on any program (not here): #service = QiskitRuntimeService.save_account(channel="ibm_quantum", token="...")
+            service = QiskitRuntimeService()
+            backend = service.least_busy(operational=True, simulator=False, min_num_qubits=args.num_qubits)
+            print(backend.name)
     if return_backend_qubits:
         return backend.num_qubits
     return backend
@@ -103,16 +117,27 @@ def get_noise_model():
     return (_noise_model, _twoqubit_error_template, _singlequbit_error_template)
 
 def executor(circuits, backend, shots, noise_model=None):
-    backend = get_backend(None, return_perfect=True)
-    if not noise_model is None:
-        results = backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
-        for i, r in enumerate(results):
-            if not 1024 in r.values():
-                pass
-                #print(circuits[i])
-                #print(r)
+    from qiskit_aer import AerSimulator
+    from qiskit.providers.fake_provider import GenericBackendV2
+    if backend.__class__ == GenericBackendV2 or backend.__class__ == AerSimulator:
+        backend = get_backend(None, return_perfect=True)
+        if not noise_model is None:
+            results = backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
+            for i, r in enumerate(results):
+                if not 1024 in r.values():
+                    pass
+                    #print(circuits[i])
+                    #print(r)
+        else:
+            results = backend.run(circuits, shots=shots).result().get_counts()
+    elif hasattr(backend, 'configuration') and not backend.configuration().simulator:
+        from qiskit_ibm_runtime import SamplerV2 as Sampler
+        sampler = Sampler(mode=backend)
+        qc_job = sampler.run(circuits, shots=1024)
+        results = qc_job.result()[0].data.meas.get_counts()
     else:
-        results = backend.run(circuits, shots=shots).result().get_counts()
+        raise AttributeError("Backend type is not recognized")
+
     return results
 
 def calculate_with_simple_backend(circuits, shots, persamples, backend, qubits, n, noise_model, apply_cross_talk=False):
@@ -351,6 +376,7 @@ def main():
     parser.add_argument('--circuitfilename', type=str, help='Set the name of the file, that contains the function making you circuit', default="circuits")
     parser.add_argument('--circuitfunction', type=str, help='Set the name of the function, that return your circuits. The function can only take a backend as input and has to return an array of circuits', default="make_initial_Circuit")
     parser.add_argument('--foldername_extra', type=str, help='Attach something to the end of the foldernamebase', default="")
+    parser.add_argument('--real_backend', help='Toggels the use of a real IBM Backend. You will be prompted an extra input to confirm this. Use QiskitRuntimeService.save_account(channel="ibm_quantum", token="<your_token>") first', default=False, action='store_true')
 
     #  Parse die Argumente
     args = parser.parse_args()
@@ -446,6 +472,8 @@ def main():
         print("\t%s: %s" % (arg_name, str(arg_value)))
         if str(arg_value) != "":
             namebase += str(arg_value) + "_"
+    print("Backend name is: "+ str(backend.name))
+    namebase += "_" + str(backend.name)
     namebase = namebase[:-1]
     os.makedirs(namebase, exist_ok=True)
     print("Namebase will be: " + namebase)

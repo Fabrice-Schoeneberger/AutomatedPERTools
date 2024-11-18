@@ -7,3 +7,5 @@ source .venv2/bin/activate
 pip install qiskit
 pip install matplotlib
 pip install qiskit_aer
+pip install qiskit_ibm_runtime
+pip install pylatexenc
