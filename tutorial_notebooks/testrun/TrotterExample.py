@@ -52,7 +52,7 @@ def get_index(qc, inst, i=None):
         return indexes
 
 def get_backend(args, return_perfect=False, return_backend_qubits=False):
-    if return_perfect or args is None:
+    if return_perfect or args is None or args.num_qubits == 0:
         from qiskit_aer import AerSimulator
         backend = AerSimulator()
     else:
@@ -61,7 +61,7 @@ def get_backend(args, return_perfect=False, return_backend_qubits=False):
         coupling_map = [[i,i+1] for i in range(num-1)]+[[i+1,i] for i in range(num-1)]
         backend = GenericBackendV2(num_qubits=num, coupling_map=coupling_map)
 
-    if args.real_backend and not return_perfect:
+    if not args is None and args.real_backend and not return_perfect:
         global validate
         if validate in None:
             validate = input("Are you sure you want to run on a REAL backend? Yes/no")
@@ -101,7 +101,7 @@ def get_noise_model():
     singlequbit_errorprobs = [0.0018781587123864844, 0.00037277073796095685, 0.0015945514328675244]
     #twoqubit_errorops = [Pauli('ZX'), Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
     #twoqubit_errorprobs = [0.00678362584027, 0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
-    twoqubit_errorops = [Pauli('IX')]
+    twoqubit_errorops = [Pauli('IY')]
     twoqubit_errorprobs = [0.05]
     #create normalized error model
     #singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]
