@@ -101,7 +101,7 @@ def get_noise_model():
     singlequbit_errorprobs = [0.0018781587123864844, 0.00037277073796095685, 0.0015945514328675244]
     #twoqubit_errorops = [Pauli('ZX'), Pauli('YZ'), Pauli('IY'), Pauli('YY'), Pauli('XY')]
     #twoqubit_errorprobs = [0.00678362584027, 0.008802700270751796, 0.0032989083407153896, 0.01917444731546973, 0.019520575974201874]
-    twoqubit_errorops = [Pauli('IY')]
+    twoqubit_errorops = [Pauli('IX')]
     twoqubit_errorprobs = [0.05]
     #create normalized error model
     #singlequbit_error_template = [(op, p) for op,p in zip(singlequbit_errorops, singlequbit_errorprobs)]+[(Pauli("I"), 1-sum(singlequbit_errorprobs))]

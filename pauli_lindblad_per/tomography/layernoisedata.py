@@ -142,12 +142,12 @@ class LayerNoiseData:
             if not skip:
                 F1_mini.append(datum.pauli)
             F1.append(datum.pauli)
-            #fidelities.append(datum.fidelity)
-            if str(datum.pauli) in ["IXYII","IYYII","IZYII","IXZII","IYZII","IZZII"]:
-                fidelities.append(1-2.7604759922361666e-07)
-            else:
-                fidelities.append(1-predone.get(datum.pauli.pauli,2.7604759922361666e-07))
-            print((datum.pauli, 1-predone.get(datum.pauli.pauli,2.7604759922361666e-07), fidelities[-1]))
+            fidelities.append(datum.fidelity)
+            #if str(datum.pauli) in ["IXYII","IYYII","IZYII","IXZII","IYZII","IZZII"]:
+            #    fidelities.append(1-2.7604759922361666e-07)
+            #else:
+            #    fidelities.append(1-predone.get(datum.pauli.pauli,2.7604759922361666e-07))
+            #print((datum.pauli, 1-predone.get(datum.pauli.pauli,2.7604759922361666e-07), fidelities[-1]))
             #If the Pauli is conjugate to another term in the model, a degeneracy is present
             if self._issingle(datum):
                 F2.append(datum.pauli)
