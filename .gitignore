@@ -5,3 +5,5 @@ __pycache__
 .venv2/
 copy_file_over.bat
 *.pickle
+.venv_04_Laptop/
+.venv_Laptop/

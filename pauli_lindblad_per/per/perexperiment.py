@@ -97,6 +97,8 @@ class PERExperiment:
 
             #pass circuit to executor
             results = executor(circuits, self._processor._qpu, shots, noise_model=noise_model)
+            for circ in circuits:
+                logger.info(circ.draw(fold=-1))
         
             #add results to instances 
             for inst, res in zip(instances, results):

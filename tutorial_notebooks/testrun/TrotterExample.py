@@ -435,8 +435,8 @@ def main():
     print("")
     print("Make Circuits")
     n = 2
-    #circuits = make_initial_Circuit(qubits, num_qubits, backend, n)
-    circuits = make_initial_Circuit2(backend) #Temporary TODO
+    circuits = make_initial_Circuit(qubits, num_qubits, backend, n)
+    #circuits = make_initial_Circuit2(backend) #Temporary TODO
     used_qubits = set()
     for circuit in circuits: 
         for inst in circuit: #look at the commands
@@ -456,7 +456,7 @@ def main():
         namebase += str(arg_value) + "_"
     namebase = namebase[:-1]
     os.makedirs(namebase, exist_ok=True)
-    namebase += "_CNOT_LAYER1" #Temporary TODO
+    #namebase += "_CNOT_LAYER1" #Temporary TODO
     print("Namebase will be: " + namebase)
     namebase += "/"
     #circuits[0].draw()
