@@ -45,7 +45,8 @@ class PERInstance(Instance):
         
         circ.measure_all()
         #transpile to reduce unnecessary single-qubit gates
-        self._circ = self._processor.transpile(self._circ, self._inst_map)
+        self._circ = circ
+        #self._circ = self._processor.transpile(self._circ, self._inst_map)
 
     def get_adjusted_expectation(self, pauli):
         """Returns the expectation value reported by the parent class, but with the sign

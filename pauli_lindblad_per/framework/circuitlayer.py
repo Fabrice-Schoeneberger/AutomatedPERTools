@@ -37,6 +37,7 @@ class CircuitLayer:
 
         self.noisemodel.init_scaling(noise_strength) #set up coefficients for sampling
         circ.compose(self.single_layer) #compose single-qubit layer
+        circ.barrier()
 
         twirl = p_type.random(circ.num_qubits()) #generate a random pauli
         circ.add_pauli(twirl)
@@ -45,10 +46,10 @@ class CircuitLayer:
         circ.add_pauli(op) 
 
         circ.compose(self.cliff_layer)
-        circ.barrier()
 
         #invert pauil twirl and compose into next layer for consistent noise
         circ.add_pauli(self.cliff_layer.conjugate(twirl))
+        circ.barrier()
 
         return sgn
 
