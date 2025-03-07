@@ -1,4 +1,4 @@
-def make_initial_Circuit2(backend):
+def make_initial_Circuit(backend):
     from qiskit import transpile, QuantumCircuit
     qubits = [0,1,2,3]
     def trotterLayer(h,J,dt,n):
@@ -29,7 +29,7 @@ def make_initial_Circuit2(backend):
 
     return [maketrotterCircuit(i) for i in range(1,15)]
 
-def make_initial_Circuit(backend):
+def make_initial_Circuit2(backend):
     from qiskit import transpile, QuantumCircuit
     circuit = QuantumCircuit(5)
     circuit.cx(1,2)

@@ -74,15 +74,6 @@ class PERData:
         """ 
         
         expfit = lambda x,a,b: a*np.exp(b*x)
-        #import json
-        #savi = {}
-        #savi["get_expectations"] = self.get_expectations()
-        #savi["get_strengths"] = self.get_strengths()
-        #savi["_data"] = self._data
-        #savi["_dataStatistic"] = self._dataStatistic
-        #savi["_counts"] = self._counts
-        #with open("data.json", 'w') as file:
-        #    json.dump(savi, file)
         
         try:
             popt, pcov = curve_fit(

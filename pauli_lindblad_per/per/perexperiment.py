@@ -71,8 +71,7 @@ class PERExperiment:
                 if base.nonoverlapping(pauli): #if nonoverlapping, compose into last basis
                     meas_bases[i] = base.get_composite(pauli)
                     break
-            else:
-                meas_bases.append(pauli) #if no break is reached, append to end
+            meas_bases.append(pauli) #if no break is reached, append to end
         logger.info(meas_bases)
         self.meas_bases = meas_bases
 
@@ -138,7 +137,9 @@ class PERExperiment:
             expectations (list[str]): expectation values to reconstruct
             samples (int): number of samples to take from distribution
         """
-        print(len(multiprocessing.active_children()))
+        if len(multiprocessing.active_children()) != 0:
+            raise Exception("Why are there children?")
+
         #Convert string labels to Pauli representation
         expectations = [self.pauli_type(label) for label in expectations]
 
@@ -157,7 +158,7 @@ class PERExperiment:
             #per_run = PERRun(self._processor, self._inst_map, pcirc, samples, noise_strengths, self.meas_bases, expectations)
             #self._per_runs.append(per_run)
         while len(multiprocessing.active_children()) > 1:
-            print(len(multiprocessing.active_children()))
+            #print(len(multiprocessing.active_children()))
             time.sleep(1)
             pass
         #changing the type from the mulitprocess list to a normal list

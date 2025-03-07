@@ -123,9 +123,9 @@ def executor(circuits, backend, shots, noise_model=None):
         backend = get_backend(None, return_perfect=True)
         if not noise_model is None:
             results = backend.run(circuits, shots=shots, noise_model = noise_model).result().get_counts()
-            for i, r in enumerate(results):
-                if not 1024 in r.values():
-                    pass
+            #for i, r in enumerate(results):
+            #    if not 1024 in r.values():
+            #        pass
                     #print(circuits[i])
                     #print(r)
         else:
@@ -147,7 +147,7 @@ def calculate_with_simple_backend(circuits, shots, persamples, backend, qubits, 
     for circ in circuits:
         qc = circ.copy()
         qc.measure_all()
-        count = executor(qc, backend, shots*persamples, noise_model)
+        count = executor([qc], backend, shots*persamples, noise_model)
         count = {tuple(int(k) for k in key):count[key] for key in count.keys()}
         tot = 0
         for key in count.keys():
@@ -427,7 +427,6 @@ def main():
     persamples = args.persamples
     shots = args.shots
     (noise_model, twoqubit_error_template, singlequbit_error_template) = get_noise_model()
-    #(noise_model, twoqubit_error, singlequbit_error) = (None, None, None)
 
     # %% Make the initial Circuits
     print("")
@@ -453,7 +452,7 @@ def main():
         circuits = get_circuit(backend)
     elif max_qubits > backend.num_qubits:
         raise Exception("Backend has to few qubits for a circuit. " +str(backend.num_qubits)+"/"+str(max_qubits)+ " given. Give more qubits with --num_qubits x")
-    #print(circuits[0])
+    
     used_qubits = set()
     for circuit in circuits: 
         for inst in circuit: #look at the commands
@@ -532,9 +531,10 @@ def main():
     noise_strengths = [0,0.5,1,2]
     expectations = []
     for q in qubits:
-        expect = "I"*(get_backend(args, return_backend_qubits=True)) #15
+        expect = "I"*(get_backend(args, return_backend_qubits=True))
         expect = expect[:q] + 'Z' + expect[q+1:]
         expectations.append("".join(reversed(expect)))
+    #print(expectations)
     print_time("do PER runs")
     perexp.generate(expectations = expectations, samples = persamples, noise_strengths = noise_strengths)
     # %% Run PER
@@ -578,8 +578,6 @@ def main():
             expec_at_noise_error = [run.get_result(op).get_std_of_strengths(strength) for strength in noise_strengths]
             for i in range(0,len(tot_at_noise)):
                 tot_at_noise_errors[i] += expec_at_noise_error[i]/len(expectations)
-
-            
 
         results.append(tot)
         results_errors.append(tot_error)

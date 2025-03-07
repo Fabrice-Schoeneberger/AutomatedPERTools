@@ -69,16 +69,16 @@ class Instance:
         rostring = self._rostring
         for key in self._result:
             newkey = "".join([{'0':'1','1':'0'}[bit] if flip=="X" else bit for bit,flip in zip(key,rostring)])
-            newerkey = ""
-            for i, c in enumerate("".join(reversed(newkey))):
-                if i not in self._keeped_qubits:
-                    newerkey += "0"
-                else:
-                    newerkey += c
-            newkey = "".join(reversed(newerkey))
+            #newerkey = ""
+            #for i, c in enumerate("".join(reversed(newkey))):
+            #    if i not in self._keeped_qubits:
+            #        newerkey += "0"
+            #    else:
+            #        newerkey += c
+            #newkey = "".join(reversed(newerkey))
             ro_untwirled[newkey] = self._result[key]
 
-        self._keeped_qubits
+        #self._keeped_qubits
 
         return ro_untwirled 
 
@@ -108,8 +108,7 @@ class Instance:
                       "Pauli": pauli, 
                       "Results:": result, 
                       "Estimator:": estimator, 
-                      "Individual Estimation:": esti_array,
-                      "Depths:": self.depth}
+                      "Individual Estimation:": esti_array}
         logger.info(print_data)
         #logger.info(estimator)
         return estimator/sum(result.values())
