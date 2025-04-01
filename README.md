@@ -5,10 +5,6 @@ Probabilistic error reduction (PER) is a related quantum error mitigation method
 
 ## Dependencies
 As of writing this, Mitiq [4] dependencies are in conflict with PyGSTi [7] and PyQuil dependencies, so different environments are requierd to run the notebooks:
-### Mitiq Environment
-* Mitiq: 0.16.0
-* Numpy: 1.20.3
-* Scipy: 1.7.3
 ### Main Environment
 * Qiskit: 0.37.0
 * PyQuil: 3.1.0

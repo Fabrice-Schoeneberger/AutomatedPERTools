@@ -7,3 +7,4 @@ __pycache__
 .venv_04_Laptop/
 copy_file_over.bat
 *.pickle
+.vscode
