@@ -9,7 +9,7 @@ logger = logging.getLogger("experiment")
 
 
 class PERRun:
-    def __init__(self, processor, inst_map, per_circ, samples, noise_strengths, meas_bases, expectations):
+    def __init__(self, processor, inst_map, per_circ, samples, noise_strengths, meas_bases, expectations, do_multithreading):
         self._per_circ = per_circ
         self._pauli_type = per_circ._qc.pauli_type
         self._noise_strengths = noise_strengths
@@ -18,6 +18,7 @@ class PERRun:
         self._meas_bases = meas_bases
         self._expectations = expectations
         self._inst_map = inst_map
+        self._do_multithreading = do_multithreading
 
         self._generate()
 
@@ -91,40 +92,46 @@ class PERRun:
     def _generate(self):
         #I hate that I have to do this, but you can't have class inside a multiprocess thread, that isself has processes running. 
         #So I have to put the entire function in a defined function outside the class. I havn't found a way around this.
-        (self.instances, self._id, self._pickled_data) = _generate_but_outside_the_class(self._meas_bases, self._noise_strengths, self._samples, self._proc, self._inst_map, self._per_circ)
+        (self.instances, self._id, self._pickled_data) = _generate_but_outside_the_class(self._meas_bases, self._noise_strengths, self._samples, self._proc, self._inst_map, self._per_circ, self._do_multithreading)
         self._counter = 0
 
 import uuid
 import pickle
-def _generate_but_outside_the_class(meas_bases, noise_strengths, samples, proc, inst_map, per_circ):
-    manager = multiprocessing.Manager()  # Use a manager to handle shared data
-    instances = manager.list()
+def _generate_but_outside_the_class(meas_bases, noise_strengths, samples, proc, inst_map, per_circ, do_multithreading):
+    if do_multithreading:
+        manager = multiprocessing.Manager()  # Use a manager to handle shared data
+        instances = manager.list()
+    else:
+        instances =  []
     lock = multiprocessing.Lock()
     id = str(uuid.uuid4())
     pickled_data = []
     counter = 0
     for basis in meas_bases:
         for lmbda in noise_strengths:
-            for sample in range(samples):
+            for sample in range(samples[lmbda]):
                 #cut the generation of the PER Circuit into many threads to profit from multicore CPU performance
-                process = multiprocessing.Process(target=_make_PERInstance, args=(proc, inst_map, per_circ, basis, lmbda, instances, lock))
-                process.start()
+                if do_multithreading:
+                    process = multiprocessing.Process(target=_make_PERInstance, args=(proc, inst_map, per_circ, basis, lmbda, instances, lock))
+                    process.start()
 
-                (pickled_data, counter) = wait_for_room(instances, id, pickled_data, counter, lock, 100)
+                    (pickled_data, counter) = wait_for_room(instances, id, pickled_data, counter, lock, 100)
                 
                 #This is the old non multithreding way:
-                #perinst = PERInstance(proc, inst_map, per_circ, basis, lmbda)
-                #instances.append(perinst)
+                else:
+                    perinst = PERInstance(proc, inst_map, per_circ, basis, lmbda)
+                    instances.append(perinst)
     (pickled_data, counter) = wait_for_room(instances, id, pickled_data, counter, lock, 1)
     manager = None
     return (list(instances), id, pickled_data)
     
 def wait_for_room(instances, id, pickled_data, counter, lock, children_count=1):
     while len(multiprocessing.active_children()) > children_count:
-        if len(instances) > 100:
+        batchsize = 100 # Change this to change the amount to circuits saved as once. Leave it as big as possible to improve performance!
+        if len(instances) > batchsize:
             with lock: # This is, so that instances don't add things into the list while this pops them out. In theory it should be ok if they would but better be save
                 pickel_list = []
-                for i in range(100):
+                for i in range(batchsize):
                     # Take from the front so to not cause any sync problems (hopefully)
                     pickel_list.append(instances.pop())
                 with open(str(id)+str(counter)+".pickle", "wb") as f:

@@ -69,16 +69,7 @@ class Instance:
         rostring = self._rostring
         for key in self._result:
             newkey = "".join([{'0':'1','1':'0'}[bit] if flip=="X" else bit for bit,flip in zip(key,rostring)])
-            #newerkey = ""
-            #for i, c in enumerate("".join(reversed(newkey))):
-            #    if i not in self._keeped_qubits:
-            #        newerkey += "0"
-            #    else:
-            #        newerkey += c
-            #newkey = "".join(reversed(newerkey))
             ro_untwirled[newkey] = self._result[key]
-
-        #self._keeped_qubits
 
         return ro_untwirled 
 
@@ -88,10 +79,7 @@ class Instance:
 
         pauli_type = self._circ.pauli_type
         estimator = 0
-        #logger.info(self._result)
-        #logger.info(self._rostring)
         result = self._untwirl_result()
-        #logger.info(result)
         #compute locations of non-idetity terms (reversed indexing)
         pz = list(reversed([{pauli_type("I"):'0'}.get(p,'1') for p in pauli]))
         #compute estimator
@@ -110,5 +98,4 @@ class Instance:
                       "Estimator:": estimator, 
                       "Individual Estimation:": esti_array}
         logger.info(print_data)
-        #logger.info(estimator)
         return estimator/sum(result.values())

@@ -17,10 +17,9 @@ class LayerNoiseData:
     """This class is responsible for aggregating the data associated with a single layer,
     processing it, and converting it into a noise model to use for PER"""
 
-    def __init__(self, layer : LayerLearning, sum_over_lambda=False, plusone = set(), used_qubits = None):
+    def __init__(self, layer : LayerLearning, plusone = set(), used_qubits = None):
         self._term_data = {} #keys are terms and the values are TermDatas
         self.layer = layer
-        self.sum_over_lambda=sum_over_lambda
         self.plusone = plusone
         self.used_qubits = used_qubits
         self.pair_sim_meas_dic = {}
@@ -126,9 +125,6 @@ class LayerNoiseData:
         F2 = [] #List of term pairs
         F1_mini = []
         fidelities = [] # list of fidelities from fits
-        from qiskit.quantum_info import Pauli, pauli_basis
-        predone = {Pauli('IIIIX'): np.float64(2.7604759922361666e-07), Pauli('IIIIY'): np.float64(2.7604759922361666e-07), Pauli('IIIIZ'): np.float64(2.7604759922361666e-07), Pauli('IIIXI'): np.float64(0.0977182333117168), Pauli('IIIYI'): np.float64(1.0528508498031108e-05), Pauli('IIIZI'): np.float64(0.09863571890753331), Pauli('IIXII'): np.float64(2.7604759922361666e-07), Pauli('IIYII'): np.float64(0.00086443562696914), Pauli('IIZII'): np.float64(-0.001108282488732959), Pauli('IXIII'): np.float64(2.7604759922361666e-07), Pauli('IYIII'): np.float64(2.7604759922361666e-07), Pauli('IZIII'): np.float64(2.7604759922361666e-07), Pauli('XIIII'): np.float64(2.7604759922361666e-07), Pauli('YIIII'): np.float64(2.7604759922361666e-07), Pauli('ZIIII'): np.float64(2.7604759922361666e-07), Pauli('IIIXX'): np.float64(0.09953459966910827), Pauli('IIIXY'): np.float64(0.09870129433840336), Pauli('IIIXZ'): np.float64(0.09760302120088082), Pauli('IIIYX'): np.float64(2.7604759922361666e-07), Pauli('IIIYY'): np.float64(2.7604759922361666e-07), Pauli('IIIYZ'): np.float64(2.7604759922361666e-07), Pauli('IIIZX'): np.float64(0.09825801372838039), Pauli('IIIZY'): np.float64(0.0966240932190986), Pauli('IIIZZ'): np.float64(0.10091994064607201), Pauli('IIXXI'): np.float64(0.10134730953374327), Pauli('IIXYI'): np.float64(-9.976518413612467e-06), Pauli('IIXZI'): np.float64(0.09825801372838039), Pauli('IIYXI'): np.float64(0.10252075870831678), Pauli('IIYYI'): np.float64(-0.001567284399190516), Pauli('IIYZI'): np.float64(0.09810262977677264), Pauli('IIZXI'): np.float64(0.10080612781242282), Pauli('IIZYI'): np.float64(-0.0030389328697042473), Pauli('IIZZI'): np.float64(0.10115570626810666), Pauli('IXXII'): np.float64(2.7604759922361666e-07), Pauli('IXYII'): np.float64(0.05137484385277957), Pauli('IXZII'): np.float64(0.05213632053555728), Pauli('IYXII'): np.float64(2.7604759922361666e-07), Pauli('IYYII'): np.float64(0.050871746205822244), Pauli('IYZII'): np.float64(0.050430599747674054), Pauli('IZXII'): np.float64(2.7604759922361666e-07), Pauli('IZYII'): np.float64(0.049877025904787264), Pauli('IZZII'): np.float64(0.050968294184473684), Pauli('XXIII'): np.float64(2.7604759922361666e-07), Pauli('XYIII'): np.float64(2.7604759922361666e-07), Pauli('XZIII'): np.float64(2.7604759922361666e-07), Pauli('YXIII'): np.float64(2.7604759922361666e-07), Pauli('YYIII'): np.float64(2.7604759922361666e-07), Pauli('YZIII'): np.float64(2.7604759922361666e-07), Pauli('ZXIII'): np.float64(2.7604759922361666e-07), Pauli('ZYIII'): np.float64(2.7604759922361666e-07), Pauli('ZZIII'): np.float64(2.7604759922361666e-07)}
-        #predone = {Pauli('IIIIX'): np.float64(0.0), Pauli('IIIIY'): np.float64(0.0), Pauli('IIIIZ'): np.float64(0.0), Pauli('IIIXI'): np.float64(0.09999999999999987), Pauli('IIIYI'): np.float64(0.0), Pauli('IIIZI'): np.float64(0.09999999999999987), Pauli('IIXII'): np.float64(0.0), Pauli('IIYII'): np.float64(0.0), Pauli('IIZII'): np.float64(0.0), Pauli('IXIII'): np.float64(0.0), Pauli('IYIII'): np.float64(0.0), Pauli('IZIII'): np.float64(0.0), Pauli('XIIII'): np.float64(0.0), Pauli('YIIII'): np.float64(0.0), Pauli('ZIIII'): np.float64(0.0), Pauli('IIIXX'): np.float64(0.09999999999999987), Pauli('IIIXY'): np.float64(0.09999999999999987), Pauli('IIIXZ'): np.float64(0.09999999999999987), Pauli('IIIYX'): np.float64(0.0), Pauli('IIIYY'): np.float64(0.0), Pauli('IIIYZ'): np.float64(0.0), Pauli('IIIZX'): np.float64(0.09999999999999987), Pauli('IIIZY'): np.float64(0.09999999999999987), Pauli('IIIZZ'): np.float64(0.09999999999999987), Pauli('IIXXI'): np.float64(0.09999999999999987), Pauli('IIXYI'): np.float64(0.0), Pauli('IIXZI'): np.float64(0.09999999999999987), Pauli('IIYXI'): np.float64(0.09999999999999987), Pauli('IIYYI'): np.float64(0.0), Pauli('IIYZI'): np.float64(0.09999999999999987), Pauli('IIZXI'): np.float64(0.09999999999999987), Pauli('IIZYI'): np.float64(0.0), Pauli('IIZZI'): np.float64(0.09999999999999987), Pauli('IXXII'): np.float64(0.0), Pauli('IXYII'): np.float64(0.0), Pauli('IXZII'): np.float64(0.0), Pauli('IYXII'): np.float64(0.0), Pauli('IYYII'): np.float64(0.0), Pauli('IYZII'): np.float64(0.0), Pauli('IZXII'): np.float64(0.0), Pauli('IZYII'): np.float64(0.0), Pauli('IZZII'): np.float64(0.0), Pauli('XXIII'): np.float64(0.0), Pauli('XYIII'): np.float64(0.0), Pauli('XZIII'): np.float64(0.0), Pauli('YXIII'): np.float64(0.0), Pauli('YYIII'): np.float64(0.0), Pauli('YZIII'): np.float64(0.0), Pauli('ZXIII'): np.float64(0.0), Pauli('ZYIII'): np.float64(0.0), Pauli('ZZIII'): np.float64(0.0)}
         logger.info(self.used_qubits)
         for datum in self._term_data.values():
             pauli = datum.pauli
@@ -143,11 +139,6 @@ class LayerNoiseData:
                 F1_mini.append(datum.pauli)
             F1.append(datum.pauli)
             fidelities.append(datum.fidelity)
-            #if str(datum.pauli) in ["IXYII","IYYII","IZYII","IXZII","IYZII","IZZII"]:
-            #    fidelities.append(1-2.7604759922361666e-07)
-            #else:
-            #    fidelities.append(1-predone.get(datum.pauli.pauli,2.7604759922361666e-07))
-            #print((datum.pauli, 1-predone.get(datum.pauli.pauli,2.7604759922361666e-07), fidelities[-1]))
             #If the Pauli is conjugate to another term in the model, a degeneracy is present
             if self._issingle(datum):
                 F2.append(datum.pauli)
@@ -166,32 +157,6 @@ class LayerNoiseData:
        
         #perform least-squares estimate of model coefficients and return as noisemodel 
         coeffs,_ = nnls(np.add(M1,M2), -np.log(fidelities)) 
-
-        if self.sum_over_lambda:
-            paulilength = len(F1[0].to_label())
-            for qubit in self.plusone:
-                logger.info([f.to_label() for f in F1])
-                #Filter out all model terms with the extra qubit active with at least one connected qubit
-                filtered_and_cut_list = [f for f in F1 if f.to_label()[paulilength-1-qubit]!='I' and (f.to_label()[:paulilength-1-qubit]+f.to_label()[paulilength-1-qubit+1:] != "I"*(paulilength-1))]
-                #In case of 2 or more connected qubits we need to seperate them
-                sorted_lists = dict()
-                for f in filtered_and_cut_list:
-                    for i, char in enumerate(f.to_label()):
-                        #find which *other* qubits are uses and sort them into lists
-                        if char != "I" and i != paulilength-1-qubit:
-                            if not i in sorted_lists: #make the new list if it didn't exist so far
-                                sorted_lists[i] = []
-                            sorted_lists[i].append(f)
-                            break
-                for index in sorted_lists:
-                    #for each connected main qubit, filter them by x,y,z and sum their coeffs up
-                    for pauli in "XYZ":
-                        x = sum([coeffs[F1.index(model_term)] for model_term in sorted_lists[index] if model_term.to_label()[index]==pauli])
-                        #add these coeffs to the single pauli coeffs of the main qubit. The extra fluf in coeffs[...] is just to find the correct coeff
-                        coeffs[[F1.index(f) for f in F1 if f.to_label()[i]==pauli and f.to_label()[:i]+f.to_label()[i+1:]=="I"*(paulilength-1)][0]] += x
-            logger.info("Summed extra qubits up and added it to main")
-
-
         self.noisemodel = NoiseModel(self.layer._cliff_layer, F1, coeffs)
 
     def _model_terms(self, links): #return a list of Pauli terms with the specified support

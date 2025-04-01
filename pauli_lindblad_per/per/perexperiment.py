@@ -5,6 +5,7 @@ from primitives.processor import QiskitProcessor
 import multiprocessing
 import time
 import logging
+import numpy as np
 
 logger = logging.getLogger("experiment")
 
@@ -123,12 +124,42 @@ class PERExperiment:
 
     def get_overhead(self, layer, noise_strength):
         return self._per_circuits[layer].overhead(noise_strength)
+    
+    def _calculate_gamma_scale(self, pcirc, noise_strengths, samples_per_circuit):
+        # Calculate gamma for every noise strength
+        gammas = []
+        for noise_strength in noise_strengths:
+            gamma = 1
+            if noise_strength < 1:
+                for layer in pcirc._layers:
+                    gamma *= np.exp(2*(1-noise_strength)*sum([abs(value[1]) for value in self.noise_data_frame.noisemodels[layer.cliff_layer].coeffs]))
+            gammas.append(gamma)
+        # Distribute and create scale. Round to nearest int number
+        samples_scale = {noise_strength: round(samples_per_circuit*gamma/sum(gammas)) for noise_strength, gamma in zip(noise_strengths, gammas)}
+        # To make sure all circuits have a minimum number of circuits, check for noise_strengths with lower counts and set them higher, without increasing the overall sample count
+        marked = [] # Save all the noise_strengths that need to be set to the minimum
+        # This is a temporary figure. The number needs to be big enougth to account for the twirling precision. Once a definitive answer is figured out, it comes here
+        minimum_circuit_count = max(samples_per_circuit/(2.5*len(noise_strengths)),1) # Define the minimum
+        new_marked = True #loop has to run at least one. Python does not have a do while loop
+        while new_marked:
+            new_marked = False
+            for key in samples_scale:
+                if samples_scale[key] < minimum_circuit_count: # Check all sample sizes
+                    new_marked = True # And mark the one that are to low
+                    marked.append(key) 
+            if new_marked: # Recalculate the scale with the min number of circuits for every marked strength taken of the pool, for the rest of the strengths
+                samples_scale = {noise_strength: round((samples_per_circuit-len(marked)*(minimum_circuit_count))*gamma/sum([gamma for noise_strength, gamma in zip(noise_strengths, gammas) if noise_strength not in marked])) for noise_strength, gamma in zip(noise_strengths, gammas) if noise_strength not in marked}
+            # Loop until nothing more gets marked
+        for mark in sorted(marked): # Add the marked back at the minimum count
+            samples_scale[mark] = round(minimum_circuit_count)
+        return samples_scale
         
     def generate(
         self, 
         expectations, 
-        samples, 
-        noise_strengths
+        samples_per_circuit, 
+        noise_strengths,
+        do_multithreading
         ):
         """Initiate the generation of circuits required for PER
 
@@ -145,20 +176,29 @@ class PERExperiment:
 
         #get minimal set of measurement bases
         self.get_meas_bases(expectations)
-        self.manager = multiprocessing.Manager()  # Use a manager to handle shared data
-        self._per_runs = self.manager.list() # Use a managed list for shared data between processes
+        if do_multithreading:
+            self.manager = multiprocessing.Manager()  # Use a manager to handle shared data
+            self._per_runs = self.manager.list() # Use a managed list for shared data between processes
+        else:
+            self._per_runs = []
 
-        self.debug = 0
+        print("test")
         #initialize PERRun for each PERCircuit
         for pcirc in self._per_circuits:
-            #cut the generation of the PER Circuit into many threads to profit from multicore CPU performance
-            process = multiprocessing.Process(target=_make_PERRUN, args=(self._processor, self._inst_map, expectations, samples, noise_strengths, self.meas_bases, pcirc, self._per_runs))
-            process.start()
-            #This is the old non multithreding way:
-            #per_run = PERRun(self._processor, self._inst_map, pcirc, samples, noise_strengths, self.meas_bases, expectations)
-            #self._per_runs.append(per_run)
+            samples = self._calculate_gamma_scale(pcirc, noise_strengths, samples_per_circuit)
+            print(samples)
+            if do_multithreading:
+                #cut the generation of the PER Circuit into many threads to profit from multicore CPU performance
+                process = multiprocessing.Process(target=_make_PERRUN, args=(self._processor, self._inst_map, expectations, samples, noise_strengths, self.meas_bases, pcirc, self._per_runs, do_multithreading))
+                print("test2")
+                process.start()
+                print("Process started")
+            else:
+            #This is the old non multithreading way:
+                per_run = PERRun(self._processor, self._inst_map, expectations, samples, noise_strengths, self.meas_bases, pcirc, self._per_runs, do_multithreading)
+                self._per_runs.append(per_run)
         while len(multiprocessing.active_children()) > 1:
-            #print(len(multiprocessing.active_children()))
+            print(len(multiprocessing.active_children()))
             time.sleep(1)
             pass
         #changing the type from the mulitprocess list to a normal list
@@ -166,7 +206,7 @@ class PERExperiment:
         self.manager = None
 
 
-def _make_PERRUN(processor, inst_map, expectations, samples, noise_strengths, meas_bases, pcirc, per_runs):
+def _make_PERRUN(processor, inst_map, expectations, samples, noise_strengths, meas_bases, pcirc, per_runs, do_multithreading):
     """ This funktion is here to be called async from generate """
-    per_run = PERRun(processor, inst_map, pcirc, samples, noise_strengths, meas_bases, expectations)
+    per_run = PERRun(processor, inst_map, pcirc, samples, noise_strengths, meas_bases, expectations, do_multithreading)
     per_runs.append(per_run)

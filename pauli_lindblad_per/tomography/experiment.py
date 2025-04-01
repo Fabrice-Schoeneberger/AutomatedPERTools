@@ -26,7 +26,7 @@ class SparsePauliTomographyExperiment:
     instance for each distinct layer, running the analysis, and then returning a PERCircuit
     with NoiseModels attached to each distinct layer"""
 
-    def __init__(self, circuits, inst_map, backend, sum_over_lambda=False):
+    def __init__(self, circuits, inst_map, backend):
 
         circuit_interface = None
         #Make sure it's a quantumcircuit as others don't work
@@ -62,7 +62,6 @@ class SparsePauliTomographyExperiment:
         self.instances = []
         self._inst_map = inst_map
         self.unused_qubits = unused_qubits
-        self.sum_over_lambda = sum_over_lambda
         self._layers = None
 
         self._layers = []
@@ -70,7 +69,7 @@ class SparsePauliTomographyExperiment:
             learning = LayerLearning(l,self._procspec)
             self._layers.append(learning)
 
-        self.analysis = Analysis(self._layers, self._procspec, sum_over_lambda=sum_over_lambda, plusone=plusone)
+        self.analysis = Analysis(self._layers, self._procspec, plusone=plusone)
 
     def generate(self, samples, single_samples, depths):
         """This method is used to generate the experimental benchmarking procedure. The samples
