@@ -26,7 +26,7 @@ class SparsePauliTomographyExperiment:
     instance for each distinct layer, running the analysis, and then returning a PERCircuit
     with NoiseModels attached to each distinct layer"""
 
-    def __init__(self, circuits, inst_map, backend, tomography_connections=False):
+    def __init__(self, circuits, inst_map, backend):
 
         circuit_interface = None
         #Make sure it's a quantumcircuit as others don't work
